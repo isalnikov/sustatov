@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "source": "sustatov_gpt.md + GEDCOM + VGD fact-check",
+    "date": "2026-08-30",
+    "agent": "0c9bde4d-1229-4196-aa0c-e71504ff39d1"
+  },
+  "confirmed_persons": [
+    {"id": "I500145", "givn": "Василий", "patronymic": "Иванович", "surn": "Сустатов", "sex": "M", "note": "ранен 15.06.1916, 3-й Заамурский пограничный полк", "confidence": "CONFIRMED", "source": "https://forum.vgd.ru/post/2339/86148/p2578444.htm"},
+    {"id": "I500073", "givn": "Василий", "surn": "Сустатов", "sex": "M", "deat": "1934", "spouse": "Прасковья Королёва", "children": ["Григорий 1912", "Алексей 1913", "Максим 1917"], "confidence": "CONFIRMED", "source": "брак 10.11.1908 метрики"},
+    {"id": "I500074", "givn": "Прасковья", "surn": "Королёва", "sex": "F", "birt": "1883", "deat": "1969", "confidence": "CONFIRMED"},
+    {"id": "I500071", "givn": "Григорий", "patronymic": "Васильевич", "surn": "Сустатов", "sex": "M", "birt": "19 JAN 1912", "deat": "10 MAR 1942", "deat_place": "Приколотное, Харьковская обл.", "occu": "Столяр", "confidence": "CONFIRMED"},
+    {"id": "I500091", "givn": "Татьяна", "surn": "Сустатова", "sex": "F", "birt": "1932", "fix": "исправлено Татяьна → Татьяна, добавлена фамилия"},
+    {"id": "I500092", "givn": "Анна", "surn": "Сустатова", "sex": "F", "birt": "10 JUL 1934", "deat": "23 AUG 1953"},
+    {"id": "I500093", "givn": "Вера", "surn": "Сустатова", "sex": "F", "birt": "7 OCT 1939"},
+    {"id": "I500094", "givn": "Николай", "patronymic": "Григорьевич", "surn": "Сустатов", "sex": "M", "birt": "4 OCT 1936", "deat": "29 OCT 2018", "confidence": "CONFIRMED"},
+    {"id": "I500149", "givn": "Нина", "surn": "", "sex": "F", "deat": "до APR 2015", "spouse": "Николай Григорьевич", "confidence": "PROBABLE"},
+    {"id": "NEW_SUST_SERAFIM", "givn": "Серафим", "patronymic": "Александрович", "surn": "Сустатов", "sex": "M", "birt": "1909", "relationship": "вероятный двоюродный дядя", "confidence": "PROBABLE"},
+    {"id": "NEW_SUST_BORIS_SEM", "givn": "Борис", "patronymic": "Семёнович", "surn": "Сустатов", "sex": "M", "birt": "1908", "birt_place": "с. Кошелиха", "deat": "20 MAR 1938", "deat_place": "Бутово", "note": "НЕ связан с I500146 Борис Михайлович", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_ALEX_FED", "givn": "Александр", "patronymic": "Фёдорович", "surn": "Сустатов", "sex": "M", "birt": "ок. 1870", "spouse": "Екатерина Степановна", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_FEDOR_IV", "givn": "Фёдор", "patronymic": "Иванович", "surn": "Сустатов", "sex": "M", "birt": "ок. 1850", "relationship": "ветка двоюродных", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_NIKITA_YAK", "givn": "Никита", "patronymic": "Яковлевич", "surn": "Сустатов", "sex": "M", "note": "ссылка в Сибирь", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_EVDOK_FED", "givn": "Евдокия", "patronymic": "Федотовна", "surn": "Сустатова", "sex": "F", "note": "брак 25.07.1886", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_VAS_YAK", "givn": "Василий", "patronymic": "Яковлевич", "surn": "Сустатов", "sex": "M", "birt": "1910", "deat": "9 DEC 1941", "note": "плен, ВОВ", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_MIH_FED", "givn": "Михаил", "patronymic": "Фёдорович", "surn": "Сустатов", "sex": "M", "birt": "1913", "note": "пропал без вести 12.1941", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_NIK_YAK", "givn": "Николай", "patronymic": "Яковлевич", "surn": "Сустатов", "sex": "M", "birt": "1918", "deat": "20 DEC 1943", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_STEP_FED", "givn": "Степан", "patronymic": "Фёдорович", "surn": "Сустатов", "sex": "M", "birt": "1910", "deat": "1 MAY 1943", "note": "партизан", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_YAK_FED", "givn": "Яков", "patronymic": "Фёдорович", "surn": "Сустатов", "sex": "M", "birt": "1910", "deat": "8 MAY 1942", "note": "плен", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_YAKOV", "givn": "Яков", "patronymic": "Матвеевич", "surn": "Сустатов", "sex": "M", "relationship": "ветка Якова, XIX в.", "confidence": "CONFIRMED"},
+    {"id": "NEW_SUST_EKATERINA", "givn": "Екатерина", "patronymic": "Степановна", "surn": "Сустатова", "sex": "F", "spouse": "Александр Фёдорович", "confidence": "CONFIRMED"}
+  ],
+  "rejected_claims": [
+    "I500146 Борис Михайлович ≠ Борис Семёнович 1908",
+    "F500065 не подтверждает отца Василия Ивановича",
+    "Мурза Сыресь — не прямой предок крестьянской линии",
+    "1671 Алатырь — контекст, не родство"
+  ]
+}

@@ -1,0 +1,4011 @@
+{
+  "meta": {
+    "title": "Род Сустатовых",
+    "direct_line": [
+      "NH001",
+      "NH013",
+      "NH015",
+      "NH019",
+      "NH035",
+      "I500085",
+      "I500073",
+      "I500071",
+      "I500007",
+      "I500001",
+      "I500003"
+    ],
+    "count": 104,
+    "sources": [
+      "sustatov.md",
+      "GEDCOM",
+      "VGD",
+      "ЦАНО"
+    ]
+  },
+  "persons": [
+    {
+      "id": "I500001",
+      "name": "Григорий Сустатов",
+      "givn": "Григорий",
+      "surn": "Сустатов",
+      "patronymic": "Васильевич",
+      "sex": "M",
+      "birt": "30 AUG 1954",
+      "birt_place": "",
+      "deat": "24 DEC 2020",
+      "deat_place": "Военно-мемориальное кладбище \"Курган Славы\"",
+      "father": "Василий Сустатов",
+      "father_id": "I500007",
+      "mother": "Александра Ковригина",
+      "mother_id": "I500006",
+      "spouses": [
+        {
+          "id": "I500002",
+          "name": "Ольга Сальникова"
+        },
+        {
+          "id": "I500142",
+          "name": ""
+        }
+      ],
+      "children": [
+        {
+          "id": "I500003",
+          "name": "Игорь Сальников"
+        }
+      ],
+      "marriages": [],
+      "note": "CONFIRMED: 1954–2020; сын Василия (1930); отец Игоря Сальникова (линия отца).",
+      "confidence": "confirmed",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "I500007",
+      "name": "Василий Сустатов",
+      "givn": "Василий",
+      "surn": "Сустатов",
+      "patronymic": "Григорьевич",
+      "sex": "M",
+      "birt": "24 JAN 1930",
+      "birt_place": "Россия, с. Кошелиха, Первомайского района, Нижегородской области",
+      "deat": "6 OCT 2004",
+      "deat_place": "Россия, г. Калининград",
+      "father": "Григорий Васильевич Сустатов",
+      "father_id": "I500071",
+      "mother": "Евдокия Абрамова",
+      "mother_id": "I500072",
+      "spouses": [
+        {
+          "id": "I500006",
+          "name": "Александра Ковригина"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500001",
+          "name": "Григорий Сустатов"
+        },
+        {
+          "id": "I500087",
+          "name": "Елена Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "CONFIRMED: с. Кошелиха; сын Григория Васильевича (1912) и Евдокии Абрамовой.",
+      "confidence": "confirmed",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "I500071",
+      "name": "Григорий Васильевич Сустатов",
+      "givn": "Григорий",
+      "surn": "Сустатов",
+      "patronymic": "Васильевич",
+      "sex": "M",
+      "birt": "19 JAN 1912",
+      "birt_place": "с. Кошелиха, Горьковская обл.",
+      "deat": "10 MAR 1942",
+      "deat_place": "Украинская ССР, Харьковская обл.",
+      "father": "Василий Иванович Сустатов",
+      "father_id": "I500073",
+      "mother": "Прасковья Фёдоровна Королёва",
+      "mother_id": "I500074",
+      "spouses": [
+        {
+          "id": "I500072",
+          "name": "Евдокия Абрамова"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500007",
+          "name": "Василий Сустатов"
+        },
+        {
+          "id": "I500091",
+          "name": "Татьяна Сустатова"
+        },
+        {
+          "id": "I500092",
+          "name": "Анна Сустатова"
+        },
+        {
+          "id": "I500094",
+          "name": "Николай Сустатов"
+        },
+        {
+          "id": "I500093",
+          "name": "Вера Сустатова"
+        }
+      ],
+      "marriages": [],
+      "note": "CONFIRMED (VGD/polkmoskva): рядовой 987 сп 226 сд; погиб от ран 10.03.1942; похоронен с. Приколотное, Велико-Бурлуцкий р-н, Харьковская обл.",
+      "confidence": "confirmed",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "I500073",
+      "name": "Василий Иванович Сустатов",
+      "givn": "Василий",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок. 1890",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "1934",
+      "deat_place": "",
+      "father": "Григорий Иванович Сустатов",
+      "father_id": "I500085",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500074",
+          "name": "Прасковья Фёдоровна Королёва"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500071",
+          "name": "Григорий Васильевич Сустатов"
+        },
+        {
+          "id": "I500147",
+          "name": "Алексей Васильевич Сустатов"
+        },
+        {
+          "id": "I500148",
+          "name": "Максим Васильевич Сустатов"
+        }
+      ],
+      "marriages": [
+        {
+          "spouse": "Прасковья Фёдоровна Королёва",
+          "date": "30 JUN 1908",
+          "place": "с. Кошелиха",
+          "note": "CONFIRMED: метрика ЦАНО ф.570 оп.10"
+        }
+      ],
+      "note": "CONFIRMED: метрика 30.06.1908 — брак с Парасковой/Прасковьей Фёдоровной Королёвой (17 лет); отец Григория (1912), Алексея (1913), Максима (1917); †1934.",
+      "confidence": "confirmed",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "I500085",
+      "name": "Григорий Иванович Сустатов",
+      "givn": "Григорий Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок. 1875",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "Иван Иванович Сустатов",
+      "father_id": "NH035",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500073",
+          "name": "Василий Иванович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "PROBABLE: сын Ивана Ивановича (~1870). Отец Василия (†1934). Череда имён Василий↔Григорий. Метрика — ЦАНО д.148.",
+      "confidence": "probable",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "NH001",
+      "name": "Андрей Петрович Сустатов",
+      "givn": "Андрей Петрович",
+      "surn": "Сустатов",
+      "patronymic": "Петрович",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "1811",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH002",
+          "name": "Дарья"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH003",
+          "name": "Кондратий Андреевич Сустатов"
+        },
+        {
+          "id": "NH009",
+          "name": "Василий Андреевич Сустатов"
+        },
+        {
+          "id": "NH013",
+          "name": "Иван Андреевич Сустатов"
+        },
+        {
+          "id": "NH023",
+          "name": "Лев Андреевич Сустатов"
+        },
+        {
+          "id": "NH036",
+          "name": "Анна Петровна"
+        }
+      ],
+      "marriages": [
+        {
+          "spouse": "Дарья",
+          "date": "",
+          "place": "",
+          "note": "1811 revision family"
+        }
+      ],
+      "note": "CONFIRMED: ревизия 1811 (ЦАНО ф.60) — 50/81 лет, жена Дарья; дети: Лев Андреевич, Иван Андреевич, Анна Петровна. Отец Кондратия (брак 08.11.1807).",
+      "confidence": "confirmed",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "NH013",
+      "name": "Иван Андреевич Сустатов",
+      "givn": "Иван Андреевич",
+      "surn": "Сустатов",
+      "patronymic": "Андреевич",
+      "sex": "M",
+      "birt": "ок. 1793",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "1833",
+      "deat_place": "",
+      "father": "Андрей Петрович Сустатов",
+      "father_id": "NH001",
+      "mother": "Дарья",
+      "mother_id": "NH002",
+      "spouses": [
+        {
+          "id": "NH014",
+          "name": "Мавра"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH015",
+          "name": "Иван Иванович Сустатов"
+        },
+        {
+          "id": "NH021",
+          "name": "Матвей Иванович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "CONFIRMED: ревизия 1811 — 18 лет, «достался по разделу с сёстрами в 1812»; †1833; жена Мавра; сын Иван (~1815) — прямая линия.",
+      "confidence": "confirmed",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "NH015",
+      "name": "Иван Иванович Сустатов",
+      "givn": "Иван Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок.1815",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Иван Андреевич Сустатов",
+      "father_id": "NH013",
+      "mother": "Мавра",
+      "mother_id": "NH014",
+      "spouses": [
+        {
+          "id": "NH016",
+          "name": "Матрёна"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH017",
+          "name": "Фёдор Иванович Сустатов"
+        },
+        {
+          "id": "NH018",
+          "name": "Федот Иванович Сустатов"
+        },
+        {
+          "id": "NH019",
+          "name": "Иван Иванович Сустатов"
+        },
+        {
+          "id": "NH020",
+          "name": "Иван Иванович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "CONFIRMED: ревизия 1858 — 36/43 года, жена Матрёна Фёдоровна; сыновья Фёдор (~1842), Федот, Иван (~1847), Иван (~1851). ПРЯМАЯ линия Igor.",
+      "confidence": "confirmed",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "NH019",
+      "name": "Иван Иванович Сустатов",
+      "givn": "Иван Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок. 1847",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Иван Иванович Сустатов",
+      "father_id": "NH015",
+      "mother": "Матрёна",
+      "mother_id": "NH016",
+      "spouses": [],
+      "children": [
+        {
+          "id": "NH035",
+          "name": "Иван Иванович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "CONFIRMED: сын Ивана Ивановича (~1815) по ревизии 1858; вероятный дед Григория Ивановича; сын NH035 (~1870).",
+      "confidence": "confirmed",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "NH035",
+      "name": "Иван Иванович Сустатов",
+      "givn": "Иван Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок.1870",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Иван Иванович Сустатов",
+      "father_id": "NH019",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500085",
+          "name": "Григорий Иванович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "PROBABLE: недостающее звено (~1870). Отец Григория Ивановича (~1875) и Василия Ивановича (~1891). Подтвердить: метрика ЦАНО ф.570 оп.10 д.148 (~1875).",
+      "confidence": "probable",
+      "category": "direct",
+      "is_direct": true,
+      "relation_igor": "Прямой предок Игоря"
+    },
+    {
+      "id": "I500015",
+      "name": "",
+      "givn": "Евдокия",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "Илья Филиппов",
+      "father_id": "I500022",
+      "mother": "",
+      "mother_id": "I500101",
+      "spouses": [
+        {
+          "id": "I500014",
+          "name": "Александр Белов"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500009",
+          "name": "Мария Белова"
+        },
+        {
+          "id": "I500019",
+          "name": "Анна Белова"
+        },
+        {
+          "id": "I500102",
+          "name": "Сергей Белов"
+        },
+        {
+          "id": "I500021",
+          "name": "Григорий Белов"
+        },
+        {
+          "id": "I500020",
+          "name": "Петр Белов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500082",
+      "name": "",
+      "givn": "Анна",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "1948",
+      "deat_place": "",
+      "father": "",
+      "father_id": "I500083",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500081",
+          "name": "Никита Абрамов"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500072",
+          "name": "Евдокия Абрамова"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500083",
+      "name": "",
+      "givn": "Федор",
+      "surn": "",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500082",
+          "name": ""
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500101",
+      "name": "",
+      "givn": "",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500022",
+          "name": "Илья Филиппов"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500099",
+          "name": "Иван Филиппов"
+        },
+        {
+          "id": "I500015",
+          "name": ""
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500142",
+      "name": "",
+      "givn": "Людмила Эдуардовна",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500001",
+          "name": "Григорий Сустатов"
+        }
+      ],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500149",
+      "name": "Нина",
+      "givn": "Нина",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500094",
+          "name": "Николай Сустатов"
+        }
+      ],
+      "children": [],
+      "marriages": [],
+      "note": "Жена Николая Г.Г. Сустатова; фамилия не установлена; умерла до 04.2015 (sarpust.ru)",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500150",
+      "name": "",
+      "givn": "Агафия",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "I500156",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500017",
+          "name": "Андрей Ботвинин"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500011",
+          "name": "Агафья Ботвинина"
+        },
+        {
+          "id": "I500120",
+          "name": "Дора Ботвинина"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500156",
+      "name": "",
+      "givn": "Борис",
+      "surn": "",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500150",
+          "name": ""
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "NH002",
+      "name": "Дарья",
+      "givn": "Дарья",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH001",
+          "name": "Андрей Петрович Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH003",
+          "name": "Кондратий Андреевич Сустатов"
+        },
+        {
+          "id": "NH009",
+          "name": "Василий Андреевич Сустатов"
+        },
+        {
+          "id": "NH013",
+          "name": "Иван Андреевич Сустатов"
+        },
+        {
+          "id": "NH023",
+          "name": "Лев Андреевич Сустатов"
+        },
+        {
+          "id": "NH036",
+          "name": "Анна Петровна"
+        }
+      ],
+      "marriages": [
+        {
+          "spouse": "Андрей Петрович Сустатов",
+          "date": "",
+          "place": "",
+          "note": "1811 revision family"
+        }
+      ],
+      "note": "CONFIRMED: жена Андрея Петровича (ревизия 1811)",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH004",
+      "name": "Анна",
+      "givn": "Анна",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH003",
+          "name": "Кондратий Андреевич Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH005",
+          "name": "Аверьян Кондратьевич Сустатов"
+        },
+        {
+          "id": "NH007",
+          "name": "Максим Кондратьевич Сустатов"
+        },
+        {
+          "id": "NH008",
+          "name": "Степан Кондратьевич Сустатов"
+        }
+      ],
+      "marriages": [
+        {
+          "spouse": "Кондратий Андреевич Сустатов",
+          "date": "08 NOV 1807",
+          "place": "",
+          "note": ""
+        }
+      ],
+      "note": "Филипповна, дочь Филиппа Михайловича",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH006",
+      "name": "Дарья",
+      "givn": "Дарья",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH005",
+          "name": "Аверьян Кондратьевич Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH034",
+          "name": "Екатерина Аверьяновна Сустатовa"
+        }
+      ],
+      "marriages": [
+        {
+          "spouse": "Аверьян Кондратьевич Сустатов",
+          "date": "08 NOV 1835",
+          "place": "",
+          "note": ""
+        }
+      ],
+      "note": "Анисимовна",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH010",
+      "name": "Ульяна",
+      "givn": "Ульяна",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH009",
+          "name": "Василий Андреевич Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH011",
+          "name": "Аким Васильевич Сустатов"
+        },
+        {
+          "id": "NH012",
+          "name": "Степан Васильевич Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH014",
+      "name": "Мавра",
+      "givn": "Мавра",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH013",
+          "name": "Иван Андреевич Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH015",
+          "name": "Иван Иванович Сустатов"
+        },
+        {
+          "id": "NH021",
+          "name": "Матвей Иванович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH016",
+      "name": "Матрёна",
+      "givn": "Матрёна",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH015",
+          "name": "Иван Иванович Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH017",
+          "name": "Фёдор Иванович Сустатов"
+        },
+        {
+          "id": "NH018",
+          "name": "Федот Иванович Сустатов"
+        },
+        {
+          "id": "NH019",
+          "name": "Иван Иванович Сустатов"
+        },
+        {
+          "id": "NH020",
+          "name": "Иван Иванович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "Фёдоровна",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH024",
+      "name": "Варвара",
+      "givn": "Варвара",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH023",
+          "name": "Лев Андреевич Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH025",
+          "name": "Иван Львович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "Васильевна",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH028",
+      "name": "Аксинья",
+      "givn": "Аксинья",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH027",
+          "name": "Василий Анисимович Сустатов"
+        }
+      ],
+      "children": [],
+      "marriages": [],
+      "note": "Егоровна",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH030",
+      "name": "Евфросиния",
+      "givn": "Евфросиния",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH029",
+          "name": "Алексей Федотovich Сустатов"
+        }
+      ],
+      "children": [],
+      "marriages": [
+        {
+          "spouse": "Алексей Федотovich Сустатов",
+          "date": "19 APR 1892",
+          "place": "",
+          "note": ""
+        }
+      ],
+      "note": "Приписнова",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH032",
+      "name": "Анна",
+      "givn": "Анна",
+      "surn": "",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH031",
+          "name": "Иван Степанович Сустатов"
+        }
+      ],
+      "children": [],
+      "marriages": [],
+      "note": "Муянова",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH036",
+      "name": "Анна Петровна",
+      "givn": "Анна",
+      "surn": "",
+      "patronymic": "Петровна",
+      "sex": "F",
+      "birt": "ок. 1789",
+      "birt_place": "с. Кошелиха",
+      "deat": "",
+      "deat_place": "",
+      "father": "Андрей Петрович Сустатов",
+      "father_id": "NH001",
+      "mother": "Дарья",
+      "mother_id": "NH002",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "CONFIRMED: дочь Андрея Петровича (ревизия 1811)",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500081",
+      "name": "Никита Абрамов",
+      "givn": "Никита",
+      "surn": "Абрамов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "Ермолай Абрамов",
+      "father_id": "I500084",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500082",
+          "name": ""
+        }
+      ],
+      "children": [
+        {
+          "id": "I500072",
+          "name": "Евдокия Абрамова"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500084",
+      "name": "Ермолай Абрамов",
+      "givn": "Ермолай",
+      "surn": "Абрамов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500081",
+          "name": "Никита Абрамов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500072",
+      "name": "Евдокия Абрамова",
+      "givn": "Евдокия",
+      "surn": "Абрамова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "24 JAN 1911",
+      "birt_place": "Россия",
+      "deat": "25 JAN 1989",
+      "deat_place": "",
+      "father": "Никита Абрамов",
+      "father_id": "I500081",
+      "mother": "",
+      "mother_id": "I500082",
+      "spouses": [
+        {
+          "id": "I500071",
+          "name": "Григорий Васильевич Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500007",
+          "name": "Василий Сустатов"
+        },
+        {
+          "id": "I500091",
+          "name": "Татьяна Сустатова"
+        },
+        {
+          "id": "I500092",
+          "name": "Анна Сустатова"
+        },
+        {
+          "id": "I500094",
+          "name": "Николай Сустатов"
+        },
+        {
+          "id": "I500093",
+          "name": "Вера Сустатова"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500014",
+      "name": "Александр Белов",
+      "givn": "Александр",
+      "surn": "Белов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "Маркел Белов",
+      "father_id": "I500018",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500015",
+          "name": ""
+        }
+      ],
+      "children": [
+        {
+          "id": "I500009",
+          "name": "Мария Белова"
+        },
+        {
+          "id": "I500019",
+          "name": "Анна Белова"
+        },
+        {
+          "id": "I500102",
+          "name": "Сергей Белов"
+        },
+        {
+          "id": "I500021",
+          "name": "Григорий Белов"
+        },
+        {
+          "id": "I500020",
+          "name": "Петр Белов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500018",
+      "name": "Маркел Белов",
+      "givn": "Маркел",
+      "surn": "Белов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500014",
+          "name": "Александр Белов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500009",
+      "name": "Мария Белова",
+      "givn": "Мария",
+      "surn": "Белова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "30 JUL 1910",
+      "birt_place": "Россия",
+      "deat": "1968",
+      "deat_place": "",
+      "father": "Александр Белов",
+      "father_id": "I500014",
+      "mother": "",
+      "mother_id": "I500015",
+      "spouses": [
+        {
+          "id": "I500008",
+          "name": "Михаил Куликов"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500004",
+          "name": "Валентина Куликова"
+        },
+        {
+          "id": "I500013",
+          "name": "Алексей Куликов"
+        },
+        {
+          "id": "I500029",
+          "name": "Владимир Куликов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500017",
+      "name": "Андрей Ботвинин",
+      "givn": "Андрей",
+      "surn": "Ботвинин",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "Борис Ботвинин",
+      "father_id": "I500155",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500150",
+          "name": ""
+        }
+      ],
+      "children": [
+        {
+          "id": "I500011",
+          "name": "Агафья Ботвинина"
+        },
+        {
+          "id": "I500120",
+          "name": "Дора Ботвинина"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500155",
+      "name": "Борис Ботвинин",
+      "givn": "Борис",
+      "surn": "Ботвинин",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500017",
+          "name": "Андрей Ботвинин"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500011",
+      "name": "Агафья Ботвинина",
+      "givn": "Агафья",
+      "surn": "Ботвинина",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "17 FEB 1907",
+      "birt_place": "Старое Люберецкое кладбище",
+      "deat": "22 MAR 1994",
+      "deat_place": "Старое Люберецкое кладбище",
+      "father": "Андрей Ботвинин",
+      "father_id": "I500017",
+      "mother": "",
+      "mother_id": "I500150",
+      "spouses": [
+        {
+          "id": "I500010",
+          "name": "Максим Сальников"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500005",
+          "name": "Егор Сальникова"
+        },
+        {
+          "id": "I500112",
+          "name": "Нина Сальникова"
+        },
+        {
+          "id": "I500114",
+          "name": "Валентина Сальникова"
+        },
+        {
+          "id": "I500113",
+          "name": "Любовь Сальникова"
+        },
+        {
+          "id": "I500116",
+          "name": "Иван Сальников"
+        },
+        {
+          "id": "I500115",
+          "name": "Анатолий Сальников"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500077",
+      "name": "Николай Дворников",
+      "givn": "Николай",
+      "surn": "Дворников",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500076",
+          "name": "Евдокия Дворникова"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500076",
+      "name": "Евдокия Дворникова",
+      "givn": "Евдокия",
+      "surn": "Дворникова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "14 MAR 1896",
+      "birt_place": "",
+      "deat": "7 OCT 1978",
+      "deat_place": "",
+      "father": "Николай Дворников",
+      "father_id": "I500077",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500078",
+          "name": "Андрей Ковригин"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500095",
+          "name": ""
+        },
+        {
+          "id": "I500096",
+          "name": ""
+        },
+        {
+          "id": "I500006",
+          "name": "Александра Ковригина"
+        },
+        {
+          "id": "I500097",
+          "name": ""
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500088",
+      "name": "Дмитрий Ермолин",
+      "givn": "Дмитрий",
+      "surn": "Ермолин",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "19 DEC 1956",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500087",
+          "name": "Елена Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500089",
+          "name": "Никита Ермиолин"
+        },
+        {
+          "id": "I500090",
+          "name": "Дарья Ермолина"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500078",
+      "name": "Андрей Ковригин",
+      "givn": "Андрей",
+      "surn": "Ковригин",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1895",
+      "birt_place": "",
+      "deat": "19 APR 1960",
+      "deat_place": "",
+      "father": "Иван Ковригин",
+      "father_id": "I500079",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500076",
+          "name": "Евдокия Дворникова"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500095",
+          "name": ""
+        },
+        {
+          "id": "I500096",
+          "name": ""
+        },
+        {
+          "id": "I500006",
+          "name": "Александра Ковригина"
+        },
+        {
+          "id": "I500097",
+          "name": ""
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500079",
+      "name": "Иван Ковригин",
+      "givn": "Иван",
+      "surn": "Ковригин",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1852",
+      "birt_place": "",
+      "deat": "1937",
+      "deat_place": "",
+      "father": "Максим Ковригин",
+      "father_id": "I500080",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500078",
+          "name": "Андрей Ковригин"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500080",
+      "name": "Максим Ковригин",
+      "givn": "Максим",
+      "surn": "Ковригин",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500079",
+          "name": "Иван Ковригин"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500006",
+      "name": "Александра Ковригина",
+      "givn": "Александра",
+      "surn": "Ковригина",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "11 JAN 1931",
+      "birt_place": "c. Б. Болдино, Нижегородской обл.",
+      "deat": "7 FEB 2010",
+      "deat_place": "г. Калинград",
+      "father": "Андрей Ковригин",
+      "father_id": "I500078",
+      "mother": "Евдокия Дворникова",
+      "mother_id": "I500076",
+      "spouses": [
+        {
+          "id": "I500007",
+          "name": "Василий Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500001",
+          "name": "Григорий Сустатов"
+        },
+        {
+          "id": "I500087",
+          "name": "Елена Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500086",
+      "name": "Фёдор Королёв",
+      "givn": "Фёдор",
+      "surn": "Королёв",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500074",
+          "name": "Прасковья Фёдоровна Королёва"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500074",
+      "name": "Прасковья Фёдоровна Королёва",
+      "givn": "Прасковья",
+      "surn": "Королёва",
+      "patronymic": "Фёдоровна",
+      "sex": "F",
+      "birt": "1883",
+      "birt_place": "",
+      "deat": "1969",
+      "deat_place": "",
+      "father": "Фёдор Королёв",
+      "father_id": "I500086",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500073",
+          "name": "Василий Иванович Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500071",
+          "name": "Григорий Васильевич Сустатов"
+        },
+        {
+          "id": "I500147",
+          "name": "Алексей Васильевич Сустатов"
+        },
+        {
+          "id": "I500148",
+          "name": "Максим Васильевич Сустатов"
+        }
+      ],
+      "marriages": [
+        {
+          "spouse": "Василий Иванович Сустатов",
+          "date": "30 JUN 1908",
+          "place": "с. Кошелиха",
+          "note": "CONFIRMED: метрика ЦАНО ф.570 оп.10"
+        }
+      ],
+      "note": "CONFIRMED: метрика 30.06.1908 — брак с Василием Ивановичем Сустатовым; также записана как Параскева Фёдоровна Королёва.",
+      "confidence": "confirmed",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500008",
+      "name": "Михаил Куликов",
+      "givn": "Михаил",
+      "surn": "Куликов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1907",
+      "birt_place": "Россия",
+      "deat": "1946",
+      "deat_place": "",
+      "father": "Алексей Куликов",
+      "father_id": "I500012",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500009",
+          "name": "Мария Белова"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500004",
+          "name": "Валентина Куликова"
+        },
+        {
+          "id": "I500013",
+          "name": "Алексей Куликов"
+        },
+        {
+          "id": "I500029",
+          "name": "Владимир Куликов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500012",
+      "name": "Алексей Куликов",
+      "givn": "Алексей",
+      "surn": "Куликов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500008",
+          "name": "Михаил Куликов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500004",
+      "name": "Валентина Куликова",
+      "givn": "Валентина",
+      "surn": "Куликова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "26 SEP 1934",
+      "birt_place": "Россия",
+      "deat": "14 JUL 2018",
+      "deat_place": "Санкт-Петербург, Северное Кладбище",
+      "father": "Михаил Куликов",
+      "father_id": "I500008",
+      "mother": "Мария Белова",
+      "mother_id": "I500009",
+      "spouses": [
+        {
+          "id": "I500005",
+          "name": "Егор Сальникова"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500002",
+          "name": "Ольга Сальникова"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500010",
+      "name": "Максим Сальников",
+      "givn": "Максим",
+      "surn": "Сальников",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1905",
+      "birt_place": "деревня Вергово",
+      "deat": "1905",
+      "deat_place": "деревня Вергово",
+      "father": "Петр Сальников",
+      "father_id": "I500016",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500011",
+          "name": "Агафья Ботвинина"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500005",
+          "name": "Егор Сальникова"
+        },
+        {
+          "id": "I500112",
+          "name": "Нина Сальникова"
+        },
+        {
+          "id": "I500114",
+          "name": "Валентина Сальникова"
+        },
+        {
+          "id": "I500113",
+          "name": "Любовь Сальникова"
+        },
+        {
+          "id": "I500116",
+          "name": "Иван Сальников"
+        },
+        {
+          "id": "I500115",
+          "name": "Анатолий Сальников"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500016",
+      "name": "Петр Сальников",
+      "givn": "Петр",
+      "surn": "Сальников",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "I500010",
+          "name": "Максим Сальников"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500002",
+      "name": "Ольга Сальникова",
+      "givn": "Ольга",
+      "surn": "Сальникова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "24 SEP 1956",
+      "birt_place": "г. Остров, Псковской области",
+      "deat": "",
+      "deat_place": "",
+      "father": "Егор Сальникова",
+      "father_id": "I500005",
+      "mother": "Валентина Куликова",
+      "mother_id": "I500004",
+      "spouses": [
+        {
+          "id": "I500001",
+          "name": "Григорий Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500003",
+          "name": "Игорь Сальников"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500005",
+      "name": "Егор Сальникова",
+      "givn": "Егор",
+      "surn": "Сальникова",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "28 AUG 1930",
+      "birt_place": "Россия",
+      "deat": "13 DEC 2014",
+      "deat_place": "Санкт-Петербург, Северное Кладбище",
+      "father": "Максим Сальников",
+      "father_id": "I500010",
+      "mother": "Агафья Ботвинина",
+      "mother_id": "I500011",
+      "spouses": [
+        {
+          "id": "I500004",
+          "name": "Валентина Куликова"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500002",
+          "name": "Ольга Сальникова"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    },
+    {
+      "id": "I500087",
+      "name": "Елена Сустатов",
+      "givn": "Елена",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "1 JUN 1959",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "Василий Сустатов",
+      "father_id": "I500007",
+      "mother": "Александра Ковригина",
+      "mother_id": "I500006",
+      "spouses": [
+        {
+          "id": "I500088",
+          "name": "Дмитрий Ермолин"
+        }
+      ],
+      "children": [
+        {
+          "id": "I500089",
+          "name": "Никита Ермиолин"
+        },
+        {
+          "id": "I500090",
+          "name": "Дарья Ермолина"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "modern",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500094",
+      "name": "Николай Сустатов",
+      "givn": "Николай",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "4 OCT 1936",
+      "birt_place": "Родился 4 октября 1936 года в селе Кошелиха (сейчас в Первомайском районе Нижегородской области)",
+      "deat": "29 OCT 2018",
+      "deat_place": "",
+      "father": "Григорий Васильевич Сустатов",
+      "father_id": "I500071",
+      "mother": "Евдокия Абрамова",
+      "mother_id": "I500072",
+      "spouses": [
+        {
+          "id": "I500149",
+          "name": "Нина"
+        }
+      ],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "modern",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500145",
+      "name": "Василий Иванович Сустатов",
+      "givn": "Василий Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок. 1891",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "CONFIRMED: тот же человек что I500073 (дубликат GEDCOM). Брак 30.06.1908; ранен 15.06.1916 (3-й Заамурский пограничный полк). НЕ отец Григория Ивановича (~1875).",
+      "confidence": "confirmed",
+      "category": "modern",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500146",
+      "name": "Борис Семёнович Сустатов",
+      "givn": "Борис Семёнович",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1908",
+      "birt_place": "с. Кошелиха",
+      "deat": "20 MAR 1938",
+      "deat_place": "Бутово, расстрел; реабилитирован 1959",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "ОТДЕЛЬНАЯ ВЕТКА. Не отец Василия Ивановича. GEDCOM ошибочно: Борис Михайлович",
+      "confidence": "gedcom",
+      "category": "modern",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500147",
+      "name": "Алексей Васильевич Сустатов",
+      "givn": "Алексей Васильевич",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1913",
+      "birt_place": "Россия, с. Кошелиха, Первомайского района, Нижегородской области",
+      "deat": "",
+      "deat_place": "",
+      "father": "Василий Иванович Сустатов",
+      "father_id": "I500073",
+      "mother": "Прасковья Фёдоровна Королёва",
+      "mother_id": "I500074",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "modern",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500148",
+      "name": "Максим Васильевич Сустатов",
+      "givn": "Максим Васильевич",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1917",
+      "birt_place": "Россия, с. Кошелиха, Первомайского района, Нижегородской области",
+      "deat": "",
+      "deat_place": "",
+      "father": "Василий Иванович Сустатов",
+      "father_id": "I500073",
+      "mother": "Прасковья Фёдоровна Королёва",
+      "mother_id": "I500074",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "modern",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH003",
+      "name": "Кондратий Андреевич Сустатов",
+      "givn": "Кондратий Андреевич",
+      "surn": "Сустатов",
+      "patronymic": "Андреевич",
+      "sex": "M",
+      "birt": "ок. 1775",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "1847",
+      "deat_place": "",
+      "father": "Андрей Петрович Сустатов",
+      "father_id": "NH001",
+      "mother": "Дарья",
+      "mother_id": "NH002",
+      "spouses": [
+        {
+          "id": "NH004",
+          "name": "Анна"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH005",
+          "name": "Аверьян Кондратьевич Сустатов"
+        },
+        {
+          "id": "NH007",
+          "name": "Максим Кондратьевич Сустатов"
+        },
+        {
+          "id": "NH008",
+          "name": "Степан Кондратьевич Сустатов"
+        }
+      ],
+      "marriages": [
+        {
+          "spouse": "Анна",
+          "date": "08 NOV 1807",
+          "place": "",
+          "note": ""
+        }
+      ],
+      "note": "CONFIRMED: брак 08.11.1807 с Анной Филиповной (дочь Филиппа Михайловича); ревизия 1858 — 42/†1847; сыновья Аверьян, Максим (†1840), Степан (рекрут).",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH005",
+      "name": "Аверьян Кондратьевич Сустатов",
+      "givn": "Аверьян Кондратьевич",
+      "surn": "Сустатов",
+      "patronymic": "Кондратьевич",
+      "sex": "M",
+      "birt": "ок.1827",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Кондратий Андреевич Сустатов",
+      "father_id": "NH003",
+      "mother": "Анна",
+      "mother_id": "NH004",
+      "spouses": [
+        {
+          "id": "NH006",
+          "name": "Дарья"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH034",
+          "name": "Екатерина Аверьяновна Сустатовa"
+        }
+      ],
+      "marriages": [
+        {
+          "spouse": "Дарья",
+          "date": "08 NOV 1835",
+          "place": "",
+          "note": ""
+        }
+      ],
+      "note": "CONFIRMED брак 08.11.1835",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH007",
+      "name": "Максим Кондратьевич Сустатов",
+      "givn": "Максим Кондратьевич",
+      "surn": "Сустатов",
+      "patronymic": "Кондратьевич",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "1840",
+      "deat_place": "",
+      "father": "Кондратий Андреевич Сустатов",
+      "father_id": "NH003",
+      "mother": "Анна",
+      "mother_id": "NH004",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "CONFIRMED сын Кондратия",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH008",
+      "name": "Степан Кондратьевич Сустатов",
+      "givn": "Степан Кондратьевич",
+      "surn": "Сустатов",
+      "patronymic": "Кондратьевич",
+      "sex": "M",
+      "birt": "ок.1841",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Кондратий Андреевич Сустатов",
+      "father_id": "NH003",
+      "mother": "Анна",
+      "mother_id": "NH004",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "CONFIRMED рекрут",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH009",
+      "name": "Василий Андреевич Сустатов",
+      "givn": "Василий Андреевич",
+      "surn": "Сустатов",
+      "patronymic": "Андреевич",
+      "sex": "M",
+      "birt": "ок.1817",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Андрей Петрович Сустатов",
+      "father_id": "NH001",
+      "mother": "Дарья",
+      "mother_id": "NH002",
+      "spouses": [
+        {
+          "id": "NH010",
+          "name": "Ульяна"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH011",
+          "name": "Аким Васильевич Сустатов"
+        },
+        {
+          "id": "NH012",
+          "name": "Степан Васильевич Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "CONFIRMED брат Кондратия",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH011",
+      "name": "Аким Васильевич Сустатов",
+      "givn": "Аким Васильевич",
+      "surn": "Сустатов",
+      "patronymic": "Васильевич",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Василий Андреевич Сустатов",
+      "father_id": "NH009",
+      "mother": "Ульяна",
+      "mother_id": "NH010",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH012",
+      "name": "Степан Васильевич Сустатов",
+      "givn": "Степан Васильевич",
+      "surn": "Сустатов",
+      "patronymic": "Васильевич",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Василий Андреевич Сустатов",
+      "father_id": "NH009",
+      "mother": "Ульяна",
+      "mother_id": "NH010",
+      "spouses": [],
+      "children": [
+        {
+          "id": "NH031",
+          "name": "Иван Степанович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH017",
+      "name": "Фёдор Иванович Сустатов",
+      "givn": "Фёдор Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок.1842",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Иван Иванович Сустатов",
+      "father_id": "NH015",
+      "mother": "Матрёна",
+      "mother_id": "NH016",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "CONFIRMED: = NS001 Фёдор Иванович (~1842); двоюродная ветка; дети Александр, Михаил, Степан, Яков — совпадают с VGD (ВОВ).",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH018",
+      "name": "Федот Иванович Сустатов",
+      "givn": "Федот Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок.1845",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Иван Иванович Сустатов",
+      "father_id": "NH015",
+      "mother": "Матрёна",
+      "mother_id": "NH016",
+      "spouses": [],
+      "children": [
+        {
+          "id": "NH029",
+          "name": "Алексей Федотovich Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH020",
+      "name": "Иван Иванович Сустатов",
+      "givn": "Иван Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок.1851",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Иван Иванович Сустатов",
+      "father_id": "NH015",
+      "mother": "Матрёна",
+      "mother_id": "NH016",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH021",
+      "name": "Матвей Иванович Сустатов",
+      "givn": "Матвей Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок.1821",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Иван Андреевич Сустатов",
+      "father_id": "NH013",
+      "mother": "Мавра",
+      "mother_id": "NH014",
+      "spouses": [],
+      "children": [
+        {
+          "id": "NH022",
+          "name": "Яков Матвеевич Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH022",
+      "name": "Яков Матвеевич Сустатов",
+      "givn": "Яков Матвеевич",
+      "surn": "Сустатов",
+      "patronymic": "Матвеевич",
+      "sex": "M",
+      "birt": "ок.1840",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Матвей Иванович Сустатов",
+      "father_id": "NH021",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH023",
+      "name": "Лев Андреевич Сустатов",
+      "givn": "Лев Андреевич",
+      "surn": "Сустатов",
+      "patronymic": "Андреевич",
+      "sex": "M",
+      "birt": "ок.1789",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Андрей Петрович Сустатов",
+      "father_id": "NH001",
+      "mother": "Дарья",
+      "mother_id": "NH002",
+      "spouses": [
+        {
+          "id": "NH024",
+          "name": "Варвара"
+        }
+      ],
+      "children": [
+        {
+          "id": "NH025",
+          "name": "Иван Львович Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "CONFIRMED параллельная ветвь",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH025",
+      "name": "Иван Львович Сустатов",
+      "givn": "Иван Львович",
+      "surn": "Сустатов",
+      "patronymic": "Львович",
+      "sex": "M",
+      "birt": "ок.1844",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Лев Андреевич Сустатов",
+      "father_id": "NH023",
+      "mother": "Варвара",
+      "mother_id": "NH024",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH026",
+      "name": "Лев Анисимович Сустатов",
+      "givn": "Лев Анисимович",
+      "surn": "Сустатов",
+      "patronymic": "Анисимович",
+      "sex": "M",
+      "birt": "ок.1815",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "1843",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "CONFIRMED",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH027",
+      "name": "Василий Анисимович Сустатов",
+      "givn": "Василий Анисимович",
+      "surn": "Сустатов",
+      "patronymic": "Анисимович",
+      "sex": "M",
+      "birt": "ок.1819",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH028",
+          "name": "Аксинья"
+        }
+      ],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH029",
+      "name": "Алексей Федотovich Сустатов",
+      "givn": "Алексей Федотovich",
+      "surn": "Сустатов",
+      "patronymic": "Федотович",
+      "sex": "M",
+      "birt": "ок. 1874",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Федот Иванович Сустатов",
+      "father_id": "NH018",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH030",
+          "name": "Евфросиния"
+        }
+      ],
+      "children": [],
+      "marriages": [
+        {
+          "spouse": "Евфросиния",
+          "date": "19 APR 1892",
+          "place": "",
+          "note": ""
+        }
+      ],
+      "note": "CONFIRMED: брак 19.04.1892 с Евфросинией Приписновой; WWI 1917 — крестьянин с. Кошелиха (Ардатовское присутствие).",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH031",
+      "name": "Иван Степанович Сустатов",
+      "givn": "Иван Степанович",
+      "surn": "Сустатов",
+      "patronymic": "Степанович",
+      "sex": "M",
+      "birt": "ок.1864",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Степан Васильевич Сустатов",
+      "father_id": "NH012",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NH032",
+          "name": "Анна"
+        }
+      ],
+      "children": [],
+      "marriages": [],
+      "note": "CONFIRMED: НЕ путать с Иваном Ивановичем (~1850)! Брак 08.11.1868 с Анной Ивановной.",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH033",
+      "name": "Иван Иванович Сустатов",
+      "givn": "Иван Иванович",
+      "surn": "Сустатов",
+      "patronymic": "Иванович",
+      "sex": "M",
+      "birt": "ок. 1850",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "CONFIRMED: отдельная линия; брак 08.11.1868 с Анной Ивановной (18 лет).",
+      "confidence": "confirmed",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH_XVII1",
+      "name": "Сыресь Сустатов",
+      "givn": "Сыресь",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "1596/1603 мурза Арзамас. Контекст, не доказанная связь",
+      "confidence": "gedcom",
+      "category": "xvii",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH_XVII2",
+      "name": "Бажен Сустатов",
+      "givn": "Бажен",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "1659-1670 мордовский мурза",
+      "confidence": "gedcom",
+      "category": "xvii",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH_XVII3",
+      "name": "Гришка Сустатов",
+      "givn": "Гришка",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "1671 Алатыр",
+      "confidence": "gedcom",
+      "category": "xvii",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH_XVII4",
+      "name": "Ненашка Сустатов",
+      "givn": "Ненашка",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "1671",
+      "confidence": "gedcom",
+      "category": "xvii",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH_XVII5",
+      "name": "Исанка Сустатов",
+      "givn": "Исанка",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "1671",
+      "confidence": "gedcom",
+      "category": "xvii",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH_XVII6",
+      "name": "Ездайка Сустатов",
+      "givn": "Ездайка",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "1671",
+      "confidence": "gedcom",
+      "category": "xvii",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH_XVII7",
+      "name": "Сустат Атков Сустатов",
+      "givn": "Сустат Атков",
+      "surn": "Сустатов",
+      "patronymic": "Атков",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "1624 Киржеман",
+      "confidence": "gedcom",
+      "category": "xvii",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH_XVII8",
+      "name": "Сустат Секшенев Сустатов",
+      "givn": "Сустат Секшенев",
+      "surn": "Сустатов",
+      "patronymic": "Секшенев",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "1629 мордvin",
+      "confidence": "gedcom",
+      "category": "xvii",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS001",
+      "name": "Фёдор Иванович Сустатов",
+      "givn": "Фёдор Иванович",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "NS002",
+          "name": "Александр Сустатов"
+        },
+        {
+          "id": "NS010",
+          "name": "Михаил Сустатов"
+        },
+        {
+          "id": "NS011",
+          "name": "Степан Сустатов"
+        },
+        {
+          "id": "NS012",
+          "name": "Яков Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "CONFIRMED: = NH017 Фёдор Иванович (~1842)",
+      "confidence": "confirmed",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS002",
+      "name": "Александр Сустатов",
+      "givn": "Александр",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "ок. 1870",
+      "birt_place": "с. Кошелиха",
+      "deat": "",
+      "deat_place": "",
+      "father": "Фёдор Иванович Сустатов",
+      "father_id": "NS001",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NS003",
+          "name": "Екатерина Сустатова"
+        }
+      ],
+      "children": [
+        {
+          "id": "NS004",
+          "name": "Серафим Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "Александр Фёдорович",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS004",
+      "name": "Серафим Сустатов",
+      "givn": "Серафим",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1909",
+      "birt_place": "с. Кошелиха",
+      "deat": "",
+      "deat_place": "",
+      "father": "Александр Сустатов",
+      "father_id": "NS002",
+      "mother": "Екатерина Сустатова",
+      "mother_id": "NS003",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "875 сп, 290 сд, 154 УР; вероятный двоюродный дядя ядра",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS005",
+      "name": "Яков Сустатов",
+      "givn": "Яков",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [
+        {
+          "id": "NS006",
+          "name": "Никита Сустатов"
+        },
+        {
+          "id": "NS008",
+          "name": "Василий Сустатов"
+        },
+        {
+          "id": "NS009",
+          "name": "Николай Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "Яков Матвеевич, ветка XIX в.",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS006",
+      "name": "Никита Сустатов",
+      "givn": "Никита",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "Яков Сустатов",
+      "father_id": "NS005",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "Никита Яковлевич, ссылка в Сибирь",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS008",
+      "name": "Василий Сустатов",
+      "givn": "Василий",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1910",
+      "birt_place": "с. Кошелиха",
+      "deat": "9 DEC 1941",
+      "deat_place": "",
+      "father": "Яков Сустатов",
+      "father_id": "NS005",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "Василий Яковлевич, плен ВОВ",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS009",
+      "name": "Николай Сустатов",
+      "givn": "Николай",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1918",
+      "birt_place": "с. Кошелиха",
+      "deat": "20 DEC 1943",
+      "deat_place": "",
+      "father": "Яков Сустатов",
+      "father_id": "NS005",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "Николай Яковлевич",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS010",
+      "name": "Михаил Сустатов",
+      "givn": "Михаил",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1913",
+      "birt_place": "с. Кошелиха",
+      "deat": "",
+      "deat_place": "",
+      "father": "Фёдор Иванович Сустатов",
+      "father_id": "NS001",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "Михаил Фёдорович, пропал 12.1941",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS011",
+      "name": "Степан Сустатов",
+      "givn": "Степан",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1910",
+      "birt_place": "с. Кошелиха",
+      "deat": "1 MAY 1943",
+      "deat_place": "",
+      "father": "Фёдор Иванович Сустатов",
+      "father_id": "NS001",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "Степан Фёдорович, партизан",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS012",
+      "name": "Яков Сустатов",
+      "givn": "Яков",
+      "surn": "Сустатов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "1910",
+      "birt_place": "с. Кошелиха",
+      "deat": "8 MAY 1942",
+      "deat_place": "",
+      "father": "Фёдор Иванович Сустатов",
+      "father_id": "NS001",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "Яков Фёдорович, плен",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NH034",
+      "name": "Екатерина Аверьяновна Сустатовa",
+      "givn": "Екатерина Аверьяновна",
+      "surn": "Сустатовa",
+      "patronymic": "Аверьяновна",
+      "sex": "F",
+      "birt": "ок.1830",
+      "birt_place": "с. Кошелиха, Ардатовский уезд",
+      "deat": "",
+      "deat_place": "",
+      "father": "Аверьян Кондратьевич Сустатов",
+      "father_id": "NH005",
+      "mother": "Дарья",
+      "mother_id": "NH006",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "historical",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500091",
+      "name": "Татьяна Сустатова",
+      "givn": "Татьяна",
+      "surn": "Сустатова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "1932",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "Григорий Васильевич Сустатов",
+      "father_id": "I500071",
+      "mother": "Евдокия Абрамова",
+      "mother_id": "I500072",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "modern",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500092",
+      "name": "Анна Сустатова",
+      "givn": "Анна",
+      "surn": "Сустатова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "10 JUL 1934",
+      "birt_place": "",
+      "deat": "23 AUG 1953",
+      "deat_place": "",
+      "father": "Григорий Васильевич Сустатов",
+      "father_id": "I500071",
+      "mother": "Евдокия Абрамова",
+      "mother_id": "I500072",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "modern",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500093",
+      "name": "Вера Сустатова",
+      "givn": "Вера",
+      "surn": "Сустатова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "7 OCT 1939",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "Григорий Васильевич Сустатов",
+      "father_id": "I500071",
+      "mother": "Евдокия Абрамова",
+      "mother_id": "I500072",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "modern",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS003",
+      "name": "Екатерина Сустатова",
+      "givn": "Екатерина",
+      "surn": "Сустатова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "NS002",
+          "name": "Александр Сустатов"
+        }
+      ],
+      "children": [
+        {
+          "id": "NS004",
+          "name": "Серафим Сустатов"
+        }
+      ],
+      "marriages": [],
+      "note": "Екатерина Степановна, жена Александра Ф.",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "NS007",
+      "name": "Евдокия Сустатова",
+      "givn": "Евдокия",
+      "surn": "Сустатова",
+      "patronymic": "",
+      "sex": "F",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [],
+      "children": [],
+      "marriages": [],
+      "note": "Евдокия Федотовна, брак 25.07.1886",
+      "confidence": "gedcom",
+      "category": "cousin",
+      "is_direct": false,
+      "relation_igor": ""
+    },
+    {
+      "id": "I500022",
+      "name": "Илья Филиппов",
+      "givn": "Илья",
+      "surn": "Филиппов",
+      "patronymic": "",
+      "sex": "M",
+      "birt": "",
+      "birt_place": "",
+      "deat": "",
+      "deat_place": "",
+      "father": "",
+      "father_id": "",
+      "mother": "",
+      "mother_id": "",
+      "spouses": [
+        {
+          "id": "I500101",
+          "name": ""
+        }
+      ],
+      "children": [
+        {
+          "id": "I500099",
+          "name": "Иван Филиппов"
+        },
+        {
+          "id": "I500015",
+          "name": ""
+        }
+      ],
+      "marriages": [],
+      "note": "",
+      "confidence": "gedcom",
+      "category": "related",
+      "is_direct": false,
+      "relation_igor": "Супруг(а)/родственник по браку"
+    }
+  ],
+  "families": [
+    {
+      "id": "F500001",
+      "husb": "I500001",
+      "wife": "I500002",
+      "children": [
+        "I500003"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500002",
+      "husb": "I500005",
+      "wife": "I500004",
+      "children": [
+        "I500002"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500003",
+      "husb": "I500007",
+      "wife": "I500006",
+      "children": [
+        "I500001",
+        "I500087"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500004",
+      "husb": "I500008",
+      "wife": "I500009",
+      "children": [
+        "I500004",
+        "I500013",
+        "I500029"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500005",
+      "husb": "I500010",
+      "wife": "I500011",
+      "children": [
+        "I500005",
+        "I500112",
+        "I500114",
+        "I500113",
+        "I500116",
+        "I500115"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500006",
+      "husb": "I500012",
+      "wife": "",
+      "children": [
+        "I500008"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500007",
+      "husb": "I500014",
+      "wife": "I500015",
+      "children": [
+        "I500009",
+        "I500019",
+        "I500102",
+        "I500021",
+        "I500020"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500008",
+      "husb": "I500016",
+      "wife": "",
+      "children": [
+        "I500010"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500009",
+      "husb": "I500017",
+      "wife": "I500150",
+      "children": [
+        "I500011",
+        "I500120"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500010",
+      "husb": "I500018",
+      "wife": "",
+      "children": [
+        "I500014"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500011",
+      "husb": "I500022",
+      "wife": "I500101",
+      "children": [
+        "I500099",
+        "I500015"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500036",
+      "husb": "I500071",
+      "wife": "I500072",
+      "children": [
+        "I500007",
+        "I500091",
+        "I500092",
+        "I500094",
+        "I500093"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500037",
+      "husb": "I500073",
+      "wife": "I500074",
+      "children": [
+        "I500071",
+        "I500147",
+        "I500148"
+      ],
+      "marr": "30 JUN 1908",
+      "marr_place": "с. Кошелиха",
+      "note": "CONFIRMED: метрика ЦАНО ф.570 оп.10"
+    },
+    {
+      "id": "F500038",
+      "husb": "I500078",
+      "wife": "I500076",
+      "children": [
+        "I500095",
+        "I500096",
+        "I500006",
+        "I500097"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500039",
+      "husb": "I500077",
+      "wife": "",
+      "children": [
+        "I500076"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500040",
+      "husb": "I500079",
+      "wife": "",
+      "children": [
+        "I500078"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500041",
+      "husb": "I500080",
+      "wife": "",
+      "children": [
+        "I500079"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500042",
+      "husb": "I500081",
+      "wife": "I500082",
+      "children": [
+        "I500072"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500043",
+      "husb": "I500083",
+      "wife": "",
+      "children": [
+        "I500082"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500044",
+      "husb": "I500084",
+      "wife": "",
+      "children": [
+        "I500081"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500045",
+      "husb": "I500085",
+      "wife": "",
+      "children": [
+        "I500073"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500046",
+      "husb": "I500086",
+      "wife": "",
+      "children": [
+        "I500074"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500047",
+      "husb": "I500088",
+      "wife": "I500087",
+      "children": [
+        "I500089",
+        "I500090"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500062",
+      "husb": "I500001",
+      "wife": "I500142",
+      "children": [],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500064",
+      "husb": "I500145",
+      "wife": "",
+      "children": [],
+      "marr": "",
+      "marr_place": "",
+      "note": "ОТМЕНЕНО: ложная связь I500145→I500085"
+    },
+    {
+      "id": "F500065",
+      "husb": "I500146",
+      "wife": "",
+      "children": [],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500066",
+      "husb": "I500094",
+      "wife": "I500149",
+      "children": [],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500069",
+      "husb": "I500155",
+      "wife": "",
+      "children": [
+        "I500017"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "F500070",
+      "husb": "I500156",
+      "wife": "",
+      "children": [
+        "I500150"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF001",
+      "husb": "NS001",
+      "wife": "",
+      "children": [
+        "NS002",
+        "NS010",
+        "NS011",
+        "NS012"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF002",
+      "husb": "NS002",
+      "wife": "NS003",
+      "children": [
+        "NS004"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF003",
+      "husb": "NS005",
+      "wife": "",
+      "children": [
+        "NS006",
+        "NS008",
+        "NS009"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_KONDR",
+      "husb": "NH003",
+      "wife": "NH004",
+      "children": [
+        "NH005",
+        "NH007",
+        "NH008"
+      ],
+      "marr": "08 NOV 1807",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_AVER",
+      "husb": "NH005",
+      "wife": "NH006",
+      "children": [
+        "NH034"
+      ],
+      "marr": "08 NOV 1835",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_VAS_ANDR",
+      "husb": "NH009",
+      "wife": "NH010",
+      "children": [
+        "NH011",
+        "NH012"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_IVAN_ANDR",
+      "husb": "NH013",
+      "wife": "NH014",
+      "children": [
+        "NH015",
+        "NH021"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_IVAN1815",
+      "husb": "NH015",
+      "wife": "NH016",
+      "children": [
+        "NH017",
+        "NH018",
+        "NH019",
+        "NH020"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_IVAN1847",
+      "husb": "NH019",
+      "wife": "",
+      "children": [
+        "NH035"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_DIRECT_1",
+      "husb": "NH035",
+      "wife": "",
+      "children": [
+        "I500085"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": "I500145 (Василий Иванович) — внук NH035 через I500085, не брат"
+    },
+    {
+      "id": "NF_FEDOT",
+      "husb": "NH018",
+      "wife": "",
+      "children": [
+        "NH029"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_ALEX_FED",
+      "husb": "NH029",
+      "wife": "NH030",
+      "children": [],
+      "marr": "19 APR 1892",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_MATVEY",
+      "husb": "NH021",
+      "wife": "",
+      "children": [
+        "NH022"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_LEV",
+      "husb": "NH023",
+      "wife": "NH024",
+      "children": [
+        "NH025"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_VAS_ANIS",
+      "husb": "NH027",
+      "wife": "NH028",
+      "children": [],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_STEP_VAS",
+      "husb": "NH012",
+      "wife": "",
+      "children": [
+        "NH031"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_IVAN_ST",
+      "husb": "NH031",
+      "wife": "NH032",
+      "children": [],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_IVAN1868",
+      "husb": "NH033",
+      "wife": "",
+      "children": [],
+      "marr": "",
+      "marr_place": "",
+      "note": ""
+    },
+    {
+      "id": "NF_ANDREI",
+      "husb": "NH001",
+      "wife": "NH002",
+      "children": [
+        "NH003",
+        "NH009",
+        "NH013",
+        "NH023",
+        "NH036"
+      ],
+      "marr": "",
+      "marr_place": "",
+      "note": "1811 revision family"
+    }
+  ]
+}
