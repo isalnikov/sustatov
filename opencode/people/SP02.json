@@ -1,0 +1,40 @@
+{
+  "id": "SP02",
+  "surname": "",
+  "given_name": "Аксинья",
+  "patronymic": "Алексеевна",
+  "full_name": "Аксинья Алексеевна (Ивановна)",
+  "sex": "F",
+  "birth": {
+    "date": "~1740",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse",
+  "generation": 0,
+  "relation_to_direct_line": "супруг(а) по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "жена Петра Никитича",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "D04"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "РГАДА, ф.350, оп.2, д.114, лл.1262–1267"
+    }
+  ],
+  "events": []
+}

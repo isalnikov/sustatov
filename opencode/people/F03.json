@@ -1,0 +1,40 @@
+{
+  "id": "F03",
+  "surname": "Ковригин",
+  "given_name": "Максим",
+  "patronymic": "",
+  "full_name": "Максим Ковригин",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse_family",
+  "generation": 0,
+  "relation_to_direct_line": "родственник по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "прадед Александры Ковригиной",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "F02"
+    ]
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

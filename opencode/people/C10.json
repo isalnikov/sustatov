@@ -1,0 +1,38 @@
+{
+  "id": "C10",
+  "surname": "Сустатов",
+  "given_name": "Михаил",
+  "patronymic": "Фёдорович",
+  "full_name": "Михаил Фёдорович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1913",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "collateral",
+  "generation": 0,
+  "relation_to_direct_line": "боковая ветвь (родство не установлено)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "пропал без вести __.12.1941",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    }
+  ],
+  "events": []
+}

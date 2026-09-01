@@ -1,0 +1,52 @@
+{
+  "id": "S02",
+  "surname": "Сустатов",
+  "given_name": "Кондратий",
+  "patronymic": "Андреевич",
+  "full_name": "Кондратий Андреевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "1847",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 4,
+  "relation_to_direct_line": "брат Ивана Андреевича",
+  "social_estate": "государственный крестьянин",
+  "occupation": "",
+  "religion": "",
+  "notes": "брак 08.11.1807; жена Анна Филипповна; ревизия 1851 «42 / умер 1847»",
+  "relationships": {
+    "father": "D05",
+    "mother": "SP03",
+    "spouses": [
+      "SP13"
+    ],
+    "children": [
+      "C01"
+    ]
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/140.htm"
+    },
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/160.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "marriage",
+      "date": "08.11.1807",
+      "note": "сын Андрея Петровича"
+    }
+  ]
+}

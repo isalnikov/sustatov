@@ -1,0 +1,38 @@
+{
+  "id": "C12",
+  "surname": "Сустатов",
+  "given_name": "Григорий",
+  "patronymic": "Михайлович",
+  "full_name": "Григорий Михайлович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1918",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "collateral",
+  "generation": 0,
+  "relation_to_direct_line": "боковая ветвь (родство не установлено)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "рядовой 110 тбр 18 тк; «За боевые заслуги», Отеч.войны II",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/100.htm"
+    }
+  ],
+  "events": []
+}

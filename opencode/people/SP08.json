@@ -1,0 +1,40 @@
+{
+  "id": "SP08",
+  "surname": "Ковригина",
+  "given_name": "Александра",
+  "patronymic": "",
+  "full_name": "Александра Ковригина",
+  "sex": "F",
+  "birth": {
+    "date": "11.01.1931",
+    "place": ""
+  },
+  "death": {
+    "date": "07.02.2010",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse",
+  "generation": 0,
+  "relation_to_direct_line": "супруг(а) по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "жена Василия 1930; с. Б. Болдино",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "D12"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

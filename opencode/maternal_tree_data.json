@@ -1,0 +1,1850 @@
+{
+  "meta": {
+    "title": "Материнские ветви рода Сустатовых",
+    "updated": "2026-09-01",
+    "sources": [
+      "GEDCOM MyHeritage",
+      "VGD №86148",
+      "cursor/todo.md",
+      "opencode/sustatov_tree_data.json"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "h-nikita",
+      "name": "Никита Иванович",
+      "sex": "M",
+      "born": "~1719",
+      "died": "1773",
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "pat-ivan-nikita"
+      ],
+      "spouseIds": [
+        "w-avdotya"
+      ],
+      "childIds": [
+        "h-petr"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2728884"
+      ],
+      "notes": "Прямая линия"
+    },
+    {
+      "id": "pat-ivan-nikita",
+      "name": "Иван ??? (отец Никиты)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "unknown",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "h-nikita"
+      ],
+      "status": "notfound",
+      "sources": [
+        "VGD p4877905"
+      ],
+      "notes": "NOT FOUND в Сыreсеve"
+    },
+    {
+      "id": "w-avdotya",
+      "name": "Авдотья Васильевна",
+      "sex": "F",
+      "born": "~1713",
+      "died": null,
+      "role": "wife",
+      "branch": "direct",
+      "parentIds": [
+        "pat-vasiliy-avdotya"
+      ],
+      "spouseIds": [
+        "h-nikita"
+      ],
+      "childIds": [
+        "h-petr",
+        "d-fedosya"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2728884"
+      ],
+      "notes": "«Старинная той деревни» (Камкина); 50 л. в 1763"
+    },
+    {
+      "id": "pat-vasiliy-avdotya",
+      "name": "Василий (отец Авдотьи)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "unknown",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-avdotya"
+      ],
+      "status": "probable",
+      "sources": [
+        "отчество"
+      ],
+      "notes": "Только по отчеству"
+    },
+    {
+      "id": "d-fedosya",
+      "name": "Федосья Никитична",
+      "sex": "F",
+      "born": "~1753",
+      "died": null,
+      "role": "daughter",
+      "branch": "direct",
+      "parentIds": [
+        "h-nikita",
+        "w-avdotya"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2728884"
+      ],
+      "notes": "Дочь; брак ❌"
+    },
+    {
+      "id": "h-petr",
+      "name": "Пётр Никитич",
+      "sex": "M",
+      "born": "~1737",
+      "died": "1819",
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-nikita",
+        "w-avdotya"
+      ],
+      "spouseIds": [
+        "w-aksinya"
+      ],
+      "childIds": [
+        "h-andrey",
+        "h-mikhail-side"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-aksinya",
+      "name": "Аксинья Алексеевна (Ивановна)",
+      "sex": "F",
+      "born": "~1740",
+      "died": null,
+      "role": "wife",
+      "branch": "direct",
+      "parentIds": [
+        "pat-aleksey-aksinya"
+      ],
+      "spouseIds": [
+        "h-petr"
+      ],
+      "childIds": [
+        "h-andrey",
+        "h-mikhail-side"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2728884",
+        "VGD p2728935"
+      ],
+      "notes": "Из с. Афтодеево (1763); 23/42 в 1782"
+    },
+    {
+      "id": "pat-aleksey-aksinya",
+      "name": "Алексей (отец Аксиньи)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "aftodeevo",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-aksinya"
+      ],
+      "status": "probable",
+      "sources": [
+        "VGD 1763"
+      ],
+      "notes": "1782: «Ивановна» — возможно отчество от другого отца"
+    },
+    {
+      "id": "h-mikhail-side",
+      "name": "Михаил Петрович",
+      "sex": "M",
+      "born": "~1752",
+      "died": "1816",
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-petr",
+        "w-aksinya"
+      ],
+      "spouseIds": [],
+      "childIds": [
+        "h-boris-mikhail"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD"
+      ],
+      "notes": "Брат Андрея; боковая ветвь"
+    },
+    {
+      "id": "h-boris-mikhail",
+      "name": "Борис Михайлович",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-mikhail-side"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD 140.htm"
+      ],
+      "notes": "Рекрут с 1805"
+    },
+    {
+      "id": "h-andrey",
+      "name": "Андрей Петрович",
+      "sex": "M",
+      "born": "~1760",
+      "died": "1811",
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-petr",
+        "w-aksinya"
+      ],
+      "spouseIds": [
+        "w-darya"
+      ],
+      "childIds": [
+        "h-ivan-andreevich",
+        "h-lev",
+        "h-kondratiy",
+        "h-vasiliy-andreevich"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2806392"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-darya",
+      "name": "Дарья (Ермолаевна?)",
+      "sex": "F",
+      "born": null,
+      "died": null,
+      "role": "wife",
+      "branch": "direct",
+      "parentIds": [
+        "pat-ermolay-darya"
+      ],
+      "spouseIds": [
+        "h-andrey"
+      ],
+      "childIds": [
+        "h-ivan-andreevich",
+        "h-lev",
+        "h-kondratiy",
+        "h-vasiliy-andreevich"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2728935"
+      ],
+      "notes": "1782: Дарья Ермолаevna; сыновья Ефим (4), Лев (1)"
+    },
+    {
+      "id": "pat-ermolay-darya",
+      "name": "Ермолай (отец Дарьи?)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "unknown",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-darya"
+      ],
+      "status": "probable",
+      "sources": [
+        "VGD 1782"
+      ],
+      "notes": "Гипотеза по отчеству"
+    },
+    {
+      "id": "h-ivan-andreevich",
+      "name": "Иван Андреевич",
+      "sex": "M",
+      "born": "~1793",
+      "died": "1833",
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-andrey",
+        "w-darya"
+      ],
+      "spouseIds": [
+        "w-mavra"
+      ],
+      "childIds": [
+        "h-ivan-1815"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2806392"
+      ],
+      "notes": "Раздел с сёстрами 1812; сёстры — имена ❌"
+    },
+    {
+      "id": "w-mavra",
+      "name": "Мавра",
+      "sex": "F",
+      "born": null,
+      "died": null,
+      "role": "wife",
+      "branch": "direct",
+      "parentIds": [],
+      "spouseIds": [
+        "h-ivan-andreevich"
+      ],
+      "childIds": [
+        "h-ivan-1815"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2806392"
+      ],
+      "notes": "Без отчества в ревизии"
+    },
+    {
+      "id": "h-ivan-1815",
+      "name": "Иван Иванович (~1815)",
+      "sex": "M",
+      "born": "~1815",
+      "died": null,
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-ivan-andreevich",
+        "w-mavra"
+      ],
+      "spouseIds": [
+        "w-matrema"
+      ],
+      "childIds": [
+        "h-ivan-1847",
+        "h-ivan-1851",
+        "h-fyodor",
+        "h-fedot"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD рев.1858"
+      ],
+      "notes": "Двор №25; 36/43"
+    },
+    {
+      "id": "w-matrema",
+      "name": "Матрёна Фёдоровна",
+      "sex": "F",
+      "born": "~1824",
+      "died": null,
+      "role": "wife",
+      "branch": "direct",
+      "parentIds": [
+        "pat-fyodor-matrema"
+      ],
+      "spouseIds": [
+        "h-ivan-1815"
+      ],
+      "childIds": [
+        "h-ivan-1847",
+        "h-ivan-1851",
+        "h-fyodor",
+        "h-fedot"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD рев.1858"
+      ],
+      "notes": "34 л. в 1858"
+    },
+    {
+      "id": "pat-fyodor-matrema",
+      "name": "Фёдор (отец Матрёны)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "koshelikha",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-matrema"
+      ],
+      "status": "probable",
+      "sources": [
+        "отчество"
+      ],
+      "notes": "Искать в ревизиях 1834 / метриках 1820-е"
+    },
+    {
+      "id": "h-ivan-1847",
+      "name": "Иван Иванович «старший» (~1847)",
+      "sex": "M",
+      "born": "~1847",
+      "died": "≤1879",
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-ivan-1815",
+        "w-matrema"
+      ],
+      "spouseIds": [
+        "w-anisya"
+      ],
+      "childIds": [
+        "h-ivan-1870"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD рев.1858",
+        "VGD 1879"
+      ],
+      "notes": "4/11 в 1858; солдат"
+    },
+    {
+      "id": "w-anisya",
+      "name": "Анисья Степановна",
+      "sex": "F",
+      "born": "~1844",
+      "died": null,
+      "role": "wife",
+      "branch": "direct",
+      "parentIds": [
+        "pat-stepan-anisya"
+      ],
+      "spouseIds": [
+        "h-ivan-1847"
+      ],
+      "childIds": [
+        "h-ivan-1870"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD 02.02.1879"
+      ],
+      "notes": "Вдова солдата Ивана (35 л.)"
+    },
+    {
+      "id": "pat-stepan-anisya",
+      "name": "Степан (отец Анисьи)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "koshelikha",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-anisya"
+      ],
+      "status": "probable",
+      "sources": [
+        "метрика 1879"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "h-ivan-1870",
+      "name": "Иван Иванович (~1870)",
+      "sex": "M",
+      "born": "~1870",
+      "died": null,
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-ivan-1847",
+        "w-anisya"
+      ],
+      "spouseIds": [
+        "w-unknown-1890"
+      ],
+      "childIds": [
+        "h-vasiliy-1890"
+      ],
+      "status": "probable",
+      "sources": [
+        "логика отчества"
+      ],
+      "notes": "PROBABLE до метрик"
+    },
+    {
+      "id": "w-unknown-1890",
+      "name": "❓ Жена Ивана ~1870 (мать Василия)",
+      "sex": "F",
+      "born": null,
+      "died": null,
+      "role": "wife",
+      "branch": "unknown",
+      "parentIds": [],
+      "spouseIds": [
+        "h-ivan-1870"
+      ],
+      "childIds": [
+        "h-vasiliy-1890"
+      ],
+      "status": "notfound",
+      "sources": [
+        "ЦАНО ф.570"
+      ],
+      "notes": "Метрика брака ~1888–1892"
+    },
+    {
+      "id": "h-ivan-1851",
+      "name": "Иван Иванович «младший» (~1851)",
+      "sex": "M",
+      "born": "~1851",
+      "died": null,
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-ivan-1815",
+        "w-matrema"
+      ],
+      "spouseIds": [
+        "w-anna-ivanovna"
+      ],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD рев.1858"
+      ],
+      "notes": "Боковая ветвь"
+    },
+    {
+      "id": "w-anna-ivanovna",
+      "name": "Анна Ивановна",
+      "sex": "F",
+      "born": "~1850",
+      "died": null,
+      "role": "wife",
+      "branch": "collateral",
+      "parentIds": [
+        "pat-ivan-anna"
+      ],
+      "spouseIds": [
+        "h-ivan-1851"
+      ],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD 08.11.1868"
+      ],
+      "notes": "Брак 1868, 18 л."
+    },
+    {
+      "id": "pat-ivan-anna",
+      "name": "Иван (отец Анны)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "koshelikha",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-anna-ivanovna"
+      ],
+      "status": "probable",
+      "sources": [
+        "метрика 1868"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "h-vasiliy-1890",
+      "name": "Василий Иванович (~1890)",
+      "sex": "M",
+      "born": "~1890",
+      "died": "1934",
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-ivan-1870",
+        "w-unknown-1890"
+      ],
+      "spouseIds": [
+        "w-praskovya"
+      ],
+      "childIds": [
+        "h-grigoriy-1912",
+        "h-alexey-1913",
+        "h-maxim-1917"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2879430"
+      ],
+      "notes": "ПМВ, 3-й Заамурский полк"
+    },
+    {
+      "id": "w-praskovya",
+      "name": "Прасковья Фёдоровна Королёва",
+      "sex": "F",
+      "born": "1883",
+      "died": "1969",
+      "role": "wife",
+      "branch": "korolev",
+      "parentIds": [
+        "pat-fyodor-korolev",
+        "pat-unknown-korolev-m"
+      ],
+      "spouseIds": [
+        "h-vasiliy-1890"
+      ],
+      "childIds": [
+        "h-grigoriy-1912",
+        "h-alexey-1913",
+        "h-maxim-1917"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500074@",
+        "VGD p2879430"
+      ],
+      "notes": "Брак 30.06.1908, 17½ л."
+    },
+    {
+      "id": "pat-fyodor-korolev",
+      "name": "Фёдор Корolёv",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "korolev",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-praskovya",
+        "h-mikhail-korolev-bro"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500086@"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-unknown-korolev-m",
+      "name": "❓ Мать Прасковьи",
+      "sex": "F",
+      "born": null,
+      "died": null,
+      "role": "mother",
+      "branch": "korolev",
+      "parentIds": [],
+      "spouseIds": [
+        "pat-fyodor-korolev"
+      ],
+      "childIds": [
+        "w-praskovya"
+      ],
+      "status": "notfound",
+      "sources": [],
+      "notes": "Не в GEDCOM"
+    },
+    {
+      "id": "h-mikhail-korolev-bro",
+      "name": "Михаил Фёдорович Корolёv",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "collateral",
+      "branch": "korolev",
+      "parentIds": [
+        "pat-fyodor-korolev"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD 100.htm"
+      ],
+      "notes": "Сапёр, ранен 09.03.1916 — вероятный брат"
+    },
+    {
+      "id": "h-grigoriy-1912",
+      "name": "Григорий Васильевич (1912)",
+      "sex": "M",
+      "born": "1912-01-19",
+      "died": "1942-03-10",
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-vasiliy-1890",
+        "w-praskovya"
+      ],
+      "spouseIds": [
+        "w-evdokia"
+      ],
+      "childIds": [
+        "h-vasiliy-1930"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500071@"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-evdokia",
+      "name": "Евдокия Абрамova",
+      "sex": "F",
+      "born": "1911-01-24",
+      "died": "1989-01-25",
+      "role": "wife",
+      "branch": "abramov",
+      "parentIds": [
+        "pat-nikita-abramov",
+        "pat-anna-markina"
+      ],
+      "spouseIds": [
+        "h-grigoriy-1912"
+      ],
+      "childIds": [
+        "h-vasiliy-1930"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500072@"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-nikita-abramov",
+      "name": "Никита Ермолаевич Абрамov",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "abramov",
+      "parentIds": [
+        "pat-ermolay-abramov"
+      ],
+      "spouseIds": [
+        "pat-anna-markina"
+      ],
+      "childIds": [
+        "w-evdokia"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD: брак + Маркина Анна"
+      ],
+      "notes": "«21 г.» в метрике"
+    },
+    {
+      "id": "pat-anna-markina",
+      "name": "Анна Фёдоровна (Маркина)",
+      "sex": "F",
+      "born": null,
+      "died": "1948",
+      "role": "mother",
+      "branch": "markin",
+      "parentIds": [
+        "pat-fyodor-markin"
+      ],
+      "spouseIds": [
+        "pat-nikita-abramov"
+      ],
+      "childIds": [
+        "w-evdokia"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500082@",
+        "VGD"
+      ],
+      "notes": "«Дочь Фёдора Ефимовича, 17 л.»"
+    },
+    {
+      "id": "pat-fyodor-markin",
+      "name": "Фёдор Ефимович (отец Анны)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "markin",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "pat-anna-markina"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2879430"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-ermolay-abramov",
+      "name": "Ермолай Иванович Абрамov",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "abramov",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "pat-nikita-abramov",
+        "h-fyodor-abram-uncle",
+        "h-ivan-abram-uncle"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500084@",
+        "VGD"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "h-fyodor-abram-uncle",
+      "name": "Фёдор Ермолаевич Абрамov",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "collateral",
+      "branch": "abramov",
+      "parentIds": [
+        "pat-ermolay-abramov"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD: брак 1877"
+      ],
+      "notes": "Дядя Евдokии"
+    },
+    {
+      "id": "h-ivan-abram-uncle",
+      "name": "Иван Ермолаевич Абрамov",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "collateral",
+      "branch": "abramov",
+      "parentIds": [
+        "pat-ermolay-abramov"
+      ],
+      "spouseIds": [
+        "w-matriona-prokudanova"
+      ],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD: брак 09.11.1887"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-matriona-prokudanova",
+      "name": "Матрона Михайловна Прокуданова",
+      "sex": "F",
+      "born": null,
+      "died": null,
+      "role": "wife",
+      "branch": "abramov",
+      "parentIds": [],
+      "spouseIds": [
+        "h-ivan-abram-uncle"
+      ],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD"
+      ],
+      "notes": "Жена дяди"
+    },
+    {
+      "id": "h-vasiliy-1930",
+      "name": "Василий Григорьевич (1930)",
+      "sex": "M",
+      "born": "1930-01-24",
+      "died": "2004-10-06",
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-grigoriy-1912",
+        "w-evdokia"
+      ],
+      "spouseIds": [
+        "w-alexandra"
+      ],
+      "childIds": [
+        "h-grigoriy-1954"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500007@"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-alexandra",
+      "name": "Александра Ковригинa",
+      "sex": "F",
+      "born": "1931-01-11",
+      "died": "2010-02-07",
+      "role": "wife",
+      "branch": "kovrigin",
+      "parentIds": [
+        "pat-andrey-kovrigin",
+        "pat-evdokia-dvornikova"
+      ],
+      "spouseIds": [
+        "h-vasiliy-1930"
+      ],
+      "childIds": [
+        "h-grigoriy-1954"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500006@"
+      ],
+      "notes": "Рожд. Б. Болдинo (GEDCOM); см. kovrigina_dvornikova_tree.md"
+    },
+    {
+      "id": "pat-andrey-kovrigin",
+      "name": "Андрей Ковригин",
+      "sex": "M",
+      "born": "1895",
+      "died": "1960-04-19",
+      "role": "father",
+      "branch": "kovrigin",
+      "parentIds": [
+        "pat-ivan-kovrigin"
+      ],
+      "spouseIds": [
+        "pat-evdokia-dvornikova"
+      ],
+      "childIds": [
+        "w-alexandra",
+        "h-dmitry-kovrigin",
+        "h-lyudmila-kovrigina",
+        "h-valentin-kovrigin"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500078@"
+      ],
+      "notes": "Жена и мать Андрея NOT FOUND; метрики — opencode/kovrigina_dvornikova_tree.md"
+    },
+    {
+      "id": "pat-evdokia-dvornikova",
+      "name": "Евдокия Дворникова",
+      "sex": "F",
+      "born": "1896-03-14",
+      "died": "1978-10-07",
+      "role": "mother",
+      "branch": "dvornikov",
+      "parentIds": [
+        "pat-nikolay-dvornikov"
+      ],
+      "spouseIds": [
+        "pat-andrey-kovrigin"
+      ],
+      "childIds": [
+        "w-alexandra",
+        "h-dmitry-kovrigin",
+        "h-lyudmila-kovrigina",
+        "h-valentin-kovrigin"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500076@"
+      ],
+      "notes": "Рожд. 14.03.1896 — цель поиска ЦАНО ф.570 оп.10 д.151"
+    },
+    {
+      "id": "pat-nikolay-dvornikov",
+      "name": "Николай Дворников",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "dvornikov",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "pat-evdokia-dvornikova"
+      ],
+      "status": "needs_verification",
+      "sources": [
+        "GEDCOM @I500077@"
+      ],
+      "notes": "NOT FOUND beyond GEDCOM; openlist Boldino — другая линия"
+    },
+    {
+      "id": "pat-ivan-kovrigin",
+      "name": "Иван Ковригин",
+      "sex": "M",
+      "born": "1852",
+      "died": "1937",
+      "role": "father",
+      "branch": "kovrigin",
+      "parentIds": [
+        "pat-maxim-kovrigin"
+      ],
+      "spouseIds": [],
+      "childIds": [
+        "pat-andrey-kovrigin"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500079@"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-maxim-kovrigin",
+      "name": "Максим Ковригин",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "kovrigin",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "pat-ivan-kovrigin"
+      ],
+      "status": "needs_verification",
+      "sources": [
+        "GEDCOM @I500080@"
+      ],
+      "notes": "Прадед Александры; далее NOT FOUND — ревизии ЦАНО ф.60"
+    },
+    {
+      "id": "h-dmitry-kovrigin",
+      "name": "Дмитрий Ковригин",
+      "sex": "M",
+      "born": "1918-02-23",
+      "died": "1990-09-17",
+      "role": "collateral",
+      "branch": "kovrigin",
+      "parentIds": [
+        "pat-andrey-kovrigin",
+        "pat-evdokia-dvornikova"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500095@"
+      ],
+      "notes": "Брат Александры"
+    },
+    {
+      "id": "h-lyudmila-kovrigina",
+      "name": "Людмила Ковригина",
+      "sex": "F",
+      "born": "1920-09-29",
+      "died": "1992-08-20",
+      "role": "collateral",
+      "branch": "kovrigin",
+      "parentIds": [
+        "pat-andrey-kovrigin",
+        "pat-evdokia-dvornikova"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500096@"
+      ],
+      "notes": "Сестра Александры"
+    },
+    {
+      "id": "h-valentin-kovrigin",
+      "name": "Валентин Ковригин",
+      "sex": "M",
+      "born": "1936-03-22",
+      "died": null,
+      "role": "collateral",
+      "branch": "kovrigin",
+      "parentIds": [
+        "pat-andrey-kovrigin",
+        "pat-evdokia-dvornikova"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500097@"
+      ],
+      "notes": "Брат Александры"
+    },
+    {
+      "id": "h-grigoriy-1954",
+      "name": "Григорий Васильевич (1954)",
+      "sex": "M",
+      "born": "1954-08-30",
+      "died": "2020-12-24",
+      "role": "husband",
+      "branch": "direct",
+      "parentIds": [
+        "h-vasiliy-1930",
+        "w-alexandra"
+      ],
+      "spouseIds": [
+        "w-olga"
+      ],
+      "childIds": [
+        "h-igor"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500001@"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-olga",
+      "name": "Ольга Сальниковa",
+      "sex": "F",
+      "born": "1956-09-24",
+      "died": null,
+      "role": "wife",
+      "branch": "salnikov",
+      "parentIds": [
+        "pat-egor-salnikov",
+        "pat-valentina-kulikova"
+      ],
+      "spouseIds": [
+        "h-grigoriy-1954"
+      ],
+      "childIds": [
+        "h-igor"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500002@"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-egor-salnikov",
+      "name": "Егор Сальников",
+      "sex": "M",
+      "born": "1930-08-28",
+      "died": "2014-12-13",
+      "role": "father",
+      "branch": "salnikov",
+      "parentIds": [
+        "pat-maxim-salnikov",
+        "pat-agafya-botvinina"
+      ],
+      "spouseIds": [
+        "pat-valentina-kulikova"
+      ],
+      "childIds": [
+        "w-olga"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500005@"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-valentina-kulikova",
+      "name": "Валентина Куликова",
+      "sex": "F",
+      "born": "1934-09-26",
+      "died": "2018-07-14",
+      "role": "mother",
+      "branch": "kulikov",
+      "parentIds": [
+        "pat-mikhail-kulikov",
+        "pat-maria-belova"
+      ],
+      "spouseIds": [
+        "pat-egor-salnikov"
+      ],
+      "childIds": [
+        "w-olga"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500004@"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-maxim-salnikov",
+      "name": "Максим Сальников",
+      "sex": "M",
+      "born": "1905",
+      "died": null,
+      "role": "father",
+      "branch": "salnikov",
+      "parentIds": [
+        "pat-petr-salnikov"
+      ],
+      "spouseIds": [
+        "pat-agafya-botvinina"
+      ],
+      "childIds": [
+        "pat-egor-salnikov"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": "дер. Вергово"
+    },
+    {
+      "id": "pat-petr-salnikov",
+      "name": "Пётр Сальников",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "salnikov",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "pat-maxim-salnikov"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-agafya-botvinina",
+      "name": "Агафья Ботвинина",
+      "sex": "F",
+      "born": "1907-02-17",
+      "died": "1994-03-22",
+      "role": "mother",
+      "branch": "botvinin",
+      "parentIds": [
+        "pat-andrey-botvinin"
+      ],
+      "spouseIds": [
+        "pat-maxim-salnikov"
+      ],
+      "childIds": [
+        "pat-egor-salnikov"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-andrey-botvinin",
+      "name": "Андрей Ботвинин",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "botvinin",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "pat-agafya-botvinina",
+        "d-dora-botvinina"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "d-dora-botvinina",
+      "name": "Дора Ботвинина",
+      "sex": "F",
+      "born": "1920-06-02",
+      "died": "1993-03-10",
+      "role": "collateral",
+      "branch": "botvinin",
+      "parentIds": [
+        "pat-andrey-botvinin"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": "Сестра Агафьи"
+    },
+    {
+      "id": "pat-mikhail-kulikov",
+      "name": "Михаил Куликов",
+      "sex": "M",
+      "born": "1907",
+      "died": "1946",
+      "role": "father",
+      "branch": "kulikov",
+      "parentIds": [
+        "pat-alexey-kulikov"
+      ],
+      "spouseIds": [
+        "pat-maria-belova"
+      ],
+      "childIds": [
+        "pat-valentina-kulikova"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-alexey-kulikov",
+      "name": "Алексей Куликов",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "kulikov",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "pat-mikhail-kulikov"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-maria-belova",
+      "name": "Мария Белова",
+      "sex": "F",
+      "born": "1910-07-30",
+      "died": "1968",
+      "role": "mother",
+      "branch": "belov",
+      "parentIds": [
+        "pat-alexander-belov",
+        "pat-evdokia-belova-m"
+      ],
+      "spouseIds": [
+        "pat-mikhail-kulikov"
+      ],
+      "childIds": [
+        "pat-valentina-kulikova"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-alexander-belov",
+      "name": "Александр Белов",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "belov",
+      "parentIds": [
+        "pat-markel-belov"
+      ],
+      "spouseIds": [
+        "pat-evdokia-belova-m"
+      ],
+      "childIds": [
+        "pat-maria-belova"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-markel-belov",
+      "name": "Маркел Белов",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "belov",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "pat-alexander-belov"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-evdokia-belova-m",
+      "name": "Евдокия (мать Марии)",
+      "sex": "F",
+      "born": null,
+      "died": null,
+      "role": "mother",
+      "branch": "belov",
+      "parentIds": [
+        "pat-ilya-filippov"
+      ],
+      "spouseIds": [
+        "pat-alexander-belov"
+      ],
+      "childIds": [
+        "pat-maria-belova"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-ilya-filippov",
+      "name": "Илья Филиппов",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "belov",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "pat-evdokia-belova-m"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "h-igor",
+      "name": "Игорь Сальников",
+      "sex": "M",
+      "born": "1982-12-16",
+      "died": null,
+      "role": "descendant",
+      "branch": "direct",
+      "parentIds": [
+        "h-grigoriy-1954",
+        "w-olga"
+      ],
+      "spouseIds": [
+        "w-olga-baskina"
+      ],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "GEDCOM @I500003@"
+      ],
+      "notes": "Фамилия по матери"
+    },
+    {
+      "id": "h-lev",
+      "name": "Лев Андреевич",
+      "sex": "M",
+      "born": "~1789",
+      "died": null,
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-andrey",
+        "w-darya"
+      ],
+      "spouseIds": [
+        "w-varvara"
+      ],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD 140.htm"
+      ],
+      "notes": "Брат прямой линии"
+    },
+    {
+      "id": "w-varvara",
+      "name": "Варвара Васильевna",
+      "sex": "F",
+      "born": null,
+      "died": null,
+      "role": "wife",
+      "branch": "collateral",
+      "parentIds": [
+        "pat-vasiliy-varvara"
+      ],
+      "spouseIds": [
+        "h-lev"
+      ],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD 140.htm"
+      ],
+      "notes": "71 л. в 1858"
+    },
+    {
+      "id": "pat-vasiliy-varvara",
+      "name": "Василий (отец Варвары)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "koshelikha",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-varvara"
+      ],
+      "status": "probable",
+      "sources": [
+        "отчество"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "h-kondratiy",
+      "name": "Кондратий Андреевич",
+      "sex": "M",
+      "born": "1765",
+      "died": "1847",
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-andrey",
+        "w-darya"
+      ],
+      "spouseIds": [
+        "w-anna-filipovna"
+      ],
+      "childIds": [
+        "h-averiyan"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-anna-filipovna",
+      "name": "Анна Филипповna",
+      "sex": "F",
+      "born": "~1798",
+      "died": null,
+      "role": "wife",
+      "branch": "collateral",
+      "parentIds": [
+        "pat-filipp-mikhailovich"
+      ],
+      "spouseIds": [
+        "h-kondratiy"
+      ],
+      "childIds": [
+        "h-averiyan"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD 08.11.1807"
+      ],
+      "notes": "60/67 л. в 1858"
+    },
+    {
+      "id": "pat-filipp-mikhailovich",
+      "name": "Филипп Михайловich",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "koshelikha",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-anna-filipovna"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD p2879430"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "h-averiyan",
+      "name": "Аверьян Кондратьевич",
+      "sex": "M",
+      "born": "~1827",
+      "died": null,
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-kondratiy",
+        "w-anna-filipovna"
+      ],
+      "spouseIds": [
+        "w-darya-anisimovna"
+      ],
+      "childIds": [
+        "d-ekaterina-aver"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD 140.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-darya-anisimovna",
+      "name": "Дарья Анисимовna",
+      "sex": "F",
+      "born": "~1816",
+      "died": null,
+      "role": "wife",
+      "branch": "collateral",
+      "parentIds": [
+        "pat-anisim-darya"
+      ],
+      "spouseIds": [
+        "h-averiyan"
+      ],
+      "childIds": [
+        "d-ekaterina-aver"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD 08.11.1835"
+      ],
+      "notes": "42 л. в 1858"
+    },
+    {
+      "id": "pat-anisim-darya",
+      "name": "Анисим (отец Дарьи)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "koshelikha",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-darya-anisimovna"
+      ],
+      "status": "probable",
+      "sources": [
+        "отчество"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "d-ekaterina-aver",
+      "name": "Екатерина Аверьяnovna",
+      "sex": "F",
+      "born": "~1844",
+      "died": null,
+      "role": "daughter",
+      "branch": "collateral",
+      "parentIds": [
+        "h-averiyan",
+        "w-darya-anisimovna"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD"
+      ],
+      "notes": "14 л. в 1851"
+    },
+    {
+      "id": "h-vasiliy-andreevich",
+      "name": "Василий Андреевич",
+      "sex": "M",
+      "born": "~1817",
+      "died": null,
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-andrey",
+        "w-darya"
+      ],
+      "spouseIds": [
+        "w-ulyana"
+      ],
+      "childIds": [
+        "h-akim"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD 140.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-ulyana",
+      "name": "Ульяна",
+      "sex": "F",
+      "born": "~1819",
+      "died": null,
+      "role": "wife",
+      "branch": "collateral",
+      "parentIds": [],
+      "spouseIds": [
+        "h-vasiliy-andreevich"
+      ],
+      "childIds": [
+        "h-akim"
+      ],
+      "status": "confirmed",
+      "sources": [
+        "VGD 140.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "h-akim",
+      "name": "Аким Васильевич",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-vasiliy-andreevich",
+        "w-ulyana"
+      ],
+      "spouseIds": [
+        "w-arina-iljinichna"
+      ],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "w-arina-iljinichna",
+      "name": "Арина Ильinichna",
+      "sex": "F",
+      "born": "~1821",
+      "died": null,
+      "role": "wife",
+      "branch": "collateral",
+      "parentIds": [
+        "pat-ilya-arina"
+      ],
+      "spouseIds": [
+        "h-akim"
+      ],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD: брак 09.11.1845"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pat-ilya-arina",
+      "name": "Илья (отец Арины)",
+      "sex": "M",
+      "born": null,
+      "died": null,
+      "role": "father",
+      "branch": "koshelikha",
+      "parentIds": [],
+      "spouseIds": [],
+      "childIds": [
+        "w-arina-iljinichna"
+      ],
+      "status": "probable",
+      "sources": [
+        "отчество"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "h-fyodor",
+      "name": "Фёдор Иванович",
+      "sex": "M",
+      "born": "~1842",
+      "died": null,
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-ivan-1815",
+        "w-matrema"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD рев.1858"
+      ],
+      "notes": "9/16 л."
+    },
+    {
+      "id": "h-fedot",
+      "name": "Федот Иванович",
+      "sex": "M",
+      "born": "~1852",
+      "died": null,
+      "role": "collateral",
+      "branch": "direct",
+      "parentIds": [
+        "h-ivan-1815",
+        "w-matrema"
+      ],
+      "spouseIds": [],
+      "childIds": [],
+      "status": "confirmed",
+      "sources": [
+        "VGD рев.1858"
+      ],
+      "notes": "6/13 л."
+    }
+  ]
+}

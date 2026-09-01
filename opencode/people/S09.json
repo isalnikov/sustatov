@@ -1,0 +1,38 @@
+{
+  "id": "S09",
+  "surname": "Сустатова",
+  "given_name": "Анна",
+  "patronymic": "",
+  "full_name": "Анна Сустатова",
+  "sex": "F",
+  "birth": {
+    "date": "10.07.1934",
+    "place": ""
+  },
+  "death": {
+    "date": "23.08.1953",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 10,
+  "relation_to_direct_line": "сестра Василия 1930",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "дочь Григория 1912; умерла в 19 лет",
+  "relationships": {
+    "father": "D11",
+    "mother": "SP07",
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

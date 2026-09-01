@@ -1,0 +1,38 @@
+{
+  "id": "C08",
+  "surname": "Сустатов",
+  "given_name": "Степан",
+  "patronymic": "Фёдорович",
+  "full_name": "Степан Фёдорович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1910",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "01.05.1943",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "collateral",
+  "generation": 0,
+  "relation_to_direct_line": "боковая ветвь (родство не установлено)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "вступил в партизанский отряд 11.01.1943; погиб",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    }
+  ],
+  "events": []
+}

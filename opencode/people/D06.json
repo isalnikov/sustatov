@@ -1,0 +1,42 @@
+{
+  "id": "D06",
+  "surname": "Сустатов",
+  "given_name": "Иван",
+  "patronymic": "Андреевич",
+  "full_name": "Иван Андреевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1793",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "1833",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 4,
+  "relation_to_direct_line": "прямой предок",
+  "social_estate": "государственный крестьянин",
+  "occupation": "",
+  "religion": "православие",
+  "notes": "ревизия 1811 (18 л.), «достался по разделу с сёстрами в 1812»; †1833; жена Мавра",
+  "relationships": {
+    "father": "D05",
+    "mother": "SP03",
+    "spouses": [
+      "SP04"
+    ],
+    "children": [
+      "D07"
+    ]
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "ЦАНО, ф.60, оп.239А, д.463, 599"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "SP07",
+  "surname": "Абрамова",
+  "given_name": "Евдокия",
+  "patronymic": "",
+  "full_name": "Евдокия Абрамова",
+  "sex": "F",
+  "birth": {
+    "date": "24.01.1911",
+    "place": ""
+  },
+  "death": {
+    "date": "25.01.1989",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse",
+  "generation": 0,
+  "relation_to_direct_line": "супруг(а) по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "жена Григория 1912",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "D11"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

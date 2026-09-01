@@ -1,0 +1,38 @@
+{
+  "id": "D14",
+  "surname": "Сальников",
+  "given_name": "Игорь",
+  "patronymic": "",
+  "full_name": "Игорь Сальников",
+  "sex": "M",
+  "birth": {
+    "date": "16.12.1982",
+    "place": "г. Ленинград"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 12,
+  "relation_to_direct_line": "сын Григория 1954",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "автор GEDCOM; фамилия по матери Ольге Сальниковой",
+  "relationships": {
+    "father": "D13",
+    "mother": "SP09",
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "X05",
+  "surname": "Сустатов",
+  "given_name": "Алешка",
+  "patronymic": "",
+  "full_name": "Алешка (сын Исанки Сустатова)",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": "д. Хмелевка, Алатырский уезд"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "xvii",
+  "generation": 0,
+  "relation_to_direct_line": "боковая (1671)",
+  "social_estate": "ясачная мордва",
+  "occupation": "",
+  "religion": "",
+  "notes": "сын Исанки Сустатова",
+  "relationships": {
+    "father": "X04",
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "url",
+      "ref": "https://vostlit.info/Texts/Dokumenty/Russ/XVII/1660-1680/Perep_kniga_alatyr_1671/text1.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "mention",
+      "date": "1671",
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+{
+  "C01": {
+    "full_name": "Аверьян Кондратьевич Сустатов",
+    "category": "cousin",
+    "status": "CONFIRMED",
+    "birth": "~1827",
+    "death": ""
+  },
+  "C02": {
+    "full_name": "Аким Васильевич Сустатов",
+    "category": "cousin",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "C03": {
+    "full_name": "Александр Фёдорович Сустатов",
+    "category": "cousin",
+    "status": "CONFIRMED",
+    "birth": "~1870",
+    "death": ""
+  },
+  "C04": {
+    "full_name": "Серафим Александрович Сустатов",
+    "category": "cousin",
+    "status": "CONFIRMED",
+    "birth": "1909",
+    "death": ""
+  },
+  "C05": {
+    "full_name": "Алексей Федотович Сустатов",
+    "category": "cousin",
+    "status": "CONFIRMED",
+    "birth": "~1874",
+    "death": ""
+  },
+  "C06": {
+    "full_name": "Василий Яковлевич Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "1910/16.02.1911",
+    "death": "09.12.1941"
+  },
+  "C07": {
+    "full_name": "Николай Яковлевич Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "1918",
+    "death": "20.12.1943"
+  },
+  "C08": {
+    "full_name": "Степан Фёдорович Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "1910",
+    "death": "01.05.1943"
+  },
+  "C09": {
+    "full_name": "Яков Фёдорович Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "12.02.1910",
+    "death": "08.05.1942"
+  },
+  "C10": {
+    "full_name": "Михаил Фёдорович Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "1913",
+    "death": ""
+  },
+  "C11": {
+    "full_name": "Алексей Фёдорович Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "1918",
+    "death": ""
+  },
+  "C12": {
+    "full_name": "Григорий Михайлович Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "1918",
+    "death": ""
+  },
+  "C13": {
+    "full_name": "Николай Иванович Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "1915",
+    "death": ""
+  },
+  "C14": {
+    "full_name": "Борис Семёнович Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "1908",
+    "death": "20.03.1938"
+  },
+  "C15": {
+    "full_name": "Борис Михайлович Сустатов",
+    "category": "collateral",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "D02": {
+    "full_name": "Иван (?)",
+    "category": "direct",
+    "status": "HYPOTHESIS",
+    "birth": "~кон. XVII в.",
+    "death": ""
+  },
+  "D03": {
+    "full_name": "Никита Иванович Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "~1715–1719",
+    "death": "1773"
+  },
+  "D04": {
+    "full_name": "Пётр Никитич Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "~1737",
+    "death": "1819"
+  },
+  "D05": {
+    "full_name": "Андрей Петрович Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "~1760",
+    "death": "1811"
+  },
+  "D06": {
+    "full_name": "Иван Андреевич Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "~1793",
+    "death": "1833"
+  },
+  "D07": {
+    "full_name": "Иван Иванович Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "~1815",
+    "death": ""
+  },
+  "D08": {
+    "full_name": "Иван Иванович Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "~1847",
+    "death": ""
+  },
+  "D09": {
+    "full_name": "Иван Иванович Сустатов",
+    "category": "direct",
+    "status": "PROBABLE",
+    "birth": "~1870",
+    "death": ""
+  },
+  "D10": {
+    "full_name": "Василий Иванович Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "~1890",
+    "death": "1934"
+  },
+  "D11": {
+    "full_name": "Григорий Васильевич Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "19.01.1912",
+    "death": "10.03.1942"
+  },
+  "D12": {
+    "full_name": "Василий Григорьевич Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "24.01.1930",
+    "death": "06.10.2004"
+  },
+  "D13": {
+    "full_name": "Григорий Васильевич Сустатов",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "30.08.1954",
+    "death": "24.12.2020"
+  },
+  "D14": {
+    "full_name": "Игорь Сальников",
+    "category": "direct",
+    "status": "CONFIRMED",
+    "birth": "16.12.1982",
+    "death": ""
+  },
+  "F01": {
+    "full_name": "Андрей Ковригин",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "1895",
+    "death": "19.04.1960"
+  },
+  "F02": {
+    "full_name": "Иван Ковригин",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "1852",
+    "death": "1937"
+  },
+  "F03": {
+    "full_name": "Максим Ковригин",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "F04": {
+    "full_name": "Евдокия Дворникова",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "14.03.1896",
+    "death": "07.10.1978"
+  },
+  "F05": {
+    "full_name": "Николай Дворников",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "F06": {
+    "full_name": "Фёдор Королёв",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "F07": {
+    "full_name": "Никита Абрамов",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "F08": {
+    "full_name": "Ермолай Иванович Абрамов",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "F09": {
+    "full_name": "Анна",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": "1948"
+  },
+  "F10": {
+    "full_name": "Фёдор",
+    "category": "spouse_family",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "P01": {
+    "full_name": "Николай Александрович Порунов",
+    "category": "porunov",
+    "status": "CONFIRMED",
+    "birth": "~1930-е",
+    "death": ""
+  },
+  "P02": {
+    "full_name": "Александр Павлович Порунов",
+    "category": "porunov",
+    "status": "PROBABLE",
+    "birth": "1912",
+    "death": "29.12.1942"
+  },
+  "P03": {
+    "full_name": "Павел Егорович Порунов",
+    "category": "porunov",
+    "status": "PROBABLE",
+    "birth": "~1885–1890",
+    "death": ""
+  },
+  "P04": {
+    "full_name": "Иван Павлович Порунов",
+    "category": "porunov",
+    "status": "CONFIRMED",
+    "birth": "1922",
+    "death": "14.05.1942"
+  },
+  "S01": {
+    "full_name": "Лев Андреевич Сустатов",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "S02": {
+    "full_name": "Кондратий Андреевич Сустатов",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": "1847"
+  },
+  "S03": {
+    "full_name": "Василий Андреевич Сустатов",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "~1817",
+    "death": ""
+  },
+  "S04": {
+    "full_name": "Фёдор Иванович Сустатов",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "~1842",
+    "death": ""
+  },
+  "S05": {
+    "full_name": "Федот Иванович Сустатов",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "S06": {
+    "full_name": "Алексей Васильевич Сустатов",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "1913",
+    "death": ""
+  },
+  "S07": {
+    "full_name": "Максим Васильевич Сустатов",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "1917",
+    "death": ""
+  },
+  "S08": {
+    "full_name": "Татьяна Сустатова",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "1932",
+    "death": ""
+  },
+  "S09": {
+    "full_name": "Анна Сустатова",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "10.07.1934",
+    "death": "23.08.1953"
+  },
+  "S10": {
+    "full_name": "Николай Григорьевич Сустатов",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "04.10.1936",
+    "death": "29.10.2018"
+  },
+  "S11": {
+    "full_name": "Вера Сустатова",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "07.10.1939",
+    "death": ""
+  },
+  "S12": {
+    "full_name": "Елена Сустатова (Ермолина)",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "01.06.1959",
+    "death": ""
+  },
+  "S13": {
+    "full_name": "Федосья Никитична",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "~1753",
+    "death": ""
+  },
+  "S14": {
+    "full_name": "Михаил Петрович Сустатов",
+    "category": "sibling",
+    "status": "CONFIRMED",
+    "birth": "~1752",
+    "death": ""
+  },
+  "SP01": {
+    "full_name": "Авдотья Васильевна",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "~1715",
+    "death": ""
+  },
+  "SP02": {
+    "full_name": "Аксинья Алексеевна (Ивановна)",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "~1740",
+    "death": ""
+  },
+  "SP03": {
+    "full_name": "Дарья",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "SP04": {
+    "full_name": "Мавра",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "SP05": {
+    "full_name": "Матрёна Фёдоровна",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "~1824",
+    "death": ""
+  },
+  "SP06": {
+    "full_name": "Прасковья Фёдоровна Королёва",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "1883",
+    "death": "1969"
+  },
+  "SP07": {
+    "full_name": "Евдокия Абрамова",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "24.01.1911",
+    "death": "25.01.1989"
+  },
+  "SP08": {
+    "full_name": "Александра Ковригина",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "11.01.1931",
+    "death": "07.02.2010"
+  },
+  "SP09": {
+    "full_name": "Ольга Сальникова",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "24.09.1956",
+    "death": ""
+  },
+  "SP10": {
+    "full_name": "Людмила Эдуардовна",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "SP11": {
+    "full_name": "Дмитрий Ермолин",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "19.12.1956",
+    "death": ""
+  },
+  "SP12": {
+    "full_name": "Нина",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "SP13": {
+    "full_name": "Анна Филипповна",
+    "category": "spouse",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "X01": {
+    "full_name": "Сыресь Сустатов",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "X02": {
+    "full_name": "Сустат Канесев сын",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "X03": {
+    "full_name": "Ненашка Сустатов",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "X04": {
+    "full_name": "Исанка Сустатов",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "X05": {
+    "full_name": "Алешка (сын Исанки Сустатова)",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "X06": {
+    "full_name": "Ездайка Сустатов",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "X07": {
+    "full_name": "Итяска Сустатов",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": "1670"
+  },
+  "X08": {
+    "full_name": "Бажен Чепкунов сын Сыресев",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "X09": {
+    "full_name": "Мамкай (Мамлей) мурза Ногаев",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  },
+  "X10": {
+    "full_name": "Надежа мурза Суморев",
+    "category": "xvii",
+    "status": "CONFIRMED",
+    "birth": "",
+    "death": ""
+  }
+}

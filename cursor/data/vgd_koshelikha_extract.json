@@ -1,0 +1,1265 @@
+{
+  "meta": {
+    "thread_url": "https://forum.vgd.ru/2339/86148/",
+    "pages_fetched": 30,
+    "total_posts": 299,
+    "relevant_posts": 40,
+    "extraction_date": "2026-09-01",
+    "persons_curated_count": 67,
+    "related_families_in_thread": {
+      "Abramov_WWII_count": 9,
+      "Korolev_WWII_count": 2,
+      "Mayukov_WWII_count": 8,
+      "Kleimenov_WWII_count": 5,
+      "Porunov_WWII_count": 2,
+      "Markin_WWII_count": 3,
+      "note": "Full lists in posts p2502356, p2584613, p3053716"
+    }
+  },
+  "key_posts": {
+    "5797917": "Direct line tree",
+    "2925910": "Metric books",
+    "2502356": "WWII casualties",
+    "2802627": "Revision lists",
+    "2584613": "WWI/WWII awards",
+    "5335751": "1930-31 tax",
+    "3730673": "Archives + 1963 news"
+  },
+  "persons": [
+    {
+      "surname": "Сустатов",
+      "given_name": "Григорий",
+      "patronymic": "Васильевич",
+      "birth": "1954-08-30",
+      "death": "2020-12-24",
+      "parents": [
+        "Василий Григорьевич Сустатов"
+      ],
+      "spouse": [
+        "Ольга Сальникова",
+        "Людмила Эдуардовна"
+      ],
+      "children": [
+        "Игорь Сальников"
+      ],
+      "notes": "Калининград; COVID-19",
+      "confidence": "probable",
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Григорий Васильевич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Василий",
+      "patronymic": "Григорьевич",
+      "birth": "1930-01-24",
+      "death": "2004-10-06",
+      "parents": [
+        "Григорий Васильевич Сустатов"
+      ],
+      "spouse": [
+        "Александра Ковригина"
+      ],
+      "children": [
+        "Григорий",
+        "Елена"
+      ],
+      "siblings": [
+        "Николай Григорьевич (1936-2018)"
+      ],
+      "notes": "с. Кошелиха",
+      "confidence": "confirmed_metric",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Василий Григорьевич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Григорий",
+      "patronymic": "Васильевич",
+      "birth": "1912-01-19",
+      "death": "1942-03-10",
+      "parents": [
+        "Василий Иванович Сустатов"
+      ],
+      "spouse": [
+        "Евдокия Абрамова"
+      ],
+      "children": [
+        "Василий (1930)",
+        "Татьяна (~1932)",
+        "Анна (1934-1953)",
+        "Николай (1936)",
+        "Вера (1939)"
+      ],
+      "notes": "столяр, колхоз «Красный Октябрь»; ВОВ",
+      "confidence": "confirmed_document",
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Григорий Васильевич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Василий",
+      "patronymic": "Иванович",
+      "birth": "~1890-1891",
+      "death": "1934",
+      "marriage": "1908-06-30",
+      "parents": [
+        "Григорий Иванович (?)"
+      ],
+      "spouse": [
+        "Прасковья Фёдоровна Королёва"
+      ],
+      "children": [
+        "Григорий (1912)",
+        "Алексей (1913)",
+        "Максим (1917)"
+      ],
+      "notes": "Брак 30.06.1908, 17½ лет; смерть GEDCOM",
+      "confidence": "probable",
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Василий Иванович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Григорий",
+      "patronymic": "Иванович",
+      "birth": "~1874-1876",
+      "parents": [
+        "?"
+      ],
+      "children": [
+        "Василий (~1891)"
+      ],
+      "notes": "Метрика не найдена",
+      "confidence": "hypothesis",
+      "spouse": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Григорий Иванович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Иван",
+      "patronymic": "Иванович",
+      "birth": "~1847",
+      "death": "до 1879",
+      "parents": [
+        "Иван Иванович (~1815)"
+      ],
+      "spouse": [
+        "Анисья Степановна"
+      ],
+      "siblings": [
+        "Фёдор",
+        "Федот",
+        "Иван (~1851)"
+      ],
+      "notes": "Ревизия 1858; умерший солдат",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Иван Иванович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Иван",
+      "patronymic": "Иванович",
+      "birth": "~1815",
+      "parents": [
+        "Иван Андреевич"
+      ],
+      "spouse": [
+        "Матрёна Фёдоровна"
+      ],
+      "children": [
+        "Фёдор",
+        "Федот",
+        "Иван (~1847)",
+        "Иван (~1851)"
+      ],
+      "notes": "Ревизия 1858: 36/43",
+      "confidence": "confirmed_metric",
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Иван Иванович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Иван",
+      "patronymic": "Андреевич",
+      "birth": "~1793",
+      "death": "1833",
+      "parents": [
+        "Андрей Петрович"
+      ],
+      "spouse": [
+        "Мavra"
+      ],
+      "children": [
+        "Иван Иванович (~1815)"
+      ],
+      "confidence": "confirmed_metric",
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Иван Андреевич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Андрей",
+      "patronymic": "Петрович",
+      "birth": "~1760",
+      "death": "1811",
+      "parents": [
+        "Пётр Никитич"
+      ],
+      "spouse": [
+        "Дарья Ермolaевna"
+      ],
+      "children": [
+        "Лev",
+        "Иван",
+        "Кondratiy",
+        "Vasiliy"
+      ],
+      "confidence": "confirmed_metric",
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Андрей Петрович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Пётр",
+      "patronymic": "Никитич",
+      "birth": "~1737",
+      "death": "1819",
+      "parents": [
+        "Никита Иванович"
+      ],
+      "spouse": [
+        "Аксинья"
+      ],
+      "children": [
+        "Михaил",
+        "Андрей"
+      ],
+      "confidence": "confirmed_metric",
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Пётр Никитич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Никита",
+      "patronymic": "Иванович",
+      "birth": "~1734",
+      "death": "1773",
+      "spouse": [
+        "Avdotya Vasilyevna"
+      ],
+      "children": [
+        "Пётр Никitich"
+      ],
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Сустатов Никита Иванович"
+    },
+    {
+      "surname": "Абрамова",
+      "given_name": "Евдокия",
+      "birth": "1911-01-24",
+      "death": "1989-01-25",
+      "spouse": [
+        "Григорий Васильевич Сустatов"
+      ],
+      "children": [
+        "Vasiliy",
+        "Татьяна",
+        "Анна",
+        "Николай",
+        "Вера"
+      ],
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Абрамова Евдокия"
+    },
+    {
+      "surname": "Королёva",
+      "given_name": "Прасковья",
+      "patronymic": "Фёдоровна",
+      "birth": "~1883",
+      "death": "1969",
+      "marriage": "1908-06-30",
+      "spouse": [
+        "Vasiliy Иванович Сустatов"
+      ],
+      "children": [
+        "Григорий",
+        "Алексей",
+        "Максим"
+      ],
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Королёva Прасковья Фёдоровна"
+    },
+    {
+      "surname": "Абрамov",
+      "given_name": "Ермолай",
+      "patronymic": "Иванович",
+      "notes": "Поручитель при браке 30.01.1906; прапрапрадед автора",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "full_name": "Абрамov Ермолай Иванович"
+    },
+    {
+      "surname": "Сустatов",
+      "given_name": "Борис",
+      "patronymic": "Семёнович",
+      "birth": "1908",
+      "death": null,
+      "notes": "Репрессии 1938; NOT direct line",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2502356.htm#pp2502356",
+      "full_name": "Сустatов Борис Семёнович"
+    },
+    {
+      "surname": "Сустatов",
+      "given_name": "Vasiliy",
+      "patronymic": "Яковлевич",
+      "birth": "1910",
+      "death": "1941-12-09",
+      "notes": "Плен Кричev",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2502356.htm#pp2502356",
+      "full_name": "Сустatов Vasiliy Яковлевич"
+    },
+    {
+      "surname": "Сустatов",
+      "given_name": "Григорий",
+      "patronymic": "Васильевич",
+      "birth": "1912",
+      "death": "1942-03-10",
+      "notes": "Direct line; 987 sp",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2502356.htm#pp2502356",
+      "full_name": "Сустatов Григорий Васильевич"
+    },
+    {
+      "surname": "Сустatов",
+      "given_name": "Михаил",
+      "patronymic": "Фёдорович",
+      "birth": "1913",
+      "death": "1941-12",
+      "notes": "Пропал без вести",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2502356.htm#pp2502356",
+      "full_name": "Сустatов Михаил Фёдорович"
+    },
+    {
+      "surname": "Сустatов",
+      "given_name": "Николай",
+      "patronymic": "Яковлевич",
+      "birth": "1918",
+      "death": "1943-12-20",
+      "notes": "257 sd",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2502356.htm#pp2502356",
+      "full_name": "Сустatов Николай Яковлевич"
+    },
+    {
+      "surname": "Сустatов",
+      "given_name": "Степан",
+      "patronymic": "Фёдорович",
+      "birth": "1910",
+      "death": "1943-05-01",
+      "notes": "Партизан",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2502356.htm#pp2502356",
+      "full_name": "Сустatов Степан Фёдорович"
+    },
+    {
+      "surname": "Сустatов",
+      "given_name": "Яков",
+      "patronymic": "Фёдорович",
+      "birth": "1910-02-12",
+      "death": "1942-05-08",
+      "notes": "Плен",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2502356.htm#pp2502356",
+      "full_name": "Сустatов Яков Фёдорович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Иван",
+      "patronymic": "Иванович",
+      "parents": [],
+      "spouse": [],
+      "notes": "1 бр., 18 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Иван Иванович"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Мария",
+      "patronymic": "Степановна",
+      "parents": [
+        "отставного солдата Степана Васильевича"
+      ],
+      "spouse": [],
+      "notes": "дочь отставного солдата Степана Васильевича, 17 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Мария Степановна"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Николай",
+      "patronymic": "Яковлевич",
+      "parents": [
+        "умерш. кр. Якова Матвеевича"
+      ],
+      "spouse": [],
+      "notes": "сын умерш. кр. Якова Матвеевича, 17 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Николай Яковлевич"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Александра",
+      "patronymic": "Степановна",
+      "parents": [
+        "отставного солдата Степана Васильевича"
+      ],
+      "spouse": [],
+      "notes": "дочь отставного солдата Степана Васильевича, 17 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Александра Степановна"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Иван",
+      "patronymic": "Степанович",
+      "parents": [
+        "отставного солдата Степана Васильевича"
+      ],
+      "spouse": [],
+      "notes": "сын отставного солдата Степана Васильевича, 17 л. 8 м. 27 д.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Иван Степанович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Пётр",
+      "patronymic": "Яковлевич",
+      "parents": [
+        "умерш. кр. Якова Матвеевича"
+      ],
+      "spouse": [],
+      "notes": "сын умерш. кр. Якова Матвеевича, 18 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Пётр Яковлевич"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Евдокия",
+      "patronymic": "Федотовна",
+      "parents": [
+        "Федота Ивановича"
+      ],
+      "spouse": [],
+      "notes": "дочь Федота Ивановича, 16 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Евдокия Федотовна"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Анна",
+      "patronymic": "Александровна",
+      "parents": [],
+      "spouse": [],
+      "notes": "разведённая жена Сустатова Никиты Яковлевича, сосланного в Сибирь с лишением всех прав состояния",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Анна Александровна"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Агапия",
+      "patronymic": "Яковлевна",
+      "parents": [
+        "Якова Матвеевича"
+      ],
+      "spouse": [],
+      "notes": "дочь Якова Матвеевича, 17 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Агапия Яковлевна"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Александр",
+      "patronymic": "Фёдорович",
+      "parents": [
+        "Фёдора Ивановича"
+      ],
+      "spouse": [],
+      "notes": "сын Фёдора Ивановича, 18 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Александр Фёдорович"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Екатерина",
+      "patronymic": "Степановна",
+      "parents": [
+        "Степана Степановича"
+      ],
+      "spouse": [],
+      "notes": "дочь Степана Степановича, 17 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Екатерина Степановна"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Фёдор",
+      "patronymic": "",
+      "parents": [
+        "вдовой кр. Наталии Тимофеевны"
+      ],
+      "spouse": [],
+      "notes": "сын вдовой кр. Наталии Тимофеевны, 17 л. 8 м. 20 д.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Фёдор"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Фёдор",
+      "patronymic": "",
+      "parents": [
+        "вдовой кр. Надежды Павловны"
+      ],
+      "spouse": [],
+      "notes": "сын вдовой кр. Надежды Павловны, 18 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Фёдор"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Алексей",
+      "patronymic": "Федотович",
+      "parents": [],
+      "spouse": [],
+      "notes": "1 бр., 18 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Алексей Федотович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Иван",
+      "patronymic": "Степанович",
+      "parents": [],
+      "spouse": [],
+      "notes": "2 бр., 27 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Иван Степанович"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Мария",
+      "patronymic": "Фёдоровна",
+      "parents": [
+        "Фёдора Ивановича"
+      ],
+      "spouse": [],
+      "notes": "дочь Фёдора Ивановича, 17 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Мария Фёдоровна"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Иван",
+      "patronymic": "",
+      "parents": [
+        "вдовой кр. Натальи Тимофеевны"
+      ],
+      "spouse": [],
+      "notes": "сын вдовой кр. Натальи Тимофеевны, 17 л. 7 м.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Иван"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Наталия",
+      "patronymic": "Ивановна",
+      "parents": [
+        "Ивана Ивановича"
+      ],
+      "spouse": [],
+      "notes": "дочь Ивана Ивановича, 17 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Наталия Ивановна"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Михаил",
+      "patronymic": "",
+      "parents": [
+        "вдовой кр. Наталии Герасимовны"
+      ],
+      "spouse": [],
+      "notes": "сын вдовой кр. Наталии Герасимовны, 18 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Михаил"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Семён",
+      "patronymic": "Степанович",
+      "parents": [
+        "вдовой кр. Наталии"
+      ],
+      "spouse": [],
+      "notes": "сын вдовой кр. Наталии, 18 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Семён Степанович"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Мария",
+      "patronymic": "Николаевна",
+      "parents": [],
+      "spouse": [],
+      "notes": "17 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Мария Николаевна"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Василий",
+      "patronymic": "Иванович",
+      "parents": [],
+      "spouse": [],
+      "notes": "17 1/2 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Василий Иванович"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Марфа",
+      "patronymic": "Петровна",
+      "parents": [],
+      "spouse": [],
+      "notes": "16 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Марфа Петровна"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Яков",
+      "patronymic": "Николвевич",
+      "parents": [],
+      "spouse": [],
+      "notes": "18 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Яков Николвевич"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Параскева",
+      "patronymic": "Александровна",
+      "parents": [],
+      "spouse": [],
+      "notes": "19 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Параскева Александровна"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Пелагея",
+      "patronymic": "Александровна",
+      "parents": [],
+      "spouse": [],
+      "notes": "18 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Пелагея Александровна"
+    },
+    {
+      "surname": "Сустатова",
+      "given_name": "Евдокия",
+      "patronymic": "Фёдоровна",
+      "parents": [],
+      "spouse": [],
+      "notes": "17 л.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатова Евдокия Фёдоровна"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Кондратий",
+      "patronymic": "Андреевич",
+      "parents": [
+        "Андрея Петровича"
+      ],
+      "spouse": [],
+      "notes": "сын Андрея Петровича, 1 бр.",
+      "confidence": "confirmed_metric",
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "full_name": "Сустатов Кондратий Андреевич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Кондратий",
+      "patronymic": "Андреевич",
+      "death": "1847",
+      "notes": "Ревизия: 42 / умер в 1847 г.",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2802627.htm#pp2802627",
+      "full_name": "Сустатов Кондратий Андреевич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Лев",
+      "patronymic": "Андреевич",
+      "death": null,
+      "notes": "Ревизия: 52 / 69",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2802627.htm#pp2802627",
+      "full_name": "Сустатов Лев Андреевич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Лев",
+      "patronymic": "Анисимович",
+      "death": "1843",
+      "notes": "Ревизия: 28 / умер в 1843 г.",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2802627.htm#pp2802627",
+      "full_name": "Сустатов Лев Анисимович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Василий",
+      "patronymic": "Анисимович",
+      "death": null,
+      "notes": "Ревизия: 22 / 39",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2802627.htm#pp2802627",
+      "full_name": "Сустатов Василий Анисимович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Аверьян",
+      "patronymic": "Кондратьевич",
+      "death": null,
+      "notes": "Ревизия: 31 / 38",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2802627.htm#pp2802627",
+      "full_name": "Сустатов Аверьян Кондратьевич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Иван",
+      "patronymic": "Иванович",
+      "death": null,
+      "notes": "Ревизия: 36 / 43",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2802627.htm#pp2802627",
+      "full_name": "Сустатов Иван Иванович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Лев",
+      "patronymic": "Андреевич",
+      "death": null,
+      "notes": "Ревизия: 69 / 76",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2802627.htm#pp2802627",
+      "full_name": "Сустатов Лев Андреевич"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Василий",
+      "patronymic": "Анисимович",
+      "death": null,
+      "notes": "Ревизия: 39 / 46",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2802627.htm#pp2802627",
+      "full_name": "Сустатов Василий Анисимович"
+    },
+    {
+      "surname": "Сустатов",
+      "given_name": "Василий",
+      "patronymic": "Андреевич",
+      "death": null,
+      "notes": "Ревизия: 58 / 65",
+      "confidence": "confirmed_metric",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": [],
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2802627.htm#pp2802627",
+      "full_name": "Сустатов Василий Андреевич"
+    },
+    {
+      "full_name": "Сустatov Алексей Фёдорovich",
+      "birth": "1918",
+      "notes": "Старшина, 854 sp 277 sd; награды за миномётный взвод; бой 14.08.1945 Мanchzhuriya",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2584613.htm#pp2584613",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": []
+    },
+    {
+      "full_name": "Сустatov Григорий Михайlovich",
+      "birth": "1918",
+      "notes": "110 tbr 18 tk",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2584613.htm#pp2584613",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": []
+    },
+    {
+      "full_name": "Сустatov Максим Vasiliyevich",
+      "birth": "1917",
+      "notes": "VPP records also in p3053716",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2584613.htm#pp2584613",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": []
+    },
+    {
+      "full_name": "Сустatov Никolay Ivanovich",
+      "birth": "1915",
+      "notes": "Ст. сержант, 27 zenproj 3 zenprojd",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2584613.htm#pp2584613",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": []
+    },
+    {
+      "full_name": "Сустatov Vasiliy Ivanovich",
+      "birth": null,
+      "notes": "WWI: 3-й Zaamurskiy погranpolk, ранен 15.06.1916 у д. Chertovets",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2584613.htm#pp2584613",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": []
+    },
+    {
+      "full_name": "Сустatov Ivan Stepanovich",
+      "notes": "Кирpichnik; учёт 1930-31",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5335751.htm#pp5335751",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": []
+    },
+    {
+      "full_name": "Сустatov Fedor Yakovlevich",
+      "notes": "Рабочий лесопильного завода",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5335751.htm#pp5335751",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": []
+    },
+    {
+      "full_name": "Сустatova Anna Egorovna",
+      "notes": "Портная",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5335751.htm#pp5335751",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": []
+    },
+    {
+      "full_name": "Сустatov Yakov Nikolaevich",
+      "notes": "Портной",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5335751.htm#pp5335751",
+      "confidence": "confirmed_document",
+      "parents": [],
+      "spouse": [],
+      "children": [],
+      "siblings": []
+    }
+  ],
+  "village_facts": [
+    {
+      "fact": "Село Кошелиха (Кamkina Мordovskaya), Ардatovский уезд",
+      "confidence": "confirmed"
+    },
+    {
+      "fact": "Остатки сахарного завода помещика Михаила Соймонова (сер. XIX в.) на территории спиртзavoda",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5743171.htm#pp5743171"
+    },
+    {
+      "fact": "Ф.66 оп.12 т.2 д.6685 — освобождение Ф. Сустатova с братьями от рекрутской повинности (1867)",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p3730673.htm#pp3730673",
+      "confidence": "confirmed_document"
+    },
+    {
+      "fact": "Сустатov V.I. — ранен 15.06.1916, 3-й Зaamurskiy погranpolk",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2584613.htm#pp2584613",
+      "confidence": "confirmed_document"
+    },
+    {
+      "fact": "Гипотеза связи с мурзой Сыreсь Сустатovым — не подтверждена",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p5797917.htm#pp5797917",
+      "confidence": "hypothesis"
+    },
+    {
+      "fact": "Церковный староста Пavel Karasev; подписанты метрик: Roman Mayukov и др.",
+      "source_url": "https://forum.vgd.ru/post/2339/86148/p2925910.htm#pp2925910",
+      "confidence": "confirmed_metric"
+    }
+  ],
+  "raw_auto_extraction": {
+    "persons_count": 414,
+    "page_summaries": [
+      {
+        "page": 0,
+        "url": "https://forum.vgd.ru/2339/86148/",
+        "total_posts": 10,
+        "relevant_posts": 2
+      },
+      {
+        "page": 10,
+        "url": "https://forum.vgd.ru/2339/86148/10.htm",
+        "total_posts": 10,
+        "relevant_posts": 2
+      },
+      {
+        "page": 20,
+        "url": "https://forum.vgd.ru/2339/86148/20.htm",
+        "total_posts": 10,
+        "relevant_posts": 2
+      },
+      {
+        "page": 30,
+        "url": "https://forum.vgd.ru/2339/86148/30.htm",
+        "total_posts": 10,
+        "relevant_posts": 3
+      },
+      {
+        "page": 40,
+        "url": "https://forum.vgd.ru/2339/86148/40.htm",
+        "total_posts": 10,
+        "relevant_posts": 1
+      },
+      {
+        "page": 50,
+        "url": "https://forum.vgd.ru/2339/86148/50.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 60,
+        "url": "https://forum.vgd.ru/2339/86148/60.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 70,
+        "url": "https://forum.vgd.ru/2339/86148/70.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 80,
+        "url": "https://forum.vgd.ru/2339/86148/80.htm",
+        "total_posts": 10,
+        "relevant_posts": 1
+      },
+      {
+        "page": 90,
+        "url": "https://forum.vgd.ru/2339/86148/90.htm",
+        "total_posts": 10,
+        "relevant_posts": 2
+      },
+      {
+        "page": 100,
+        "url": "https://forum.vgd.ru/2339/86148/100.htm",
+        "total_posts": 10,
+        "relevant_posts": 2
+      },
+      {
+        "page": 110,
+        "url": "https://forum.vgd.ru/2339/86148/110.htm",
+        "total_posts": 10,
+        "relevant_posts": 2
+      },
+      {
+        "page": 120,
+        "url": "https://forum.vgd.ru/2339/86148/120.htm",
+        "total_posts": 10,
+        "relevant_posts": 1
+      },
+      {
+        "page": 130,
+        "url": "https://forum.vgd.ru/2339/86148/130.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 140,
+        "url": "https://forum.vgd.ru/2339/86148/140.htm",
+        "total_posts": 10,
+        "relevant_posts": 5
+      },
+      {
+        "page": 150,
+        "url": "https://forum.vgd.ru/2339/86148/150.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 160,
+        "url": "https://forum.vgd.ru/2339/86148/160.htm",
+        "total_posts": 10,
+        "relevant_posts": 4
+      },
+      {
+        "page": 170,
+        "url": "https://forum.vgd.ru/2339/86148/170.htm",
+        "total_posts": 10,
+        "relevant_posts": 1
+      },
+      {
+        "page": 180,
+        "url": "https://forum.vgd.ru/2339/86148/180.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 190,
+        "url": "https://forum.vgd.ru/2339/86148/190.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 200,
+        "url": "https://forum.vgd.ru/2339/86148/200.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 210,
+        "url": "https://forum.vgd.ru/2339/86148/210.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 220,
+        "url": "https://forum.vgd.ru/2339/86148/220.htm",
+        "total_posts": 10,
+        "relevant_posts": 0
+      },
+      {
+        "page": 230,
+        "url": "https://forum.vgd.ru/2339/86148/230.htm",
+        "total_posts": 10,
+        "relevant_posts": 3
+      },
+      {
+        "page": 240,
+        "url": "https://forum.vgd.ru/2339/86148/240.htm",
+        "total_posts": 10,
+        "relevant_posts": 1
+      },
+      {
+        "page": 250,
+        "url": "https://forum.vgd.ru/2339/86148/250.htm",
+        "total_posts": 10,
+        "relevant_posts": 1
+      },
+      {
+        "page": 260,
+        "url": "https://forum.vgd.ru/2339/86148/260.htm",
+        "total_posts": 10,
+        "relevant_posts": 1
+      },
+      {
+        "page": 270,
+        "url": "https://forum.vgd.ru/2339/86148/270.htm",
+        "total_posts": 10,
+        "relevant_posts": 3
+      },
+      {
+        "page": 280,
+        "url": "https://forum.vgd.ru/2339/86148/280.htm",
+        "total_posts": 10,
+        "relevant_posts": 1
+      },
+      {
+        "page": 290,
+        "url": "https://forum.vgd.ru/2339/86148/290.htm",
+        "total_posts": 9,
+        "relevant_posts": 2
+      }
+    ]
+  }
+}

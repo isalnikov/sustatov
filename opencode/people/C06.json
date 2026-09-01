@@ -1,0 +1,38 @@
+{
+  "id": "C06",
+  "surname": "Сустатов",
+  "given_name": "Василий",
+  "patronymic": "Яковлевич",
+  "full_name": "Василий Яковлевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1910/16.02.1911",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "09.12.1941",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "collateral",
+  "generation": 0,
+  "relation_to_direct_line": "боковая ветвь (родство не установлено)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "попал в плен 18.07.1941 в Кричеве; погиб в плену (шталаг IV B)",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    }
+  ],
+  "events": []
+}

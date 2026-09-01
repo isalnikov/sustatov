@@ -1,0 +1,44 @@
+{
+  "id": "S10",
+  "surname": "Сустатов",
+  "given_name": "Николай",
+  "patronymic": "Григорьевич",
+  "full_name": "Николай Григорьевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "04.10.1936",
+    "place": "с. Кошелиха, Первомайский р-н, Горьковская обл."
+  },
+  "death": {
+    "date": "29.10.2018",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 10,
+  "relation_to_direct_line": "брат Василия 1930",
+  "social_estate": "",
+  "occupation": "мемуарист; ВНИИЭФ",
+  "religion": "",
+  "notes": "автор воспоминаний о Кошелихе; служил на флоте 1955-59; жена Нина",
+  "relationships": {
+    "father": "D11",
+    "mother": "SP07",
+    "spouses": [
+      "SP12"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "url",
+      "ref": "http://sarpust.ru/2015/02/vospominaniya-n-g-sustatova-chast-i-koshelihinskij-spirtzavod/"
+    },
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

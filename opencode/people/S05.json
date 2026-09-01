@@ -1,0 +1,40 @@
+{
+  "id": "S05",
+  "surname": "Сустатов",
+  "given_name": "Федот",
+  "patronymic": "Иванович",
+  "full_name": "Федот Иванович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 6,
+  "relation_to_direct_line": "брат Ивана Ивановича (~1847)",
+  "social_estate": "государственный крестьянин",
+  "occupation": "",
+  "religion": "",
+  "notes": "сын Ивана Ивановича (~1815), ревизия 1858",
+  "relationships": {
+    "father": "D07",
+    "mother": "SP05",
+    "spouses": [],
+    "children": [
+      "C05"
+    ]
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "ЦАНО, ф.60, оп.239А, д.463, 599"
+    }
+  ],
+  "events": []
+}

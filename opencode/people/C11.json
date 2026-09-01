@@ -1,0 +1,38 @@
+{
+  "id": "C11",
+  "surname": "Сустатов",
+  "given_name": "Алексей",
+  "patronymic": "Фёдорович",
+  "full_name": "Алексей Фёдорович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1918",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "collateral",
+  "generation": 0,
+  "relation_to_direct_line": "боковая ветвь (родство не установлено)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "старшина 854 сп 277 сд; награды: «За боевые заслуги», 2×Отеч.войны II, 2×Красная Звезда, Слава III",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/100.htm"
+    }
+  ],
+  "events": []
+}

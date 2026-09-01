@@ -1,0 +1,40 @@
+{
+  "id": "D08",
+  "surname": "Сустатов",
+  "given_name": "Иван",
+  "patronymic": "Иванович",
+  "full_name": "Иван Иванович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1847",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 6,
+  "relation_to_direct_line": "прямой предок",
+  "social_estate": "государственный крестьянин",
+  "occupation": "",
+  "religion": "православие",
+  "notes": "сын Ивана Ивановича (~1815) по ревизии 1858; ⚠️ разграничить от тёзки-брата Ивана (~1851)",
+  "relationships": {
+    "father": "D07",
+    "mother": "SP05",
+    "spouses": [],
+    "children": [
+      "D09"
+    ]
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "ЦАНО, ф.60, оп.239А, д.463, 599"
+    }
+  ],
+  "events": []
+}

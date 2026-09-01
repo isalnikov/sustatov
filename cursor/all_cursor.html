@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Род Сустатовых — MyHeritage GEDCOM · граф</title>
+<style>
+:root {
+  --bg: #f4f7f2; --surface: #ffffff; --surface2: #eef5ea; --border: #c5d4bc;
+  --text: #1a2e1a; --muted: #5a6f5a; --accent: #2d6a3e; --accent-light: #4a9e62;
+  --direct: #1b5e20; --side: #2e7d32; --inlaw: #6a1b9a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+header {
+  padding: 1.1rem 1.5rem;
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
+  color: #fff; border-bottom: 1px solid rgba(255,255,255,.2);
+}
+header h1 { margin: 0 0 .25rem; font-size: 1.35rem; }
+header p { margin: 0; opacity: .9; font-size: .88rem; }
+.layout { display: grid; grid-template-columns: 1fr 340px; grid-template-rows: auto 1fr; min-height: calc(100vh - 72px); }
+.toolbar {
+  grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .6rem;
+  padding: .75rem 1.5rem; background: var(--surface); border-bottom: 1px solid var(--border); align-items: center;
+}
+.toolbar input, .toolbar select, .toolbar button {
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+  padding: .4rem .65rem; border-radius: 8px; font-size: .85rem;
+}
+.toolbar button { cursor: pointer; background: var(--accent); color: #fff; border-color: var(--accent); }
+.toolbar button:hover { background: var(--accent-light); }
+.toolbar button#btn-reset { background: var(--surface2); color: var(--text); }
+#graph-wrap { position: relative; overflow: hidden; background: radial-gradient(ellipse at center,#eef5ea 0%,#f4f7f2 100%); }
+#graph-canvas { width: 100%; height: 100%; display: block; cursor: grab; }
+#graph-canvas:active { cursor: grabbing; }
+aside { border-left: 1px solid var(--border); background: var(--surface); overflow: auto; padding: 1rem; }
+aside h2 { margin: 0 0 .75rem; font-size: 1rem; color: var(--accent); }
+#detail-empty { color: var(--muted); font-size: .9rem; }
+#detail { display: none; }
+#detail.visible { display: block; }
+#detail h3 { margin: 0 0 .5rem; font-size: 1.05rem; line-height: 1.3; }
+#detail .badges { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .75rem; }
+.badge { font-size: .68rem; padding: .15rem .45rem; border-radius: 4px; text-transform: uppercase; letter-spacing: .03em; }
+.badge.direct { background: #c8e6c9; color: var(--direct); }
+.badge.side { background: #dcedc8; color: #33691e; }
+.badge.inlaw { background: #e1bee7; color: #6a1b9a; }
+.badge.sustatov { background: #fff9c4; color: #827717; }
+.badge.relative { background: #eceff1; color: #546e7a; }
+#detail dl { display: grid; grid-template-columns: 88px 1fr; gap: .3rem .6rem; margin: 0; font-size: .84rem; }
+#detail dt { color: var(--muted); }
+#detail dd { margin: 0; }
+#detail a { color: var(--accent); word-break: break-all; }
+.stats { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .75rem; }
+.stat { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: .35rem .65rem; font-size: .78rem; }
+.stat b { font-size: 1.1rem; display: block; color: var(--accent); }
+.legend { font-size: .78rem; color: var(--muted); margin-bottom: .5rem; }
+.legend span { display: inline-flex; align-items: center; gap: .3rem; margin-right: .75rem; }
+.edge-line { display: inline-block; width: 24px; height: 3px; border-radius: 2px; vertical-align: middle; }
+.edge-parent { background: #2e7d32; }
+.edge-spouse { border-top: 2px dashed #8e24aa; height: 0; width: 24px; }
+.edge-sibling { border-top: 2px dashed #558b2f; height: 0; width: 24px; }
+#tooltip {
+  position: absolute; pointer-events: none; background: #fff; border: 1px solid var(--border);
+  padding: .35rem .55rem; border-radius: 6px; font-size: .76rem; display: none; z-index: 10;
+  max-width: 260px; box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+#edge-info { font-size: .78rem; color: var(--muted); margin-top: .5rem; padding-top: .5rem; border-top: 1px solid var(--border); }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; grid-template-rows: auto 55vh auto; }
+  aside { border-left: none; border-top: 1px solid var(--border); max-height: 40vh; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Род Сустатовых — MyHeritage</h1>
+  <p>Экспорт GEDCOM · 141 персон · интерактивный граф (перетаскивание, зум, карточка по клику)</p>
+</header>
+<div class="layout">
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Поиск ФИО…" aria-label="Поиск">
+    <select id="filter-surn"><option value="">Все фамилии</option><option value="sustatov">Только Сустатовы</option><option value="relative">Родственники</option></select>
+    <select id="filter-role"><option value="">Все роли</option><option value="direct">Прямая</option><option value="side">Боковая</option><option value="inlaw">По браку</option></select>
+    <select id="filter-edge"><option value="all">Все рёбра</option><option value="parent">Только родители</option><option value="spouse">Только браки</option><option value="sibling">Только братья/сёстры</option></select>
+    <select id="filter-focus"><option value="">Весь граф</option><option value="direct">Подграф: прямая линия</option><option value="I500003">От Игоря (I500003)</option><option value="I500001">От Григория (1954)</option><option value="I500007">От Василия (1930)</option><option value="I500073">От Василия (~1891)</option></select>
+    <button type="button" id="btn-reset">Сброс вида</button>
+    <button type="button" id="btn-fit">Вписать в экран</button>
+  </div>
+  <div id="graph-wrap">
+    <canvas id="graph-canvas"></canvas>
+    <div id="tooltip"></div>
+  </div>
+  <aside>
+    <div class="stats" id="stats"></div>
+    <div class="legend">
+      <span><i class="edge-line edge-parent"></i> родитель→ребёнок</span>
+      <span><i class="edge-line edge-spouse"></i> брак</span>
+      <span><i class="edge-line edge-sibling"></i> sibling</span>
+    </div>
+    <h2>Карточка</h2>
+    <div id="detail-empty">Кликните на узел графа</div>
+    <div id="detail"></div>
+    <div id="edge-info"></div>
+  </aside>
+</div>
+<script>
+const NODES = [{"id": "I500073", "name": "Василий Сустатов", "born": null, "died": "1934", "place": "", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500085"], "spouseIds": ["I500074"], "childIds": ["I500071", "I500147", "I500148"], "siblingIds": [], "role": "direct", "status": "confirmed", "gedcomId": "I500073", "notes": "", "sources": []}, {"id": "I500085", "name": "Григорий Сустатов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500145"], "spouseIds": [], "childIds": ["I500073"], "siblingIds": [], "role": "direct", "status": "confirmed", "gedcomId": "I500085", "notes": "", "sources": []}, {"id": "I500145", "name": "???? Василий Иванович Сустатов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500146"], "spouseIds": [], "childIds": ["I500085"], "siblingIds": [], "role": "direct", "status": "confirmed", "gedcomId": "I500145", "notes": "", "sources": []}, {"id": "I500146", "name": "???? Борис Михайлович Сустатов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": [], "spouseIds": [], "childIds": ["I500145"], "siblingIds": [], "role": "direct", "status": "confirmed", "gedcomId": "I500146", "notes": "", "sources": []}, {"id": "I500087", "name": "Елена Сустатов", "born": "1 JUN 1959", "died": null, "place": "", "sex": "F", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500007", "I500006"], "spouseIds": ["I500088"], "childIds": ["I500089", "I500090"], "siblingIds": ["I500001", "I500087"], "role": "direct", "status": "confirmed", "gedcomId": "I500087", "notes": "", "sources": []}, {"id": "I500071", "name": "Григорий Сустатов", "born": "19 JAN 1912", "died": "10 MAR 1942", "place": "Россия", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500073", "I500074"], "spouseIds": ["I500072"], "childIds": ["I500007", "I500091", "I500092", "I500093", "I500094"], "siblingIds": ["I500071", "I500147", "I500148"], "role": "direct", "status": "confirmed", "gedcomId": "I500071", "notes": "<div class=\"b-veteranInfo__item b-veteranInfo__birthplace\" style=\"margin: 0px 50px 15px 0px; padding: 0px 50px 0px 0px; outline: 0px; background: #ffffff; box-sizing: border-box; font-size: 0.93rem; o", "sources": ["https://pamyat-naroda.ru/heroes/isp-chelovek_spisok2324860/?backurl=%2Fheroes%2F%3Fadv_search%3Dy%26last_name%3D%D0%A1%D1%83%D1%81%D1%82%D0%B0%D1%82%D0%BE%D0%B2%26first_name%3D%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B9%26middle_name%3D%D0%92%D0%B0%D"]}, {"id": "I500147", "name": "Алексей Васильевич Сустатов", "born": "1913", "died": null, "place": "Россия, с. Кошелиха, Первомайского района, Нижегородской области", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500073", "I500074"], "spouseIds": [], "childIds": [], "siblingIds": ["I500071", "I500147", "I500148"], "role": "direct", "status": "confirmed", "gedcomId": "I500147", "notes": "", "sources": []}, {"id": "I500148", "name": "Максим Васильевич Сустатов", "born": "1917", "died": null, "place": "Россия, с. Кошелиха, Первомайского района, Нижегородской области", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500073", "I500074"], "spouseIds": [], "childIds": [], "siblingIds": ["I500071", "I500147", "I500148"], "role": "direct", "status": "confirmed", "gedcomId": "I500148", "notes": "", "sources": []}, {"id": "I500007", "name": "Василий Сустатов", "born": "24 JAN 1930", "died": "6 OCT 2004", "place": "Россия, с. Кошелиха, Первомайского района, Нижегородской области", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500071", "I500072"], "spouseIds": ["I500006"], "childIds": ["I500001", "I500087"], "siblingIds": ["I500007", "I500091", "I500092", "I500093", "I500094"], "role": "direct", "status": "confirmed", "gedcomId": "I500007", "notes": "", "sources": ["Василий Сустатов"]}, {"id": "I500001", "name": "Григорий Сустатов", "born": "30 AUG 1954", "died": "24 DEC 2020", "place": "г. Калинград", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500007", "I500006"], "spouseIds": ["I500002", "I500142"], "childIds": ["I500003"], "siblingIds": ["I500001", "I500087"], "role": "direct", "status": "confirmed", "gedcomId": "I500001", "notes": "", "sources": ["https://www.myheritage.com/person-1500220_361231921_361231921/%D0%B3%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B9-%D1%81%D1%83%D1%81%D1%82%D0%B0%D1%82%D0%BE%D0%B2?lang=RU"]}, {"id": "I500094", "name": "Николай Сустатов", "born": "4 OCT 1936", "died": "29 OCT 2018", "place": "Родился 4 октября 1936 года в селе Кошелиха (сейчас в Первомайском районе Нижегородской области)", "sex": "M", "surn": "Сустатов", "isSustatov": true, "parentIds": ["I500071", "I500072"], "spouseIds": ["I500149"], "childIds": [], "siblingIds": ["I500007", "I500091", "I500092", "I500093", "I500094"], "role": "direct", "status": "confirmed", "gedcomId": "I500094", "notes": "", "sources": []}, {"id": "I500012", "name": "Алексей Куликов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Куликов", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500008"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500012", "notes": "", "sources": ["Алексей Куликов"]}, {"id": "I500013", "name": "Алексей Куликов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Куликов", "isSustatov": false, "parentIds": ["I500008", "I500009"], "spouseIds": ["I500119"], "childIds": [], "siblingIds": ["I500004", "I500013", "I500029"], "role": "side", "status": "confirmed", "gedcomId": "I500013", "notes": "", "sources": ["Алексей Куликов"]}, {"id": "I500014", "name": "Александр Белов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Белов", "isSustatov": false, "parentIds": ["I500018"], "spouseIds": ["I500015"], "childIds": ["I500009", "I500019", "I500020", "I500021", "I500102"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500014", "notes": "", "sources": ["Александр Белов"]}, {"id": "I500015", "name": "Евдокия", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500022", "I500101"], "spouseIds": ["I500014"], "childIds": ["I500009", "I500019", "I500020", "I500021", "I500102"], "siblingIds": ["I500015", "I500099"], "role": "side", "status": "confirmed", "gedcomId": "I500015", "notes": "", "sources": ["Евдокия"]}, {"id": "I500016", "name": "Петр Сальников", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сальников", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500010"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500016", "notes": "", "sources": ["Петр Сальников"]}, {"id": "I500017", "name": "Андрей Ботвинин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Ботвинин", "isSustatov": false, "parentIds": ["I500155"], "spouseIds": ["I500150"], "childIds": ["I500011", "I500120"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500017", "notes": "", "sources": ["Андрей Ботвинин"]}, {"id": "I500018", "name": "Маркел Белов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Белов", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500014"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500018", "notes": "", "sources": ["Маркел Белов"]}, {"id": "I500020", "name": "Петр Белов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Белов", "isSustatov": false, "parentIds": ["I500014", "I500015"], "spouseIds": [], "childIds": [], "siblingIds": ["I500009", "I500019", "I500020", "I500021", "I500102"], "role": "side", "status": "confirmed", "gedcomId": "I500020", "notes": "", "sources": ["Петр Белов"]}, {"id": "I500021", "name": "Григорий Белов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Белов", "isSustatov": false, "parentIds": ["I500014", "I500015"], "spouseIds": ["I500121"], "childIds": ["I500122", "I500138"], "siblingIds": ["I500009", "I500019", "I500020", "I500021", "I500102"], "role": "side", "status": "confirmed", "gedcomId": "I500021", "notes": "", "sources": ["Григорий Белов"]}, {"id": "I500022", "name": "Илья Филиппов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Филиппов", "isSustatov": false, "parentIds": [], "spouseIds": ["I500101"], "childIds": ["I500015", "I500099"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500022", "notes": "", "sources": ["Илья"]}, {"id": "I500028", "name": "Куликова?", "born": null, "died": null, "place": "", "sex": "F", "surn": "Куликова?", "isSustatov": false, "parentIds": [], "spouseIds": ["I500033"], "childIds": ["I500034", "I500035"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500028", "notes": "", "sources": ["Неизвестно Куликова?"]}, {"id": "I500029", "name": "Владимир Куликов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Куликов", "isSustatov": false, "parentIds": ["I500008", "I500009"], "spouseIds": ["I500069"], "childIds": ["I500068"], "siblingIds": ["I500004", "I500013", "I500029"], "role": "side", "status": "confirmed", "gedcomId": "I500029", "notes": "", "sources": ["Владимир Куликов"]}, {"id": "I500033", "name": "Василий Зотов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Зотов", "isSustatov": false, "parentIds": [], "spouseIds": ["I500028"], "childIds": ["I500034", "I500035"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500033", "notes": "", "sources": ["Василий Зотов"]}, {"id": "I500034", "name": "Татьяна", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500033", "I500028"], "spouseIds": ["I500036"], "childIds": ["I500037", "I500038"], "siblingIds": ["I500034", "I500035"], "role": "side", "status": "confirmed", "gedcomId": "I500034", "notes": "", "sources": ["Татьяна Белова"]}, {"id": "I500035", "name": "Анна", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500033", "I500028"], "spouseIds": [], "childIds": [], "siblingIds": ["I500034", "I500035"], "role": "side", "status": "confirmed", "gedcomId": "I500035", "notes": "", "sources": ["Анна Сомова"]}, {"id": "I500036", "name": "Григорий Белов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Белов", "isSustatov": false, "parentIds": [], "spouseIds": ["I500034", "I500039"], "childIds": ["I500037", "I500038"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500036", "notes": "", "sources": ["Григорий Белов"]}, {"id": "I500037", "name": "Надежда Белова", "born": null, "died": null, "place": "", "sex": "F", "surn": "Белова", "isSustatov": false, "parentIds": ["I500036", "I500034"], "spouseIds": ["I500040", "I500044"], "childIds": ["I500041", "I500042", "I500043"], "siblingIds": ["I500037", "I500038"], "role": "side", "status": "confirmed", "gedcomId": "I500037", "notes": "", "sources": ["Надежда Сиротина"]}, {"id": "I500038", "name": "Вера Белова", "born": null, "died": null, "place": "", "sex": "F", "surn": "Белова", "isSustatov": false, "parentIds": ["I500036", "I500034"], "spouseIds": ["I500045"], "childIds": ["I500046", "I500047"], "siblingIds": ["I500037", "I500038"], "role": "side", "status": "confirmed", "gedcomId": "I500038", "notes": "", "sources": ["Вера Суркова"]}, {"id": "I500039", "name": "Александра", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500036"], "childIds": [], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500039", "notes": "", "sources": ["Александра Белова"]}, {"id": "I500040", "name": "Константин Сиротин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сиротин", "isSustatov": false, "parentIds": ["I500048", "I500049"], "spouseIds": ["I500037"], "childIds": ["I500041", "I500042"], "siblingIds": ["I500040", "I500062", "I500063"], "role": "side", "status": "confirmed", "gedcomId": "I500040", "notes": "", "sources": ["Константин Сиротин"]}, {"id": "I500044", "name": "I500044", "born": null, "died": null, "place": "", "sex": "M", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500037"], "childIds": ["I500043"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500044", "notes": "", "sources": []}, {"id": "I500045", "name": "Михаил Сурков", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сурков", "isSustatov": false, "parentIds": [], "spouseIds": ["I500038"], "childIds": ["I500046", "I500047"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500045", "notes": "", "sources": ["Михаил Сурков"]}, {"id": "I500046", "name": "Лариса Суркова", "born": null, "died": null, "place": "", "sex": "F", "surn": "Суркова", "isSustatov": false, "parentIds": ["I500045", "I500038"], "spouseIds": [], "childIds": [], "siblingIds": ["I500046", "I500047"], "role": "side", "status": "confirmed", "gedcomId": "I500046", "notes": "", "sources": ["Лариса Суркова"]}, {"id": "I500047", "name": "Юрий Сурков", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сурков", "isSustatov": false, "parentIds": ["I500045", "I500038"], "spouseIds": [], "childIds": [], "siblingIds": ["I500046", "I500047"], "role": "side", "status": "confirmed", "gedcomId": "I500047", "notes": "", "sources": ["Юрий Сурков"]}, {"id": "I500048", "name": "Федор Сиротин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сиротин", "isSustatov": false, "parentIds": ["I500060", "I500061"], "spouseIds": ["I500049"], "childIds": ["I500040", "I500062", "I500063"], "siblingIds": ["I500048"], "role": "side", "status": "confirmed", "gedcomId": "I500048", "notes": "", "sources": ["Федор Сиротин"]}, {"id": "I500049", "name": "Анна Макарова", "born": null, "died": null, "place": "", "sex": "F", "surn": "Макарова", "isSustatov": false, "parentIds": [], "spouseIds": ["I500048"], "childIds": ["I500040", "I500062", "I500063"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500049", "notes": "", "sources": ["Анна Сиротина"]}, {"id": "I500053", "name": "Александра Крючкова", "born": null, "died": null, "place": "", "sex": "F", "surn": "Крючкова", "isSustatov": false, "parentIds": [], "spouseIds": ["I500042"], "childIds": ["I500054", "I500055"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500053", "notes": "", "sources": ["Александра Сиротина"]}, {"id": "I500057", "name": "Павел Грунин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Грунин", "isSustatov": false, "parentIds": ["I500056", "I500043"], "spouseIds": [], "childIds": [], "siblingIds": ["I500057", "I500058", "I500059"], "role": "side", "status": "confirmed", "gedcomId": "I500057", "notes": "", "sources": ["Павел Грунин"]}, {"id": "I500058", "name": "Алексей Грунин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Грунин", "isSustatov": false, "parentIds": ["I500056", "I500043"], "spouseIds": [], "childIds": [], "siblingIds": ["I500057", "I500058", "I500059"], "role": "side", "status": "confirmed", "gedcomId": "I500058", "notes": "", "sources": ["Алексей Грунин"]}, {"id": "I500060", "name": "Михаил Сиротин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сиротин", "isSustatov": false, "parentIds": [], "spouseIds": ["I500061"], "childIds": ["I500048"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500060", "notes": "", "sources": ["Михаил Сиротин"]}, {"id": "I500061", "name": "Прасковья", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500060"], "childIds": ["I500048"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500061", "notes": "", "sources": ["Прасковья Сиротина"]}, {"id": "I500062", "name": "Пелагея Сиротина", "born": null, "died": "8 JUN 2004", "place": "с. Засарье, Ульяновская обл.", "sex": "F", "surn": "Сиротина", "isSustatov": false, "parentIds": ["I500048", "I500049"], "spouseIds": [], "childIds": [], "siblingIds": ["I500040", "I500062", "I500063"], "role": "side", "status": "confirmed", "gedcomId": "I500062", "notes": "", "sources": ["Пелагея Жегалова"]}, {"id": "I500063", "name": "Таисия Сиротина", "born": null, "died": null, "place": "", "sex": "F", "surn": "Сиротина", "isSustatov": false, "parentIds": ["I500048", "I500049"], "spouseIds": [], "childIds": [], "siblingIds": ["I500040", "I500062", "I500063"], "role": "side", "status": "confirmed", "gedcomId": "I500063", "notes": "", "sources": ["Таисия Сиротина"]}, {"id": "I500069", "name": "Зина", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500029"], "childIds": ["I500068"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500069", "notes": "", "sources": []}, {"id": "I500077", "name": "Николай Дворников", "born": null, "died": null, "place": "", "sex": "M", "surn": "Дворников", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500076"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500077", "notes": "", "sources": []}, {"id": "I500080", "name": "Максим Ковригин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Ковригин", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500079"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500080", "notes": "", "sources": []}, {"id": "I500081", "name": "Никита Абрамов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Абрамов", "isSustatov": false, "parentIds": ["I500084"], "spouseIds": ["I500082"], "childIds": ["I500072"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500081", "notes": "", "sources": []}, {"id": "I500082", "name": "Анна", "born": null, "died": "1948", "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500083"], "spouseIds": ["I500081"], "childIds": ["I500072"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500082", "notes": "", "sources": []}, {"id": "I500083", "name": "Федор", "born": null, "died": null, "place": "", "sex": "M", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500082"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500083", "notes": "", "sources": []}, {"id": "I500084", "name": "Ермолай Абрамов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Абрамов", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500081"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500084", "notes": "", "sources": []}, {"id": "I500086", "name": "Фёдор Королёв", "born": null, "died": null, "place": "", "sex": "M", "surn": "Королёв", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500074"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500086", "notes": "", "sources": []}, {"id": "I500101", "name": "I500101", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500022"], "childIds": ["I500015", "I500099"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500101", "notes": "", "sources": []}, {"id": "I500102", "name": "Сергей Белов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Белов", "isSustatov": false, "parentIds": ["I500014", "I500015"], "spouseIds": [], "childIds": [], "siblingIds": ["I500009", "I500019", "I500020", "I500021", "I500102"], "role": "side", "status": "confirmed", "gedcomId": "I500102", "notes": "", "sources": []}, {"id": "I500104", "name": "Дмитрий Сомов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сомов", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500103"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500104", "notes": "", "sources": []}, {"id": "I500107", "name": "Григорий Марушкин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Марушкин", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500105", "I500109"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500107", "notes": "", "sources": []}, {"id": "I500108", "name": "Михаил Васькин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Васькин", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500106", "I500110", "I500111"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500108", "notes": "", "sources": []}, {"id": "I500109", "name": "Надежда Марушкина", "born": null, "died": null, "place": "", "sex": "F", "surn": "Марушкина", "isSustatov": false, "parentIds": ["I500107"], "spouseIds": [], "childIds": [], "siblingIds": ["I500105"], "role": "side", "status": "confirmed", "gedcomId": "I500109", "notes": "", "sources": []}, {"id": "I500110", "name": "Людмила Васькина", "born": null, "died": null, "place": "", "sex": "F", "surn": "Васькина", "isSustatov": false, "parentIds": ["I500108"], "spouseIds": [], "childIds": [], "siblingIds": ["I500106", "I500111"], "role": "side", "status": "confirmed", "gedcomId": "I500110", "notes": "", "sources": []}, {"id": "I500111", "name": "Валентина Васькина", "born": null, "died": null, "place": "", "sex": "F", "surn": "Васькина", "isSustatov": false, "parentIds": ["I500108"], "spouseIds": [], "childIds": [], "siblingIds": ["I500106", "I500110"], "role": "side", "status": "confirmed", "gedcomId": "I500111", "notes": "", "sources": []}, {"id": "I500113", "name": "Любовь Сальникова", "born": null, "died": null, "place": "", "sex": "F", "surn": "Сальникова", "isSustatov": false, "parentIds": ["I500010", "I500011"], "spouseIds": [], "childIds": [], "siblingIds": ["I500005", "I500112", "I500113", "I500114", "I500115", "I500116"], "role": "side", "status": "confirmed", "gedcomId": "I500113", "notes": "", "sources": []}, {"id": "I500115", "name": "Анатолий Сальников", "born": null, "died": null, "place": "Поляна Крым", "sex": "M", "surn": "Сальников", "isSustatov": false, "parentIds": ["I500010", "I500011"], "spouseIds": ["I500118"], "childIds": ["I500117"], "siblingIds": ["I500005", "I500112", "I500113", "I500114", "I500115", "I500116"], "role": "side", "status": "confirmed", "gedcomId": "I500115", "notes": "", "sources": []}, {"id": "I500116", "name": "Иван Сальников", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сальников", "isSustatov": false, "parentIds": ["I500010", "I500011"], "spouseIds": [], "childIds": [], "siblingIds": ["I500005", "I500112", "I500113", "I500114", "I500115", "I500116"], "role": "side", "status": "confirmed", "gedcomId": "I500116", "notes": "", "sources": []}, {"id": "I500118", "name": "I500118", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500115"], "childIds": ["I500117"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500118", "notes": "", "sources": []}, {"id": "I500121", "name": "Татяна Зотова", "born": null, "died": null, "place": "", "sex": "F", "surn": "Зотова", "isSustatov": false, "parentIds": [], "spouseIds": ["I500021"], "childIds": ["I500122", "I500138"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500121", "notes": "", "sources": []}, {"id": "I500135", "name": "Андрей Тихонов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Тихонов", "isSustatov": false, "parentIds": [], "spouseIds": ["I500133"], "childIds": ["I500134", "I500136", "I500137"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500135", "notes": "", "sources": []}, {"id": "I500137", "name": "Матвей Тихонов", "born": null, "died": null, "place": "", "sex": "M", "surn": "Тихонов", "isSustatov": false, "parentIds": ["I500135", "I500133"], "spouseIds": [], "childIds": [], "siblingIds": ["I500134", "I500136", "I500137"], "role": "side", "status": "confirmed", "gedcomId": "I500137", "notes": "", "sources": []}, {"id": "I500138", "name": "Вера Белова", "born": null, "died": null, "place": "", "sex": "F", "surn": "Белова", "isSustatov": false, "parentIds": ["I500021", "I500121"], "spouseIds": ["I500139"], "childIds": ["I500140", "I500141"], "siblingIds": ["I500122", "I500138"], "role": "side", "status": "confirmed", "gedcomId": "I500138", "notes": "", "sources": []}, {"id": "I500139", "name": "Михаил Сурков", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сурков", "isSustatov": false, "parentIds": [], "spouseIds": ["I500138"], "childIds": ["I500140", "I500141"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500139", "notes": "", "sources": []}, {"id": "I500140", "name": "Юрий Сурков", "born": null, "died": null, "place": "", "sex": "M", "surn": "Сурков", "isSustatov": false, "parentIds": ["I500139", "I500138"], "spouseIds": [], "childIds": [], "siblingIds": ["I500140", "I500141"], "role": "side", "status": "confirmed", "gedcomId": "I500140", "notes": "", "sources": []}, {"id": "I500141", "name": "Лариса Сурков", "born": null, "died": null, "place": "", "sex": "F", "surn": "Сурков", "isSustatov": false, "parentIds": ["I500139", "I500138"], "spouseIds": [], "childIds": [], "siblingIds": ["I500140", "I500141"], "role": "side", "status": "confirmed", "gedcomId": "I500141", "notes": "", "sources": []}, {"id": "I500142", "name": "Людмила Эдуардовна", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500001"], "childIds": [], "siblingIds": [], "role": "inlaw", "status": "confirmed", "gedcomId": "I500142", "notes": "", "sources": []}, {"id": "I500143", "name": "Мария Куликов", "born": null, "died": null, "place": "", "sex": "F", "surn": "Куликов", "isSustatov": false, "parentIds": ["I500068", "I500144"], "spouseIds": [], "childIds": [], "siblingIds": ["I500143"], "role": "side", "status": "confirmed", "gedcomId": "I500143", "notes": "", "sources": []}, {"id": "I500144", "name": "Ирина", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500068"], "childIds": ["I500143"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500144", "notes": "", "sources": []}, {"id": "I500149", "name": "Нина", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500094"], "childIds": [], "siblingIds": [], "role": "inlaw", "status": "confirmed", "gedcomId": "I500149", "notes": "", "sources": []}, {"id": "I500150", "name": "Агафия", "born": null, "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500156"], "spouseIds": ["I500017"], "childIds": ["I500011", "I500120"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500150", "notes": "", "sources": []}, {"id": "I500155", "name": "Борис Ботвинин", "born": null, "died": null, "place": "", "sex": "M", "surn": "Ботвинин", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500017"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500155", "notes": "", "sources": []}, {"id": "I500156", "name": "Борис", "born": null, "died": null, "place": "", "sex": "M", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": [], "childIds": ["I500150"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500156", "notes": "", "sources": []}, {"id": "I500106", "name": "Сергей Васькина", "born": "1 MAR 1961", "died": null, "place": "Кубри́нск — село в Переславском районе Ярославской области", "sex": "M", "surn": "Васькина", "isSustatov": false, "parentIds": ["I500108"], "spouseIds": ["I500105"], "childIds": ["I500030"], "siblingIds": ["I500110", "I500111"], "role": "side", "status": "confirmed", "gedcomId": "I500106", "notes": "", "sources": []}, {"id": "I500130", "name": "Ульяна Медведев", "born": "10 JAN 2019", "died": null, "place": "г. Москва", "sex": "F", "surn": "Медведев", "isSustatov": false, "parentIds": ["I500128", "I500127"], "spouseIds": [], "childIds": [], "siblingIds": ["I500129", "I500130"], "role": "side", "status": "confirmed", "gedcomId": "I500130", "notes": "", "sources": []}, {"id": "I500092", "name": "Анна", "born": "10 JUL 1934", "died": "23 AUG 1953", "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500071", "I500072"], "spouseIds": [], "childIds": [], "siblingIds": ["I500007", "I500091", "I500092", "I500093", "I500094"], "role": "side", "status": "confirmed", "gedcomId": "I500092", "notes": "", "sources": []}, {"id": "I500006", "name": "Александра Ковригина", "born": "11 JAN 1931", "died": "7 FEB 2010", "place": "c. Б. Болдино, Нижегородской обл.", "sex": "F", "surn": "Ковригина", "isSustatov": false, "parentIds": ["I500078", "I500076"], "spouseIds": ["I500007"], "childIds": ["I500001", "I500087"], "siblingIds": ["I500006", "I500095", "I500096", "I500097"], "role": "inlaw", "status": "confirmed", "gedcomId": "I500006", "notes": "", "sources": []}, {"id": "I500112", "name": "Нина Сальникова", "born": "11 SEP 1936", "died": null, "place": "г. Москва", "sex": "F", "surn": "Сальникова", "isSustatov": false, "parentIds": ["I500010", "I500011"], "spouseIds": [], "childIds": [], "siblingIds": ["I500005", "I500112", "I500113", "I500114", "I500115", "I500116"], "role": "side", "status": "confirmed", "gedcomId": "I500112", "notes": "", "sources": []}, {"id": "I500055", "name": "Елена Сиротина", "born": "12 JAN 1987", "died": null, "place": "", "sex": "F", "surn": "Сиротина", "isSustatov": false, "parentIds": ["I500042", "I500053"], "spouseIds": [], "childIds": [], "siblingIds": ["I500054", "I500055"], "role": "side", "status": "confirmed", "gedcomId": "I500055", "notes": "", "sources": ["Елена Хаймурзина"]}, {"id": "I500076", "name": "Евдокия Дворникова", "born": "14 MAR 1896", "died": "7 OCT 1978", "place": "", "sex": "F", "surn": "Дворникова", "isSustatov": false, "parentIds": ["I500077"], "spouseIds": ["I500078"], "childIds": ["I500006", "I500095", "I500096", "I500097"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500076", "notes": "", "sources": []}, {"id": "I500122", "name": "Надежна", "born": "15 SEP 1927", "died": "23 OCT 2005", "place": "с. Васильевка, Цильнинского района", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500021", "I500121"], "spouseIds": ["I500123"], "childIds": ["I500124", "I500131"], "siblingIds": ["I500122", "I500138"], "role": "side", "status": "confirmed", "gedcomId": "I500122", "notes": "", "sources": []}, {"id": "I500003", "name": "Игорь Сальников", "born": "16 DEC 1982", "died": null, "place": "г. Ленинград", "sex": "M", "surn": "Сальников", "isSustatov": false, "parentIds": ["I500001", "I500002"], "spouseIds": ["I500030"], "childIds": ["I500031", "I500032"], "siblingIds": ["I500003"], "role": "direct", "status": "confirmed", "gedcomId": "I500003", "notes": "", "sources": []}, {"id": "I500011", "name": "Агафья Ботвинина", "born": "17 FEB 1907", "died": "22 MAR 1994", "place": "п Угпа", "sex": "F", "surn": "Ботвинина", "isSustatov": false, "parentIds": ["I500017", "I500150"], "spouseIds": ["I500010"], "childIds": ["I500005", "I500112", "I500113", "I500114", "I500115", "I500116"], "siblingIds": ["I500011", "I500120"], "role": "side", "status": "confirmed", "gedcomId": "I500011", "notes": "", "sources": ["Агафья Ботвинина"]}, {"id": "I500068", "name": "Александр Куликов", "born": "17 NOV 1971", "died": null, "place": "", "sex": "M", "surn": "Куликов", "isSustatov": false, "parentIds": ["I500029", "I500069"], "spouseIds": ["I500144"], "childIds": ["I500143"], "siblingIds": ["I500068"], "role": "side", "status": "confirmed", "gedcomId": "I500068", "notes": "", "sources": []}, {"id": "I500090", "name": "Дарья Ермолина", "born": "18 MAR 1987", "died": null, "place": "", "sex": "F", "surn": "Ермолина", "isSustatov": false, "parentIds": ["I500088", "I500087"], "spouseIds": [], "childIds": [], "siblingIds": ["I500089", "I500090"], "role": "side", "status": "confirmed", "gedcomId": "I500090", "notes": "", "sources": []}, {"id": "I500079", "name": "Иван Ковригин", "born": "1852", "died": "1937", "place": "", "sex": "M", "surn": "Ковригин", "isSustatov": false, "parentIds": ["I500080"], "spouseIds": [], "childIds": ["I500078"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500079", "notes": "", "sources": []}, {"id": "I500074", "name": "Прасковья Королёва", "born": "1883", "died": "1969", "place": "", "sex": "F", "surn": "Королёва", "isSustatov": false, "parentIds": ["I500086"], "spouseIds": ["I500073"], "childIds": ["I500071", "I500147", "I500148"], "siblingIds": [], "role": "inlaw", "status": "confirmed", "gedcomId": "I500074", "notes": "", "sources": []}, {"id": "I500078", "name": "Андрей Ковригин", "born": "1895", "died": "19 APR 1960", "place": "", "sex": "M", "surn": "Ковригин", "isSustatov": false, "parentIds": ["I500079"], "spouseIds": ["I500076"], "childIds": ["I500006", "I500095", "I500096", "I500097"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500078", "notes": "", "sources": []}, {"id": "I500019", "name": "Анна Белова", "born": "19 DEC 1921", "died": "23 APR 1992", "place": "Ульяновская обл., Ишеевский р-н, г. Васильевка (Куйбышевский край, Ульяновский р-н, Симбирская губерния и уезд)|Ульяновская обл., Ишеевский р-н, с. Васильевка", "sex": "F", "surn": "Белова", "isSustatov": false, "parentIds": ["I500014", "I500015"], "spouseIds": ["I500103"], "childIds": [], "siblingIds": ["I500009", "I500019", "I500020", "I500021", "I500102"], "role": "side", "status": "confirmed", "gedcomId": "I500019", "notes": "", "sources": ["Анна Белова"]}, {"id": "I500088", "name": "Дмитрий Ермолин", "born": "19 DEC 1956", "died": null, "place": "", "sex": "M", "surn": "Ермолин", "isSustatov": false, "parentIds": [], "spouseIds": ["I500087"], "childIds": ["I500089", "I500090"], "siblingIds": [], "role": "inlaw", "status": "confirmed", "gedcomId": "I500088", "notes": "", "sources": []}, {"id": "I500010", "name": "Максим Сальников", "born": "1905", "died": null, "place": "деревня Вергово", "sex": "M", "surn": "Сальников", "isSustatov": false, "parentIds": ["I500016"], "spouseIds": ["I500011"], "childIds": ["I500005", "I500112", "I500113", "I500114", "I500115", "I500116"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500010", "notes": "", "sources": ["Максим Сальников"]}, {"id": "I500008", "name": "Михаил Куликов", "born": "1907", "died": "1946", "place": "Россия", "sex": "M", "surn": "Куликов", "isSustatov": false, "parentIds": ["I500012"], "spouseIds": ["I500009"], "childIds": ["I500004", "I500013", "I500029"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500008", "notes": "", "sources": ["Михаил Куликов"]}, {"id": "I500123", "name": "Константин Сиротин", "born": "1927", "died": "1975", "place": "с. Цыповка, Ульяновская обл.", "sex": "M", "surn": "Сиротин", "isSustatov": false, "parentIds": [], "spouseIds": ["I500122"], "childIds": ["I500124", "I500131"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500123", "notes": "", "sources": []}, {"id": "I500091", "name": "Татяьна", "born": "1932", "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500071", "I500072"], "spouseIds": [], "childIds": [], "siblingIds": ["I500007", "I500091", "I500092", "I500093", "I500094"], "role": "side", "status": "confirmed", "gedcomId": "I500091", "notes": "", "sources": []}, {"id": "I500120", "name": "Дора Ботвинина", "born": "2 JUN 1920", "died": "10 MAR 1993", "place": "", "sex": "F", "surn": "Ботвинина", "isSustatov": false, "parentIds": ["I500017", "I500150"], "spouseIds": [], "childIds": [], "siblingIds": ["I500011", "I500120"], "role": "side", "status": "confirmed", "gedcomId": "I500120", "notes": "", "sources": []}, {"id": "I500119", "name": "Александра", "born": "2 MAR 1935", "died": "25 OCT 2020", "place": "с.Пелтечь", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500013"], "childIds": [], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500119", "notes": "", "sources": []}, {"id": "I500129", "name": "Алексей Медведев", "born": "20 JUN 2015", "died": null, "place": "Москва", "sex": "M", "surn": "Медведев", "isSustatov": false, "parentIds": ["I500128", "I500127"], "spouseIds": [], "childIds": [], "siblingIds": ["I500129", "I500130"], "role": "side", "status": "confirmed", "gedcomId": "I500129", "notes": "", "sources": []}, {"id": "I500157", "name": "Сергей Нарышкин", "born": "21 SEP 1982", "died": null, "place": "", "sex": "M", "surn": "Нарышкин", "isSustatov": false, "parentIds": ["I500152", "I500114"], "spouseIds": [], "childIds": [], "siblingIds": ["I500151", "I500157"], "role": "side", "status": "confirmed", "gedcomId": "I500157", "notes": "", "sources": []}, {"id": "I500151", "name": "Максим Нарышкин", "born": "22 APR 1975", "died": "24 DEC 2013", "place": "", "sex": "M", "surn": "Нарышкин", "isSustatov": false, "parentIds": ["I500152", "I500114"], "spouseIds": [], "childIds": [], "siblingIds": ["I500151", "I500157"], "role": "side", "status": "confirmed", "gedcomId": "I500151", "notes": "", "sources": []}, {"id": "I500114", "name": "Валентина Сальникова", "born": "22 JUL 1950", "died": "22 DEC 2024", "place": "", "sex": "F", "surn": "Сальникова", "isSustatov": false, "parentIds": ["I500010", "I500011"], "spouseIds": ["I500152"], "childIds": ["I500151", "I500157"], "siblingIds": ["I500005", "I500112", "I500113", "I500114", "I500115", "I500116"], "role": "side", "status": "confirmed", "gedcomId": "I500114", "notes": "", "sources": []}, {"id": "I500097", "name": "Валентин", "born": "22 MAR 1936", "died": null, "place": "", "sex": "M", "surn": "", "isSustatov": false, "parentIds": ["I500078", "I500076"], "spouseIds": [], "childIds": [], "siblingIds": ["I500006", "I500095", "I500096", "I500097"], "role": "side", "status": "confirmed", "gedcomId": "I500097", "notes": "", "sources": []}, {"id": "I500095", "name": "Дмитрий", "born": "23 FEB 1918", "died": "17 SEP 1990", "place": "", "sex": "M", "surn": "", "isSustatov": false, "parentIds": ["I500078", "I500076"], "spouseIds": [], "childIds": [], "siblingIds": ["I500006", "I500095", "I500096", "I500097"], "role": "side", "status": "confirmed", "gedcomId": "I500095", "notes": "", "sources": []}, {"id": "I500072", "name": "Евдокия Абрамова", "born": "24 JAN 1911", "died": "25 JAN 1989", "place": "Россия", "sex": "F", "surn": "Абрамова", "isSustatov": false, "parentIds": ["I500081", "I500082"], "spouseIds": ["I500071"], "childIds": ["I500007", "I500091", "I500092", "I500093", "I500094"], "siblingIds": ["I500072"], "role": "inlaw", "status": "confirmed", "gedcomId": "I500072", "notes": "", "sources": ["Евдокия Абрамова"]}, {"id": "I500105", "name": "Елена Марушкина", "born": "24 MAY 1963", "died": null, "place": "", "sex": "F", "surn": "Марушкина", "isSustatov": false, "parentIds": ["I500107"], "spouseIds": ["I500106"], "childIds": ["I500030"], "siblingIds": ["I500109"], "role": "side", "status": "confirmed", "gedcomId": "I500105", "notes": "", "sources": []}, {"id": "I500002", "name": "Ольга Сальникова", "born": "24 SEP 1956", "died": null, "place": "г. Остров, Псковской области", "sex": "F", "surn": "Сальникова", "isSustatov": false, "parentIds": ["I500005", "I500004"], "spouseIds": ["I500001"], "childIds": ["I500003"], "siblingIds": ["I500002"], "role": "inlaw", "status": "confirmed", "gedcomId": "I500002", "notes": "", "sources": []}, {"id": "I500152", "name": "Александр Нарышкин", "born": "25 SEP 1953", "died": "15 AUG 1984", "place": "Москва", "sex": "M", "surn": "Нарышкин", "isSustatov": false, "parentIds": [], "spouseIds": ["I500114"], "childIds": ["I500151", "I500157"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500152", "notes": "", "sources": []}, {"id": "I500031", "name": "Максим Сальников", "born": "26 NOV 2015", "died": null, "place": "г. Москва", "sex": "M", "surn": "Сальников", "isSustatov": false, "parentIds": ["I500003", "I500030"], "spouseIds": [], "childIds": [], "siblingIds": ["I500031", "I500032"], "role": "side", "status": "confirmed", "gedcomId": "I500031", "notes": "", "sources": ["Максим Сальников"]}, {"id": "I500004", "name": "Валентина Куликова", "born": "26 SEP 1934", "died": "14 JUL 2018", "place": "Россия", "sex": "F", "surn": "Куликова", "isSustatov": false, "parentIds": ["I500008", "I500009"], "spouseIds": ["I500005"], "childIds": ["I500002"], "siblingIds": ["I500004", "I500013", "I500029"], "role": "side", "status": "confirmed", "gedcomId": "I500004", "notes": "", "sources": []}, {"id": "I500005", "name": "Егор Сальникова", "born": "28 AUG 1930", "died": "13 DEC 2014", "place": "Россия", "sex": "M", "surn": "Сальникова", "isSustatov": false, "parentIds": ["I500010", "I500011"], "spouseIds": ["I500004"], "childIds": ["I500002"], "siblingIds": ["I500005", "I500112", "I500113", "I500114", "I500115", "I500116"], "role": "side", "status": "confirmed", "gedcomId": "I500005", "notes": "", "sources": []}, {"id": "I500099", "name": "Иван Филиппов", "born": "29 AUG 1893", "died": "1965", "place": "Ульяновская обл., Ишеевский р-н, г. Васильевка (Куйбышевский край, Ульяновский р-н, Симбирская губерния и уезд)|Ульяновская обл., Ишеевский р-н, с. Васильевка", "sex": "M", "surn": "Филиппов", "isSustatov": false, "parentIds": ["I500022", "I500101"], "spouseIds": [], "childIds": [], "siblingIds": ["I500015", "I500099"], "role": "side", "status": "confirmed", "gedcomId": "I500099", "notes": "<p><p><a style=\"color: #1155cc; pointer-events: none; font-family: Roboto, Arial, sans-serif; font-size: 14px; font-variant-ligatures: none; letter-spacing: 0.2px; white-space: pre-wrap; background-co", "sources": []}, {"id": "I500059", "name": "Мария Грунина", "born": "29 NOV 1988", "died": null, "place": "Сурское", "sex": "F", "surn": "Грунина", "isSustatov": false, "parentIds": ["I500056", "I500043"], "spouseIds": [], "childIds": [], "siblingIds": ["I500057", "I500058", "I500059"], "role": "side", "status": "confirmed", "gedcomId": "I500059", "notes": "", "sources": ["Мария Тихонова"]}, {"id": "I500133", "name": "Мария Грунин", "born": "29 NOV 1988", "died": null, "place": "Сурское", "sex": "F", "surn": "Грунин", "isSustatov": false, "parentIds": ["I500132", "I500131"], "spouseIds": ["I500135"], "childIds": ["I500134", "I500136", "I500137"], "siblingIds": ["I500133"], "role": "side", "status": "confirmed", "gedcomId": "I500133", "notes": "", "sources": []}, {"id": "I500096", "name": "Людмила", "born": "29 SEP 1920", "died": "20 AUG 1992", "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500078", "I500076"], "spouseIds": [], "childIds": [], "siblingIds": ["I500006", "I500095", "I500096", "I500097"], "role": "side", "status": "confirmed", "gedcomId": "I500096", "notes": "", "sources": []}, {"id": "I500052", "name": "Анна Сиротина", "born": "3 APR 1979", "died": null, "place": "Ульяновск", "sex": "F", "surn": "Сиротина", "isSustatov": false, "parentIds": ["I500041", "I500050"], "spouseIds": [], "childIds": [], "siblingIds": ["I500051", "I500052"], "role": "side", "status": "confirmed", "gedcomId": "I500052", "notes": "", "sources": ["Анна Сиротина"]}, {"id": "I500054", "name": "Татьяна Сиротина", "born": "3 AUG 1985", "died": null, "place": "", "sex": "F", "surn": "Сиротина", "isSustatov": false, "parentIds": ["I500042", "I500053"], "spouseIds": [], "childIds": [], "siblingIds": ["I500054", "I500055"], "role": "side", "status": "confirmed", "gedcomId": "I500054", "notes": "", "sources": ["Татьяна Коновалова"]}, {"id": "I500128", "name": "Антон Медведев", "born": "3 FEB 1987", "died": null, "place": "Краснозаводск, Сергиево-Посадский район", "sex": "M", "surn": "Медведев", "isSustatov": false, "parentIds": [], "spouseIds": ["I500127"], "childIds": ["I500129", "I500130"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500128", "notes": "", "sources": []}, {"id": "I500041", "name": "Алексей Сиротин", "born": "3 NOV 1956", "died": null, "place": "", "sex": "M", "surn": "Сиротин", "isSustatov": false, "parentIds": ["I500040", "I500037"], "spouseIds": ["I500050"], "childIds": ["I500051", "I500052"], "siblingIds": ["I500041", "I500042"], "role": "side", "status": "confirmed", "gedcomId": "I500041", "notes": "", "sources": ["Алексей Сиротин"]}, {"id": "I500124", "name": "Алексей Сиротин", "born": "3 NOV 1956", "died": null, "place": "", "sex": "M", "surn": "Сиротин", "isSustatov": false, "parentIds": ["I500123", "I500122"], "spouseIds": ["I500126"], "childIds": ["I500127"], "siblingIds": ["I500124", "I500131"], "role": "side", "status": "confirmed", "gedcomId": "I500124", "notes": "", "sources": []}, {"id": "I500009", "name": "Мария Белова", "born": "30 JUL 1910", "died": "1968", "place": "Россия", "sex": "F", "surn": "Белова", "isSustatov": false, "parentIds": ["I500014", "I500015"], "spouseIds": ["I500008"], "childIds": ["I500004", "I500013", "I500029"], "siblingIds": ["I500009", "I500019", "I500020", "I500021", "I500102"], "role": "side", "status": "confirmed", "gedcomId": "I500009", "notes": "", "sources": ["Мария Белова"]}, {"id": "I500103", "name": "Георгий Сомов", "born": "31 MAY 1919", "died": "23 MAY 1983", "place": "г. Москва", "sex": "M", "surn": "Сомов", "isSustatov": false, "parentIds": ["I500104"], "spouseIds": ["I500019"], "childIds": [], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500103", "notes": "", "sources": []}, {"id": "I500043", "name": "Ирина Белова", "born": "4 APR 1953", "died": null, "place": "Россия", "sex": "F", "surn": "Белова", "isSustatov": false, "parentIds": ["I500044", "I500037"], "spouseIds": ["I500056"], "childIds": ["I500057", "I500058", "I500059"], "siblingIds": ["I500043"], "role": "side", "status": "confirmed", "gedcomId": "I500043", "notes": "", "sources": ["Ирина Грунина"]}, {"id": "I500131", "name": "Ирина (Юрьевна)", "born": "4 APR 1953", "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500123", "I500122"], "spouseIds": ["I500132"], "childIds": ["I500133"], "siblingIds": ["I500124", "I500131"], "role": "side", "status": "confirmed", "gedcomId": "I500131", "notes": "", "sources": []}, {"id": "I500089", "name": "Никита Ермиолин", "born": "4 JUN 1982", "died": null, "place": "", "sex": "M", "surn": "Ермиолин", "isSustatov": false, "parentIds": ["I500088", "I500087"], "spouseIds": [], "childIds": [], "siblingIds": ["I500089", "I500090"], "role": "side", "status": "confirmed", "gedcomId": "I500089", "notes": "", "sources": []}, {"id": "I500051", "name": "Екатерина Сиротина", "born": "4 JUN 1987", "died": null, "place": "Байконур (Ленинск), Казахстан", "sex": "F", "surn": "Сиротина", "isSustatov": false, "parentIds": ["I500041", "I500050"], "spouseIds": [], "childIds": [], "siblingIds": ["I500051", "I500052"], "role": "side", "status": "confirmed", "gedcomId": "I500051", "notes": "", "sources": ["Екатерина Сиротина"]}, {"id": "I500127", "name": "Екатерина Сиротин", "born": "4 JUN 1987", "died": null, "place": "Байконур (Ленинск), Казахстан", "sex": "F", "surn": "Сиротин", "isSustatov": false, "parentIds": ["I500124", "I500126"], "spouseIds": ["I500128"], "childIds": ["I500129", "I500130"], "siblingIds": ["I500127"], "role": "side", "status": "confirmed", "gedcomId": "I500127", "notes": "", "sources": []}, {"id": "I500050", "name": "Мария Есина", "born": "6 APR 1957", "died": null, "place": "Новочеремшанск, Ульяновская обл.", "sex": "F", "surn": "Есина", "isSustatov": false, "parentIds": [], "spouseIds": ["I500041"], "childIds": ["I500051", "I500052"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500050", "notes": "", "sources": ["Мария Сиротина"]}, {"id": "I500126", "name": "Мария", "born": "6 APR 1957", "died": null, "place": "Новочеремшанск, Ульяновская обл.", "sex": "F", "surn": "", "isSustatov": false, "parentIds": [], "spouseIds": ["I500124"], "childIds": ["I500127"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500126", "notes": "", "sources": []}, {"id": "I500117", "name": "Денис Сальников", "born": "6 SEP 1979", "died": null, "place": "", "sex": "M", "surn": "Сальников", "isSustatov": false, "parentIds": ["I500115", "I500118"], "spouseIds": [], "childIds": [], "siblingIds": ["I500117"], "role": "side", "status": "confirmed", "gedcomId": "I500117", "notes": "", "sources": []}, {"id": "I500093", "name": "Вера", "born": "7 OCT 1939", "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500071", "I500072"], "spouseIds": [], "childIds": [], "siblingIds": ["I500007", "I500091", "I500092", "I500093", "I500094"], "role": "side", "status": "confirmed", "gedcomId": "I500093", "notes": "", "sources": []}, {"id": "I500042", "name": "Александр Сиротин", "born": "7 OCT 1960", "died": null, "place": "", "sex": "M", "surn": "Сиротин", "isSustatov": false, "parentIds": ["I500040", "I500037"], "spouseIds": ["I500053"], "childIds": ["I500054", "I500055"], "siblingIds": ["I500041", "I500042"], "role": "side", "status": "confirmed", "gedcomId": "I500042", "notes": "", "sources": ["Александр Сиротин"]}, {"id": "I500056", "name": "Александр Грунин", "born": "8 APR 1955", "died": null, "place": "Россия", "sex": "M", "surn": "Грунин", "isSustatov": false, "parentIds": [], "spouseIds": ["I500043"], "childIds": ["I500057", "I500058", "I500059"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500056", "notes": "", "sources": ["Александр Грунин"]}, {"id": "I500132", "name": "Александр Грунин", "born": "8 APR 1955", "died": null, "place": "", "sex": "M", "surn": "Грунин", "isSustatov": false, "parentIds": [], "spouseIds": ["I500131"], "childIds": ["I500133"], "siblingIds": [], "role": "side", "status": "confirmed", "gedcomId": "I500132", "notes": "", "sources": []}, {"id": "I500030", "name": "Ольга Васькина", "born": "8 DEC 1985", "died": null, "place": "г. Сергиев Посад", "sex": "F", "surn": "Васькина", "isSustatov": false, "parentIds": ["I500106", "I500105"], "spouseIds": ["I500003"], "childIds": ["I500031", "I500032"], "siblingIds": ["I500030"], "role": "inlaw", "status": "confirmed", "gedcomId": "I500030", "notes": "", "sources": ["Ольга Сальникова"]}, {"id": "I500032", "name": "Анна Сальникова", "born": "8 JUL 2017", "died": null, "place": "г. Москва", "sex": "F", "surn": "Сальникова", "isSustatov": false, "parentIds": ["I500003", "I500030"], "spouseIds": [], "childIds": [], "siblingIds": ["I500031", "I500032"], "role": "side", "status": "confirmed", "gedcomId": "I500032", "notes": "", "sources": ["Анна Сальникова"]}, {"id": "I500134", "name": "Арина", "born": "JUL 2021", "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500135", "I500133"], "spouseIds": [], "childIds": [], "siblingIds": ["I500134", "I500136", "I500137"], "role": "side", "status": "confirmed", "gedcomId": "I500134", "notes": "", "sources": []}, {"id": "I500136", "name": "Александра", "born": "JUL 2021", "died": null, "place": "", "sex": "F", "surn": "", "isSustatov": false, "parentIds": ["I500135", "I500133"], "spouseIds": [], "childIds": [], "siblingIds": ["I500134", "I500136", "I500137"], "role": "side", "status": "confirmed", "gedcomId": "I500136", "notes": "", "sources": []}];
+const byId = Object.fromEntries(NODES.map(n => [n.id, n]));
+
+function dates(n) {
+  const b = n.born || '?';
+  const d = n.died || '—';
+  return `${b} — ${d}`;
+}
+
+function names(ids) {
+  return (ids || []).map(i => byId[i]?.name || i).filter(Boolean).join(', ') || '—';
+}
+
+function buildEdges(nodeList, edgeFilter) {
+  const ids = new Set(nodeList.map(n => n.id));
+  const edges = [];
+  const seen = new Set();
+  const add = (a, b, type) => {
+    if (!ids.has(a) || !ids.has(b)) return;
+    const k = [a,b].sort().join('|') + type;
+    if (seen.has(k)) return;
+    seen.add(k);
+    edges.push({ from: a, to: b, type });
+  };
+  nodeList.forEach(n => {
+    (n.parentIds||[]).forEach(p => add(p, n.id, 'parent'));
+    (n.spouseIds||[]).forEach(s => add(n.id, s, 'spouse'));
+    (n.childIds||[]).forEach(c => add(n.id, c, 'parent'));
+    (n.siblingIds||[]).forEach(s => add(n.id, s, 'sibling'));
+    (n.parentIds||[]).forEach(pid => {
+      nodeList.filter(x => x.id !== n.id && (x.parentIds||[]).includes(pid))
+        .forEach(sib => add(n.id, sib.id, 'sibling'));
+    });
+  });
+  if (edgeFilter && edgeFilter !== 'all')
+    return edges.filter(e => e.type === edgeFilter);
+  return edges;
+}
+
+function getFilteredNodes() {
+  const q = (document.getElementById('search').value || '').toLowerCase().trim();
+  const surn = document.getElementById('filter-surn').value;
+  const role = document.getElementById('filter-role').value;
+  const focus = document.getElementById('filter-focus').value;
+  let list = NODES.slice();
+  if (q) list = list.filter(n => n.name.toLowerCase().includes(q) || n.id.toLowerCase().includes(q));
+  if (surn === 'sustatov') list = list.filter(n => n.isSustatov);
+  if (surn === 'relative') list = list.filter(n => !n.isSustatov);
+  if (role) list = list.filter(n => n.role === role);
+  if (focus === 'direct') list = list.filter(n => n.role === 'direct');
+  if (focus && byId[focus]) {
+    const keep = new Set();
+    const walk = (id, depth) => {
+      if (!id || !byId[id] || keep.has(id) || depth > 20) return;
+      keep.add(id);
+      const n = byId[id];
+      [...(n.parentIds||[]), ...(n.childIds||[]), ...(n.spouseIds||[]), ...(n.siblingIds||[])].forEach(x => walk(x, depth+1));
+    };
+    walk(focus, 0);
+    list = list.filter(n => keep.has(n.id));
+  }
+  return list;
+}
+
+function renderStats(list, edges) {
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><b>${list.length}</b>узлов</div>
+    <div class="stat"><b>${edges.length}</b>рёбер</div>
+    <div class="stat"><b>${list.filter(n=>n.isSustatov).length}</b>Сустатовы</div>
+    <div class="stat"><b>${list.filter(n=>n.role==='direct').length}</b>прямая</div>`;
+}
+
+function showDetail(id) {
+  const n = byId[id];
+  const empty = document.getElementById('detail-empty');
+  const el = document.getElementById('detail');
+  if (!n) { el.classList.remove('visible'); empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+  el.classList.add('visible');
+  const roleLabel = {direct:'прямая',side:'боковая',inlaw:'по браку',unknown:'—'}[n.role] || n.role;
+  const src = (n.sources||[]).map(s => `<a href="${s}" target="_blank" rel="noopener">${s.replace(/https:\/\//,'')}</a>`).join('<br>') || '—';
+  el.innerHTML = `
+    <h3>${n.name}</h3>
+    <div class="badges">
+      <span class="badge ${n.isSustatov?'sustatov':'relative'}">${n.isSustatov?'Сустатов':'родня'}</span>
+      <span class="badge ${n.role}">${roleLabel}</span>
+    </div>
+    <dl>
+      <dt>ID</dt><dd><code>${n.id}</code>${n.gedcomId ? ' · '+n.gedcomId : ''}</dd>
+      <dt>Даты</dt><dd>${dates(n)}</dd>
+      <dt>Место</dt><dd>${n.place || '—'}</dd>
+      <dt>Родители</dt><dd>${names(n.parentIds)}</dd>
+      <dt>Супруг(и)</dt><dd>${names(n.spouseIds)}</dd>
+      <dt>Дети</dt><dd>${names(n.childIds)}</dd>
+      <dt>Братья/сёстры</dt><dd>${names(n.siblingIds)}</dd>
+      <dt>Заметки</dt><dd>${n.notes || '—'}</dd>
+      <dt>Источники</dt><dd>${src}</dd>
+    </dl>`;
+}
+
+let graph = null;
+
+function initGraph() {
+  const canvas = document.getElementById('graph-canvas');
+  const wrap = document.getElementById('graph-wrap');
+  const tooltip = document.getElementById('tooltip');
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  let W, H;
+  const resize = () => {
+    W = wrap.clientWidth; H = wrap.clientHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  resize();
+
+  const nodeList = getFilteredNodes();
+  const edgeFilter = document.getElementById('filter-edge').value;
+  const edges = buildEdges(nodeList, edgeFilter);
+  renderStats(nodeList, edges);
+
+  const simNodes = nodeList.map((n, i) => ({
+    id: n.id, data: n,
+    x: W/2 + Math.cos(i / Math.max(nodeList.length,1) * Math.PI * 2) * Math.min(W,H) * 0.32,
+    y: H/2 + Math.sin(i / Math.max(nodeList.length,1) * Math.PI * 2) * Math.min(W,H) * 0.32,
+    vx: 0, vy: 0,
+  }));
+  const simMap = Object.fromEntries(simNodes.map(n => [n.id, n]));
+  const simEdges = edges.filter(e => simMap[e.from] && simMap[e.to]);
+
+  graph = {
+    canvas, ctx, W, H, simNodes, simEdges, simMap,
+    panX: graph?.panX ?? 0, panY: graph?.panY ?? 0, zoom: graph?.zoom ?? 1,
+    selected: graph?.selected ?? null, dragging: null, dragOff: {x:0,y:0}, panStart: {x:0,y:0},
+    hoverEdge: null,
+  };
+
+  const roleColor = (n) => {
+    if (n.isSustatov) {
+      return ({direct:'#1b5e20',side:'#388e3c',inlaw:'#ef6c00',unknown:'#78909c'}[n.role] || '#2e7d32');
+    }
+    return ({direct:'#1565c0',side:'#00838f',inlaw:'#8e24aa',unknown:'#90a4ae'}[n.role] || '#78909c');
+  };
+
+  function step() {
+    const rep = 1200, spring = 0.028, damp = 0.86, center = 0.0015;
+    simNodes.forEach(a => {
+      simNodes.forEach(b => {
+        if (a.id >= b.id) return;
+        let dx = a.x - b.x, dy = a.y - b.y;
+        let d2 = dx*dx + dy*dy + 0.01;
+        let f = rep / d2;
+        a.vx += dx * f; a.vy += dy * f;
+        b.vx -= dx * f; b.vy -= dy * f;
+      });
+    });
+    simEdges.forEach(e => {
+      const a = simMap[e.from], b = simMap[e.to];
+      let dx = b.x - a.x, dy = b.y - a.y;
+      let d = Math.hypot(dx, dy) || 1;
+      let rest = e.type === 'spouse' ? 85 : e.type === 'sibling' ? 105 : 125;
+      let f = (d - rest) * spring;
+      a.vx += dx/d*f; a.vy += dy/d*f;
+      b.vx -= dx/d*f; b.vy -= dy/d*f;
+    });
+    simNodes.forEach(n => {
+      n.vx += (W/2 - n.x) * center;
+      n.vy += (H/2 - n.y) * center;
+      n.vx *= damp; n.vy *= damp;
+      n.x += n.vx; n.y += n.vy;
+    });
+  }
+
+  function draw() {
+    const { panX, panY, zoom, selected, hoverEdge } = graph;
+    ctx.clearRect(0, 0, W, H);
+    ctx.save();
+    ctx.translate(panX, panY);
+    ctx.scale(zoom, zoom);
+    simEdges.forEach(e => {
+      const a = simMap[e.from], b = simMap[e.to];
+      const hl = hoverEdge && hoverEdge.from === e.from && hoverEdge.to === e.to;
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      if (e.type === 'parent') {
+        ctx.strokeStyle = hl ? '#1b5e20' : 'rgba(46,125,50,.5)';
+        ctx.lineWidth = hl ? 2.5 : 1.8;
+        ctx.setLineDash([]);
+        const ang = Math.atan2(b.y - a.y, b.x - a.x);
+        const ax = b.x - Math.cos(ang)*14, ay = b.y - Math.sin(ang)*14;
+        ctx.lineTo(ax, ay);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(b.x, b.y);
+        ctx.lineTo(ax - Math.cos(ang-0.4)*8, ay - Math.sin(ang-0.4)*8);
+        ctx.lineTo(ax - Math.cos(ang+0.4)*8, ay - Math.sin(ang+0.4)*8);
+        ctx.closePath();
+        ctx.fillStyle = ctx.strokeStyle;
+        ctx.fill();
+      } else if (e.type === 'spouse') {
+        ctx.strokeStyle = hl ? '#8e24aa' : 'rgba(142,36,170,.55)';
+        ctx.lineWidth = hl ? 2 : 1.4;
+        ctx.setLineDash([7,5]);
+        ctx.stroke();
+      } else {
+        ctx.strokeStyle = hl ? '#558b2f' : 'rgba(85,139,47,.45)';
+        ctx.lineWidth = 1.2;
+        ctx.setLineDash([4,6]);
+        ctx.stroke();
+      }
+    });
+    ctx.setLineDash([]);
+    simNodes.forEach(n => {
+      const sel = n.id === selected;
+      const r = sel ? 13 : (n.data.isSustatov ? 11 : 9);
+      ctx.beginPath();
+      ctx.fillStyle = roleColor(n.data);
+      ctx.arc(n.x, n.y, r, 0, Math.PI*2);
+      ctx.fill();
+      if (sel) { ctx.strokeStyle = '#1b4332'; ctx.lineWidth = 2.5; ctx.stroke(); }
+      ctx.fillStyle = '#1a2e1a';
+      ctx.font = (n.data.isSustatov ? 'bold ' : '') + '10px Segoe UI,sans-serif';
+      ctx.textAlign = 'center';
+      const label = n.data.name.length > 26 ? n.data.name.slice(0,24)+'…' : n.data.name;
+      ctx.fillText(label, n.x, n.y + r + 13);
+    });
+    ctx.restore();
+  }
+
+  if (graph._raf) cancelAnimationFrame(graph._raf);
+  (function loop() { step(); draw(); graph._raf = requestAnimationFrame(loop); })();
+
+  function screenToWorld(sx, sy) {
+    return { x: (sx - graph.panX) / graph.zoom, y: (sy - graph.panY) / graph.zoom };
+  }
+
+  function hitEdge(w) {
+    let best = null, bestD = 12;
+    simEdges.forEach(e => {
+      const a = simMap[e.from], b = simMap[e.to];
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const len2 = dx*dx + dy*dy || 1;
+      let t = ((w.x-a.x)*dx + (w.y-a.y)*dy) / len2;
+      t = Math.max(0, Math.min(1, t));
+      const px = a.x + t*dx, py = a.y + t*dy;
+      const d = Math.hypot(w.x - px, w.y - py);
+      if (d < bestD) { bestD = d; best = e; }
+    });
+    return best;
+  }
+
+  canvas.onmousedown = ev => {
+    const rect = canvas.getBoundingClientRect();
+    const w = screenToWorld(ev.clientX - rect.left, ev.clientY - rect.top);
+    const hit = simNodes.find(n => Math.hypot(n.x - w.x, n.y - w.y) < 14);
+    if (hit) {
+      graph.selected = hit.id;
+      graph.dragging = hit;
+      graph.dragOff = { x: w.x - hit.x, y: w.y - hit.y };
+      showDetail(hit.id);
+      document.getElementById('edge-info').textContent = '';
+    } else {
+      const e = hitEdge(w);
+      if (e) {
+        const labels = {parent:'родитель → ребёнок', spouse:'брак', sibling:'брат/сестра'};
+        document.getElementById('edge-info').textContent =
+          labels[e.type] + ': ' + (byId[e.from]?.name||e.from) + ' ↔ ' + (byId[e.to]?.name||e.to);
+      } else {
+        graph.dragging = 'pan';
+        graph.panStart = { x: ev.clientX - graph.panX, y: ev.clientY - graph.panY };
+      }
+    }
+  };
+  window.onmousemove = ev => {
+    const rect = canvas.getBoundingClientRect();
+    const w = screenToWorld(ev.clientX - rect.left, ev.clientY - rect.top);
+    if (graph.dragging === 'pan') {
+      graph.panX = ev.clientX - graph.panStart.x;
+      graph.panY = ev.clientY - graph.panStart.y;
+      return;
+    }
+    if (graph.dragging && graph.dragging !== 'pan') {
+      graph.dragging.x = w.x - graph.dragOff.x;
+      graph.dragging.y = w.y - graph.dragOff.y;
+      graph.dragging.vx = graph.dragging.vy = 0;
+      return;
+    }
+    const hit = simNodes.find(n => Math.hypot(n.x - w.x, n.y - w.y) < 14);
+    if (hit) {
+      tooltip.style.display = 'block';
+      tooltip.style.left = (ev.clientX - rect.left + 12) + 'px';
+      tooltip.style.top = (ev.clientY - rect.top + 12) + 'px';
+      tooltip.textContent = hit.data.name + ' · ' + dates(hit.data);
+      graph.hoverEdge = null;
+    } else {
+      graph.hoverEdge = hitEdge(w);
+      tooltip.style.display = graph.hoverEdge ? 'block' : 'none';
+      if (graph.hoverEdge) {
+        tooltip.textContent = graph.hoverEdge.type + ': ' + (byId[graph.hoverEdge.from]?.name||'');
+        tooltip.style.left = (ev.clientX - rect.left + 12) + 'px';
+        tooltip.style.top = (ev.clientY - rect.top + 12) + 'px';
+      }
+    }
+  };
+  window.onmouseup = () => { graph.dragging = null; };
+  canvas.onwheel = ev => {
+    ev.preventDefault();
+    graph.zoom = Math.min(3, Math.max(0.25, graph.zoom * (ev.deltaY > 0 ? 0.92 : 1.08)));
+  };
+}
+
+document.getElementById('btn-reset').onclick = () => {
+  if (graph) { graph.panX = graph.panY = 0; graph.zoom = 1; }
+  initGraph();
+};
+document.getElementById('btn-fit').onclick = () => {
+  if (!graph || !graph.simNodes.length) return;
+  const xs = graph.simNodes.map(n => n.x), ys = graph.simNodes.map(n => n.y);
+  const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+  const pw = maxX - minX + 80, ph = maxY - minY + 80;
+  graph.zoom = Math.min(graph.W / pw, graph.H / ph, 1.2);
+  graph.panX = graph.W/2 - (minX + maxX)/2 * graph.zoom;
+  graph.panY = graph.H/2 - (minY + maxY)/2 * graph.zoom;
+};
+['search','filter-surn','filter-role','filter-edge','filter-focus'].forEach(id => {
+  document.getElementById(id).addEventListener('input', initGraph);
+  document.getElementById(id).addEventListener('change', initGraph);
+});
+window.addEventListener('resize', initGraph);
+initGraph();
+</script>
+</body>
+</html>

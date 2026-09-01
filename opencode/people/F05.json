@@ -1,0 +1,40 @@
+{
+  "id": "F05",
+  "surname": "Дворников",
+  "given_name": "Николай",
+  "patronymic": "",
+  "full_name": "Николай Дворников",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse_family",
+  "generation": 0,
+  "relation_to_direct_line": "родственник по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "отец Евдокии Дворниковой",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "F04"
+    ]
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

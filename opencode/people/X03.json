@@ -1,0 +1,44 @@
+{
+  "id": "X03",
+  "surname": "Сустатов",
+  "given_name": "Ненашка",
+  "patronymic": "",
+  "full_name": "Ненашка Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": "д. Хмелевка, Алатырский уезд"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "xvii",
+  "generation": 0,
+  "relation_to_direct_line": "боковая (Алатырский уезд, 1671)",
+  "social_estate": "ясачная мордва",
+  "occupation": "бортник",
+  "religion": "дохристианская мордва",
+  "notes": "переписная книга 1671",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "url",
+      "ref": "https://vostlit.info/Texts/Dokumenty/Russ/XVII/1660-1680/Perep_kniga_alatyr_1671/text1.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "mention",
+      "date": "1671",
+      "note": "жилой двор, д. Хмелевка"
+    }
+  ]
+}

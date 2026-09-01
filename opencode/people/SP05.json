@@ -1,0 +1,40 @@
+{
+  "id": "SP05",
+  "surname": "",
+  "given_name": "Матрёна",
+  "patronymic": "Фёдоровна",
+  "full_name": "Матрёна Фёдоровна",
+  "sex": "F",
+  "birth": {
+    "date": "~1824",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse",
+  "generation": 0,
+  "relation_to_direct_line": "супруг(а) по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "жена Ивана Ивановича (~1815)",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "D07"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "ЦАНО, ф.60, оп.239А, д.463, 599"
+    }
+  ],
+  "events": []
+}

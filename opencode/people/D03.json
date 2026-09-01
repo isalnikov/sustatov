@@ -1,0 +1,49 @@
+{
+  "id": "D03",
+  "surname": "Сустатов",
+  "given_name": "Никита",
+  "patronymic": "Иванович",
+  "full_name": "Никита Иванович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1715–1719",
+    "place": "дворцовая деревня Сыресева"
+  },
+  "death": {
+    "date": "1773",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 1,
+  "relation_to_direct_line": "прямой предок",
+  "social_estate": "ясачная/дворцовая мордва",
+  "occupation": "",
+  "religion": "новокрещён",
+  "notes": "ревизии 1748 (29 л., «прибывшие из дворцовой д. Сыресевой»), 1763 (47/48), †1773 (по ревизии 1782)",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "SP01"
+    ],
+    "children": [
+      "D04",
+      "S13"
+    ]
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "РГАДА, ф.350, оп.2, д.114, лл.1262–1267"
+    }
+  ],
+  "events": [
+    {
+      "type": "migration",
+      "date": "~1724",
+      "note": "переселение из д. Сыресевой в Камкину (Кошелиху)"
+    }
+  ]
+}

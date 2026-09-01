@@ -1,0 +1,45 @@
+{
+  "id": "D05",
+  "surname": "Сустатов",
+  "given_name": "Андрей",
+  "patronymic": "Петрович",
+  "full_name": "Андрей Петрович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1760",
+    "place": "с. Кошелиха (Камкина), Ардатовский уезд"
+  },
+  "death": {
+    "date": "1811",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 3,
+  "relation_to_direct_line": "прямой предок",
+  "social_estate": "государственный крестьянин",
+  "occupation": "",
+  "religion": "православие",
+  "notes": "ревизия 1811 (50 лет); жена Дарья; дети Лев, Иван, Кондратий, Василий",
+  "relationships": {
+    "father": "D04",
+    "mother": "SP02",
+    "spouses": [
+      "SP03"
+    ],
+    "children": [
+      "D06",
+      "S01",
+      "S02",
+      "S03"
+    ]
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "ЦАНО, ф.60, оп.239А, д.463, 599"
+    }
+  ],
+  "events": []
+}

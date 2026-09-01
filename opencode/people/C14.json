@@ -1,0 +1,38 @@
+{
+  "id": "C14",
+  "surname": "Сустатов",
+  "given_name": "Борис",
+  "patronymic": "Семёнович",
+  "full_name": "Борис Семёнович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1908",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "20.03.1938",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "collateral",
+  "generation": 0,
+  "relation_to_direct_line": "боковая ветвь (родство не установлено)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "прораб; арестован 13.01.1938, расстрелян (Бутово), реабилитирован 1959",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    }
+  ],
+  "events": []
+}

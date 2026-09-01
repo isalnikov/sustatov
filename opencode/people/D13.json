@@ -1,0 +1,43 @@
+{
+  "id": "D13",
+  "surname": "Сустатов",
+  "given_name": "Григорий",
+  "patronymic": "Васильевич",
+  "full_name": "Григорий Васильевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "30.08.1954",
+    "place": ""
+  },
+  "death": {
+    "date": "24.12.2020",
+    "place": "г. Калининград",
+    "cause": "COVID-19"
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 11,
+  "relation_to_direct_line": "прямая линия",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "похоронен: военно-мемориальное кладбище «Курган Славы»; жёны Ольга Сальникова, Людмила Эдуардовна",
+  "relationships": {
+    "father": "D12",
+    "mother": "SP08",
+    "spouses": [
+      "SP09",
+      "SP10"
+    ],
+    "children": [
+      "D14"
+    ]
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

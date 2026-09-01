@@ -1,0 +1,1886 @@
+[
+  {
+    "id": "sust-ap-1770",
+    "name": "Андрей Петрович Сустатов",
+    "born": "1770",
+    "died": "1811",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "sust-pn-1737"
+    ],
+    "spouseIds": [
+      "sust-darya-ap"
+    ],
+    "childIds": [
+      "side-004",
+      "side-008",
+      "side-009",
+      "sust-ia-1793"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 1,
+    "sources": [
+      "VGD p2806392"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "sust-darya-ap",
+    "name": "Дарья",
+    "born": null,
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "sust-ap-1770"
+    ],
+    "childIds": [
+      "sust-ia-1793",
+      "side-008",
+      "side-009",
+      "side-004"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 1,
+    "sources": [
+      "VGD"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-010a",
+    "name": "Акилина Евдокимовна",
+    "born": "~1810",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "side-010"
+    ],
+    "childIds": [
+      "side-010b"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 2,
+    "sources": [
+      "https://forum.vgd.ru/post/2339/86148/p2995932.htm"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-010d",
+    "name": "Аксинья Егоровна",
+    "born": "~1819",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "side-010c"
+    ],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 2,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-004a",
+    "name": "Анна Филипповна",
+    "born": "~1798",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "side-004"
+    ],
+    "childIds": [
+      "side-005",
+      "side-006",
+      "side-007",
+      "side-004b",
+      "side-004c"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 2,
+    "sources": [
+      "https://forum.vgd.ru/post/2339/86148/p2879430.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818326.htm",
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Дочь Филиппа Михайловича; рев.1834/1858 — 60/67 лет"
+  },
+  {
+    "id": "side-009",
+    "name": "Василий Андреевич Сустатов",
+    "born": "~1800",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "sust-ap-1770",
+      "sust-darya-ap"
+    ],
+    "spouseIds": [
+      "side-009a"
+    ],
+    "childIds": [
+      "side-009b",
+      "side-009c",
+      "side-009d"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 2,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Брат Кондратия Андреевича (не сын); рев.1858 — 58 лет"
+  },
+  {
+    "id": "side-010c",
+    "name": "Василий Анисимович Сустатов",
+    "born": "~1819",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [],
+    "spouseIds": [
+      "side-010d"
+    ],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 2,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Брат Льва Анисимовича; рев.1858 — 39 лет"
+  },
+  {
+    "id": "sust-ia-1793",
+    "name": "Иван Андреевич Сустатов",
+    "born": "1793",
+    "died": "1833",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "sust-ap-1770"
+    ],
+    "spouseIds": [
+      "sust-mavra"
+    ],
+    "childIds": [
+      "sust-ii-1815"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 2,
+    "sources": [
+      "VGD p2806392"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-004",
+    "name": "Кондратий Андреевич Сустатов",
+    "born": "1765",
+    "died": "1847",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "sust-ap-1770",
+      "sust-darya-ap"
+    ],
+    "spouseIds": [
+      "side-004a"
+    ],
+    "childIds": [
+      "side-005",
+      "side-006",
+      "side-007",
+      "side-004b",
+      "side-004c"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 2,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818326.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2879430.htm"
+    ],
+    "notes": "Брак 08.11.1807 + Анна Филипповна (дочь Филиппа Михайловича); †1847"
+  },
+  {
+    "id": "side-008",
+    "name": "Лев Андреевич Сустатов",
+    "born": "1789",
+    "died": null,
+    "place": "",
+    "sex": "M",
+    "parentIds": [
+      "sust-ap-1770"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 2,
+    "sources": [
+      "VGD 140.htm"
+    ],
+    "notes": "Брат Ивана Андreevicha"
+  },
+  {
+    "id": "side-010",
+    "name": "Лев Анисимович Сустатов",
+    "born": "~1815",
+    "died": "1843",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [],
+    "spouseIds": [
+      "side-010a"
+    ],
+    "childIds": [
+      "side-010b"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 2,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2995932.htm"
+    ],
+    "notes": "Сын Анисима Михайловича (не Андрея Петровича); рев.1858 — †1843"
+  },
+  {
+    "id": "sust-mavra",
+    "name": "Мавра",
+    "born": null,
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "sust-ia-1793"
+    ],
+    "childIds": [
+      "sust-ii-1815"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 2,
+    "sources": [
+      "VGD"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-009a",
+    "name": "Ульяна",
+    "born": "~1819",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "side-009"
+    ],
+    "childIds": [
+      "side-009b",
+      "side-009c",
+      "side-009d"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 2,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-005",
+    "name": "Аверьян Кондратьевич Сустатов",
+    "born": "~1827",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-004",
+      "side-004a"
+    ],
+    "spouseIds": [
+      "side-005a"
+    ],
+    "childIds": [
+      "side-005b"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818093.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2995932.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818326.htm"
+    ],
+    "notes": "Брак 08.11.1835 + Дарья Анисимовна; рев.1858 двор №24 — 31/38 лет; смерть и потомки после 1858 NOT FOUND"
+  },
+  {
+    "id": "side-004c",
+    "name": "Аграфена Кондратьевна",
+    "born": "~1803",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [
+      "side-004",
+      "side-004a"
+    ],
+    "spouseIds": [
+      "side-004c-sp"
+    ],
+    "childIds": [
+      "side-004c-ch"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/post/2339/86148/p2806392.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818093.htm",
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Рев.1816 — 13 лет; рев.1850 — жена Ефима Ивановича"
+  },
+  {
+    "id": "side-009b",
+    "name": "Аким Васильевич Сустатов",
+    "born": "~1820",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-009",
+      "side-009a"
+    ],
+    "spouseIds": [
+      "side-009e"
+    ],
+    "childIds": [
+      "side-009f",
+      "side-009g"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "брак 09.11.1845"
+    ],
+    "notes": "Рев.1858 — 38 лет"
+  },
+  {
+    "id": "side-007a",
+    "name": "Анастасия Антоновна",
+    "born": "~1835",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "side-007"
+    ],
+    "childIds": [
+      "side-007b"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/post/2339/86148/p2879430.htm",
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Дочь Антона Григорьевича; рев.1858 — 23 года"
+  },
+  {
+    "id": "side-009h",
+    "name": "Анна Тимофеевна",
+    "born": "~1835",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "side-009c"
+    ],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-009e",
+    "name": "Арина Ильинична",
+    "born": "~1821",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "side-009b"
+    ],
+    "childIds": [
+      "side-009f",
+      "side-009g"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-005a",
+    "name": "Дарья Анисимовна",
+    "born": "~1816",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "side-005"
+    ],
+    "childIds": [
+      "side-005b"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/post/2339/86148/p2995932.htm",
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818093.htm"
+    ],
+    "notes": "Брак 08.11.1835; рев.1858 — 42 года"
+  },
+  {
+    "id": "side-004c-sp",
+    "name": "Ефим Иванович",
+    "born": "~1830",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [],
+    "spouseIds": [
+      "side-004c"
+    ],
+    "childIds": [
+      "side-004c-ch"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "sust-ii-1815",
+    "name": "Иван Иванович Сустатов",
+    "born": "1815",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "sust-ia-1793"
+    ],
+    "spouseIds": [
+      "sust-matrema"
+    ],
+    "childIds": [
+      "sust-ii-1847",
+      "side-011",
+      "side-015",
+      "side-016",
+      "side-013"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 3,
+    "sources": [
+      "VGD рев.1858 двор №25"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-004b",
+    "name": "Мавра Кондратьевна",
+    "born": "~1798",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [
+      "side-004",
+      "side-004a"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/post/2339/86148/p2806392.htm",
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Рев.1816 — 18 лет; дальнейшая судьба NOT FOUND"
+  },
+  {
+    "id": "side-006",
+    "name": "Максим Кондратьевич Сустатов",
+    "born": "~1811",
+    "died": "1840",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-004",
+      "side-004a"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/post/2339/86148/p2806392.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818326.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2995932.htm"
+    ],
+    "notes": "Рев.1816 — 5 лет; рев.1834 — «умер в 1840 г.» (~29 лет); брак и дети NOT FOUND — ветвь обрывается"
+  },
+  {
+    "id": "side-013",
+    "name": "Матвей Иванович",
+    "born": "1828",
+    "died": null,
+    "place": "",
+    "sex": "M",
+    "parentIds": [
+      "sust-ia-1793"
+    ],
+    "spouseIds": [],
+    "childIds": [
+      "side-014"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "VGD 1858"
+    ],
+    "notes": "Брат главы двора"
+  },
+  {
+    "id": "side-009d",
+    "name": "Матрёна Васильевна",
+    "born": "~1845",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [
+      "side-009",
+      "side-009a"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "sust-matrema",
+    "name": "Матрёна Фёдоровна",
+    "born": null,
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "sust-ii-1815"
+    ],
+    "childIds": [
+      "sust-ii-1847",
+      "side-011",
+      "side-015",
+      "side-016",
+      "side-013"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 3,
+    "sources": [
+      "VGD рев.1858"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-010b",
+    "name": "Пантелей Львович Сустатов",
+    "born": "~1837",
+    "died": "1840",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-010",
+      "side-010a"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "†1840; без потомков"
+  },
+  {
+    "id": "side-009c",
+    "name": "Степан Васильевич Сустатов",
+    "born": "~1835",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-009",
+      "side-009a"
+    ],
+    "spouseIds": [
+      "side-009h"
+    ],
+    "childIds": [
+      "side-009c1"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2820771.htm",
+      "брак 09.11.1845"
+    ],
+    "notes": "Рекрут с 1853; жена Анна Тимофеевна; сын Степан Степанович (~1864, PROBABLE)"
+  },
+  {
+    "id": "side-007",
+    "name": "Степан Кондратьевич Сустатов",
+    "born": "~1834",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-004",
+      "side-004a"
+    ],
+    "spouseIds": [
+      "side-007a"
+    ],
+    "childIds": [
+      "side-014-notfound"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 3,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818326.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2995932.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818093.htm"
+    ],
+    "notes": "Рев.1834 — 2 мес.; рев.1851 — 17 л.; рекрут с 1855 (числится в дворе Аверьяна, №24); потомки NOT FOUND"
+  },
+  {
+    "id": "side-012a",
+    "name": "Анисья (вдова)",
+    "born": "1844",
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "sust-ii-1847"
+    ],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 4,
+    "sources": [
+      "VGD 1879"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-011a",
+    "name": "Анна Ивановна",
+    "born": "1851",
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "side-011"
+    ],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 4,
+    "sources": [
+      "VGD"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-007b",
+    "name": "Арина Степановна",
+    "born": "~1826",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "probable",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "«Племянница Аверьяна» (32 г. в 1858) — связь со Степаном Кондратьевичем не доказана (конфликт возраста); NOT FOUND"
+  },
+  {
+    "id": "side-005b",
+    "name": "Екатерина Аверьяновна",
+    "born": "~1844",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [
+      "side-005",
+      "side-005a"
+    ],
+    "spouseIds": [
+      "side-005c"
+    ],
+    "childIds": [
+      "side-005d"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2962408.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818326.htm"
+    ],
+    "notes": "Рев.1851 — 14 л.; венчание 06.11.1855 + Иван Евдокимович («Аверкий Кондратьевич» в метрике); фамилия Сустатов далее не продолжается"
+  },
+  {
+    "id": "side-005c",
+    "name": "Иван Евдокимович",
+    "born": "~1837",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [],
+    "spouseIds": [
+      "side-005b"
+    ],
+    "childIds": [
+      "side-005d"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 4,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2962408.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2879430.htm"
+    ],
+    "notes": "Сын умерш. Евдокима Михеевича; рев.1858 — 20 лет"
+  },
+  {
+    "id": "side-004c-ch",
+    "name": "Иван Ефимович",
+    "born": "~1857",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-004c-sp",
+      "side-004c"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "probable",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Рев.1858 — 1 год; потомки до 2026 NOT FOUND"
+  },
+  {
+    "id": "side-011",
+    "name": "Иван Иванович (младший)",
+    "born": "1851",
+    "died": null,
+    "place": "",
+    "sex": "M",
+    "parentIds": [
+      "sust-ii-1815",
+      "sust-matrema"
+    ],
+    "spouseIds": [
+      "side-011a"
+    ],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "VGD 1858",
+      "VGD p2879430"
+    ],
+    "notes": "Брак 1868"
+  },
+  {
+    "id": "sust-ii-1847",
+    "name": "Иван Иванович Сустатов (старший)",
+    "born": "1847",
+    "died": "1879",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "sust-ii-1815"
+    ],
+    "spouseIds": [
+      "side-012a"
+    ],
+    "childIds": [
+      "sust-ii-1870"
+    ],
+    "status": "probable",
+    "role": "direct",
+    "gen": 4,
+    "sources": [
+      "VGD рев.1858",
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Солдат; вдova Анисья 1879"
+  },
+  {
+    "id": "side-009g",
+    "name": "Никита Акимович Сустатов",
+    "born": "1855",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-009b",
+      "side-009e"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Р.1855; потомки NOT FOUND"
+  },
+  {
+    "id": "side-014-notfound",
+    "name": "Потомки Степана Кондратьевича после 1858",
+    "born": null,
+    "died": null,
+    "place": "",
+    "sex": "",
+    "parentIds": [
+      "side-007"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "notfound",
+    "role": "side",
+    "gen": 4,
+    "sources": [],
+    "notes": "Рекрут с 1855; GEDCOM, openlist, метрики VGD 1860–2026 — записей нет"
+  },
+  {
+    "id": "side-009f",
+    "name": "Степан Акимович Сустатов",
+    "born": "~1847",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-009b",
+      "side-009e"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm"
+    ],
+    "notes": "Рев.1858 — 11/18 л.; потомки NOT FOUND"
+  },
+  {
+    "id": "side-009c1",
+    "name": "Степан Степанович Сустатов",
+    "born": "~1864",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "side-009c",
+      "side-009h"
+    ],
+    "spouseIds": [],
+    "childIds": [
+      "side-015-notfound"
+    ],
+    "status": "probable",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "https://forum.vgd.ru/post/2339/86148/p2820771.htm"
+    ],
+    "notes": "~4 л. в списке солдатских семей; ≠ Степан Кондратьевич; потомки NOT FOUND"
+  },
+  {
+    "id": "side-016",
+    "name": "Федот Иванович",
+    "born": "1852",
+    "died": null,
+    "place": "",
+    "sex": "M",
+    "parentIds": [
+      "sust-ii-1815"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "VGD 1858"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-015",
+    "name": "Фёдор Иванович",
+    "born": "1849",
+    "died": null,
+    "place": "",
+    "sex": "M",
+    "parentIds": [
+      "sust-ii-1815"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "VGD 1858"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-014",
+    "name": "Яков Матвеевич",
+    "born": "1847",
+    "died": null,
+    "place": "",
+    "sex": "M",
+    "parentIds": [
+      "side-013"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 4,
+    "sources": [
+      "VGD"
+    ],
+    "notes": "Ветвь Яковлевых"
+  },
+  {
+    "id": "sust-ii-1870",
+    "name": "Иван Иванович Сустатов",
+    "born": "1870",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "sust-ii-1847"
+    ],
+    "spouseIds": [],
+    "childIds": [
+      "I500073"
+    ],
+    "status": "probable",
+    "role": "direct",
+    "gen": 5,
+    "sources": [
+      "todo.md",
+      "логика отчества"
+    ],
+    "notes": "PROBABLE до метрик ЦАНО"
+  },
+  {
+    "id": "side-005d",
+    "name": "Наталья Ивановна",
+    "born": "~1857",
+    "died": null,
+    "place": "Кошелиха",
+    "sex": "F",
+    "parentIds": [
+      "side-005c",
+      "side-005b"
+    ],
+    "spouseIds": [],
+    "childIds": [
+      "side-013-notfound"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 5,
+    "sources": [
+      "https://forum.vgd.ru/2339/86148/140.htm",
+      "https://forum.vgd.ru/post/2339/86148/p2818093.htm"
+    ],
+    "notes": "Внучка Аверьяна; рев.1858 — 6 мес.; потомки до 2026 NOT FOUND (ЦАНО ф.570)"
+  },
+  {
+    "id": "side-015-notfound",
+    "name": "Потомки Степана Степановича (collateral)",
+    "born": null,
+    "died": null,
+    "place": "",
+    "sex": "",
+    "parentIds": [
+      "side-009c1"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "notfound",
+    "role": "side",
+    "gen": 5,
+    "sources": [],
+    "notes": "Ветвь Василия Андреевича; связь с прямой линией не установлена"
+  },
+  {
+    "id": "I500073",
+    "name": "Василий Иванович Сустатов",
+    "born": "1890",
+    "died": "1934",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "sust-ii-1870"
+    ],
+    "spouseIds": [
+      "I500074"
+    ],
+    "childIds": [
+      "I500071",
+      "I500147",
+      "I500148"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 6,
+    "sources": [
+      "GEDCOM @I500073@",
+      "https://forum.vgd.ru/post/2339/86148/p2879430.htm"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-013-notfound",
+    "name": "Потомки ветви Аверьяна после 1860",
+    "born": null,
+    "died": null,
+    "place": "",
+    "sex": "",
+    "parentIds": [
+      "side-005d"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "notfound",
+    "role": "side",
+    "gen": 6,
+    "sources": [],
+    "notes": "GEDCOM, openlist, sarpust, опубликованные метрики VGD 1860–2026 — записей нет"
+  },
+  {
+    "id": "I500074",
+    "name": "Прасковья Королёва (Сустатова)",
+    "born": "1891",
+    "died": "1969",
+    "place": "",
+    "sex": "F",
+    "parentIds": [
+      "I500086"
+    ],
+    "spouseIds": [
+      "I500073"
+    ],
+    "childIds": [
+      "I500071",
+      "I500147",
+      "I500148"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 6,
+    "sources": [
+      "GEDCOM @I500074@",
+      "https://forum.vgd.ru/post/2339/86148/p2879430.htm"
+    ],
+    "notes": "Брак 30.06.1908"
+  },
+  {
+    "id": "I500147",
+    "name": "Алексей Васильевич Сустатов",
+    "born": "1913",
+    "died": "1944-10-03",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "I500073",
+      "I500074"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 7,
+    "sources": [
+      "GEDCOM @I500147@",
+      "https://forum.vgd.ru/2339/86148/170.htm"
+    ],
+    "notes": "Дядя; ВОВ"
+  },
+  {
+    "id": "I500071",
+    "name": "Григорий Васильевич Сустатов",
+    "born": "1912-01-19",
+    "died": "1942-03-10",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "I500073",
+      "I500074"
+    ],
+    "spouseIds": [
+      "I500072"
+    ],
+    "childIds": [
+      "I500007",
+      "I500091",
+      "I500092",
+      "I500094",
+      "I500093"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 7,
+    "sources": [
+      "GEDCOM @I500071@",
+      "https://forum.vgd.ru/post/2339/86148/p2516205.htm",
+      "https://sarpust.ru/2015/02/vospominaniya-n-g-sustatova-chast-i-koshelihinskij-spirtzavod/"
+    ],
+    "notes": "987 сп, 226 сd; с. Приколотное"
+  },
+  {
+    "id": "I500072",
+    "name": "Евдокия Абрамova (Сустатовa)",
+    "born": "1911-01-24",
+    "died": "1989-01-25",
+    "place": "",
+    "sex": "F",
+    "parentIds": [
+      "I500081",
+      "I500082"
+    ],
+    "spouseIds": [
+      "I500071"
+    ],
+    "childIds": [
+      "I500007",
+      "I500091",
+      "I500092",
+      "I500094",
+      "I500093"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 7,
+    "sources": [
+      "GEDCOM @I500072@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500148",
+    "name": "Максим Васильевич Сустатов",
+    "born": "1917",
+    "died": "1944-04-19",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "I500073",
+      "I500074"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 7,
+    "sources": [
+      "GEDCOM @I500148@"
+    ],
+    "notes": "Дядя; ВОВ"
+  },
+  {
+    "id": "I500006",
+    "name": "Александра Ковригина (Сустатова)",
+    "born": "1931-01-11",
+    "died": "2010-02-07",
+    "place": "Б. Болдино → Калининград",
+    "sex": "F",
+    "parentIds": [
+      "I500078",
+      "I500076"
+    ],
+    "spouseIds": [
+      "I500007"
+    ],
+    "childIds": [
+      "I500001",
+      "I500087"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 8,
+    "sources": [
+      "GEDCOM @I500006@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500092",
+    "name": "Анна Сустатова",
+    "born": "1934-07-10",
+    "died": "1953-08-23",
+    "place": "",
+    "sex": "F",
+    "parentIds": [
+      "I500071",
+      "I500072"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 8,
+    "sources": [
+      "GEDCOM @I500092@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500007",
+    "name": "Василий Григорьевич Сустатов",
+    "born": "1930-01-24",
+    "died": "2004-10-06",
+    "place": "Кошелиха → Калининград",
+    "sex": "M",
+    "parentIds": [
+      "I500071",
+      "I500072"
+    ],
+    "spouseIds": [
+      "I500006"
+    ],
+    "childIds": [
+      "I500001",
+      "I500087"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 8,
+    "sources": [
+      "GEDCOM @I500007@",
+      "sarpust.ru/memuary"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500093",
+    "name": "Вера Сустатова",
+    "born": "1939-10-07",
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [
+      "I500071",
+      "I500072"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "probable",
+    "role": "side",
+    "gen": 8,
+    "sources": [
+      "GEDCOM @I500093@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500094",
+    "name": "Николай Григорьевич Сустатов",
+    "born": "1936-10-04",
+    "died": "2018-10-29",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [
+      "I500071",
+      "I500072"
+    ],
+    "spouseIds": [
+      "I500149"
+    ],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 8,
+    "sources": [
+      "GEDCOM @I500094@",
+      "https://sarpust.ru/memuary/"
+    ],
+    "notes": "Автор мемуаров; детей в GEDCOM нет"
+  },
+  {
+    "id": "I500149",
+    "name": "Нина",
+    "born": null,
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "I500094"
+    ],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 8,
+    "sources": [
+      "GEDCOM @I500149@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500091",
+    "name": "Татьяна Сустатова",
+    "born": "1932",
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [
+      "I500071",
+      "I500072"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "probable",
+    "role": "side",
+    "gen": 8,
+    "sources": [
+      "GEDCOM @I500091@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500001",
+    "name": "Григорий Васильевич Сустатов",
+    "born": "1954-08-30",
+    "died": "2020-12-24",
+    "place": "Калининград",
+    "sex": "M",
+    "parentIds": [
+      "I500007",
+      "I500006"
+    ],
+    "spouseIds": [
+      "I500002",
+      "I500142"
+    ],
+    "childIds": [
+      "I500003"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 9,
+    "sources": [
+      "GEDCOM @I500001@",
+      "MyHeritage",
+      "isustatov.html"
+    ],
+    "notes": "COVID-19; 2 брака"
+  },
+  {
+    "id": "I500088",
+    "name": "Дмитрий Ермолин",
+    "born": "1956-12-19",
+    "died": null,
+    "place": "",
+    "sex": "M",
+    "parentIds": [],
+    "spouseIds": [
+      "I500087"
+    ],
+    "childIds": [
+      "I500089",
+      "I500090"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 9,
+    "sources": [
+      "GEDCOM @I500088@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500087",
+    "name": "Елена Сустатова (Ермолина)",
+    "born": "1959-06-01",
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [
+      "I500007",
+      "I500006"
+    ],
+    "spouseIds": [
+      "I500088"
+    ],
+    "childIds": [
+      "I500089",
+      "I500090"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 9,
+    "sources": [
+      "GEDCOM @I500087@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500142",
+    "name": "Людмила Эдуардовна",
+    "born": null,
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "I500001"
+    ],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 9,
+    "sources": [
+      "GEDCOM @I500142@"
+    ],
+    "notes": "2-й брак Григория"
+  },
+  {
+    "id": "I500002",
+    "name": "Ольга Сальникова (Сустатова)",
+    "born": "1956-09-24",
+    "died": null,
+    "place": "г. Остров",
+    "sex": "F",
+    "parentIds": [
+      "I500005",
+      "I500004"
+    ],
+    "spouseIds": [
+      "I500001"
+    ],
+    "childIds": [
+      "I500003"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 9,
+    "sources": [
+      "GEDCOM @I500002@"
+    ],
+    "notes": "Развод"
+  },
+  {
+    "id": "I500090",
+    "name": "Дарья Ермолина",
+    "born": "1987-03-18",
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [
+      "I500087",
+      "I500088"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "descendant",
+    "gen": 10,
+    "sources": [
+      "GEDCOM @I500090@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500003",
+    "name": "Игорь Сальников",
+    "born": "1982-12-16",
+    "died": null,
+    "place": "Ленинград",
+    "sex": "M",
+    "parentIds": [
+      "I500001",
+      "I500002"
+    ],
+    "spouseIds": [
+      "I500030"
+    ],
+    "childIds": [
+      "I500031",
+      "I500032"
+    ],
+    "status": "confirmed",
+    "role": "descendant",
+    "gen": 10,
+    "sources": [
+      "GEDCOM @I500003@"
+    ],
+    "notes": "Фамилия по матери"
+  },
+  {
+    "id": "I500089",
+    "name": "Никита Ермолин",
+    "born": "1982-06-04",
+    "died": null,
+    "place": "",
+    "sex": "M",
+    "parentIds": [
+      "I500087",
+      "I500088"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "descendant",
+    "gen": 10,
+    "sources": [
+      "GEDCOM @I500089@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500030",
+    "name": "Ольга Баскина (Сальникова)",
+    "born": "1985-12-08",
+    "died": null,
+    "place": "Сergiev Posad",
+    "sex": "F",
+    "parentIds": [
+      "I500106",
+      "I500105"
+    ],
+    "spouseIds": [
+      "I500003"
+    ],
+    "childIds": [
+      "I500031",
+      "I500032"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 10,
+    "sources": [
+      "GEDCOM @I500030@"
+    ],
+    "notes": "Развод 2022"
+  },
+  {
+    "id": "sust-aksinya",
+    "name": "Аксинья",
+    "born": null,
+    "died": null,
+    "place": "Афтодеево",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "sust-pn-1737"
+    ],
+    "childIds": [
+      "sust-ap-1770",
+      "side-001"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 11,
+    "sources": [
+      "VGD"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500032",
+    "name": "Анна Сальникова",
+    "born": "2017-07-08",
+    "died": null,
+    "place": "Москва",
+    "sex": "F",
+    "parentIds": [
+      "I500003",
+      "I500030"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "descendant",
+    "gen": 11,
+    "sources": [
+      "GEDCOM @I500032@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "I500031",
+    "name": "Максим Сальников",
+    "born": "2015-11-26",
+    "died": null,
+    "place": "Москва",
+    "sex": "M",
+    "parentIds": [
+      "I500003",
+      "I500030"
+    ],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "descendant",
+    "gen": 11,
+    "sources": [
+      "GEDCOM @I500031@"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-001",
+    "name": "Михаил Петрович Сустатов",
+    "born": "1754",
+    "died": "1816",
+    "place": "",
+    "sex": "M",
+    "parentIds": [
+      "sust-pn-1737"
+    ],
+    "spouseIds": [],
+    "childIds": [
+      "side-002"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 11,
+    "sources": [
+      "VGD",
+      "todo.md"
+    ],
+    "notes": "Брат Андрея Петровича"
+  },
+  {
+    "id": "sust-pn-1737",
+    "name": "Пётр Никитич Сустатов",
+    "born": "1737",
+    "died": "1819",
+    "place": "Кошелиха/Камкина",
+    "sex": "M",
+    "parentIds": [
+      "sust-ni-1719"
+    ],
+    "spouseIds": [
+      "sust-aksinya"
+    ],
+    "childIds": [
+      "sust-ap-1770",
+      "side-001"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 11,
+    "sources": [
+      "VGD p2728884",
+      "todo.md"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "sust-avdotya",
+    "name": "Авдотья Васильевна",
+    "born": null,
+    "died": null,
+    "place": "",
+    "sex": "F",
+    "parentIds": [],
+    "spouseIds": [
+      "sust-ni-1719"
+    ],
+    "childIds": [
+      "sust-pn-1737"
+    ],
+    "status": "confirmed",
+    "role": "inlaw",
+    "gen": 12,
+    "sources": [
+      "VGD"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "side-002",
+    "name": "Борис Михайлович Сустатов",
+    "born": "1805",
+    "died": null,
+    "place": "",
+    "sex": "M",
+    "parentIds": [
+      "side-001"
+    ],
+    "spouseIds": [],
+    "childIds": [
+      "side-003"
+    ],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 12,
+    "sources": [
+      "VGD p2714644"
+    ],
+    "notes": "Рекрут 1805"
+  },
+  {
+    "id": "sust-ni-1719",
+    "name": "Никита Иванович Сустатов",
+    "born": "1719",
+    "died": "1773",
+    "place": "Сыресева → Камкина",
+    "sex": "M",
+    "parentIds": [
+      "sust-ivan-xiii"
+    ],
+    "spouseIds": [
+      "sust-avdotya"
+    ],
+    "childIds": [
+      "sust-pn-1737"
+    ],
+    "status": "confirmed",
+    "role": "direct",
+    "gen": 12,
+    "sources": [
+      "VGD p4877905"
+    ],
+    "notes": "Прибылой из Сыресевой"
+  },
+  {
+    "id": "sust-ivan-xiii",
+    "name": "Иван ??? (отец Никиты)",
+    "born": null,
+    "died": null,
+    "place": "Сыресева?",
+    "sex": "M",
+    "parentIds": [],
+    "spouseIds": [],
+    "childIds": [
+      "sust-ni-1719"
+    ],
+    "status": "notfound",
+    "role": "direct",
+    "gen": 13,
+    "sources": [
+      "VGD 1748 «Никита Ivanov»"
+    ],
+    "notes": "NOT FOUND"
+  },
+  {
+    "id": "side-003",
+    "name": "Борис Семёнович Сустатов",
+    "born": "1908",
+    "died": "1938-03-20",
+    "place": "Кошелиха",
+    "sex": "M",
+    "parentIds": [],
+    "spouseIds": [],
+    "childIds": [],
+    "status": "confirmed",
+    "role": "side",
+    "gen": 20,
+    "sources": [
+      "https://ru.openlist.wiki/",
+      "todo.md"
+    ],
+    "notes": "Боковая; ≠ отец Василия"
+  }
+]

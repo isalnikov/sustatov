@@ -1,0 +1,126 @@
+{
+  "$schema": "./person.schema.json",
+  "id": "",
+  "gedcomId": null,
+  "sex": null,
+  "role": null,
+
+  "identification": {
+    "surname": {
+      "primary": null,
+      "married": null,
+      "variants": []
+    },
+    "givenName": null,
+    "patronymic": null,
+    "displayName": null,
+    "secretNames": []
+  },
+
+  "lifeCycle": {
+    "birth": {
+      "date": { "value": null, "calendar": null, "precision": null, "note": null },
+      "place": {
+        "governorate": null,
+        "district": null,
+        "volost": null,
+        "settlement": null,
+        "modernName": null,
+        "note": null
+      },
+      "baptism": {
+        "date": { "value": null, "calendar": null, "precision": null, "note": null },
+        "place": {
+          "governorate": null,
+          "district": null,
+          "volost": null,
+          "settlement": null,
+          "modernName": null,
+          "note": null
+        },
+        "godparents": []
+      },
+      "sources": []
+    },
+    "marriages": [],
+    "death": {
+      "date": { "value": null, "calendar": null, "precision": null, "note": null },
+      "place": {
+        "governorate": null,
+        "district": null,
+        "volost": null,
+        "settlement": null,
+        "modernName": null,
+        "note": null
+      },
+      "cause": null,
+      "burial": {
+        "date": { "value": null, "calendar": null, "precision": null, "note": null },
+        "place": {
+          "governorate": null,
+          "district": null,
+          "volost": null,
+          "settlement": null,
+          "modernName": null,
+          "note": null
+        },
+        "cemetery": null,
+        "plotNumber": null
+      },
+      "sources": []
+    }
+  },
+
+  "relationships": {
+    "parents": {
+      "fatherId": null,
+      "motherId": null
+    },
+    "spouses": [],
+    "children": [],
+    "siblings": {
+      "full": [],
+      "halfByFather": [],
+      "halfByMother": [],
+      "step": []
+    }
+  },
+
+  "socialPortrait": {
+    "estate": null,
+    "religion": null,
+    "education": [],
+    "occupations": [],
+    "militaryService": [],
+    "awards": [],
+    "residences": []
+  },
+
+  "sources": {
+    "archival": [],
+    "homeArchive": [],
+    "oralHistory": [],
+    "overallConfidence": "needs_verification",
+    "references": [],
+    "vgdPosts": []
+  },
+
+  "media": {
+    "photos": [],
+    "physicalTraits": {
+      "appearance": null,
+      "height": null,
+      "eyeColor": null,
+      "geneticConditions": [],
+      "note": null
+    },
+    "biography": null,
+    "notes": null
+  },
+
+  "meta": {
+    "createdAt": null,
+    "updatedAt": null,
+    "researchStatus": null
+  }
+}

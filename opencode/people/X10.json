@@ -1,0 +1,44 @@
+{
+  "id": "X10",
+  "surname": "Еделев",
+  "given_name": "Надежа",
+  "patronymic": "Суморев сын",
+  "full_name": "Надежа мурза Суморев",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "xvii",
+  "generation": 0,
+  "relation_to_direct_line": "князья Еделевы",
+  "social_estate": "мурза",
+  "occupation": "",
+  "religion": "",
+  "notes": "Смотренный список 1643 — 250 четей, 2 двора",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "article",
+      "ref": "Демидов А.Н. «Еделевский» список… 1572 г. Финно-угорский мир, т.12 №1, 2020"
+    }
+  ],
+  "events": [
+    {
+      "type": "mention",
+      "date": "1643",
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "C02",
+  "surname": "Сустатов",
+  "given_name": "Аким",
+  "patronymic": "Васильевич",
+  "full_name": "Аким Васильевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "cousin",
+  "generation": 5,
+  "relation_to_direct_line": "двоюродный (сын Василия Андреевича)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "ревизия 1858 (38/45)",
+  "relationships": {
+    "father": "S03",
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/140.htm"
+    }
+  ],
+  "events": []
+}

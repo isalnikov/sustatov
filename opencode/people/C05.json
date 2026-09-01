@@ -1,0 +1,44 @@
+{
+  "id": "C05",
+  "surname": "Сустатов",
+  "given_name": "Алексей",
+  "patronymic": "Федотович",
+  "full_name": "Алексей Федотович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1874",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "cousin",
+  "generation": 7,
+  "relation_to_direct_line": "двоюродный (сын Федота Ивановича)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "брак 19.04.1892 с Евфросинией; ПМВ 1917",
+  "relationships": {
+    "father": "S05",
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/160.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "marriage",
+      "date": "19.04.1892",
+      "note": ""
+    }
+  ]
+}

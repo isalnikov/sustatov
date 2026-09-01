@@ -1,0 +1,20 @@
+# LifeLines config for project sustatov
+# Used by build_sustatov_ged.py via llexec -C
+
+%llroot%:=/home/igor/cursorwork/sustatov/lifelines
+
+LLDATABASES:=/home/igor/cursorwork/sustatov
+LLPROGRAMS:=%llroot%/reports
+LLREPORTS:=%llroot%/output
+LLARCHIVES:=%llroot%/output
+InputPath:=/home/igor/cursorwork/sustatov
+
+codeset=UTF-8
+gedcom output codeset=UTF-8
+gedcom input codeset=UTF-8
+
+user.fullname=Игорь Сальников / Sustatov Research
+user.email=sustatov@local
+user.address=с. Кошелиха, Нижегородская обл.
+
+DenySystemCalls=1

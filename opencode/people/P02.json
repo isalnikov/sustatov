@@ -1,0 +1,46 @@
+{
+  "id": "P02",
+  "surname": "Порунов",
+  "given_name": "Александр",
+  "patronymic": "Павлович",
+  "full_name": "Александр Павлович Порунов",
+  "sex": "M",
+  "birth": {
+    "date": "1912",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "29.12.1942",
+    "place": "Сталинградская обл., Котельниковский р-н, х. Цыган-Нацмен",
+    "cause": "погиб (ВОВ)"
+  },
+  "status": "PROBABLE",
+  "category": "porunov",
+  "generation": 9,
+  "relation_to_direct_line": "вероятный отец Николая Александровича (по отчеству)",
+  "social_estate": "",
+  "occupation": "ефрейтор ЮФ 17 отд. Гв. бат. минеров",
+  "religion": "",
+  "notes": "погиб в ВОВ",
+  "relationships": {
+    "father": "P03",
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "P01"
+    ]
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "death",
+      "date": "29.12.1942",
+      "note": "погиб"
+    }
+  ]
+}

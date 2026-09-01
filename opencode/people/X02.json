@@ -1,0 +1,44 @@
+{
+  "id": "X02",
+  "surname": "Сустатов",
+  "given_name": "Сустат",
+  "patronymic": "Канесев сын",
+  "full_name": "Сустат Канесев сын",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": "Нижегородский уезд"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "xvii",
+  "generation": 0,
+  "relation_to_direct_line": "однофамилец XVI в. (не установлено родство)",
+  "social_estate": "ясачная мордва",
+  "occupation": "",
+  "religion": "дохристианская мордва",
+  "notes": "1591 — «мордва Сустатъ Канесевъ сынъ… знамя свое приложилъ»",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "book",
+      "ref": "Веселовский С.Б. Арзамасские поместные акты (1578–1618). М., 1915"
+    }
+  ],
+  "events": [
+    {
+      "type": "mention",
+      "date": "1591",
+      "note": "акт №47"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "S06",
+  "surname": "Сустатов",
+  "given_name": "Алексей",
+  "patronymic": "Васильевич",
+  "full_name": "Алексей Васильевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1913",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 9,
+  "relation_to_direct_line": "брат Григория 1912",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "рядовой; прибыл 20.09.1944 на Горьковский ВПП, убыл 03.10.1944 п/п 55390 г. Муром",
+  "relationships": {
+    "father": "D10",
+    "mother": "SP06",
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/170.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "military",
+      "date": "1944",
+      "note": "ВПП"
+    }
+  ]
+}

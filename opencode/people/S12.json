@@ -1,0 +1,40 @@
+{
+  "id": "S12",
+  "surname": "Сустатова",
+  "given_name": "Елена",
+  "patronymic": "",
+  "full_name": "Елена Сустатова (Ермолина)",
+  "sex": "F",
+  "birth": {
+    "date": "01.06.1959",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 11,
+  "relation_to_direct_line": "сестра Григория 1954",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "муж Дмитрий Ермолин; дети Никита (1982), Дарья (1987)",
+  "relationships": {
+    "father": "D12",
+    "mother": "SP08",
+    "spouses": [
+      "SP11"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

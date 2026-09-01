@@ -1,0 +1,40 @@
+{
+  "id": "SP06",
+  "surname": "Королёва",
+  "given_name": "Прасковья",
+  "patronymic": "Фёдоровна",
+  "full_name": "Прасковья Фёдоровна Королёва",
+  "sex": "F",
+  "birth": {
+    "date": "1883",
+    "place": ""
+  },
+  "death": {
+    "date": "1969",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse",
+  "generation": 0,
+  "relation_to_direct_line": "супруг(а) по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "жена Василия Ивановича; брак 30.06.1908",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "D10"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "ЦАНО, ф.570, оп.10, д.142–148"
+    }
+  ],
+  "events": []
+}

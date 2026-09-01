@@ -1,0 +1,59 @@
+{
+  "id": "D10",
+  "surname": "Сустатов",
+  "given_name": "Василий",
+  "patronymic": "Иванович",
+  "full_name": "Василий Иванович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1890",
+    "place": "с. Кошелиха, Ардатовский уезд"
+  },
+  "death": {
+    "date": "1934",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 8,
+  "relation_to_direct_line": "прямой предок",
+  "social_estate": "крестьянин",
+  "occupation": "",
+  "religion": "православие",
+  "notes": "брак 30.06.1908 (17½ л.) с Прасковьей Королёвой; ПМВ рядовой 3-го Заамурского полка, ранен 15.06.1916",
+  "relationships": {
+    "father": "D09",
+    "mother": null,
+    "spouses": [
+      "SP06"
+    ],
+    "children": [
+      "D11",
+      "S06",
+      "S07"
+    ]
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "ЦАНО, ф.570, оп.10, д.142–148"
+    },
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/100.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "marriage",
+      "date": "30.06.1908",
+      "note": "с Прасковьей Фёдоровной Королёвой"
+    },
+    {
+      "type": "military",
+      "date": "1916",
+      "note": "ранен, 3-й Заамурский пограничный полк"
+    }
+  ]
+}

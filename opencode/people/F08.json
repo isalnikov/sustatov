@@ -1,0 +1,40 @@
+{
+  "id": "F08",
+  "surname": "Абрамов",
+  "given_name": "Ермолай",
+  "patronymic": "",
+  "full_name": "Ермолай Иванович Абрамов",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse_family",
+  "generation": 0,
+  "relation_to_direct_line": "родственник по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "дед Евдокии Абрамовой",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "F07"
+    ]
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "S11",
+  "surname": "Сустатова",
+  "given_name": "Вера",
+  "patronymic": "",
+  "full_name": "Вера Сустатова",
+  "sex": "F",
+  "birth": {
+    "date": "07.10.1939",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 10,
+  "relation_to_direct_line": "сестра Василия 1930",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "дочь Григория 1912",
+  "relationships": {
+    "father": "D11",
+    "mother": "SP07",
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

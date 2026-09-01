@@ -1,0 +1,45 @@
+{
+  "id": "P03",
+  "surname": "Порунов",
+  "given_name": "Павел",
+  "patronymic": "Егорович",
+  "full_name": "Павел Егорович Порунов",
+  "sex": "M",
+  "birth": {
+    "date": "~1885–1890",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "PROBABLE",
+  "category": "porunov",
+  "generation": 8,
+  "relation_to_direct_line": "вероятный дед Николая Александровича",
+  "social_estate": "",
+  "occupation": "плотник",
+  "religion": "",
+  "notes": "плотник Кошелихинского лесозавода № 27 (1919); брак с Клейменовой Анной Васильевной",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "P02",
+      "P04"
+    ]
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/270.htm"
+    },
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/160.htm"
+    }
+  ],
+  "events": []
+}

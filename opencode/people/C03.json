@@ -1,0 +1,46 @@
+{
+  "id": "C03",
+  "surname": "Сустатов",
+  "given_name": "Александр",
+  "patronymic": "Фёдорович",
+  "full_name": "Александр Фёдорович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1870",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "cousin",
+  "generation": 7,
+  "relation_to_direct_line": "двоюродный (сын Фёдора Ивановича)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "брак 09.11.1890; жена Екатерина",
+  "relationships": {
+    "father": "S04",
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "C04"
+    ]
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/160.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "marriage",
+      "date": "09.11.1890",
+      "note": "сын Фёдора Ивановича"
+    }
+  ]
+}

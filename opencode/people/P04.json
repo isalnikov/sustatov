@@ -1,0 +1,38 @@
+{
+  "id": "P04",
+  "surname": "Порунов",
+  "given_name": "Иван",
+  "patronymic": "Павлович",
+  "full_name": "Иван Павлович Порунов",
+  "sex": "M",
+  "birth": {
+    "date": "1922",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "14.05.1942",
+    "place": "Тульская обл., Белевский р-н",
+    "cause": "погиб (ВОВ)"
+  },
+  "status": "CONFIRMED",
+  "category": "porunov",
+  "generation": 9,
+  "relation_to_direct_line": "вероятный дядя Николая Александровича",
+  "social_estate": "",
+  "occupation": "красноармеец 201 танк. бр.",
+  "religion": "",
+  "notes": "погиб в ВОВ",
+  "relationships": {
+    "father": "P03",
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,61 @@
+{
+  "id": "D11",
+  "surname": "Сустатов",
+  "given_name": "Григорий",
+  "patronymic": "Васильевич",
+  "full_name": "Григорий Васильевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "19.01.1912",
+    "place": "с. Кошелиха, Горьковская обл."
+  },
+  "death": {
+    "date": "10.03.1942",
+    "place": "с. Приколотное, Харьковская обл.",
+    "cause": "умер от ран (ВОВ)"
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 9,
+  "relation_to_direct_line": "прямой предок",
+  "social_estate": "крестьянин",
+  "occupation": "столяр",
+  "religion": "православие",
+  "notes": "987 сп 226 сд, пулемётчик/санитар, вынес 40 раненых; подорвался на мине 07.03.1942; похоронен в братской могиле",
+  "relationships": {
+    "father": "D10",
+    "mother": "SP06",
+    "spouses": [
+      "SP07"
+    ],
+    "children": [
+      "D12",
+      "S08",
+      "S09",
+      "S10",
+      "S11"
+    ]
+  },
+  "sources": [
+    {
+      "type": "url",
+      "ref": "https://pamyat-naroda.ru/heroes/isp-chelovek_spisok2324860/"
+    },
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "military",
+      "date": "1941",
+      "note": "призван из колхоза «Красный Октябрь»"
+    },
+    {
+      "type": "death",
+      "date": "10.03.1942",
+      "note": "умер от ран в госпитале"
+    }
+  ]
+}

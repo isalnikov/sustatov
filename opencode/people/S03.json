@@ -1,0 +1,40 @@
+{
+  "id": "S03",
+  "surname": "Сустатов",
+  "given_name": "Василий",
+  "patronymic": "Андреевич",
+  "full_name": "Василий Андреевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1817",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 4,
+  "relation_to_direct_line": "брат Ивана Андреевича",
+  "social_estate": "государственный крестьянин",
+  "occupation": "",
+  "religion": "",
+  "notes": "ревизия 1858 (58/65); сын Аким",
+  "relationships": {
+    "father": "D05",
+    "mother": "SP03",
+    "spouses": [],
+    "children": [
+      "C02"
+    ]
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/140.htm"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,48 @@
+{
+  "id": "C04",
+  "surname": "Сустатов",
+  "given_name": "Серафим",
+  "patronymic": "Александрович",
+  "full_name": "Серафим Александрович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1909",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "cousin",
+  "generation": 8,
+  "relation_to_direct_line": "троюродный (сын Александра Фёдоровича)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "рядовой 393 опаб 154 УР; орден Отечественной войны II (07.05.1944)",
+  "relationships": {
+    "father": "C03",
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    },
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/170.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "military",
+      "date": "1941–1944",
+      "note": "в армии с 04.10.1941, трижды ранен"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "SP11",
+  "surname": "Ермолин",
+  "given_name": "Дмитрий",
+  "patronymic": "",
+  "full_name": "Дмитрий Ермолин",
+  "sex": "M",
+  "birth": {
+    "date": "19.12.1956",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse",
+  "generation": 0,
+  "relation_to_direct_line": "супруг(а) по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "муж Елены 1959",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "S12"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

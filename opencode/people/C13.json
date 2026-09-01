@@ -1,0 +1,38 @@
+{
+  "id": "C13",
+  "surname": "Сустатов",
+  "given_name": "Николай",
+  "patronymic": "Иванович",
+  "full_name": "Николай Иванович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1915",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "collateral",
+  "generation": 0,
+  "relation_to_direct_line": "боковая ветвь (родство не установлено)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "ст. сержант; медаль «За боевые заслуги» (22.08.1944)",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/100.htm"
+    }
+  ],
+  "events": []
+}

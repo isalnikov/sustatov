@@ -1,0 +1,38 @@
+{
+  "id": "S14",
+  "surname": "Сустатов",
+  "given_name": "Михаил",
+  "patronymic": "Петрович",
+  "full_name": "Михаил Петрович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1752",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 3,
+  "relation_to_direct_line": "брат Андрея Петровича",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "сын Петра Никитича (ревизия 1763, 11 л.)",
+  "relationships": {
+    "father": "D04",
+    "mother": "SP02",
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "РГАДА, ф.350, оп.2, д.114, лл.1262–1267"
+    }
+  ],
+  "events": []
+}

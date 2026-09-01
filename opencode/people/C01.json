@@ -1,0 +1,38 @@
+{
+  "id": "C01",
+  "surname": "Сустатов",
+  "given_name": "Аверьян",
+  "patronymic": "Кондратьевич",
+  "full_name": "Аверьян Кондратьевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1827",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "cousin",
+  "generation": 5,
+  "relation_to_direct_line": "двоюродный (сын Кондратия Андреевича)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "ревизия 1858 (31/38); жена Дарья Анисимовна",
+  "relationships": {
+    "father": "S02",
+    "mother": "SP13",
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/140.htm"
+    }
+  ],
+  "events": []
+}

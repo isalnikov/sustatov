@@ -1,0 +1,40 @@
+{
+  "id": "F01",
+  "surname": "Ковригин",
+  "given_name": "Андрей",
+  "patronymic": "",
+  "full_name": "Андрей Ковригин",
+  "sex": "M",
+  "birth": {
+    "date": "1895",
+    "place": ""
+  },
+  "death": {
+    "date": "19.04.1960",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse_family",
+  "generation": 0,
+  "relation_to_direct_line": "родственник по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "отец Александры Ковригиной",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "SP08"
+    ]
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

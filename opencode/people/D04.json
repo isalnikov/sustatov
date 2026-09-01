@@ -1,0 +1,43 @@
+{
+  "id": "D04",
+  "surname": "Сустатов",
+  "given_name": "Пётр",
+  "patronymic": "Никитич",
+  "full_name": "Пётр Никитич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1737",
+    "place": "с. Кошелиха (Камкина)"
+  },
+  "death": {
+    "date": "1819",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 2,
+  "relation_to_direct_line": "прямой предок",
+  "social_estate": "государственный крестьянин",
+  "occupation": "",
+  "religion": "православие",
+  "notes": "ревизии 1763 (26/27), 1782; †1819 (зафиксировано ревизией 1834)",
+  "relationships": {
+    "father": "D03",
+    "mother": "SP01",
+    "spouses": [
+      "SP02"
+    ],
+    "children": [
+      "D05",
+      "S14"
+    ]
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "ЦАНО, ф.60, оп.239А, д.463, 599"
+    }
+  ],
+  "events": []
+}

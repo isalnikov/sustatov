@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Род Сустатовых — интерактивное древо</title>
+<style>
+:root{
+  --bg:#f4f7f2; --surface:#fff; --surface2:#eef5ea; --border:#c5d4bc; --text:#1a2e1a; --muted:#5a6f5a;
+  --accent:#2d6a3e; --accent-light:#4a9e62; --direct:#1b5e20; --direct-bg:#c8e6c9;
+  --confirmed:#2e7d32; --probable:#ef6c00; --gedcom:#546e7a; --xvii:#5e35b1; --male:#1565c0; --female:#ad1457;
+  --shadow:0 2px 12px rgba(26,46,26,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;min-height:100vh}
+a{color:var(--accent)}
+.site-header{background:linear-gradient(135deg,#1b4332,#2d6a4f 50%,#40916c);color:#fff;padding:20px 28px 16px;box-shadow:var(--shadow)}
+.site-header h1{font-size:1.6rem;font-weight:700}
+.site-header .subtitle{opacity:.88;font-size:.92rem;margin-top:4px}
+.stats-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.stat-chip{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:4px 14px;font-size:.82rem}
+nav.tabs{display:flex;flex-wrap:wrap;gap:4px;padding:10px 20px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+nav.tabs button{background:transparent;border:1px solid transparent;color:var(--muted);padding:8px 16px;border-radius:10px;cursor:pointer;font-size:.88rem;font-weight:500}
+nav.tabs button:hover{background:var(--surface2);color:var(--text)}
+nav.tabs button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{max-width:1400px;margin:0 auto;padding:20px}
+section.panel{display:none}
+section.panel.active{display:block}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}
+.card h2{font-size:1.05rem;color:var(--accent);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--surface2)}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.04em}
+.badge.c{background:#e8f5e9;color:var(--confirmed)}
+.badge.p{background:#fff3e0;color:var(--probable)}
+.badge.h{background:#ffebee;color:#c62828}
+.badge.direct{background:var(--direct-bg);color:var(--direct)}
+.badge.xvii{background:#ede7f6;color:var(--xvii)}
+.badge.m{background:#e3f2fd;color:var(--male)}
+.badge.f{background:#fce4ec;color:var(--female)}
+/* timeline */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;background:linear-gradient(var(--accent),var(--accent-light));border-radius:2px}
+.tl-item{position:relative;margin-bottom:14px;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;cursor:pointer}
+.tl-item::before{content:'';position:absolute;left:-24px;top:16px;width:12px;height:12px;background:var(--accent);border:2px solid #fff;border-radius:50%;box-shadow:0 0 0 2px var(--accent-light)}
+.tl-item.probable::before{background:var(--probable);box-shadow:0 0 0 2px #ffcc80}
+.tl-name{font-weight:700}
+.tl-dates{color:var(--muted);font-size:.85rem;margin:2px 0 6px}
+.tl-note{font-size:.82rem}
+/* tree */
+.tree-toolbar{display:flex;gap:8px;padding:10px;border-bottom:1px solid var(--border);flex-wrap:wrap;align-items:center}
+.tree-toolbar input{flex:1;min-width:180px;padding:7px 12px;border:1px solid var(--border);border-radius:8px;font-size:.88rem}
+.tree-toolbar button{padding:7px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;cursor:pointer;font-size:.82rem}
+.tree-toolbar button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tree-wrap{overflow:hidden;background:var(--surface);border:1px solid var(--border);border-radius:10px;min-height:560px;position:relative;cursor:grab}
+.tree-wrap.dragging{cursor:grabbing}
+#treeSvg{display:block;user-select:none}
+.link{fill:none;stroke:#90a4ae;stroke-width:1.5}
+.link.direct{stroke:var(--accent);stroke-width:2.5}
+.link.dashed{stroke-dasharray:5 5;stroke:#b0bec5}
+.node-card{cursor:pointer}
+.node-card rect{stroke-width:2;transition:filter .15s}
+.node-card:hover rect{filter:brightness(1.04)}
+.node-card.direct rect{stroke:var(--direct);stroke-width:3}
+.node-card.dim{opacity:.15}
+.node-name{font-weight:600;font-size:13px}
+.node-dates{font-size:11px;fill:#546e7a}
+.node-meta{font-size:10px;fill:#78909c}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.78rem;margin-top:10px}
+.legend span{display:flex;align-items:center;gap:5px}
+.legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
+/* table */
+.table-scroll{overflow:auto;border:1px solid var(--border);border-radius:10px;max-height:70vh}
+table.data-table{width:100%;border-collapse:collapse;font-size:.8rem}
+table.data-table th{background:var(--accent);color:#fff;padding:10px 8px;text-align:left;position:sticky;top:0;white-space:nowrap}
+table.data-table td{padding:8px;border-bottom:1px solid var(--border);vertical-align:top;max-width:240px}
+table.data-table tr:hover td{background:var(--surface2)}
+table.data-table tr.direct td{background:#e8f5e9}
+td.note{font-size:.75rem;color:var(--muted);max-width:280px}
+/* modal */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--surface);border-radius:14px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+.modal-header{padding:18px 20px;background:linear-gradient(135deg,#2d6a4f,#40916c);color:#fff;border-radius:14px 14px 0 0;display:flex;justify-content:space-between;align-items:flex-start}
+.modal-header h2{font-size:1.2rem}
+.modal-close{background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1}
+.modal-body{padding:18px 20px}
+.dg{display:grid;grid-template-columns:140px 1fr;gap:6px 12px;font-size:.88rem;margin-bottom:14px}
+.dg dt{color:var(--muted);font-weight:500}
+.dg dd{margin:0}
+@media (max-width:768px){.site-header h1{font-size:1.2rem}main{padding:12px}.dg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <h1>Род Сустатовых</h1>
+  <p class="subtitle">с. Кошелиха, Ардатовский уезд → Первомайский р-н, Нижегородская обл. · линия отца Игоря Сальникова</p>
+  <div class="stats-row" id="statsRow"></div>
+</header>
+<nav class="tabs">
+  <button data-tab="overview" class="active">Обзор</button>
+  <button data-tab="tree">Дерево</button>
+  <button data-tab="table">Таблица</button>
+</nav>
+<main>
+  <section class="panel active" id="panel-overview">
+    <div class="card">
+      <h2>Прямая линия (от Игоря Сальникова к Андрею Петровичу и ранее)</h2>
+      <div class="timeline" id="directTimeline"></div>
+      <div class="legend">
+        <span><i style="background:#c8e6c9;border:2px solid #1b5e20"></i> Прямая линия</span>
+        <span><i style="background:#e8f5e9"></i> CONFIRMED</span>
+        <span><i style="background:#fff3e0"></i> PROBABLE</span>
+        <span><i style="background:#ffebee"></i> HYPOTHESIS</span>
+        <span><i style="background:#ede7f6"></i> XVII век (контекст)</span>
+      </div>
+    </div>
+  </section>
+  <section class="panel" id="panel-tree">
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="tree-toolbar">
+        <input type="search" id="treeSearch" placeholder="Поиск в дереве…">
+        <button id="btnIn">+</button>
+        <button id="btnOut">−</button>
+        <button id="btnReset">Сброс</button>
+        <button id="btnDirect">Только прямая линия</button>
+        <button id="btnAll">Все ветви</button>
+      </div>
+      <div class="tree-wrap" id="treeWrap"><svg id="treeSvg" xmlns="http://www.w3.org/2000/svg"></svg></div>
+    </div>
+  </section>
+  <section class="panel" id="panel-table">
+    <div class="card">
+      <h2>Полная таблица персон</h2>
+      <div class="table-scroll">
+        <table class="data-table" id="mainTable">
+          <thead><tr><th>Имя</th><th>Годы</th><th>Статус</th><th>Родство</th><th>События / детали</th><th>Источник</th></tr></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="modal-overlay" id="overlay"><div class="modal"><div class="modal-header"><h2 id="mTitle"></h2><button class="modal-close" onclick="closeModal()">×</button></div><div class="modal-body" id="mBody"></div></div></div>
+
+<script>
+const SRC={
+ "Веселовский 1915":"https://archive.org/stream/smutnoevremiamos04impe",
+ "Демидов 2020":"https://sciup.org/edelevskij-spisok-oberegatelnoj-pamjati-carja-ioanna-vasilevicha-mordovskim-147217950",
+ "Переписная книга 1671":"https://vostlit.info/Texts/Dokumenty/Russ/XVII/1660-1680/Perep_kniga_alatyr_1671/text1.htm",
+ "sarpust.ru":"http://sarpust.ru/2015/02/vospominaniya-n-g-sustatova-chast-i-koshelihinskij-spirtzavod/",
+ "Память народа":"https://pamyat-naroda.ru/heroes/isp-chelovek_spisok2324860/",
+ "ВГД-форум":"https://forum.vgd.ru/2339/86148/",
+ "GEDCOM":"MyHeritage GEDCOM",
+ "РГАДА ф.350":"РГАДА ф.350 оп.2 д.114",
+ "ЦАНО ф.60":"ЦАНО ф.60 оп.239А",
+ "ЦАНО ф.570":"ЦАНО ф.570 оп.10"
+};
+
+function P(id,name,dates,status,cat,father,spouse,note,src){
+  return {id,name,dates,status,cat,father:father||null,spouse:spouse||null,note:note||"",src:src||"",ch:[]};
+}
+const roots=[];
+
+const rXVII=P("xvii","XVII век — контекст (связь не доказана)","—","c","xvii",null,null,"Сыресь Сустатов, Сустатовы Алатыря, князья Еделевы");
+roots.push(rXVII);
+
+const syres=P("syres","Сыресь Сустатов","упом. 1596, 1603","c","xvii","xvii",null,"мурза «еделевский»; родовое «знамя» изображено в акте 1596","Веселовский 1915");
+const alatyr=P("alatyr","Сустатовы Алатыря","1671","c","xvii","xvii",null,"Ненашка, Исанка+Алешка, Ездайка, Итяска (убит на Кондарати)","Переписная книга 1671");
+const edelev=P("edelev","Князья Еделевы","—","c","xvii","xvii",null,"Бажен Сыресев, Мамкай Ногаев, Надежа Суморев","Демидов 2020");
+rXVII.ch=[syres,alatyr,edelev];
+
+const n1=P("n1","Никита Иванович Сустатов","~1715–1719 — †1773","c","direct",null,"Авдотья Васильевна","прямой предок","РГАДА ф.350");
+roots.push(n1);
+const n2=P("n2","Пётр Никитич Сустатов","~1737 — †1819","c","direct","n1","Аксинья Алексеевна","прямой предок","ЦАНО ф.60");
+n1.ch=[n2];
+const n3=P("n3","Андрей Петрович Сустатов","~1760 — †1811","c","direct","n2","Дарья","прямой предок; ревизия 1811","ЦАНО ф.60");
+n2.ch=[n3];
+const sibLev=P("lev","Лев Андреевич","—","c","sib","n3","Варвара Васильевна","брат прямой линии","ВГД-форум");
+const sibKon=P("kon","Кондратий Андреевич","— †1847","c","sib","n3","Анна Филипповна","брат; брак 08.11.1807","ВГД-форум");
+const sibVas=P("vas","Василий Андреевич","~1817","c","sib","n3","Ульяна","брат прямой линии","ВГД-форум");
+const n4=P("n4","Иван Андреевич Сустатов","~1793 — †1833","c","direct","n3","Мавра","прямой предок","ЦАНО ф.60");
+n3.ch=[sibLev,sibKon,sibVas,n4];
+const aver=P("aver","Аверьян Кондратьевич","~1827","c","cousin","kon","Дарья","сын Кондратия","ВГД-форум");
+sibKon.ch=[aver];
+const akim=P("akim","Аким Васильевич","—","c","cousin","vas",null,"сын Василия Андреевича","ВГД-форум");
+sibVas.ch=[akim];
+
+const n5=P("n5","Иван Иванович Сустатов","~1815","c","direct","n4","Матрёна Фёдоровна","прямой предок; ревизия 1858","ЦАНО ф.60");
+n4.ch=[n5];
+const sibFed=P("fed","Фёдор Иванович","~1842","c","sib","n5",null,"брат прямой линии","ВГД-форум");
+const sibFedot=P("fedot","Федот Иванович","—","c","sib","n5",null,"брат прямой линии","ВГД-форум");
+const n6=P("n6","Иван Иванович Сустатов","~1847","c","direct","n5",null,"прямой предок (разграничить от брата Ивана ~1851)","ЦАНО ф.60");
+n5.ch=[sibFed,sibFedot,n6];
+const alexF=P("alexf","Александр Фёдорович","~1870","c","cousin","fed","Екатерина","сын Фёдора; брак 1890","ВГД-форум");
+sibFed.ch=[alexF];
+const seraf=P("seraf","Серафим Александрович","1909","c","cousin","alexf",null,"Отеч.войны II","ВГД-форум");
+alexF.ch=[seraf];
+const alexFt=P("alexft","Алексей Федотович","~1874","c","cousin","fedot","Евфросиния","брак 19.04.1892","ВГД-форум");
+sibFedot.ch=[alexFt];
+
+const n7=P("n7","Иван Иванович Сустатов","~1870","p","direct","n6",null,"отец Василия (по отчеству «Иванович»)","ЦАНО ф.570");
+n6.ch=[n7];
+const n8=P("n8","Василий Иванович Сустатов","~1890 — †1934","c","direct","n7","Прасковья Королёва","прямой предок; брак 30.06.1908; ПМВ ранен 1916","ЦАНО ф.570");
+n7.ch=[n8];
+const sibAlx=P("alxv","Алексей Васильевич","1913","c","sib","n8",null,"брат; ВПП 1944","ВГД-форум");
+const sibMax=P("maxv","Максим Васильевич","1917","c","sib","n8",null,"брат; ВПП 1943-44","ВГД-форум");
+const n9=P("n9","Григорий Васильевич Сустатов","1912 — †1942","c","direct","n8","Евдокия Абрамова","прямой предок; 987 сп 226 сд, погиб","Память народа");
+n8.ch=[sibAlx,sibMax,n9];
+const sibTat=P("tat","Татьяна","1932","c","sib","n9",null,"сестра","GEDCOM");
+const sibAnn=P("ann","Анна","1934 — 1953","c","sib","n9",null,"сестра","GEDCOM");
+const sibNik=P("nik","Николай Григорьевич","1936 — 2018","c","sib","n9","Нина","брат; мемуарист","sarpust.ru");
+const sibVer=P("ver","Вера","1939","c","sib","n9",null,"сестра","GEDCOM");
+const n10=P("n10","Василий Григорьевич Сустатов","1930 — †2004","c","direct","n9","Александра Ковригина","прямой предок; «Кошка»","GEDCOM");
+n9.ch=[sibTat,sibAnn,sibNik,sibVer,n10];
+const sibElena=P("elena","Елена Сустатова","1959","c","sib","n10","Дмитрий Ермолин","сестра; дети Никита, Дарья","GEDCOM");
+const n11=P("n11","Григорий Васильевич Сустатов","1954 — †2020","c","direct","n10","Ольга Сальникова / Людмила Эдуардовна","COVID-19, Калининград","GEDCOM");
+n10.ch=[sibElena,n11];
+const igor=P("igor","Игорь Сальников","1982","c","direct","n11",null,"сын; автор GEDCOM","GEDCOM");
+n11.ch=[igor];
+
+const rSide=P("side","Сустатовы с. Кошелихи — боковые ветви","XIX–XX вв.","c","cousin",null,null,"родство с прямой линией не установлено");
+roots.push(rSide);
+const bm1805=P("bm1805","Борис Михайлович","рекрут 1805","c","cousin","side",null,"рекрут с 1805","ВГД-форум");
+const bs1908=P("bs1908","Борис Семёнович","1908 — †1938","c","cousin","side",null,"репрессирован, Бутово","ВГД-форум");
+const vya=P("vya","Василий Яковлевич","1910/1911 — †1941","c","cousin","side",null,"погиб в плену","ВГД-форум");
+const nya=P("nya","Николай Яковлевич","1918 — †1943","c","cousin","side",null,"погиб","ВГД-форум");
+const ste=P("ste","Степан Фёдорович","1910 — †1943","c","cousin","side",null,"партизан","ВГД-форум");
+const yaf=P("yaf","Яков Фёдорович","1910 — †1942","c","cousin","side",null,"погиб в плену","ВГД-форум");
+const mif=P("mif","Михаил Фёдорович","1913 — пропал 1941","c","cousin","side",null,"пропал без вести","ВГД-форум");
+const alfe=P("alfe","Алексей Фёдорович","1918","c","cousin","side",null,"старшина, 5 наград","ВГД-форум");
+const grmi=P("grmi","Григорий Михайлович","1918","c","cousin","side",null,"рядовой","ВГД-форум");
+const nii=P("nii","Николай Иванович","1915","c","cousin","side",null,"ст.сержант","ВГД-форум");
+rSide.ch=[bm1805,bs1908,vya,nya,ste,yaf,mif,alfe,grmi,nii];
+
+const all=[];
+(function flat(arr){
+  arr.forEach(n=>{all.push(n); if(n.ch&&n.ch.length) flat(n.ch);});
+})(roots);
+
+let slot=0;
+function layout(n,depth){
+  n.depth=depth;
+  if(!n.ch.length){ n.min=n.max=slot++; n.slot=n.min; }
+  else { let mn=1e9,mx=-1; n.ch.forEach(c=>{layout(c,depth+1); mn=Math.min(mn,c.min); mx=Math.max(mx,c.max);}); n.min=mn;n.max=mx;n.slot=(mn+mx)/2; }
+}
+roots.forEach(r=>{ slot+=1.5; layout(r,0); });
+
+const CW=236, RH=74, XGAP=18, YGAP=26;
+const pos={};
+all.forEach(n=>{ pos[n.id]={x:n.slot*CW, y:n.depth*(RH+YGAP)}; });
+
+const W=Math.ceil((slot+2)*CW), H=Math.ceil((maxDepth()+1)*(RH+YGAP)+60);
+function maxDepth(){let m=0;all.forEach(n=>m=Math.max(m,n.depth));return m;}
+
+const svg=document.getElementById('treeSvg');
+svg.setAttribute('width',W); svg.setAttribute('height',H);
+const g=document.createElementNS('http://www.w3.org/2000/svg','g'); g.id='viewport'; svg.appendChild(g);
+const links=document.createElementNS('http://www.w3.org/2000/svg','g'); g.appendChild(links);
+const nodes=document.createElementNS('http://www.w3.org/2000/svg','g'); g.appendChild(nodes);
+
+const colors={direct:'#c8e6c9',sib:'#e8f5e9',cousin:'#e3f2fd',xvii:'#ede7f6',spouse:'#fce4ec'};
+const strokes={direct:'#1b5e20',sib:'#2e7d32',cousin:'#1565c0',xvii:'#5e35b1',spouse:'#ad1457'};
+
+function isDirectChain(n){
+  let t=n;
+  while(t){ if(t.cat==='direct') return true; t=byId(t.father); }
+  return false;
+}
+function byId(id){return all.find(x=>x.id===id);}
+
+all.forEach(n=>{
+  const p=pos[n.id];
+  const direct = n.cat==='direct';
+  const nodeG=document.createElementNS('http://www.w3.org/2000/svg','g');
+  nodeG.setAttribute('class','node-card'+(direct?' direct':''));
+  nodeG.setAttribute('transform',`translate(${p.x-CW/2+40},${p.y})`);
+  nodeG.setAttribute('data-id',n.id);
+  const h=n.spouse?78:64;
+  const rect=document.createElementNS('http://www.w3.org/2000/svg','rect');
+  rect.setAttribute('width',CW-40); rect.setAttribute('height',h); rect.setAttribute('rx',9); rect.setAttribute('ry',9);
+  rect.setAttribute('fill',colors[n.cat]||'#fff'); rect.setAttribute('stroke',strokes[n.cat]||'#999');
+  nodeG.appendChild(rect);
+  const nm=document.createElementNS('http://www.w3.org/2000/svg','text');
+  nm.setAttribute('x',10); nm.setAttribute('y',20); nm.setAttribute('class','node-name'); nm.textContent=n.name;
+  nodeG.appendChild(nm);
+  const dt=document.createElementNS('http://www.w3.org/2000/svg','text');
+  dt.setAttribute('x',10); dt.setAttribute('y',38); dt.setAttribute('class','node-dates'); dt.textContent=n.dates;
+  nodeG.appendChild(dt);
+  const mt=document.createElementNS('http://www.w3.org/2000/svg','text');
+  mt.setAttribute('x',10); mt.setAttribute('y',54); mt.setAttribute('class','node-meta');
+  mt.textContent=n.note.length>52?n.note.slice(0,52)+'…':n.note;
+  nodeG.appendChild(mt);
+  if(n.spouse){
+    const sp=document.createElementNS('http://www.w3.org/2000/svg','text');
+    sp.setAttribute('x',10); sp.setAttribute('y',70); sp.setAttribute('class','node-meta');
+    sp.setAttribute('fill','#ad1457'); sp.textContent='⚭ '+n.spouse;
+    nodeG.appendChild(sp);
+  }
+  nodeG.addEventListener('click',()=>openModal(n));
+  nodes.appendChild(nodeG);
+
+  if(n.father){
+    const fp=pos[n.father];
+    const l=document.createElementNS('http://www.w3.org/2000/svg','path');
+    const x1=fp.x, y1=fp.y+64, x2=p.x, y2=p.y;
+    l.setAttribute('d',`M${x1},${y1} C${x1},${(y1+y2)/2} ${x2},${(y1+y2)/2} ${x2},${y2}`);
+    l.setAttribute('class','link'+(isDirectChain(byId(n.father))&&n.cat!=='cousin'?' direct':''));
+    if(byId(n.father).cat==='xvii') l.setAttribute('class','link dashed');
+    links.appendChild(l);
+  }
+});
+
+let view={x:0,y:0,k:1};
+function apply(){g.setAttribute('transform',`translate(${view.x},${view.y}) scale(${view.k})`);}
+const wrap=document.getElementById('treeWrap');
+let panning=false,sx,sy;
+wrap.addEventListener('mousedown',e=>{panning=true;sx=e.clientX-view.x;sy=e.clientY-view.y;wrap.classList.add('dragging');});
+window.addEventListener('mousemove',e=>{if(!panning)return;view.x=e.clientX-sx;view.y=e.clientY-sy;apply();});
+window.addEventListener('mouseup',()=>{panning=false;wrap.classList.remove('dragging');});
+wrap.addEventListener('wheel',e=>{e.preventDefault();const f=e.deltaY<0?1.1:0.9;view.k=Math.min(3,Math.max(0.3,view.k*f));apply();},{passive:false});
+document.getElementById('btnIn').onclick=()=>{view.k=Math.min(3,view.k*1.2);apply();};
+document.getElementById('btnOut').onclick=()=>{view.k=Math.max(0.3,view.k/1.2);apply();};
+document.getElementById('btnReset').onclick=()=>{view={x:0,y:0,k:1};apply();};
+document.getElementById('btnDirect').onclick=()=>{
+  document.querySelectorAll('.node-card').forEach(el=>{
+    const n=byId(el.getAttribute('data-id'));
+    el.classList.toggle('dim', !(n.cat==='direct'||n.cat==='sib'));
+  });
+};
+document.getElementById('btnAll').onclick=()=>{document.querySelectorAll('.node-card').forEach(el=>el.classList.remove('dim'));};
+document.getElementById('treeSearch').oninput=e=>{
+  const q=e.target.value.trim().toLowerCase();
+  document.querySelectorAll('.node-card').forEach(el=>{
+    const n=byId(el.getAttribute('data-id'));
+    el.classList.toggle('dim', q && !(n.name+' '+n.dates+' '+n.note).toLowerCase().includes(q));
+  });
+};
+
+function openModal(n){
+  document.getElementById('mTitle').textContent=n.name;
+  const badge={c:'CONFIRMED',p:'PROBABLE',h:'HYPOTHESIS'}[n.status]||n.status;
+  const src = SRC[n.src]||n.src||'';
+  const link = src.startsWith('http')?`<a href="${src}" target="_blank">${src}</a>`:(src||'—');
+  document.getElementById('mBody').innerHTML=
+    `<dl class="dg">
+      <dt>Даты</dt><dd>${n.dates}</dd>
+      <dt>Статус</dt><dd>${badge}</dd>
+      <dt>Категория</dt><dd>${n.cat}</dd>
+      <dt>Супруг(а)</dt><dd>${n.spouse||'—'}</dd>
+      <dt>Отец</dt><dd>${n.father?byId(n.father).name:'—'}</dd>
+      <dt>Примечание</dt><dd>${n.note}</dd>
+      <dt>Источник</dt><dd>${link}</dd>
+    </dl>`;
+  document.getElementById('overlay').classList.add('open');
+}
+function closeModal(){document.getElementById('overlay').classList.remove('open');}
+document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal();});
+
+const ROWS=[
+["Сыресь Сустатов","упом. 1596, 1603","c","родоначальник (мурза)","«еделевский мурза»; родовое «знамя» изображено в акте 1596","Веселовский 1915"],
+["Никита Иванович","~1715–1719 — 1773","c","прямой предок","жена Авдотья Васильевна","РГАДА ф.350"],
+["Пётр Никитич","~1737 — 1819","c","прямой предок","жена Аксинья Алексеевна","ЦАНО ф.60"],
+["Андрей Петрович","~1760 — 1811","c","прямой предок","жена Дарья; сыновья Лев, Иван, Кондратий, Василий","ЦАНО ф.60"],
+["Иван Андреевич","~1793 — 1833","c","прямой предок","жена Мавра","ЦАНО ф.60"],
+["Иван Иванович","~1815","c","прямой предок","жена Матрёна Фёдоровна","ЦАНО ф.60"],
+["Иван Иванович","~1847","c","прямой предок","разграничить от брата Ивана (~1851)","ЦАНО ф.60"],
+["Иван Иванович","~1870","p","отец Василия","недостающее звено","ЦАНО ф.570"],
+["Василий Иванович","~1890 — 1934","c","прямой предок","брак 30.06.1908; ПМВ ранен 1916","ЦАНО ф.570"],
+["Григорий Васильевич","1912 — 1942","c","прямой предок","987 сп 226 сд, погиб","Память народа"],
+["Василий Григорьевич","1930 — 2004","c","прямой предок","с.Кошелиха; «Кошка»","GEDCOM"],
+["Григорий Васильевич","1954 — 2020","c","прямая линия","Калининград, COVID-19","GEDCOM"],
+["Игорь Сальников","1982","c","сын","Ленинград","GEDCOM"],
+["Лев Андреевич","—","c","брат прямой линии","жена Варвара Васильевна","ВГД-форум"],
+["Кондратий Андреевич","†1847","c","брат прямой линии","брак 08.11.1807","ВГД-форум"],
+["Василий Андреевич","~1817","c","брат прямой линии","сын Аким","ВГД-форум"],
+["Фёдор Иванович","~1842","c","брат прямой линии","сын Александр Фёдорович","ВГД-форум"],
+["Федот Иванович","—","c","брат прямой линии","сын Алексей Федотович","ВГД-форум"],
+["Алексей Васильевич","1913","c","брат Григория 1912","ВПП 1944","ВГД-форум"],
+["Максим Васильевич","1917","c","брат Григория 1912","ВПП 1943-44","ВГД-форум"],
+["Татьяна","1932","c","сестра Василия 1930","—","GEDCOM"],
+["Анна","1934–1953","c","сестра Василия 1930","—","GEDCOM"],
+["Николай Григорьевич","1936–2018","c","брат Василия 1930","мемуарист","sarpust.ru"],
+["Вера","1939","c","сестра Василия 1930","—","GEDCOM"],
+["Елена Сустатова","1959","c","сестра Григория 1954","муж Дмитрий Ермолин","GEDCOM"],
+["Борис Михайлович","рекрут 1805","c","боковая ветвь","рекрут с 1805","ВГД-форум"],
+["Борис Семёнович","1908–1938","c","боковая ветвь","репрессирован, Бутово","ВГД-форум"],
+["Василий Яковлевич","1910/1911","c","боковая ветвь","погиб в плену 09.12.1941","ВГД-форум"],
+["Николай Яковлевич","1918","c","боковая ветвь","погиб 20.12.1943","ВГД-форум"],
+["Степан Фёдорович","1910","c","боковая ветвь","партизан, погиб 01.05.1943","ВГД-форум"],
+["Яков Фёдорович","1910","c","боковая ветвь","погиб в плену 08.05.1942","ВГД-форум"],
+["Михаил Фёдорович","1913","c","боковая ветвь","пропал без вести 12.1941","ВГД-форум"],
+["Алексей Фёдорович","1918","c","боковая ветвь","старшина, 5 наград","ВГД-форум"],
+["Григорий Михайлович","1918","c","боковая ветвь","рядовой","ВГД-форум"],
+["Николай Иванович","1915","c","боковая ветвь","ст.сержант","ВГД-форум"],
+["Серафим Александрович","1909","c","боковая ветвь","Отеч.войны II","ВГД-форум"],
+["Ненашка Сустатов","1671","c","XVII век","д.Хмелевка","Переписная книга 1671"],
+["Исанка Сустатов","1671","c","XVII век","сын Алешка","Переписная книга 1671"],
+["Ездайка Сустатов","1671","c","XVII век","д.Сыресева","Переписная книга 1671"],
+["Итяска Сустатов","†1670","c","XVII век","убит на Кондарати","Переписная книга 1671"],
+];
+const tb=document.getElementById('tableBody');
+tb.innerHTML=ROWS.map(r=>{
+  const src=SRC[r[5]]||r[5];
+  const link=src.startsWith('http')?`<a href="${src}" target="_blank">↗</a>`:'';
+  return `<tr class="${r[3]==='прямой предок'||r[3]==='прямая линия'?'direct':''}">
+    <td>${r[0]}</td><td>${r[1]}</td><td><span class="badge ${r[2]}">${r[2]}</span></td>
+    <td>${r[3]}</td><td class="note">${r[4]}</td><td>${link} ${r[5]}</td></tr>`;
+}).join('');
+
+const directOrder=[n11,n10,n9,n8,n7,n6,n5,n4,n3,n2,n1,syres];
+document.getElementById('directTimeline').innerHTML=directOrder.map((n,i)=>{
+  const prb=n.status==='p'?' probable':'';
+  return `<div class="tl-item${prb}" onclick="openModal(all.find(x=>x.id==='${n.id}'))">
+    <div class="tl-name">${i+1}. ${n.name}</div>
+    <div class="tl-dates">${n.dates}</div>
+    <div><span class="badge direct">Прямая линия</span> <span class="badge ${n.status}">${n.status==='c'?'CONFIRMED':n.status==='p'?'PROBABLE':'HYPOTHESIS'}</span></div>
+    <div class="tl-note">${n.note}</div></div>`;
+}).join('');
+
+document.getElementById('statsRow').innerHTML=[
+  `<span class="stat-chip">${all.length} персон в графе</span>`,
+  `<span class="stat-chip">12 в прямой линии</span>`,
+  `<span class="stat-chip">CONFIRMED / PROBABLE / HYPOTHESIS</span>`,
+  `<span class="stat-chip">с 1596 (мурза Сыресь)</span>`,
+  `<span class="stat-chip">с. Кошелиха</span>`
+].join('');
+
+document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('nav.tabs button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  document.querySelectorAll('section.panel').forEach(s=>s.classList.remove('active'));
+  document.getElementById('panel-'+b.dataset.tab).classList.add('active');
+}));
+</script>
+</body>
+</html>

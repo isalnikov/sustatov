@@ -1,0 +1,35 @@
+{
+  "id": "D02",
+  "surname": "",
+  "given_name": "Иван",
+  "patronymic": "",
+  "full_name": "Иван (?)",
+  "sex": "M",
+  "birth": {
+    "date": "~кон. XVII в.",
+    "place": "дворцовая деревня Сыресева"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "HYPOTHESIS",
+  "category": "direct",
+  "generation": 0,
+  "relation_to_direct_line": "отец Никиты Ивановича (не идентифицирован)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "отец Никиты Иванова; в источниках не найден; возможно записан под эрзянским именем до крещения",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "D03"
+    ]
+  },
+  "sources": [],
+  "events": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "F02",
+  "surname": "Ковригин",
+  "given_name": "Иван",
+  "patronymic": "",
+  "full_name": "Иван Ковригин",
+  "sex": "M",
+  "birth": {
+    "date": "1852",
+    "place": ""
+  },
+  "death": {
+    "date": "1937",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse_family",
+  "generation": 0,
+  "relation_to_direct_line": "родственник по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "дед Александры Ковригиной",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "F01"
+    ]
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "D09",
+  "surname": "Сустатов",
+  "given_name": "Иван",
+  "patronymic": "Иванович",
+  "full_name": "Иван Иванович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "~1870",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "PROBABLE",
+  "category": "direct",
+  "generation": 7,
+  "relation_to_direct_line": "отец Василия Ивановича (по отчеству «Иванович»)",
+  "social_estate": "крестьянин",
+  "occupation": "",
+  "religion": "православие",
+  "notes": "недостающее звено; подтвердить метрикой",
+  "relationships": {
+    "father": "D08",
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "D10"
+    ]
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "ЦАНО, ф.570, оп.10, д.142–148"
+    }
+  ],
+  "events": []
+}

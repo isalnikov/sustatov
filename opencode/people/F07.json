@@ -1,0 +1,40 @@
+{
+  "id": "F07",
+  "surname": "Абрамов",
+  "given_name": "Никита",
+  "patronymic": "",
+  "full_name": "Никита Абрамов",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse_family",
+  "generation": 0,
+  "relation_to_direct_line": "родственник по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "отец Евдокии Абрамовой",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "SP07"
+    ]
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

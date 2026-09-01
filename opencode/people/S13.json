@@ -1,0 +1,38 @@
+{
+  "id": "S13",
+  "surname": "Сустатова",
+  "given_name": "Федосья",
+  "patronymic": "Никитична",
+  "full_name": "Федосья Никитична",
+  "sex": "F",
+  "birth": {
+    "date": "~1753",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 2,
+  "relation_to_direct_line": "сестра Петра Никитича (дочь Никиты)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "дочь Никиты Ивановича (ревизия 1763, 10 л.)",
+  "relationships": {
+    "father": "D03",
+    "mother": "SP01",
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "РГАДА, ф.350, оп.2, д.114, лл.1262–1267"
+    }
+  ],
+  "events": []
+}

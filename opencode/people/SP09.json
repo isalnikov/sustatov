@@ -1,0 +1,40 @@
+{
+  "id": "SP09",
+  "surname": "Сальникова",
+  "given_name": "Ольга",
+  "patronymic": "",
+  "full_name": "Ольга Сальникова",
+  "sex": "F",
+  "birth": {
+    "date": "24.09.1956",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse",
+  "generation": 0,
+  "relation_to_direct_line": "супруг(а) по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "жена Григория 1954 (развод); г. Остров Псковской обл.",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "D13"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

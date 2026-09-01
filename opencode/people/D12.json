@@ -1,0 +1,47 @@
+{
+  "id": "D12",
+  "surname": "Сустатов",
+  "given_name": "Василий",
+  "patronymic": "Григорьевич",
+  "full_name": "Василий Григорьевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "24.01.1930",
+    "place": "с. Кошелиха, Первомайский р-н, Горьковская обл."
+  },
+  "death": {
+    "date": "06.10.2004",
+    "place": "г. Калининград",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "direct",
+  "generation": 10,
+  "relation_to_direct_line": "прямой предок",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "прозвище «Кошка» (гулькомовцы); жена Александра Ковригина",
+  "relationships": {
+    "father": "D11",
+    "mother": "SP07",
+    "spouses": [
+      "SP08"
+    ],
+    "children": [
+      "D13",
+      "S12"
+    ]
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    },
+    {
+      "type": "url",
+      "ref": "http://sarpust.ru/2015/02/vospominaniya-n-g-sustatova-chast-iii-dezertiry-i-gul-komovtsy/"
+    }
+  ],
+  "events": []
+}

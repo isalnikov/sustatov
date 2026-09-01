@@ -1,0 +1,44 @@
+{
+  "id": "X09",
+  "surname": "Еделев",
+  "given_name": "Мамкай (Мамлей)",
+  "patronymic": "Ногаев сын",
+  "full_name": "Мамкай (Мамлей) мурза Ногаев",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "xvii",
+  "generation": 0,
+  "relation_to_direct_line": "князья Еделевы",
+  "social_estate": "мурза",
+  "occupation": "",
+  "religion": "",
+  "notes": "Смотренный список 1643 — 200 четей, 11 дворов",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "article",
+      "ref": "Демидов А.Н. «Еделевский» список… 1572 г. Финно-угорский мир, т.12 №1, 2020"
+    }
+  ],
+  "events": [
+    {
+      "type": "mention",
+      "date": "1643",
+      "note": "Смотренный список служилых татар Алатырского уезда"
+    }
+  ]
+}

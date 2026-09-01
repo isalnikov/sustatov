@@ -1,0 +1,38 @@
+{
+  "id": "C09",
+  "surname": "Сустатов",
+  "given_name": "Яков",
+  "patronymic": "Фёдорович",
+  "full_name": "Яков Фёдорович Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "12.02.1910",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "08.05.1942",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "collateral",
+  "generation": 0,
+  "relation_to_direct_line": "боковая ветвь (родство не установлено)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "сержант; попал в плен 28.08.1941; погиб в плену",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    }
+  ],
+  "events": []
+}

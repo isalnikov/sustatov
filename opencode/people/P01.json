@@ -1,0 +1,38 @@
+{
+  "id": "P01",
+  "surname": "Порунов",
+  "given_name": "Николай",
+  "patronymic": "Александрович",
+  "full_name": "Николай Александрович Порунов",
+  "sex": "M",
+  "birth": {
+    "date": "~1930-е",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "porunov",
+  "generation": 10,
+  "relation_to_direct_line": "двоюродный брат Василия Григорьевича Сустатова (1930) и Николая Григорьевича (1936)",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "мемуары Н.Г. Сустатова: «я и мой двоюродный брат Порунов Николай Александрович пасли в ночном колхозных лошадей»",
+  "relationships": {
+    "father": "P02",
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "url",
+      "ref": "http://sarpust.ru/2015/02/vospominaniya-n-g-sustatova-chast-iii-dezertiry-i-gul-komovtsy/"
+    }
+  ],
+  "events": []
+}

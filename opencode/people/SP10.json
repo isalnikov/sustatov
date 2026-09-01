@@ -1,0 +1,40 @@
+{
+  "id": "SP10",
+  "surname": "",
+  "given_name": "Людмила",
+  "patronymic": "Эдуардовна",
+  "full_name": "Людмила Эдуардовна",
+  "sex": "F",
+  "birth": {
+    "date": "",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse",
+  "generation": 0,
+  "relation_to_direct_line": "супруг(а) по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "вторая жена Григория 1954",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "D13"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

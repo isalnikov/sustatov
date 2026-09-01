@@ -1,0 +1,513 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/isalnikov/sustatov/schemas/person.schema.json",
+  "title": "Persona",
+  "description": "Карточка персоны для генеалогической базы рода Сустатовых. Все поля сохраняются; пустые значения — null, \"\" или [].",
+  "type": "object",
+  "required": ["id", "identification", "lifeCycle", "relationships", "socialPortrait", "sources", "media"],
+  "additionalProperties": false,
+  "$defs": {
+    "DateValue": {
+      "type": "object",
+      "description": "Дата в формате ДД.ММ.ГГГГ или частичная (год, ~год). calendar: gregorian | julian (старый стиль).",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": ["string", "null"],
+          "description": "ДД.ММ.ГГГГ, ГГГГ или ~ГГГГ",
+          "examples": ["24.01.1930", "1912", "~1890"]
+        },
+        "calendar": {
+          "type": ["string", "null"],
+          "enum": ["gregorian", "julian", null],
+          "description": "Новый (григорианский) или старый (юлианский) стиль"
+        },
+        "precision": {
+          "type": ["string", "null"],
+          "enum": ["exact", "month", "year", "circa", "before", "after", null]
+        },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "Place": {
+      "type": "object",
+      "description": "География: губерния/область → уезд/район → населённый пункт",
+      "additionalProperties": false,
+      "properties": {
+        "governorate": { "type": ["string", "null"], "description": "Губерния или область" },
+        "district": { "type": ["string", "null"], "description": "Уезд или район" },
+        "volost": { "type": ["string", "null"], "description": "Волость или сельсовет" },
+        "settlement": { "type": ["string", "null"], "description": "Село, деревня, город" },
+        "modernName": { "type": ["string", "null"], "description": "Современное название (если отличается)" },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "Confidence": {
+      "type": "string",
+      "enum": ["reliable", "needs_verification", "hypothesis"],
+      "description": "Надёжный источник | Требует проверки | Гипотеза"
+    },
+    "SourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": ["string", "null"] },
+        "reference": { "type": ["string", "null"], "description": "URL, шифр архива, цитата" },
+        "confidence": { "$ref": "#/$defs/Confidence" },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "ArchivalDocument": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "archive": { "type": ["string", "null"], "description": "ЦАНО, ГАРО и т.д." },
+        "fund": { "type": ["string", "null"], "description": "Фонд" },
+        "inventory": { "type": ["string", "null"], "description": "Опись" },
+        "file": { "type": ["string", "null"], "description": "Дело" },
+        "page": { "type": ["string", "null"], "description": "Лист" },
+        "documentType": {
+          "type": ["string", "null"],
+          "description": "Метрическая книга, ревизская сказка, исповедная ведомость…"
+        },
+        "year": { "type": ["string", "null"] },
+        "confidence": { "$ref": "#/$defs/Confidence" },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "Marriage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "date": { "$ref": "#/$defs/DateValue" },
+        "place": { "$ref": "#/$defs/Place" },
+        "witnesses": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Поручители / свидетели"
+        },
+        "marriageRecordNumber": { "type": ["string", "null"], "description": "Номер брачного обыска" },
+        "spouseId": { "type": ["string", "null"], "description": "ID карточки супруга(и)" },
+        "divorce": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "date": { "$ref": "#/$defs/DateValue" },
+            "place": { "$ref": "#/$defs/Place" },
+            "note": { "type": ["string", "null"] }
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SourceRef" }
+        }
+      }
+    },
+    "ChildRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "description": "ID карточки ребёнка" },
+        "order": { "type": ["integer", "null"], "description": "Порядок рождения (1 = старший)" },
+        "note": { "type": ["string", "null"], "description": "Умер во младенчестве и т.п." }
+      },
+      "required": ["id"]
+    },
+    "Residence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "from": { "$ref": "#/$defs/DateValue" },
+        "to": { "$ref": "#/$defs/DateValue" },
+        "place": { "$ref": "#/$defs/Place" },
+        "address": { "type": ["string", "null"] },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "Photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": ["string", "null"], "description": "Путь или URL файла" },
+        "date": { "$ref": "#/$defs/DateValue" },
+        "caption": { "type": ["string", "null"] },
+        "personsOnPhoto": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "ID или имена других людей на снимке"
+        }
+      }
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Уникальный код в базе (например, sust-vg-1930 или ИВ-001)",
+      "pattern": "^[A-Za-zА-Яа-я0-9._-]+$"
+    },
+    "gedcomId": {
+      "type": ["string", "null"],
+      "description": "Ссылка на запись GEDCOM, напр. @I500007@",
+      "pattern": "^@I[0-9]+@$"
+    },
+    "sex": {
+      "type": ["string", "null"],
+      "enum": ["M", "F", "U", null],
+      "description": "M — муж., F — жен., U — неизвестно"
+    },
+    "role": {
+      "type": ["string", "null"],
+      "enum": ["direct", "collateral", "inlaw", "unknown", null],
+      "description": "Роль в дереве: прямая линия, боковая, супруг(а) по браку"
+    },
+    "identification": {
+      "type": "object",
+      "description": "Блок 1: Основная идентификация",
+      "required": ["surname", "givenName", "patronymic", "secretNames"],
+      "additionalProperties": false,
+      "properties": {
+        "surname": {
+          "type": "object",
+          "required": ["primary", "variants"],
+          "additionalProperties": false,
+          "properties": {
+            "primary": {
+              "type": ["string", "null"],
+              "description": "Основная фамилия; для женщин — девичья до брака"
+            },
+            "married": {
+              "type": ["string", "null"],
+              "description": "Фамилия после брака (если менялась)"
+            },
+            "variants": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Исторические варианты написания"
+            }
+          }
+        },
+        "givenName": {
+          "type": ["string", "null"],
+          "description": "Имя по документам"
+        },
+        "patronymic": {
+          "type": ["string", "null"],
+          "description": "Отчество (привязка к отцу)"
+        },
+        "displayName": {
+          "type": ["string", "null"],
+          "description": "Полное имя для отображения (ФИО одной строкой)"
+        },
+        "secretNames": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Прозвища, домашние имена (напр. «Кoshka»)"
+        }
+      }
+    },
+    "lifeCycle": {
+      "type": "object",
+      "description": "Блок 2: Жизненный цикл",
+      "required": ["birth", "marriages", "death"],
+      "additionalProperties": false,
+      "properties": {
+        "birth": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "date": { "$ref": "#/$defs/DateValue" },
+            "place": { "$ref": "#/$defs/Place" },
+            "baptism": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "date": { "$ref": "#/$defs/DateValue" },
+                "place": { "$ref": "#/$defs/Place" },
+                "godparents": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "description": "Восприемники (крестные)"
+                }
+              }
+            },
+            "sources": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/SourceRef" }
+            }
+          }
+        },
+        "marriages": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Marriage" },
+          "description": "Браки по хронологии"
+        },
+        "death": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "date": { "$ref": "#/$defs/DateValue" },
+            "place": { "$ref": "#/$defs/Place" },
+            "cause": { "type": ["string", "null"], "description": "Причина по документам" },
+            "burial": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "date": { "$ref": "#/$defs/DateValue" },
+                "place": { "$ref": "#/$defs/Place" },
+                "cemetery": { "type": ["string", "null"] },
+                "plotNumber": { "type": ["string", "null"] }
+              }
+            },
+            "sources": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/SourceRef" }
+            }
+          }
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "description": "Блок 3: Родственные связи (ссылки на id других карточек)",
+      "required": ["parents", "spouses", "children", "siblings"],
+      "additionalProperties": false,
+      "properties": {
+        "parents": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "fatherId": { "type": ["string", "null"] },
+            "motherId": { "type": ["string", "null"] }
+          }
+        },
+        "spouses": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "ID супругов по хронологии браков"
+        },
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ChildRef" },
+          "description": "Дети в порядке рождения, включая умерших младенцами"
+        },
+        "siblings": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "full": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Родные (единокровные и единoутробные)"
+            },
+            "halfByFather": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Единокровные (общий отец)"
+            },
+            "halfByMother": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Единoутробные (общая мать)"
+            },
+            "step": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Сводные"
+            }
+          }
+        }
+      }
+    },
+    "socialPortrait": {
+      "type": "object",
+      "description": "Блок 4: Социальный портрет и биография",
+      "required": ["estate", "religion", "education", "occupations", "militaryService", "awards", "residences"],
+      "additionalProperties": false,
+      "properties": {
+        "estate": {
+          "type": ["string", "null"],
+          "description": "Сословие до 1917 г.: крестьяне, мещане, дворяне, духовенство…"
+        },
+        "religion": {
+          "type": ["string", "null"],
+          "description": "Вероисповедание"
+        },
+        "education": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "institution": { "type": ["string", "null"] },
+              "from": { "$ref": "#/$defs/DateValue" },
+              "to": { "$ref": "#/$defs/DateValue" },
+              "specialty": { "type": ["string", "null"] },
+              "note": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "occupations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": { "type": ["string", "null"] },
+              "employer": { "type": ["string", "null"] },
+              "place": { "$ref": "#/$defs/Place" },
+              "from": { "$ref": "#/$defs/DateValue" },
+              "to": { "$ref": "#/$defs/DateValue" },
+              "note": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "militaryService": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "unit": { "type": ["string", "null"] },
+              "rank": { "type": ["string", "null"] },
+              "from": { "$ref": "#/$defs/DateValue" },
+              "to": { "$ref": "#/$defs/DateValue" },
+              "note": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "awards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": { "type": ["string", "null"] },
+              "date": { "$ref": "#/$defs/DateValue" },
+              "note": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "residences": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Residence" },
+          "description": "Хронология мест проживания"
+        }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "description": "Блок 5: Источники и доказательства",
+      "required": ["archival", "homeArchive", "oralHistory", "overallConfidence"],
+      "additionalProperties": false,
+      "properties": {
+        "archival": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ArchivalDocument" }
+        },
+        "homeArchive": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "documentType": {
+                "type": ["string", "null"],
+                "description": "Свидетельство о рождении, паспорт, трудовая…"
+              },
+              "description": { "type": ["string", "null"] },
+              "holder": { "type": ["string", "null"], "description": "У кого хранится" },
+              "confidence": { "$ref": "#/$defs/Confidence" }
+            }
+          }
+        },
+        "oralHistory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "informant": { "type": ["string", "null"], "description": "Кто рассказал" },
+              "date": { "$ref": "#/$defs/DateValue" },
+              "medium": {
+                "type": ["string", "null"],
+                "description": "Устно, аудиозапись, стенограмма"
+              },
+              "transcript": { "type": ["string", "null"] },
+              "confidence": { "$ref": "#/$defs/Confidence" }
+            }
+          }
+        },
+        "overallConfidence": {
+          "$ref": "#/$defs/Confidence",
+          "description": "Сводная степень достоверности карточки"
+        },
+        "references": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SourceRef" },
+          "description": "Прочие ссылки (URL, публикации)"
+        },
+        "vgdPosts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "page": { "type": ["integer", "null"] },
+              "url": { "type": ["string", "null"] },
+              "excerpt": { "type": ["string", "null"] }
+            }
+          },
+          "description": "Выдержки из темы ВГД №86148"
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "description": "Блок 6: Мультимедиа и заметки",
+      "required": ["photos", "physicalTraits", "biography"],
+      "additionalProperties": false,
+      "properties": {
+        "photos": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Photo" }
+        },
+        "physicalTraits": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "appearance": { "type": ["string", "null"] },
+            "height": { "type": ["string", "null"] },
+            "eyeColor": { "type": ["string", "null"] },
+            "geneticConditions": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "note": { "type": ["string", "null"] }
+          }
+        },
+        "biography": {
+          "type": ["string", "null"],
+          "description": "Свободный текст: характер, истории, судьба"
+        },
+        "notes": {
+          "type": ["string", "null"],
+          "description": "Рабочие заметки исследователя"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "createdAt": { "type": ["string", "null"], "format": "date-time" },
+        "updatedAt": { "type": ["string", "null"], "format": "date-time" },
+        "researchStatus": {
+          "type": ["string", "null"],
+          "enum": ["confirmed", "probable", "hypothesis", "not_found", null],
+          "description": "Статус для дерева (совместим с sustatov_tree_data.json)"
+        }
+      }
+    }
+  }
+}

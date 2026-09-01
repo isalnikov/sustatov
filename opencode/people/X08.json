@@ -1,0 +1,38 @@
+{
+  "id": "X08",
+  "surname": "Сыресев (Еделев)",
+  "given_name": "Бажен",
+  "patronymic": "Чепкунов сын",
+  "full_name": "Бажен Чепкунов сын Сыресев",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "xvii",
+  "generation": 0,
+  "relation_to_direct_line": "князья Еделевы (отделившаяся ветвь рода)",
+  "social_estate": "мурза",
+  "occupation": "",
+  "religion": "",
+  "notes": "племянник Девая Сыресева; владел 14 дворами в д. Еделево",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "article",
+      "ref": "Демидов А.Н. «Еделевский» список… 1572 г. Финно-угорский мир, т.12 №1, 2020"
+    }
+  ],
+  "events": []
+}

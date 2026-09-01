@@ -1,0 +1,40 @@
+{
+  "id": "SP01",
+  "surname": "",
+  "given_name": "Авдотья",
+  "patronymic": "Васильевна",
+  "full_name": "Авдотья Васильевна",
+  "sex": "F",
+  "birth": {
+    "date": "~1715",
+    "place": ""
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse",
+  "generation": 0,
+  "relation_to_direct_line": "супруг(а) по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "жена Никиты Ивановича",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [
+      "D03"
+    ],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "archive",
+      "ref": "РГАДА, ф.350, оп.2, д.114, лл.1262–1267"
+    }
+  ],
+  "events": []
+}

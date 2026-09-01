@@ -1,0 +1,40 @@
+{
+  "id": "F04",
+  "surname": "Дворникова",
+  "given_name": "Евдокия",
+  "patronymic": "",
+  "full_name": "Евдокия Дворникова",
+  "sex": "M",
+  "birth": {
+    "date": "14.03.1896",
+    "place": ""
+  },
+  "death": {
+    "date": "07.10.1978",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "spouse_family",
+  "generation": 0,
+  "relation_to_direct_line": "родственник по браку",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "мать Александры Ковригиной",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": [
+      "SP08"
+    ]
+  },
+  "sources": [
+    {
+      "type": "file",
+      "ref": "MyHeritage GEDCOM"
+    }
+  ],
+  "events": []
+}

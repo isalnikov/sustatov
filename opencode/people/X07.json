@@ -1,0 +1,44 @@
+{
+  "id": "X07",
+  "surname": "Сустатов",
+  "given_name": "Итяска",
+  "patronymic": "",
+  "full_name": "Итяска Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "",
+    "place": "д. Баева, Алатырский уезд"
+  },
+  "death": {
+    "date": "1670",
+    "place": "Кондарать",
+    "cause": "убит (восстание Разина)"
+  },
+  "status": "CONFIRMED",
+  "category": "xvii",
+  "generation": 0,
+  "relation_to_direct_line": "боковая (1671)",
+  "social_estate": "ясачная мордва",
+  "occupation": "",
+  "religion": "",
+  "notes": "«дв. пуст Итяски Сустатова, убит на Кондарате»",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "url",
+      "ref": "https://vostlit.info/Texts/Dokumenty/Russ/XVII/1660-1680/Perep_kniga_alatyr_1671/text1.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "death",
+      "date": "1670",
+      "note": "убит на Кондарати"
+    }
+  ]
+}

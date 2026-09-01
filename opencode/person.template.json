@@ -1,0 +1,26 @@
+{
+  "id": "",
+  "surname": "",
+  "given_name": "",
+  "patronymic": "",
+  "full_name": "",
+  "sex": "M|F",
+  "birth": {"date": "", "place": ""},
+  "death": {"date": "", "place": "", "cause": ""},
+  "status": "CONFIRMED|PROBABLE|HYPOTHESIS",
+  "category": "direct|sibling|cousin|collateral|spouse|spouse_family|xvii|porunov",
+  "generation": 0,
+  "relation_to_direct_line": "",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "",
+  "relationships": {
+    "father": null,
+    "mother": null,
+    "spouses": [],
+    "children": []
+  },
+  "sources": [],
+  "events": []
+}

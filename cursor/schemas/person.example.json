@@ -1,0 +1,241 @@
+{
+  "$schema": "./person.schema.json",
+  "id": "sust-vg-1930",
+  "gedcomId": "@I500007@",
+  "sex": "M",
+  "role": "direct",
+
+  "identification": {
+    "surname": {
+      "primary": "Сустатов",
+      "married": null,
+      "variants": []
+    },
+    "givenName": "Василий",
+    "patronymic": "Григорьевич",
+    "secretNames": ["Кошка"]
+  },
+
+  "lifeCycle": {
+    "birth": {
+      "date": {
+        "value": "24.01.1930",
+        "calendar": "gregorian",
+        "precision": "exact",
+        "note": null
+      },
+      "place": {
+        "governorate": "Горьковская область",
+        "district": "Ардатовский район",
+        "volost": null,
+        "settlement": "с. Кошелиха (Камкина Мордовская)",
+        "modernName": "Кошелиха, Нижегородская обл.",
+        "note": "Рождение по семейным данным и GEDCOM"
+      },
+      "baptism": {
+        "date": { "value": null, "calendar": null, "precision": null, "note": null },
+        "place": {
+          "governorate": "Нижегородская губерния",
+          "district": "Ардатовский уезд",
+          "volost": "Кременковская",
+          "settlement": "с. Кошелиха",
+          "modernName": null,
+          "note": "Предположительно приход Покровской церкви Кошелихи"
+        },
+        "godparents": []
+      },
+      "sources": [
+        {
+          "title": "GEDCOM MyHeritage",
+          "reference": "@I500007@",
+          "confidence": "reliable",
+          "note": null
+        }
+      ]
+    },
+    "marriages": [
+      {
+        "date": { "value": null, "calendar": null, "precision": null, "note": "Требует уточнения по метрикам" },
+        "place": {
+          "governorate": null,
+          "district": null,
+          "volost": null,
+          "settlement": null,
+          "modernName": null,
+          "note": null
+        },
+        "witnesses": [],
+        "marriageRecordNumber": null,
+        "spouseId": null,
+        "divorce": {
+          "date": { "value": null, "calendar": null, "precision": null, "note": null },
+          "place": {
+            "governorate": null,
+            "district": null,
+            "volost": null,
+            "settlement": null,
+            "modernName": null,
+            "note": null
+          },
+          "note": null
+        },
+        "sources": []
+      }
+    ],
+    "death": {
+      "date": {
+        "value": "06.10.2004",
+        "calendar": "gregorian",
+        "precision": "exact",
+        "note": null
+      },
+      "place": {
+        "governorate": null,
+        "district": null,
+        "volost": null,
+        "settlement": "Калининград",
+        "modernName": "Калининград",
+        "note": null
+      },
+      "cause": null,
+      "burial": {
+        "date": { "value": null, "calendar": null, "precision": null, "note": null },
+        "place": {
+          "governorate": null,
+          "district": null,
+          "volost": null,
+          "settlement": "Калининград",
+          "modernName": null,
+          "note": null
+        },
+        "cemetery": null,
+        "plotNumber": null
+      },
+      "sources": [
+        {
+          "title": "GEDCOM MyHeritage",
+          "reference": "@I500007@",
+          "confidence": "reliable",
+          "note": null
+        }
+      ]
+    }
+  },
+
+  "relationships": {
+    "parents": {
+      "fatherId": "sust-gv-1912",
+      "motherId": null
+    },
+    "spouses": [],
+    "children": [
+      { "id": "sust-gv-1954", "order": 1, "note": "Григорий Васильевич, р. 30.08.1954" },
+      { "id": "sust-na-1936", "order": 2, "note": "Николай Васильевич, р. 1936" }
+    ],
+    "siblings": {
+      "full": [],
+      "halfByFather": [],
+      "halfByMother": [],
+      "step": []
+    }
+  },
+
+  "socialPortrait": {
+    "estate": "крестьяне (мордва)",
+    "religion": "православие",
+    "education": [],
+    "occupations": [],
+    "militaryService": [],
+    "awards": [],
+    "residences": [
+      {
+        "from": { "value": "1930", "calendar": "gregorian", "precision": "year", "note": null },
+        "to": { "value": null, "calendar": null, "precision": null, "note": "Переезд — уточнить" },
+        "place": {
+          "governorate": "Горьковская область",
+          "district": "Ардатовский район",
+          "volost": null,
+          "settlement": "с. Кошелиха",
+          "modernName": null,
+          "note": null
+        },
+        "address": null,
+        "note": "Детство и молодость"
+      },
+      {
+        "from": { "value": null, "calendar": null, "precision": null, "note": null },
+        "to": { "value": "06.10.2004", "calendar": "gregorian", "precision": "exact", "note": null },
+        "place": {
+          "governorate": null,
+          "district": null,
+          "volost": null,
+          "settlement": "Калининград",
+          "modernName": null,
+          "note": null
+        },
+        "address": null,
+        "note": "После переезда"
+      }
+    ]
+  },
+
+  "sources": {
+    "archival": [
+      {
+        "archive": "ЦАНО",
+        "fund": "570",
+        "inventory": null,
+        "file": null,
+        "page": null,
+        "documentType": "Метрические книги с. Кошелиха",
+        "year": "1930",
+        "confidence": "needs_verification",
+        "note": "Запись о рождении — запросить"
+      }
+    ],
+    "homeArchive": [],
+    "oralHistory": [
+      {
+        "informant": "Н.Г. Сустатов",
+        "date": { "value": null, "calendar": null, "precision": null, "note": "Мемуары, опубл. 2015" },
+        "medium": "Публикация на sarpust.ru",
+        "transcript": "Прозвище «Кошка»; воспоминания о Кошелихе и двоюродном брате Порунове Н.А.",
+        "confidence": "reliable"
+      }
+    ],
+    "overallConfidence": "reliable",
+    "references": [
+      {
+        "title": "Мемуары Н.Г. Сустатова, ч. III",
+        "reference": "https://sarpust.ru/2015/02/vospominaniya-n-g-sustatova-chast-iii-dezertiry-i-gul-komovtsy/",
+        "confidence": "reliable",
+        "note": "Двоюродный брат Порунов Н.А."
+      },
+      {
+        "title": "VGD Кошелиха №86148",
+        "reference": "https://forum.vgd.ru/2339/86148/",
+        "confidence": "reliable",
+        "note": null
+      }
+    ]
+  },
+
+  "media": {
+    "photos": [],
+    "physicalTraits": {
+      "appearance": null,
+      "height": null,
+      "eyeColor": null,
+      "geneticConditions": [],
+      "note": null
+    },
+    "biography": "Василий Григорьевич — сын Григория Васильевича (1912–1942). Прозвище «Кошка» упоминается в мемуарах брата Николая. Переехал в Калининград.",
+    "notes": "Совместим с узлом sustatov_tree_data.json: parentIds → relationships.parents, spouseIds → relationships.spouses"
+  },
+
+  "meta": {
+    "createdAt": "2026-09-01T00:00:00Z",
+    "updatedAt": null,
+    "researchStatus": "confirmed"
+  }
+}

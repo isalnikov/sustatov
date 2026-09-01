@@ -1,0 +1,48 @@
+{
+  "id": "S07",
+  "surname": "Сустатов",
+  "given_name": "Максим",
+  "patronymic": "Васильевич",
+  "full_name": "Максим Васильевич Сустатов",
+  "sex": "M",
+  "birth": {
+    "date": "1917",
+    "place": "с. Кошелиха"
+  },
+  "death": {
+    "date": "",
+    "place": "",
+    "cause": ""
+  },
+  "status": "CONFIRMED",
+  "category": "sibling",
+  "generation": 9,
+  "relation_to_direct_line": "брат Григория 1912",
+  "social_estate": "",
+  "occupation": "",
+  "religion": "",
+  "notes": "рядовой; ВПП 1943–1944; орден Отечественной войны II (1985)",
+  "relationships": {
+    "father": "D10",
+    "mother": "SP06",
+    "spouses": [],
+    "children": []
+  },
+  "sources": [
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/170.htm"
+    },
+    {
+      "type": "forum",
+      "ref": "https://forum.vgd.ru/2339/86148/20.htm"
+    }
+  ],
+  "events": [
+    {
+      "type": "military",
+      "date": "1943–1944",
+      "note": "ВПП"
+    }
+  ]
+}
