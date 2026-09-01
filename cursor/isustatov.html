@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Род Сустатовых — сводная схема</title>
+  <style>
+    :root {
+      --bg: #f4f0e8;
+      --card: #fffcf7;
+      --ink: #1e1a16;
+      --muted: #5c534a;
+      --line: #c9b99a;
+      --confirmed: #2d6a4f;
+      --confirmed-bg: #d8f3dc;
+      --probable: #b08900;
+      --probable-bg: #fff3cd;
+      --question: #9b2226;
+      --question-bg: #fde8e8;
+      --accent: #4a6741;
+      --shadow: 0 4px 24px rgba(30, 26, 22, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2f4f3e 0%, #4a6741 100%);
+      color: #fff;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      opacity: 0.92;
+      max-width: 52rem;
+      margin: 0 auto;
+      font-size: 0.95rem;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.25rem;
+      font-size: 0.85rem;
+    }
+
+    .meta-bar span {
+      background: rgba(255,255,255,0.15);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    nav.toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(244, 240, 232, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      padding: 0.75rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav.toolbar button {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    nav.toolbar button:hover,
+    nav.toolbar button.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .legend {
+      max-width: 56rem;
+      margin: 1.5rem auto 0;
+      padding: 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      font-size: 0.82rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-confirmed { background: var(--confirmed-bg); color: var(--confirmed); }
+    .badge-probable  { background: var(--probable-bg);  color: var(--probable); }
+    .badge-question  { background: var(--question-bg);  color: var(--question); }
+
+    main {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .chain-hint {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .person-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 0;
+      overflow: hidden;
+      transition: opacity 0.25s, transform 0.25s;
+    }
+
+    .person-card.hidden { display: none; }
+
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem 1rem;
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(to right, rgba(74,103,65,0.06), transparent);
+    }
+
+    .gen-num {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-weight: 600;
+      min-width: 5rem;
+    }
+
+    .person-name {
+      font-size: 1.15rem;
+      font-weight: 600;
+      flex: 1;
+    }
+
+    .dates {
+      font-size: 0.9rem;
+      color: var(--muted);
+      width: 100%;
+      margin-top: 0.15rem;
+    }
+
+    .card-body {
+      padding: 1rem 1.25rem 1.15rem;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .field { font-size: 0.92rem; }
+    .field-label {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+    }
+
+    .field ul {
+      margin-left: 1.1rem;
+    }
+
+    .field li { margin-bottom: 0.2rem; }
+
+    .sources {
+      border-top: 1px dashed var(--line);
+      padding-top: 0.75rem;
+    }
+
+    .sources a {
+      color: #1a5276;
+      word-break: break-all;
+    }
+
+    .sources a:hover { text-decoration: none; }
+
+    .sources li {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      margin-bottom: 0.35rem;
+      font-size: 0.85rem;
+    }
+
+    .connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.35rem 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .connector::before {
+      content: "";
+      width: 2px;
+      height: 1.1rem;
+      background: var(--line);
+    }
+
+    .connector span {
+      padding: 0.2rem 0.5rem;
+      background: var(--bg);
+    }
+
+    .fork-note {
+      background: var(--question-bg);
+      border: 1px solid #f5c2c7;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 0.5rem 0 1rem;
+      font-size: 0.9rem;
+    }
+
+    .fork-note strong { color: var(--question); }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--line);
+    }
+
+    @media print {
+      nav.toolbar { display: none; }
+      .person-card { break-inside: avoid; box-shadow: none; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Род Сустатовых — прямая линия</h1>
+  <p>Сводная схема от сына к отцу · с. Кошелиха (Камкина), Кременковская волость, Ардатовский уезд, Нижегородская губерния → муниципальный округ Первомайский, Нижегородская обл.</p>
+  <div class="meta-bar">
+    <span>Обновлено: 31.08.2026</span>
+    <span>13 поколений (13 → 1)</span>
+    <span>Направление: ↓ к предкам</span>
+    <span> https://forum.vgd.ru/2339/86148/?p=5797917#pp5797917</span>
+  </div>
+</header>
+
+<nav class="toolbar" aria-label="Фильтр">
+  <button type="button" class="active" data-filter="all">Все</button>
+  <button type="button" data-filter="confirmed">Подтверждено</button>
+  <button type="button" data-filter="probable">Вероятно</button>
+  <button type="button" data-filter="question">Под вопросом</button>
+  <button type="button" id="btn-top">↑ Наверх</button>
+  <button type="button" id="btn-print">Печать</button>
+</nav>
+
+<div class="legend">
+  <span class="badge badge-confirmed">Подтверждено</span>
+  <span class="badge badge-probable">Вероятно</span>
+  <span class="badge badge-question">Под вопросом</span>
+</div>
+
+<main id="tree">
+
+  <p class="chain-hint">Цепочка предков: от <strong>Григория Васильевича (1954)</strong> к <strong>Никите Ивановичу (†1773)</strong></p>
+
+  <!-- 9 -->
+  <article class="person-card" data-status="confirmed" id="gen-9">
+    <div class="card-header">
+      <span class="gen-num">Покол. 9</span>
+      <span class="person-name">Григорий Васильевич Сустатов</span>
+      <span class="badge badge-confirmed">Подтверждено</span>
+      <span class="dates">р. 30.08.1954 · † 24.12.2020 (66 лет), г. Калининград · COVID-19</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Браки</div>
+        <ul>
+          <li><strong>Ольга Сальникова</strong> (р. 24.09.1956, г. Остров, Псковская обл.) — развод</li>
+          <li><strong>Людмила Эдуардовна</strong> — 2-й брак</li>
+        </ul>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети</div>
+        <ul>
+          <li><strong>Игорь Сальников</strong> (р. 16.12.1982, Ленинград) — от брака с Ольгой</li>
+        </ul>
+      </div>
+      <div class="field">
+        <div class="field-label">Прочее</div>
+        <p>Похоронен: Военно-мемориальное кладбище «Курган Славы», Калининград.</p>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="MyHeritage_GEDCOM_749073761_686021731_1_2025-02-02.ged">GEDCOM MyHeritage (@I500001@)</a></li>
+          <li><a href="https://www.myheritage.com/person-1500220_361231921_361231921/%D0%B3%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B9-%D1%81%D1%83%D1%81%D1%82%D0%B0%D1%82%D0%BE%D0%B2?lang=RU" target="_blank" rel="noopener">MyHeritage — карточка</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <!-- 8 -->
+  <article class="person-card" data-status="confirmed" id="gen-8">
+    <div class="card-header">
+      <span class="gen-num">Покол. 8</span>
+      <span class="person-name">Василий Григорьевич Сустатов</span>
+      <span class="badge badge-confirmed">Подтверждено</span>
+      <span class="dates">р. 24.01.1930, с. Кошелиха · † 06.10.2004 (74 года), г. Калининград</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Брак</div>
+        <p><strong>Александра Ковригина</strong> (р. 11.01.1931, с. Б. Болдино, Нижегородская губ. · † 07.02.2010, 79 лет, Калининград)</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети</div>
+        <ul>
+          <li><strong>Григорий Васильевич</strong> (30.08.1954 — 24.12.2020) — прямая линия</li>
+          <li><strong>Елена</strong> (р. 01.06.1959) — замужем Ермолина</li>
+        </ul>
+      </div>
+      <div class="field">
+        <div class="field-label">Брат (боковая ветвь)</div>
+        <p><strong>Николай Григорьевич</strong> (04.10.1936, Кошелиха — † 29.10.2018, 82 года)</p>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="MyHeritage_GEDCOM_749073761_686021731_1_2025-02-02.ged">GEDCOM (@I500007@)</a></li>
+          <li><a href="https://sarpust.ru/memuary/" target="_blank" rel="noopener">Мемуары Н.Г. Сустатова (sarpust.ru)</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <!-- 7 -->
+  <article class="person-card" data-status="confirmed" id="gen-7">
+    <div class="card-header">
+      <span class="gen-num">Покол. 7</span>
+      <span class="person-name">Григорий Васильевич Сустатов</span>
+      <span class="badge badge-confirmed">Подтверждено</span>
+      <span class="dates">р. 19.01.1912, с. Кошелиха · † 10.03.1942 (30 лет), ранения, ВОВ</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Брак</div>
+        <p><strong>Евдокия Абрамова</strong> (р. 24.01.1911 · † 25.01.1989, 78 лет)</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети</div>
+        <ul>
+          <li><strong>Василий Григорьевич</strong> (24.01.1930) — прямая линия</li>
+          <li><strong>Татьяна</strong> (~1932)</li>
+          <li><strong>Анна</strong> (10.07.1934 — † 23.08.1953, 19 лет)</li>
+          <li><strong>Николай Григорьевич</strong> (04.10.1936 — † 29.10.2018)</li>
+          <li><strong>Вера</strong> (07.10.1939)</li>
+        </ul>
+      </div>
+      <div class="field">
+        <div class="field-label">Прочее</div>
+        <ul>
+          <li>Профессия: столяр, колхоз «Красный Октябрь»</li>
+          <li>Воинская часть: рядовой 987 стрелкового полка, 226 стрелковая дивизия</li>
+          <li>Захоронение: братская могила, с. Приколотное, Велико-Бурлуцкий р-н, Харьковская обл.</li>
+        </ul>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="MyHeritage_GEDCOM_749073761_686021731_1_2025-02-02.ged">GEDCOM (@I500071@)</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2516205.htm" target="_blank" rel="noopener">VGD — карточка погибшего (polkmoskva)</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2944381.htm" target="_blank" rel="noopener">VGD — сведения GorA9911</a></li>
+          <li><a href="https://sarpust.ru/2015/02/vospominaniya-n-g-sustatova-chast-i-koshelihinskij-spirtzavod/" target="_blank" rel="noopener">sarpust.ru — спиртзавод, ёмкости</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <!-- 6 -->
+  <article class="person-card" data-status="confirmed" id="gen-6">
+    <div class="card-header">
+      <span class="gen-num">Покол. 6</span>
+      <span class="person-name">Василий Иванович Сустатов</span>
+      <span class="badge badge-confirmed">Подтверждено</span>
+      <span class="dates">р. ~1890–1891 (расчёт из метрики) · † 1934 (метрика не найдена)</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Брак</div>
+        <p><strong>30.06.1908</strong> + <strong>Прасковья (Параскева) Фёдоровна Королёва</strong> (17 лет → р. ~1891; GEDCOM: 1883 — † 1969, 85–86 лет)</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети</div>
+        <ul>
+          <li><strong>Григорий Васильевич</strong> (19.01.1912) — прямая линия</li>
+          <li><strong>Алексей Васильевич</strong> (1913, Кошелиха)</li>
+          <li><strong>Максим Васильевич</strong> (1917, Кошелиха; рядовой, ВОВ)</li>
+        </ul>
+      </div>
+      <div class="field">
+        <div class="field-label">Отчество = доказательство отца</div>
+        <p><strong>Василий Иванович</strong> — отец мог быть только <strong>Иван</strong>, не Григорий (иначе было бы «Григорьевич»). Подтверждено в метрике брака <strong>30.06.1908</strong> и в списке раненых <strong>15.06.1916</strong>: «Сустатов Василий Иванович, рядовой 3-го Заамурского полка».</p>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2879430.htm" target="_blank" rel="noopener">VGD — метрика брака 30.06.1908 (ЦАНО ф.570)</a></li>
+          <li><a href="MyHeritage_GEDCOM_749073761_686021731_1_2025-02-02.ged">GEDCOM (@I500073@, @I500074@)</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <!-- 5 -->
+  <article class="person-card" data-status="probable" id="gen-5">
+    <div class="card-header">
+      <span class="gen-num">Покол. 5</span>
+      <span class="person-name">Иван Иванович Сустатов</span>
+      <span class="badge badge-probable">Вероятно</span>
+      <span class="dates">р. ~1868–1872 (ориентир ~1870) · † ?</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Роль в линии</div>
+        <p><strong>Отец Василия</strong> — доказан логикой отчества (<strong>Василий Иванович</strong>). Разрыв ~20 лет до рождения сына — норма для XIX века.</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети</div>
+        <ul>
+          <li><strong>Василий Иванович</strong> (~1890–1891) — прямая линия</li>
+        </ul>
+      </div>
+      <div class="field">
+        <div class="field-label">Как перевести в CONFIRMED</div>
+        <ul>
+          <li>Метрика брака <strong>30.06.1908</strong> — «…крестьянин <strong>Иван Иванов</strong> Сустатов… сын его <strong>Василий</strong>»</li>
+          <li>Метрика рождения Василия (~1890) — «у крестьянина <strong>Ивана Иванова</strong> Сустатова… родился сын Василий»</li>
+          <li>Исповедные ведомости <strong>1850–1870</strong> (ф.570 оп.559а) — разведут Ивана ~1847 и Ивана ~1870</li>
+        </ul>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Где искать</div>
+        <ul>
+          <li>ЦАНО ф.570 оп.3 <strong>д.1012</strong> (1891) — рождение Василия; оп.10 <strong>д.148</strong> — брак 1908</li>
+          <li>ЦАНО ф.570 оп.3 д.348–418 (1870–1872) — рождение самого Ивана</li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p4231625.htm" target="_blank" rel="noopener">VGD — индекс МК (Покровская ц. Кошелихи + ц. Михаила Архангела с. Павловское)</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <div class="fork-note" id="fork">
+    <strong>Проверка 2026-08-31 (исправлено):</strong> прямая линия — <strong>четыре Ивана подряд → Василий</strong>.
+    Отчество <strong>Василий Иванович</strong> исключает «Григория ~1875» из линии (имя «Григорий» возвращается только в <strong>1912</strong> — Григорий Васильевич).
+    Ревизия 1858 (двор №25): два тёзки — <strong>Иван ~1847</strong> (прямой предок) и <strong>Иван ~1851</strong> (боковая ветвь; брак 1868).
+    ⚠ Не путать с <strong>Гришаниным</strong> Григорием (1880) — другая фамилия.
+    Приход: метрики могут быть под <strong>Покровской ц. Кошелихи</strong> и/или <strong>ц. Михаила Архангела с. Павловское</strong>.
+  </div>
+
+  <!-- 4 -->
+  <article class="person-card" data-status="confirmed" id="gen-4">
+    <div class="card-header">
+      <span class="gen-num">Покол. 4</span>
+      <span class="person-name">Иван Иванович Сустатов (старший)</span>
+      <span class="badge badge-confirmed">Ревизия 1858 ✓</span>
+      <span class="badge badge-probable">Прямая линия ?</span>
+      <span class="dates">р. ~1847 (рев. 1858: 4/11) · † ? (возм. до 1879 — «умерший солдат»)</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Семья (ревизия 1858)</div>
+        <p>Сын <strong>Ивана Ивановича ~1815</strong> и <strong>Матрёны Фёдоровны</strong>. Братья: <strong>Фёдор</strong>, <strong>Федот</strong>; тёзка-брат <strong>Иван же</strong> (~1851).</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Косвенные следы</div>
+        <ul>
+          <li><strong>02.02.1879</strong> — вдова Анисья, жена умерш. солдата <strong>Ивана Ивановича</strong> (35 л.) — вероятно он</li>
+          <li><strong>09.11.1897</strong> — дочь <strong>Наталия Ивановна</strong> (17 л., р. ~1880), дочь «Ивана Ивановича» (какой именно — не различено)</li>
+        </ul>
+      </div>
+      <div class="field">
+        <div class="field-label">Роль в линии</div>
+        <p><strong>Прямой предок</strong> — дед <strong>Ивана ~1870</strong>, прадед <strong>Василия ~1891</strong>. Возможна смерть как солдата до 1879 (вдова Анисья, 02.02.1879); тогда отец Ивана ~1870 — <strong>Иван ~1851</strong> (младший брат).</p>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="https://forum.vgd.ru/2339/86148/140.htm" target="_blank" rel="noopener">VGD — ревизия 1858, стр. 15</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2879430.htm" target="_blank" rel="noopener">VGD — браки 1879, 1889</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <!-- 3 -->
+  <article class="person-card" data-status="confirmed" id="gen-3">
+    <div class="card-header">
+      <span class="gen-num">Покол. 3</span>
+      <span class="person-name">Иван Иванович Сустатов</span>
+      <span class="badge badge-confirmed">Подтверждено</span>
+      <span class="dates">р. ~1815 (рев. 1858: 36/43) · † ?</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Брак</div>
+        <p><strong>Матрёна Фёдоровна</strong></p>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети (рев. 1858)</div>
+        <ul>
+          <li><strong>Фёдор Иванович</strong> (~1849)</li>
+          <li><strong>Федот Иванович</strong> (~1852)</li>
+          <li><strong>Иван Иванович</strong> (~1847) — прямая линия (?)</li>
+          <li><strong>Иван Иванович</strong> (~1851) — одноимённый брат</li>
+        </ul>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="https://forum.vgd.ru/2339/86148/140.htm" target="_blank" rel="noopener">VGD — ревизия 1858</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <!-- 2 -->
+  <article class="person-card" data-status="confirmed" id="gen-2">
+    <div class="card-header">
+      <span class="gen-num">Покол. 2</span>
+      <span class="person-name">Иван Андреевич Сустатов</span>
+      <span class="badge badge-confirmed">Подтверждено</span>
+      <span class="dates">р. ~1793 (рев. 1811: 18 лет) · † 1833</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Брак</div>
+        <p><strong>Мавра</strong> (Мавра)</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети</div>
+        <ul>
+          <li><strong>Иван Иванович</strong> (~1815) — прямая линия</li>
+        </ul>
+      </div>
+      <div class="field">
+        <div class="field-label">Прочее</div>
+        <p>Ревизия 1811: «достался по разделу с сёстрами в 1812».</p>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2806392.htm" target="_blank" rel="noopener">VGD — ревизия 1811 / убыль 1833</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <!-- 1 -->
+  <article class="person-card" data-status="confirmed" id="gen-1">
+    <div class="card-header">
+      <span class="gen-num">Покол. 1</span>
+      <span class="person-name">Андрей Петрович Сустатов</span>
+      <span class="badge badge-confirmed">Подтверждено</span>
+      <span class="dates">р. ~1760 (рев. 1811: 50/81) · † 1811</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Брак</div>
+        <p><strong>Дарья</strong> (у сына Андрея в 1782: <strong>Дарья Ермолаевна</strong> — вероятно та же семья)</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети</div>
+        <ul>
+          <li><strong>Лев Андреевич</strong></li>
+          <li><strong>Иван Андреевич</strong> (~1793) — прямая линия</li>
+          <li><strong>Кондратий Андреевич</strong> (брак 08.11.1807 + Анна Филипповна)</li>
+          <li><strong>Василий Андреевич</strong></li>
+        </ul>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2806392.htm" target="_blank" rel="noopener">VGD — ревизия 1811</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2879430.htm" target="_blank" rel="noopener">VGD — брак сына Кондратия, 1807</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <!-- 11 -->
+  <article class="person-card" data-status="confirmed" id="gen-11">
+    <div class="card-header">
+      <span class="gen-num">Покол. 11</span>
+      <span class="person-name">Пётр Никитич Сустатов</span>
+      <span class="badge badge-confirmed">Подтверждено</span>
+      <span class="dates">р. ~1737 (1782: 26/45) · † 1819 (зафикс. в рев. 1834)</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Брак</div>
+        <p><strong>Аксинья</strong> (Алексеевна / Ивановна, из с. Афтодеево)</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети</div>
+        <ul>
+          <li><strong>Михаил Петрович</strong> (1763: 11 л. · † 1816)</li>
+          <li><strong>Андрей Петрович</strong> (~1760) — прямая линия</li>
+        </ul>
+      </div>
+      <div class="field">
+        <div class="field-label">⚠ Не путать</div>
+        <p>Одноимённый <strong>Пётр Никитич</strong>, †1811 (жена Марфа) — другая семья.</p>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2728884.htm" target="_blank" rel="noopener">VGD — ревизия 1763 (РГАДА ф.350 оп.2 д.147)</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2728935.htm" target="_blank" rel="noopener">VGD — ревизия 1782 (ЦАНО ф.60 оп.239А д.15)</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2733304.htm" target="_blank" rel="noopener">VGD — ревизия 1811 (д.463)</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2795210.htm" target="_blank" rel="noopener">VGD — ревизия 1816 (д.599)</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2800605.htm" target="_blank" rel="noopener">VGD — ревизия 1834, смерть 1819 (д.1099)</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="connector"><span>↑ отец</span></div>
+
+  <!-- 12 -->
+  <article class="person-card" data-status="confirmed" id="gen-12">
+    <div class="card-header">
+      <span class="gen-num">Покол. 12</span>
+      <span class="person-name">Никита Иванович Сустатов</span>
+      <span class="badge badge-confirmed">Подтверждено</span>
+      <span class="dates">р. ~1715–1719 (1748: 29 · 1763: 29/48) · † 1773</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Примечание</div>
+        <p>Дата ~1734 <strong>ошибочна</strong>. Двойной возраст: 29 (1744/1748) / 48 (1763). Семья <strong>из д. Сыресевой</strong> (~1724).</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Брак</div>
+        <p><strong>Авдотья Васильевна</strong> («старинная той деревни»)</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Дети</div>
+        <ul>
+          <li><strong>Пётр Никитич</strong> (~1737) — прямая линия</li>
+          <li><strong>Федосья Никитична</strong></li>
+        </ul>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Источники</div>
+        <ul>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p4877905.htm" target="_blank" rel="noopener">VGD — ревизия 1748 (из Сыресевой)</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2728884.htm" target="_blank" rel="noopener">VGD — ревизия 1763</a></li>
+          <li><a href="https://forum.vgd.ru/post/2339/86148/p2728935.htm" target="_blank" rel="noopener">VGD — ревизия 1782 (ум. 1773)</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+  <div class="connector"><span>↑ отец — не найден</span></div>
+
+  <!-- 13 -->
+  <article class="person-card" data-status="question" id="gen-13">
+    <div class="card-header">
+      <span class="gen-num">Покол. 13</span>
+      <span class="person-name">Иван ??? (отец Никиты)</span>
+      <span class="badge badge-question">Не найден</span>
+      <span class="dates">д. Сыресевой · † до 1748 (?)</span>
+    </div>
+    <div class="card-body">
+      <div class="field">
+        <div class="field-label">Статус</div>
+        <p>Имя <strong>Иван</strong> — из отчества сына. В открытых выписках по <strong>Сыресевой</strong> (1719–1763) пара «Иван + сын Никита ~1719» <strong>не найдена</strong>. Раздел старожилов-бортников (РГАДА д.85 л.940) на VGD не опубликован.</p>
+      </div>
+      <div class="field">
+        <div class="field-label">Контекст</div>
+        <p>Дворцовая ясачная <strong>д. Сыресева</strong>, Утишный стан (~1724 → Камкина). В ревизии 1748 Никита — «прибылой из Сыресевой», без пометки об умершем отце (в отличие от других семей в том же блоке).</p>
+      </div>
+      <div class="field sources">
+        <div class="field-label">Куда смотреть</div>
+        <ul>
+          <li><a href="https://forum.vgd.ru/2339/75748/" target="_blank" rel="noopener">VGD — Сыресево, ревизии 1719–1763</a></li>
+          <li>РГАДА ф.350 оп.2 д.85 л.940 — старожилы-бортники 1719</li>
+          <li>РГАДА ф.350 оп.2 д.109 — перепись 1722–1727</li>
+          <li>РГАДА ф.350 оп.2 д.114 лл.1262–1267 — прибытие в Камкины</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <p>Генеалогическое исследование · рабочая папка sustatov · данные из ревизий, метрик (VGD), GEDCOM MyHeritage</p>
+  <p><a href="https://forum.vgd.ru/2339/86148/" target="_blank" rel="noopener">Тема VGD «Кошелиха» №86148</a></p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var cards = document.querySelectorAll(".person-card");
+  var buttons = document.querySelectorAll("nav.toolbar button[data-filter]");
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var filter = btn.getAttribute("data-filter");
+      buttons.forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+
+      cards.forEach(function (card) {
+        var status = card.getAttribute("data-status");
+        var show = filter === "all" || status === filter;
+        card.classList.toggle("hidden", !show);
+      });
+
+      var fork = document.getElementById("fork");
+      if (fork) {
+        fork.style.display = (filter === "all" || filter === "probable" || filter === "question") ? "block" : "none";
+      }
+
+      document.querySelectorAll(".connector").forEach(function (c, i) {
+        var prev = cards[i];
+        var next = cards[i + 1];
+        if (!prev || !next) return;
+        var ps = !prev.classList.contains("hidden");
+        var ns = !next.classList.contains("hidden");
+        c.style.display = (ps && ns) ? "flex" : "none";
+      });
+    });
+  });
+
+  document.getElementById("btn-top").addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  document.getElementById("btn-print").addEventListener("click", function () {
+    window.print();
+  });
+})();
+</script>
+
+</body>
+</html>
