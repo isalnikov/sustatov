@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Род Сустатовых — Кошелиха | Генеалогия</title>
+<style>
+:root {
+  --bg: #f4f7f2;
+  --surface: #ffffff;
+  --surface2: #eef5ea;
+  --border: #c5d4bc;
+  --text: #1a2e1a;
+  --muted: #5a6f5a;
+  --accent: #2d6a3e;
+  --accent-light: #4a9e62;
+  --direct: #1b5e20;
+  --direct-bg: #c8e6c9;
+  --confirmed: #2e7d32;
+  --probable: #ef6c00;
+  --gedcom: #546e7a;
+  --xvii: #5e35b1;
+  --male: #1565c0;
+  --female: #ad1457;
+  --shadow: 0 2px 12px rgba(26,46,26,.08);
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+a { color: var(--accent); }
+
+/* HEADER */
+.site-header {
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
+  color: #fff;
+  padding: 20px 28px 16px;
+  box-shadow: var(--shadow);
+}
+.site-header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: .01em; }
+.site-header .subtitle { opacity: .88; font-size: .92rem; margin-top: 4px; }
+.stats-row {
+  display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px;
+}
+.stat-chip {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: .82rem;
+}
+
+/* NAV */
+nav.tabs {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  padding: 10px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+}
+nav.tabs button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: .88rem;
+  font-weight: 500;
+  transition: all .15s;
+}
+nav.tabs button:hover { background: var(--surface2); color: var(--text); }
+nav.tabs button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* MAIN */
+main { max-width: 1400px; margin: 0 auto; padding: 20px; }
+section.panel { display: none; animation: fade .25s ease; }
+section.panel.active { display: block; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.card h2 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--surface2);
+}
+.card h3 { font-size: .92rem; color: var(--muted); margin: 12px 0 8px; text-transform: uppercase; letter-spacing: .06em; }
+
+/* BADGES */
+.badge {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.badge.confirmed { background: #e8f5e9; color: var(--confirmed); }
+.badge.probable { background: #fff3e0; color: var(--probable); }
+.badge.gedcom { background: #eceff1; color: var(--gedcom); }
+.badge.direct { background: var(--direct-bg); color: var(--direct); }
+.badge.xvii { background: #ede7f6; color: var(--xvii); }
+.badge.m { background: #e3f2fd; color: var(--male); }
+.badge.f { background: #fce4ec; color: var(--female); }
+
+/* DIRECT LINE TIMELINE */
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 8px; top: 0; bottom: 0;
+  width: 3px; background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+  border-radius: 2px;
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: box-shadow .15s;
+}
+.tl-item:hover { box-shadow: var(--shadow); border-color: var(--accent-light); }
+.tl-item::before {
+  content: '';
+  position: absolute; left: -24px; top: 18px;
+  width: 12px; height: 12px;
+  background: var(--accent);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--accent-light);
+}
+.tl-item.probable::before { background: var(--probable); box-shadow: 0 0 0 2px #ffcc80; }
+.tl-name { font-weight: 700; font-size: 1rem; }
+.tl-dates { color: var(--muted); font-size: .85rem; margin: 2px 0 6px; }
+.tl-note { font-size: .82rem; color: var(--text); }
+
+/* TREE */
+.tree-wrap {
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-height: 500px;
+  position: relative;
+}
+.tree-toolbar {
+  display: flex; gap: 8px; padding: 10px; border-bottom: 1px solid var(--border);
+  flex-wrap: wrap; align-items: center;
+}
+.tree-toolbar input {
+  flex: 1; min-width: 180px;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: .88rem;
+}
+.tree-toolbar button {
+  padding: 7px 14px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: .82rem;
+}
+.tree-toolbar button:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+#treeSvg { display: block; min-width: 100%; }
+.node-card {
+  cursor: pointer;
+}
+.node-rect {
+  rx: 8; ry: 8;
+  stroke-width: 2;
+  transition: filter .15s;
+}
+.node-card:hover .node-rect { filter: brightness(1.05); }
+.node-card.direct .node-rect { stroke: var(--direct); stroke-width: 3; }
+.node-card.selected .node-rect { filter: drop-shadow(0 0 6px rgba(45,106,62,.6)); }
+.link { fill: none; stroke: #90a4ae; stroke-width: 1.5; }
+
+/* TABLE */
+.table-controls {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; align-items: center;
+}
+.table-controls input, .table-controls select {
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: .85rem;
+  background: var(--surface);
+}
+.table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+table.data-table {
+  width: 100%; border-collapse: collapse; font-size: .8rem;
+}
+table.data-table th {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 8px;
+  text-align: left;
+  position: sticky; top: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+table.data-table th:hover { background: #1b4332; }
+table.data-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  max-width: 220px;
+}
+table.data-table tr:hover td { background: var(--surface2); }
+table.data-table tr.direct-row td { background: #e8f5e9; }
+table.data-table tr:nth-child(even):not(.direct-row) td { background: #fafcf9; }
+td.note-cell { font-size: .75rem; color: var(--muted); max-width: 280px; }
+
+/* BRANCHES GRID */
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+.branch-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+.branch-card h3 { color: var(--accent); margin-bottom: 8px; font-size: .95rem; }
+.branch-card ul { list-style: none; font-size: .82rem; }
+.branch-card li { padding: 3px 0; border-bottom: 1px dotted var(--border); cursor: pointer; }
+.branch-card li:hover { color: var(--accent); }
+
+/* DETAIL MODAL */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 200;
+  align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--surface);
+  border-radius: 14px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 40px rgba(0,0,0,.2);
+}
+.modal-header {
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #2d6a4f, #40916c);
+  color: #fff;
+  border-radius: 14px 14px 0 0;
+  display: flex; justify-content: space-between; align-items: flex-start;
+}
+.modal-header h2 { font-size: 1.2rem; }
+.modal-close {
+  background: rgba(255,255,255,.2);
+  border: none; color: #fff;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  cursor: pointer; font-size: 1.2rem;
+  line-height: 1;
+}
+.modal-body { padding: 18px 20px; }
+.detail-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 6px 12px;
+  font-size: .88rem;
+  margin-bottom: 14px;
+}
+.detail-grid dt { color: var(--muted); font-weight: 500; }
+.detail-grid dd { margin: 0; }
+.detail-section { margin-top: 14px; }
+.detail-section h4 { font-size: .8rem; color: var(--accent); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+.link-list { list-style: none; }
+.link-list li {
+  padding: 5px 0;
+  cursor: pointer;
+  color: var(--accent);
+  font-size: .88rem;
+}
+.link-list li:hover { text-decoration: underline; }
+
+/* OVERVIEW */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+.overview-item {
+  padding: 14px;
+  background: var(--surface2);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+}
+.overview-item h4 { font-size: .88rem; margin-bottom: 4px; }
+.overview-item p { font-size: .78rem; color: var(--muted); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: .78rem; margin-top: 10px; }
+.legend span { display: flex; align-items: center; gap: 5px; }
+.legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+
+@media (max-width: 768px) {
+  .site-header h1 { font-size: 1.2rem; }
+  main { padding: 12px; }
+  .detail-grid { grid-template-columns: 1fr; }
+  .detail-grid dt { margin-top: 6px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Род Сустатовых</h1>
+  <p class="subtitle">с. Кошелиха, Ардатовский уезд → Первомайский р-н, Нижегородская обл. · Линия отца Игоря Сальникова</p>
+  <div class="stats-row" id="statsRow"></div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="active" data-tab="overview">Обзор</button>
+  <button data-tab="direct">Прямая линия</button>
+  <button data-tab="tree">Дерево</button>
+  <button data-tab="table">Таблица</button>
+  <button data-tab="branches">Ветви</button>
+  <button data-tab="xvii">XVII век</button>
+  <button data-tab="families">Семьи</button>
+  <button data-tab="sources">Источники</button>
+</nav>
+
+<main>
+  <section class="panel active" id="panel-overview">
+    <div class="card">
+      <h2>Хронология рода</h2>
+      <p style="font-size:.9rem;color:var(--muted);margin-bottom:14px">
+        Документально подтверждённая линия ведётся от <strong>Андрея Петровича (†1811)</strong> через ревизии и метрики Кошелихи.
+        Контекст XVII века (Сыресь, мурзы) — исторический, без доказанной связи с конкретной веткой 1912 года.
+      </p>
+      <div class="overview-grid" id="overviewGrid"></div>
+      <div class="legend">
+        <span><i style="background:#c8e6c9;border:2px solid #1b5e20"></i> Прямая линия Igor</span>
+        <span><i style="background:#e8f5e9"></i> CONFIRMED</span>
+        <span><i style="background:#fff3e0"></i> PROBABLE</span>
+        <span><i style="background:#ede7f6"></i> XVII век (контекст)</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-direct">
+    <div class="card">
+      <h2>Прямая линия: Игорь Сальников ← … ← Андрей Петрович</h2>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:16px">11 поколений · клик по карточке — подробности</p>
+      <div class="timeline" id="directTimeline"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-tree">
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="tree-toolbar">
+        <input type="search" id="treeSearch" placeholder="Поиск в дереве…">
+        <button id="btnZoomIn">+</button>
+        <button id="btnZoomOut">−</button>
+        <button id="btnResetView">Сброс</button>
+        <button id="btnDirectOnly">Только прямая линия</button>
+        <button id="btnAllTree">Все ветви</button>
+      </div>
+      <div class="tree-wrap" id="treeWrap">
+        <svg id="treeSvg" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-table">
+    <div class="card">
+      <h2>Полная таблица персон</h2>
+      <div class="table-controls">
+        <input type="search" id="tableSearch" placeholder="Фильтр по ФИО, примечанию…">
+        <select id="filterCategory">
+          <option value="">Все категории</option>
+          <option value="direct">Прямая линия</option>
+          <option value="modern">XX–XXI век</option>
+          <option value="historical">XIX век (архив)</option>
+          <option value="cousin">Двоюродные (ВОВ)</option>
+          <option value="xvii">XVII век</option>
+          <option value="related">Супруги / родственники</option>
+        </select>
+        <select id="filterConfidence">
+          <option value="">Все статусы</option>
+          <option value="confirmed">CONFIRMED</option>
+          <option value="probable">PROBABLE</option>
+          <option value="gedcom">GEDCOM / семья</option>
+        </select>
+        <span id="tableCount" style="font-size:.82rem;color:var(--muted)"></span>
+      </div>
+      <div class="table-scroll">
+        <table class="data-table" id="mainTable">
+          <thead><tr>
+            <th data-sort="id">ID</th>
+            <th data-sort="name">ФИО</th>
+            <th data-sort="patronymic">Отчество</th>
+            <th data-sort="sex">Пол</th>
+            <th data-sort="birt">Рождение</th>
+            <th data-sort="deat">Смерть</th>
+            <th>Места</th>
+            <th>Отец</th>
+            <th>Мать</th>
+            <th>Супруг(и)</th>
+            <th>Дети</th>
+            <th>Браки (даты)</th>
+            <th>Родство с Igor</th>
+            <th data-sort="confidence">Статус</th>
+            <th>Примечания / факты</th>
+          </tr></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-branches">
+    <div class="card">
+      <h2>Параллельные ветви Сустатовых Кошелихи</h2>
+      <div class="branch-grid" id="branchGrid"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-xvii">
+    <div class="card">
+      <h2>Контекст XVII века — мордовские мурзы и Алатырский уезд</h2>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:14px">Не соединено с прямой линией Igor без промежуточных документов (разрыв ~130 лет: 1671→1807)</p>
+      <div class="table-scroll">
+        <table class="data-table" id="xviiTable">
+          <thead><tr>
+            <th>ID</th><th>Имя</th><th>Период</th><th>Место</th><th>Факты</th><th>Источник</th>
+          </tr></thead>
+          <tbody id="xviiBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-families">
+    <div class="card">
+      <h2>Семейные группы (браки и дети)</h2>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:12px">38 семей из GEDCOM и архивных реконструкций · клик по имени — карточка персоны</p>
+      <div class="table-scroll">
+        <table class="data-table" id="familiesTable">
+          <thead><tr>
+            <th>ID семьи</th><th>Муж</th><th>Жена</th><th>Дата брака</th><th>Место</th><th>Дети</th><th>Примечание</th>
+          </tr></thead>
+          <tbody id="familiesBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-sources">
+    <div class="card">
+      <h2>Источники и архивы</h2>
+      <div class="detail-grid" style="grid-template-columns:1fr">
+        <div class="overview-item"><h4>ЦАНО — метрики Кошелихи</h4><p>ф.570, оп.10, д.142–148 (1807–1918). Приоритет: д.148 — рождения 1909–1917 (метрика Григория 1912).</p></div>
+        <div class="overview-item"><h4>ЦАНО — ревизии</h4><p>ф.60 — ревизские сказки 1811, 1834, 1851, 1858 (семейные группы Сустатовых).</p></div>
+        <div class="overview-item"><h4>VGD Forum — Кошелиха</h4><p><a href="https://forum.vgd.ru/2339/86148/" target="_blank">forum.vgd.ru/2339/86148</a> — ревизии, метрики, участники ВОВ.</p></div>
+        <div class="overview-item"><h4>sustatov.md</h4><p>Исследование ветки: ревизия 1858, браки 1807–1892, гипотеза прямой линии.</p></div>
+        <div class="overview-item"><h4>XVII век</h4><p>А.Н. Демидов — Сыресь 1596/1603; перепись 1671 Алатыр; Атемарская десятня — Бажен Сустатов.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="modal-overlay" id="modal" role="dialog">
+  <div class="modal">
+    <div class="modal-header">
+      <div><h2 id="modalTitle"></h2><div id="modalBadges" style="margin-top:6px"></div></div>
+      <button class="modal-close" id="modalClose" aria-label="Закрыть">&times;</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+const DATA = {"meta": {"title": "Род Сустатовых", "direct_line": ["NH001", "NH013", "NH015", "NH019", "NH035", "I500085", "I500073", "I500071", "I500007", "I500001", "I500003"], "count": 104, "sources": ["sustatov.md", "GEDCOM", "VGD", "ЦАНО"]}, "persons": [{"id": "I500001", "name": "Григорий Сустатов", "givn": "Григорий", "surn": "Сустатов", "patronymic": "Васильевич", "sex": "M", "birt": "30 AUG 1954", "birt_place": "", "deat": "24 DEC 2020", "deat_place": "Военно-мемориальное кладбище \"Курган Славы\"", "father": "Василий Сустатов", "father_id": "I500007", "mother": "Александра Ковригина", "mother_id": "I500006", "spouses": [{"id": "I500002", "name": "Ольга Сальникова"}, {"id": "I500142", "name": ""}], "children": [{"id": "I500003", "name": "Игорь Сальников"}], "marriages": [], "note": "CONFIRMED: 1954–2020; сын Василия (1930); отец Игоря Сальникова (линия отца).", "confidence": "confirmed", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "I500007", "name": "Василий Сустатов", "givn": "Василий", "surn": "Сустатов", "patronymic": "Григорьевич", "sex": "M", "birt": "24 JAN 1930", "birt_place": "Россия, с. Кошелиха, Первомайского района, Нижегородской области", "deat": "6 OCT 2004", "deat_place": "Россия, г. Калининград", "father": "Григорий Васильевич Сустатов", "father_id": "I500071", "mother": "Евдокия Абрамова", "mother_id": "I500072", "spouses": [{"id": "I500006", "name": "Александра Ковригина"}], "children": [{"id": "I500001", "name": "Григорий Сустатов"}, {"id": "I500087", "name": "Елена Сустатов"}], "marriages": [], "note": "CONFIRMED: с. Кошелиха; сын Григория Васильевича (1912) и Евдокии Абрамовой.", "confidence": "confirmed", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "I500071", "name": "Григорий Васильевич Сустатов", "givn": "Григорий", "surn": "Сустатов", "patronymic": "Васильевич", "sex": "M", "birt": "19 JAN 1912", "birt_place": "с. Кошелиха, Горьковская обл.", "deat": "10 MAR 1942", "deat_place": "Украинская ССР, Харьковская обл.", "father": "Василий Иванович Сустатов", "father_id": "I500073", "mother": "Прасковья Фёдоровна Королёва", "mother_id": "I500074", "spouses": [{"id": "I500072", "name": "Евдокия Абрамова"}], "children": [{"id": "I500007", "name": "Василий Сустатов"}, {"id": "I500091", "name": "Татьяна Сустатова"}, {"id": "I500092", "name": "Анна Сустатова"}, {"id": "I500094", "name": "Николай Сустатов"}, {"id": "I500093", "name": "Вера Сустатова"}], "marriages": [], "note": "CONFIRMED (VGD/polkmoskva): рядовой 987 сп 226 сд; погиб от ран 10.03.1942; похоронен с. Приколотное, Велико-Бурлуцкий р-н, Харьковская обл.", "confidence": "confirmed", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "I500073", "name": "Василий Иванович Сустатов", "givn": "Василий", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок. 1890", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "1934", "deat_place": "", "father": "Григорий Иванович Сустатов", "father_id": "I500085", "mother": "", "mother_id": "", "spouses": [{"id": "I500074", "name": "Прасковья Фёдоровна Королёва"}], "children": [{"id": "I500071", "name": "Григорий Васильевич Сустатов"}, {"id": "I500147", "name": "Алексей Васильевич Сустатов"}, {"id": "I500148", "name": "Максим Васильевич Сустатов"}], "marriages": [{"spouse": "Прасковья Фёдоровна Королёва", "date": "30 JUN 1908", "place": "с. Кошелиха", "note": "CONFIRMED: метрика ЦАНО ф.570 оп.10"}], "note": "CONFIRMED: метрика 30.06.1908 — брак с Парасковой/Прасковьей Фёдоровной Королёвой (17 лет); отец Григория (1912), Алексея (1913), Максима (1917); †1934.", "confidence": "confirmed", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "I500085", "name": "Григорий Иванович Сустатов", "givn": "Григорий Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок. 1875", "birt_place": "", "deat": "", "deat_place": "", "father": "Иван Иванович Сустатов", "father_id": "NH035", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500073", "name": "Василий Иванович Сустатов"}], "marriages": [], "note": "PROBABLE: сын Ивана Ивановича (~1870). Отец Василия (†1934). Череда имён Василий↔Григорий. Метрика — ЦАНО д.148.", "confidence": "probable", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "NH001", "name": "Андрей Петрович Сустатов", "givn": "Андрей Петрович", "surn": "Сустатов", "patronymic": "Петрович", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "1811", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH002", "name": "Дарья"}], "children": [{"id": "NH003", "name": "Кондратий Андреевич Сустатов"}, {"id": "NH009", "name": "Василий Андреевич Сустатов"}, {"id": "NH013", "name": "Иван Андреевич Сустатов"}, {"id": "NH023", "name": "Лев Андреевич Сустатов"}, {"id": "NH036", "name": "Анна Петровна"}], "marriages": [{"spouse": "Дарья", "date": "", "place": "", "note": "1811 revision family"}], "note": "CONFIRMED: ревизия 1811 (ЦАНО ф.60) — 50/81 лет, жена Дарья; дети: Лев Андреевич, Иван Андреевич, Анна Петровна. Отец Кондратия (брак 08.11.1807).", "confidence": "confirmed", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "NH013", "name": "Иван Андреевич Сустатов", "givn": "Иван Андреевич", "surn": "Сустатов", "patronymic": "Андреевич", "sex": "M", "birt": "ок. 1793", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "1833", "deat_place": "", "father": "Андрей Петрович Сустатов", "father_id": "NH001", "mother": "Дарья", "mother_id": "NH002", "spouses": [{"id": "NH014", "name": "Мавра"}], "children": [{"id": "NH015", "name": "Иван Иванович Сустатов"}, {"id": "NH021", "name": "Матвей Иванович Сустатов"}], "marriages": [], "note": "CONFIRMED: ревизия 1811 — 18 лет, «достался по разделу с сёстрами в 1812»; †1833; жена Мавра; сын Иван (~1815) — прямая линия.", "confidence": "confirmed", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "NH015", "name": "Иван Иванович Сустатов", "givn": "Иван Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок.1815", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Иван Андреевич Сустатов", "father_id": "NH013", "mother": "Мавра", "mother_id": "NH014", "spouses": [{"id": "NH016", "name": "Матрёна"}], "children": [{"id": "NH017", "name": "Фёдор Иванович Сустатов"}, {"id": "NH018", "name": "Федот Иванович Сустатов"}, {"id": "NH019", "name": "Иван Иванович Сустатов"}, {"id": "NH020", "name": "Иван Иванович Сустатов"}], "marriages": [], "note": "CONFIRMED: ревизия 1858 — 36/43 года, жена Матрёна Фёдоровна; сыновья Фёдор (~1842), Федот, Иван (~1847), Иван (~1851). ПРЯМАЯ линия Igor.", "confidence": "confirmed", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "NH019", "name": "Иван Иванович Сустатов", "givn": "Иван Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок. 1847", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Иван Иванович Сустатов", "father_id": "NH015", "mother": "Матрёна", "mother_id": "NH016", "spouses": [], "children": [{"id": "NH035", "name": "Иван Иванович Сустатов"}], "marriages": [], "note": "CONFIRMED: сын Ивана Ивановича (~1815) по ревизии 1858; вероятный дед Григория Ивановича; сын NH035 (~1870).", "confidence": "confirmed", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "NH035", "name": "Иван Иванович Сустатов", "givn": "Иван Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок.1870", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Иван Иванович Сустатов", "father_id": "NH019", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500085", "name": "Григорий Иванович Сустатов"}], "marriages": [], "note": "PROBABLE: недостающее звено (~1870). Отец Григория Ивановича (~1875) и Василия Ивановича (~1891). Подтвердить: метрика ЦАНО ф.570 оп.10 д.148 (~1875).", "confidence": "probable", "category": "direct", "is_direct": true, "relation_igor": "Прямой предок Игоря"}, {"id": "I500015", "name": "", "givn": "Евдокия", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "Илья Филиппов", "father_id": "I500022", "mother": "", "mother_id": "I500101", "spouses": [{"id": "I500014", "name": "Александр Белов"}], "children": [{"id": "I500009", "name": "Мария Белова"}, {"id": "I500019", "name": "Анна Белова"}, {"id": "I500102", "name": "Сергей Белов"}, {"id": "I500021", "name": "Григорий Белов"}, {"id": "I500020", "name": "Петр Белов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500082", "name": "", "givn": "Анна", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "1948", "deat_place": "", "father": "", "father_id": "I500083", "mother": "", "mother_id": "", "spouses": [{"id": "I500081", "name": "Никита Абрамов"}], "children": [{"id": "I500072", "name": "Евдокия Абрамова"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500083", "name": "", "givn": "Федор", "surn": "", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500082", "name": ""}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500101", "name": "", "givn": "", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "I500022", "name": "Илья Филиппов"}], "children": [{"id": "I500099", "name": "Иван Филиппов"}, {"id": "I500015", "name": ""}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500142", "name": "", "givn": "Людмила Эдуардовна", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "I500001", "name": "Григорий Сустатов"}], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500149", "name": "Нина", "givn": "Нина", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "I500094", "name": "Николай Сустатов"}], "children": [], "marriages": [], "note": "Жена Николая Г.Г. Сустатова; фамилия не установлена; умерла до 04.2015 (sarpust.ru)", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500150", "name": "", "givn": "Агафия", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "I500156", "mother": "", "mother_id": "", "spouses": [{"id": "I500017", "name": "Андрей Ботвинин"}], "children": [{"id": "I500011", "name": "Агафья Ботвинина"}, {"id": "I500120", "name": "Дора Ботвинина"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500156", "name": "", "givn": "Борис", "surn": "", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500150", "name": ""}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "NH002", "name": "Дарья", "givn": "Дарья", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH001", "name": "Андрей Петрович Сустатов"}], "children": [{"id": "NH003", "name": "Кондратий Андреевич Сустатов"}, {"id": "NH009", "name": "Василий Андреевич Сустатов"}, {"id": "NH013", "name": "Иван Андреевич Сустатов"}, {"id": "NH023", "name": "Лев Андреевич Сустатов"}, {"id": "NH036", "name": "Анна Петровна"}], "marriages": [{"spouse": "Андрей Петрович Сустатов", "date": "", "place": "", "note": "1811 revision family"}], "note": "CONFIRMED: жена Андрея Петровича (ревизия 1811)", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH004", "name": "Анна", "givn": "Анна", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH003", "name": "Кондратий Андреевич Сустатов"}], "children": [{"id": "NH005", "name": "Аверьян Кондратьевич Сустатов"}, {"id": "NH007", "name": "Максим Кондратьевич Сустатов"}, {"id": "NH008", "name": "Степан Кондратьевич Сустатов"}], "marriages": [{"spouse": "Кондратий Андреевич Сустатов", "date": "08 NOV 1807", "place": "", "note": ""}], "note": "Филипповна, дочь Филиппа Михайловича", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH006", "name": "Дарья", "givn": "Дарья", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH005", "name": "Аверьян Кондратьевич Сустатов"}], "children": [{"id": "NH034", "name": "Екатерина Аверьяновна Сустатовa"}], "marriages": [{"spouse": "Аверьян Кондратьевич Сустатов", "date": "08 NOV 1835", "place": "", "note": ""}], "note": "Анисимовна", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH010", "name": "Ульяна", "givn": "Ульяна", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH009", "name": "Василий Андреевич Сустатов"}], "children": [{"id": "NH011", "name": "Аким Васильевич Сустатов"}, {"id": "NH012", "name": "Степан Васильевич Сустатов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH014", "name": "Мавра", "givn": "Мавра", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH013", "name": "Иван Андреевич Сустатов"}], "children": [{"id": "NH015", "name": "Иван Иванович Сустатов"}, {"id": "NH021", "name": "Матвей Иванович Сустатов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH016", "name": "Матрёна", "givn": "Матрёна", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH015", "name": "Иван Иванович Сустатов"}], "children": [{"id": "NH017", "name": "Фёдор Иванович Сустатов"}, {"id": "NH018", "name": "Федот Иванович Сустатов"}, {"id": "NH019", "name": "Иван Иванович Сустатов"}, {"id": "NH020", "name": "Иван Иванович Сустатов"}], "marriages": [], "note": "Фёдоровна", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH024", "name": "Варвара", "givn": "Варвара", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH023", "name": "Лев Андреевич Сустатов"}], "children": [{"id": "NH025", "name": "Иван Львович Сустатов"}], "marriages": [], "note": "Васильевна", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH028", "name": "Аксинья", "givn": "Аксинья", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH027", "name": "Василий Анисимович Сустатов"}], "children": [], "marriages": [], "note": "Егоровна", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH030", "name": "Евфросиния", "givn": "Евфросиния", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH029", "name": "Алексей Федотovich Сустатов"}], "children": [], "marriages": [{"spouse": "Алексей Федотovich Сустатов", "date": "19 APR 1892", "place": "", "note": ""}], "note": "Приписнова", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH032", "name": "Анна", "givn": "Анна", "surn": "", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH031", "name": "Иван Степанович Сустатов"}], "children": [], "marriages": [], "note": "Муянова", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH036", "name": "Анна Петровна", "givn": "Анна", "surn": "", "patronymic": "Петровна", "sex": "F", "birt": "ок. 1789", "birt_place": "с. Кошелиха", "deat": "", "deat_place": "", "father": "Андрей Петрович Сустатов", "father_id": "NH001", "mother": "Дарья", "mother_id": "NH002", "spouses": [], "children": [], "marriages": [], "note": "CONFIRMED: дочь Андрея Петровича (ревизия 1811)", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "I500081", "name": "Никита Абрамов", "givn": "Никита", "surn": "Абрамов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "Ермолай Абрамов", "father_id": "I500084", "mother": "", "mother_id": "", "spouses": [{"id": "I500082", "name": ""}], "children": [{"id": "I500072", "name": "Евдокия Абрамова"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500084", "name": "Ермолай Абрамов", "givn": "Ермолай", "surn": "Абрамов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500081", "name": "Никита Абрамов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500072", "name": "Евдокия Абрамова", "givn": "Евдокия", "surn": "Абрамова", "patronymic": "", "sex": "F", "birt": "24 JAN 1911", "birt_place": "Россия", "deat": "25 JAN 1989", "deat_place": "", "father": "Никита Абрамов", "father_id": "I500081", "mother": "", "mother_id": "I500082", "spouses": [{"id": "I500071", "name": "Григорий Васильевич Сустатов"}], "children": [{"id": "I500007", "name": "Василий Сустатов"}, {"id": "I500091", "name": "Татьяна Сустатова"}, {"id": "I500092", "name": "Анна Сустатова"}, {"id": "I500094", "name": "Николай Сустатов"}, {"id": "I500093", "name": "Вера Сустатова"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500014", "name": "Александр Белов", "givn": "Александр", "surn": "Белов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "Маркел Белов", "father_id": "I500018", "mother": "", "mother_id": "", "spouses": [{"id": "I500015", "name": ""}], "children": [{"id": "I500009", "name": "Мария Белова"}, {"id": "I500019", "name": "Анна Белова"}, {"id": "I500102", "name": "Сергей Белов"}, {"id": "I500021", "name": "Григорий Белов"}, {"id": "I500020", "name": "Петр Белов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500018", "name": "Маркел Белов", "givn": "Маркел", "surn": "Белов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500014", "name": "Александр Белов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500009", "name": "Мария Белова", "givn": "Мария", "surn": "Белова", "patronymic": "", "sex": "F", "birt": "30 JUL 1910", "birt_place": "Россия", "deat": "1968", "deat_place": "", "father": "Александр Белов", "father_id": "I500014", "mother": "", "mother_id": "I500015", "spouses": [{"id": "I500008", "name": "Михаил Куликов"}], "children": [{"id": "I500004", "name": "Валентина Куликова"}, {"id": "I500013", "name": "Алексей Куликов"}, {"id": "I500029", "name": "Владимир Куликов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500017", "name": "Андрей Ботвинин", "givn": "Андрей", "surn": "Ботвинин", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "Борис Ботвинин", "father_id": "I500155", "mother": "", "mother_id": "", "spouses": [{"id": "I500150", "name": ""}], "children": [{"id": "I500011", "name": "Агафья Ботвинина"}, {"id": "I500120", "name": "Дора Ботвинина"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500155", "name": "Борис Ботвинин", "givn": "Борис", "surn": "Ботвинин", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500017", "name": "Андрей Ботвинин"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500011", "name": "Агафья Ботвинина", "givn": "Агафья", "surn": "Ботвинина", "patronymic": "", "sex": "F", "birt": "17 FEB 1907", "birt_place": "Старое Люберецкое кладбище", "deat": "22 MAR 1994", "deat_place": "Старое Люберецкое кладбище", "father": "Андрей Ботвинин", "father_id": "I500017", "mother": "", "mother_id": "I500150", "spouses": [{"id": "I500010", "name": "Максим Сальников"}], "children": [{"id": "I500005", "name": "Егор Сальникова"}, {"id": "I500112", "name": "Нина Сальникова"}, {"id": "I500114", "name": "Валентина Сальникова"}, {"id": "I500113", "name": "Любовь Сальникова"}, {"id": "I500116", "name": "Иван Сальников"}, {"id": "I500115", "name": "Анатолий Сальников"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500077", "name": "Николай Дворников", "givn": "Николай", "surn": "Дворников", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500076", "name": "Евдокия Дворникова"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500076", "name": "Евдокия Дворникова", "givn": "Евдокия", "surn": "Дворникова", "patronymic": "", "sex": "F", "birt": "14 MAR 1896", "birt_place": "", "deat": "7 OCT 1978", "deat_place": "", "father": "Николай Дворников", "father_id": "I500077", "mother": "", "mother_id": "", "spouses": [{"id": "I500078", "name": "Андрей Ковригин"}], "children": [{"id": "I500095", "name": ""}, {"id": "I500096", "name": ""}, {"id": "I500006", "name": "Александра Ковригина"}, {"id": "I500097", "name": ""}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500088", "name": "Дмитрий Ермолин", "givn": "Дмитрий", "surn": "Ермолин", "patronymic": "", "sex": "M", "birt": "19 DEC 1956", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "I500087", "name": "Елена Сустатов"}], "children": [{"id": "I500089", "name": "Никита Ермиолин"}, {"id": "I500090", "name": "Дарья Ермолина"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500078", "name": "Андрей Ковригин", "givn": "Андрей", "surn": "Ковригин", "patronymic": "", "sex": "M", "birt": "1895", "birt_place": "", "deat": "19 APR 1960", "deat_place": "", "father": "Иван Ковригин", "father_id": "I500079", "mother": "", "mother_id": "", "spouses": [{"id": "I500076", "name": "Евдокия Дворникова"}], "children": [{"id": "I500095", "name": ""}, {"id": "I500096", "name": ""}, {"id": "I500006", "name": "Александра Ковригина"}, {"id": "I500097", "name": ""}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500079", "name": "Иван Ковригин", "givn": "Иван", "surn": "Ковригин", "patronymic": "", "sex": "M", "birt": "1852", "birt_place": "", "deat": "1937", "deat_place": "", "father": "Максим Ковригин", "father_id": "I500080", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500078", "name": "Андрей Ковригин"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500080", "name": "Максим Ковригин", "givn": "Максим", "surn": "Ковригин", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500079", "name": "Иван Ковригин"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500006", "name": "Александра Ковригина", "givn": "Александра", "surn": "Ковригина", "patronymic": "", "sex": "F", "birt": "11 JAN 1931", "birt_place": "c. Б. Болдино, Нижегородской обл.", "deat": "7 FEB 2010", "deat_place": "г. Калинград", "father": "Андрей Ковригин", "father_id": "I500078", "mother": "Евдокия Дворникова", "mother_id": "I500076", "spouses": [{"id": "I500007", "name": "Василий Сустатов"}], "children": [{"id": "I500001", "name": "Григорий Сустатов"}, {"id": "I500087", "name": "Елена Сустатов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500086", "name": "Фёдор Королёв", "givn": "Фёдор", "surn": "Королёв", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500074", "name": "Прасковья Фёдоровна Королёва"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500074", "name": "Прасковья Фёдоровна Королёва", "givn": "Прасковья", "surn": "Королёва", "patronymic": "Фёдоровна", "sex": "F", "birt": "1883", "birt_place": "", "deat": "1969", "deat_place": "", "father": "Фёдор Королёв", "father_id": "I500086", "mother": "", "mother_id": "", "spouses": [{"id": "I500073", "name": "Василий Иванович Сустатов"}], "children": [{"id": "I500071", "name": "Григорий Васильевич Сустатов"}, {"id": "I500147", "name": "Алексей Васильевич Сустатов"}, {"id": "I500148", "name": "Максим Васильевич Сустатов"}], "marriages": [{"spouse": "Василий Иванович Сустатов", "date": "30 JUN 1908", "place": "с. Кошелиха", "note": "CONFIRMED: метрика ЦАНО ф.570 оп.10"}], "note": "CONFIRMED: метрика 30.06.1908 — брак с Василием Ивановичем Сустатовым; также записана как Параскева Фёдоровна Королёва.", "confidence": "confirmed", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500008", "name": "Михаил Куликов", "givn": "Михаил", "surn": "Куликов", "patronymic": "", "sex": "M", "birt": "1907", "birt_place": "Россия", "deat": "1946", "deat_place": "", "father": "Алексей Куликов", "father_id": "I500012", "mother": "", "mother_id": "", "spouses": [{"id": "I500009", "name": "Мария Белова"}], "children": [{"id": "I500004", "name": "Валентина Куликова"}, {"id": "I500013", "name": "Алексей Куликов"}, {"id": "I500029", "name": "Владимир Куликов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500012", "name": "Алексей Куликов", "givn": "Алексей", "surn": "Куликов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500008", "name": "Михаил Куликов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500004", "name": "Валентина Куликова", "givn": "Валентина", "surn": "Куликова", "patronymic": "", "sex": "F", "birt": "26 SEP 1934", "birt_place": "Россия", "deat": "14 JUL 2018", "deat_place": "Санкт-Петербург, Северное Кладбище", "father": "Михаил Куликов", "father_id": "I500008", "mother": "Мария Белова", "mother_id": "I500009", "spouses": [{"id": "I500005", "name": "Егор Сальникова"}], "children": [{"id": "I500002", "name": "Ольга Сальникова"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500010", "name": "Максим Сальников", "givn": "Максим", "surn": "Сальников", "patronymic": "", "sex": "M", "birt": "1905", "birt_place": "деревня Вергово", "deat": "1905", "deat_place": "деревня Вергово", "father": "Петр Сальников", "father_id": "I500016", "mother": "", "mother_id": "", "spouses": [{"id": "I500011", "name": "Агафья Ботвинина"}], "children": [{"id": "I500005", "name": "Егор Сальникова"}, {"id": "I500112", "name": "Нина Сальникова"}, {"id": "I500114", "name": "Валентина Сальникова"}, {"id": "I500113", "name": "Любовь Сальникова"}, {"id": "I500116", "name": "Иван Сальников"}, {"id": "I500115", "name": "Анатолий Сальников"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500016", "name": "Петр Сальников", "givn": "Петр", "surn": "Сальников", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "I500010", "name": "Максим Сальников"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500002", "name": "Ольга Сальникова", "givn": "Ольга", "surn": "Сальникова", "patronymic": "", "sex": "F", "birt": "24 SEP 1956", "birt_place": "г. Остров, Псковской области", "deat": "", "deat_place": "", "father": "Егор Сальникова", "father_id": "I500005", "mother": "Валентина Куликова", "mother_id": "I500004", "spouses": [{"id": "I500001", "name": "Григорий Сустатов"}], "children": [{"id": "I500003", "name": "Игорь Сальников"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500005", "name": "Егор Сальникова", "givn": "Егор", "surn": "Сальникова", "patronymic": "", "sex": "M", "birt": "28 AUG 1930", "birt_place": "Россия", "deat": "13 DEC 2014", "deat_place": "Санкт-Петербург, Северное Кладбище", "father": "Максим Сальников", "father_id": "I500010", "mother": "Агафья Ботвинина", "mother_id": "I500011", "spouses": [{"id": "I500004", "name": "Валентина Куликова"}], "children": [{"id": "I500002", "name": "Ольга Сальникова"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}, {"id": "I500087", "name": "Елена Сустатов", "givn": "Елена", "surn": "Сустатов", "patronymic": "", "sex": "F", "birt": "1 JUN 1959", "birt_place": "", "deat": "", "deat_place": "", "father": "Василий Сустатов", "father_id": "I500007", "mother": "Александра Ковригина", "mother_id": "I500006", "spouses": [{"id": "I500088", "name": "Дмитрий Ермолин"}], "children": [{"id": "I500089", "name": "Никита Ермиолин"}, {"id": "I500090", "name": "Дарья Ермолина"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "modern", "is_direct": false, "relation_igor": ""}, {"id": "I500094", "name": "Николай Сустатов", "givn": "Николай", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "4 OCT 1936", "birt_place": "Родился 4 октября 1936 года в селе Кошелиха (сейчас в Первомайском районе Нижегородской области)", "deat": "29 OCT 2018", "deat_place": "", "father": "Григорий Васильевич Сустатов", "father_id": "I500071", "mother": "Евдокия Абрамова", "mother_id": "I500072", "spouses": [{"id": "I500149", "name": "Нина"}], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "modern", "is_direct": false, "relation_igor": ""}, {"id": "I500145", "name": "Василий Иванович Сустатов", "givn": "Василий Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок. 1891", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "CONFIRMED: тот же человек что I500073 (дубликат GEDCOM). Брак 30.06.1908; ранен 15.06.1916 (3-й Заамурский пограничный полк). НЕ отец Григория Ивановича (~1875).", "confidence": "confirmed", "category": "modern", "is_direct": false, "relation_igor": ""}, {"id": "I500146", "name": "Борис Семёнович Сустатов", "givn": "Борис Семёнович", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "1908", "birt_place": "с. Кошелиха", "deat": "20 MAR 1938", "deat_place": "Бутово, расстрел; реабилитирован 1959", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "ОТДЕЛЬНАЯ ВЕТКА. Не отец Василия Ивановича. GEDCOM ошибочно: Борис Михайлович", "confidence": "gedcom", "category": "modern", "is_direct": false, "relation_igor": ""}, {"id": "I500147", "name": "Алексей Васильевич Сустатов", "givn": "Алексей Васильевич", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "1913", "birt_place": "Россия, с. Кошелиха, Первомайского района, Нижегородской области", "deat": "", "deat_place": "", "father": "Василий Иванович Сустатов", "father_id": "I500073", "mother": "Прасковья Фёдоровна Королёва", "mother_id": "I500074", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "modern", "is_direct": false, "relation_igor": ""}, {"id": "I500148", "name": "Максим Васильевич Сустатов", "givn": "Максим Васильевич", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "1917", "birt_place": "Россия, с. Кошелиха, Первомайского района, Нижегородской области", "deat": "", "deat_place": "", "father": "Василий Иванович Сустатов", "father_id": "I500073", "mother": "Прасковья Фёдоровна Королёва", "mother_id": "I500074", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "modern", "is_direct": false, "relation_igor": ""}, {"id": "NH003", "name": "Кондратий Андреевич Сустатов", "givn": "Кондратий Андреевич", "surn": "Сустатов", "patronymic": "Андреевич", "sex": "M", "birt": "ок. 1775", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "1847", "deat_place": "", "father": "Андрей Петрович Сустатов", "father_id": "NH001", "mother": "Дарья", "mother_id": "NH002", "spouses": [{"id": "NH004", "name": "Анна"}], "children": [{"id": "NH005", "name": "Аверьян Кондратьевич Сустатов"}, {"id": "NH007", "name": "Максим Кондратьевич Сустатов"}, {"id": "NH008", "name": "Степан Кондратьевич Сустатов"}], "marriages": [{"spouse": "Анна", "date": "08 NOV 1807", "place": "", "note": ""}], "note": "CONFIRMED: брак 08.11.1807 с Анной Филиповной (дочь Филиппа Михайловича); ревизия 1858 — 42/†1847; сыновья Аверьян, Максим (†1840), Степан (рекрут).", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH005", "name": "Аверьян Кондратьевич Сустатов", "givn": "Аверьян Кондратьевич", "surn": "Сустатов", "patronymic": "Кондратьевич", "sex": "M", "birt": "ок.1827", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Кондратий Андреевич Сустатов", "father_id": "NH003", "mother": "Анна", "mother_id": "NH004", "spouses": [{"id": "NH006", "name": "Дарья"}], "children": [{"id": "NH034", "name": "Екатерина Аверьяновна Сустатовa"}], "marriages": [{"spouse": "Дарья", "date": "08 NOV 1835", "place": "", "note": ""}], "note": "CONFIRMED брак 08.11.1835", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH007", "name": "Максим Кондратьевич Сустатов", "givn": "Максим Кондратьевич", "surn": "Сустатов", "patronymic": "Кондратьевич", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "1840", "deat_place": "", "father": "Кондратий Андреевич Сустатов", "father_id": "NH003", "mother": "Анна", "mother_id": "NH004", "spouses": [], "children": [], "marriages": [], "note": "CONFIRMED сын Кондратия", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH008", "name": "Степан Кондратьевич Сустатов", "givn": "Степан Кондратьевич", "surn": "Сустатов", "patronymic": "Кондратьевич", "sex": "M", "birt": "ок.1841", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Кондратий Андреевич Сустатов", "father_id": "NH003", "mother": "Анна", "mother_id": "NH004", "spouses": [], "children": [], "marriages": [], "note": "CONFIRMED рекрут", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH009", "name": "Василий Андреевич Сустатов", "givn": "Василий Андреевич", "surn": "Сустатов", "patronymic": "Андреевич", "sex": "M", "birt": "ок.1817", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Андрей Петрович Сустатов", "father_id": "NH001", "mother": "Дарья", "mother_id": "NH002", "spouses": [{"id": "NH010", "name": "Ульяна"}], "children": [{"id": "NH011", "name": "Аким Васильевич Сустатов"}, {"id": "NH012", "name": "Степан Васильевич Сустатов"}], "marriages": [], "note": "CONFIRMED брат Кондратия", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH011", "name": "Аким Васильевич Сустатов", "givn": "Аким Васильевич", "surn": "Сустатов", "patronymic": "Васильевич", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Василий Андреевич Сустатов", "father_id": "NH009", "mother": "Ульяна", "mother_id": "NH010", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH012", "name": "Степан Васильевич Сустатов", "givn": "Степан Васильевич", "surn": "Сустатов", "patronymic": "Васильевич", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Василий Андреевич Сустатов", "father_id": "NH009", "mother": "Ульяна", "mother_id": "NH010", "spouses": [], "children": [{"id": "NH031", "name": "Иван Степанович Сустатов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH017", "name": "Фёдор Иванович Сустатов", "givn": "Фёдор Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок.1842", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Иван Иванович Сустатов", "father_id": "NH015", "mother": "Матрёна", "mother_id": "NH016", "spouses": [], "children": [], "marriages": [], "note": "CONFIRMED: = NS001 Фёдор Иванович (~1842); двоюродная ветка; дети Александр, Михаил, Степан, Яков — совпадают с VGD (ВОВ).", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH018", "name": "Федот Иванович Сустатов", "givn": "Федот Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок.1845", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Иван Иванович Сустатов", "father_id": "NH015", "mother": "Матрёна", "mother_id": "NH016", "spouses": [], "children": [{"id": "NH029", "name": "Алексей Федотovich Сустатов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH020", "name": "Иван Иванович Сустатов", "givn": "Иван Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок.1851", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Иван Иванович Сустатов", "father_id": "NH015", "mother": "Матрёна", "mother_id": "NH016", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH021", "name": "Матвей Иванович Сустатов", "givn": "Матвей Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок.1821", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Иван Андреевич Сустатов", "father_id": "NH013", "mother": "Мавра", "mother_id": "NH014", "spouses": [], "children": [{"id": "NH022", "name": "Яков Матвеевич Сустатов"}], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH022", "name": "Яков Матвеевич Сустатов", "givn": "Яков Матвеевич", "surn": "Сустатов", "patronymic": "Матвеевич", "sex": "M", "birt": "ок.1840", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Матвей Иванович Сустатов", "father_id": "NH021", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH023", "name": "Лев Андреевич Сустатов", "givn": "Лев Андреевич", "surn": "Сустатов", "patronymic": "Андреевич", "sex": "M", "birt": "ок.1789", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Андрей Петрович Сустатов", "father_id": "NH001", "mother": "Дарья", "mother_id": "NH002", "spouses": [{"id": "NH024", "name": "Варвара"}], "children": [{"id": "NH025", "name": "Иван Львович Сустатов"}], "marriages": [], "note": "CONFIRMED параллельная ветвь", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH025", "name": "Иван Львович Сустатов", "givn": "Иван Львович", "surn": "Сустатов", "patronymic": "Львович", "sex": "M", "birt": "ок.1844", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Лев Андреевич Сустатов", "father_id": "NH023", "mother": "Варвара", "mother_id": "NH024", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH026", "name": "Лев Анисимович Сустатов", "givn": "Лев Анисимович", "surn": "Сустатов", "patronymic": "Анисимович", "sex": "M", "birt": "ок.1815", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "1843", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "CONFIRMED", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH027", "name": "Василий Анисимович Сустатов", "givn": "Василий Анисимович", "surn": "Сустатов", "patronymic": "Анисимович", "sex": "M", "birt": "ок.1819", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NH028", "name": "Аксинья"}], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH029", "name": "Алексей Федотovich Сустатов", "givn": "Алексей Федотovich", "surn": "Сустатов", "patronymic": "Федотович", "sex": "M", "birt": "ок. 1874", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Федот Иванович Сустатов", "father_id": "NH018", "mother": "", "mother_id": "", "spouses": [{"id": "NH030", "name": "Евфросиния"}], "children": [], "marriages": [{"spouse": "Евфросиния", "date": "19 APR 1892", "place": "", "note": ""}], "note": "CONFIRMED: брак 19.04.1892 с Евфросинией Приписновой; WWI 1917 — крестьянин с. Кошелиха (Ардатовское присутствие).", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH031", "name": "Иван Степанович Сустатов", "givn": "Иван Степанович", "surn": "Сустатов", "patronymic": "Степанович", "sex": "M", "birt": "ок.1864", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Степан Васильевич Сустатов", "father_id": "NH012", "mother": "", "mother_id": "", "spouses": [{"id": "NH032", "name": "Анна"}], "children": [], "marriages": [], "note": "CONFIRMED: НЕ путать с Иваном Ивановичем (~1850)! Брак 08.11.1868 с Анной Ивановной.", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH033", "name": "Иван Иванович Сустатов", "givn": "Иван Иванович", "surn": "Сустатов", "patronymic": "Иванович", "sex": "M", "birt": "ок. 1850", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "CONFIRMED: отдельная линия; брак 08.11.1868 с Анной Ивановной (18 лет).", "confidence": "confirmed", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "NH_XVII1", "name": "Сыресь Сустатов", "givn": "Сыресь", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "1596/1603 мурза Арзамас. Контекст, не доказанная связь", "confidence": "gedcom", "category": "xvii", "is_direct": false, "relation_igor": ""}, {"id": "NH_XVII2", "name": "Бажен Сустатов", "givn": "Бажен", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "1659-1670 мордовский мурза", "confidence": "gedcom", "category": "xvii", "is_direct": false, "relation_igor": ""}, {"id": "NH_XVII3", "name": "Гришка Сустатов", "givn": "Гришка", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "1671 Алатыр", "confidence": "gedcom", "category": "xvii", "is_direct": false, "relation_igor": ""}, {"id": "NH_XVII4", "name": "Ненашка Сустатов", "givn": "Ненашка", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "1671", "confidence": "gedcom", "category": "xvii", "is_direct": false, "relation_igor": ""}, {"id": "NH_XVII5", "name": "Исанка Сустатов", "givn": "Исанка", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "1671", "confidence": "gedcom", "category": "xvii", "is_direct": false, "relation_igor": ""}, {"id": "NH_XVII6", "name": "Ездайка Сустатов", "givn": "Ездайка", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "1671", "confidence": "gedcom", "category": "xvii", "is_direct": false, "relation_igor": ""}, {"id": "NH_XVII7", "name": "Сустат Атков Сустатов", "givn": "Сустат Атков", "surn": "Сустатов", "patronymic": "Атков", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "1624 Киржеман", "confidence": "gedcom", "category": "xvii", "is_direct": false, "relation_igor": ""}, {"id": "NH_XVII8", "name": "Сустат Секшенев Сустатов", "givn": "Сустат Секшенев", "surn": "Сустатов", "patronymic": "Секшенев", "sex": "M", "birt": "", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "1629 мордvin", "confidence": "gedcom", "category": "xvii", "is_direct": false, "relation_igor": ""}, {"id": "NS001", "name": "Фёдор Иванович Сустатов", "givn": "Фёдор Иванович", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "NS002", "name": "Александр Сустатов"}, {"id": "NS010", "name": "Михаил Сустатов"}, {"id": "NS011", "name": "Степан Сустатов"}, {"id": "NS012", "name": "Яков Сустатов"}], "marriages": [], "note": "CONFIRMED: = NH017 Фёдор Иванович (~1842)", "confidence": "confirmed", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS002", "name": "Александр Сустатов", "givn": "Александр", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "ок. 1870", "birt_place": "с. Кошелиха", "deat": "", "deat_place": "", "father": "Фёдор Иванович Сустатов", "father_id": "NS001", "mother": "", "mother_id": "", "spouses": [{"id": "NS003", "name": "Екатерина Сустатова"}], "children": [{"id": "NS004", "name": "Серафим Сустатов"}], "marriages": [], "note": "Александр Фёдорович", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS004", "name": "Серафим Сустатов", "givn": "Серафим", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "1909", "birt_place": "с. Кошелиха", "deat": "", "deat_place": "", "father": "Александр Сустатов", "father_id": "NS002", "mother": "Екатерина Сустатова", "mother_id": "NS003", "spouses": [], "children": [], "marriages": [], "note": "875 сп, 290 сд, 154 УР; вероятный двоюродный дядя ядра", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS005", "name": "Яков Сустатов", "givn": "Яков", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [{"id": "NS006", "name": "Никита Сустатов"}, {"id": "NS008", "name": "Василий Сустатов"}, {"id": "NS009", "name": "Николай Сустатов"}], "marriages": [], "note": "Яков Матвеевич, ветка XIX в.", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS006", "name": "Никита Сустатов", "givn": "Никита", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "Яков Сустатов", "father_id": "NS005", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "Никита Яковлевич, ссылка в Сибирь", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS008", "name": "Василий Сустатов", "givn": "Василий", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "1910", "birt_place": "с. Кошелиха", "deat": "9 DEC 1941", "deat_place": "", "father": "Яков Сустатов", "father_id": "NS005", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "Василий Яковлевич, плен ВОВ", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS009", "name": "Николай Сустатов", "givn": "Николай", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "1918", "birt_place": "с. Кошелиха", "deat": "20 DEC 1943", "deat_place": "", "father": "Яков Сустатов", "father_id": "NS005", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "Николай Яковлевич", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS010", "name": "Михаил Сустатов", "givn": "Михаил", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "1913", "birt_place": "с. Кошелиха", "deat": "", "deat_place": "", "father": "Фёдор Иванович Сустатов", "father_id": "NS001", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "Михаил Фёдорович, пропал 12.1941", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS011", "name": "Степан Сустатов", "givn": "Степан", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "1910", "birt_place": "с. Кошелиха", "deat": "1 MAY 1943", "deat_place": "", "father": "Фёдор Иванович Сустатов", "father_id": "NS001", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "Степан Фёдорович, партизан", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS012", "name": "Яков Сустатов", "givn": "Яков", "surn": "Сустатов", "patronymic": "", "sex": "M", "birt": "1910", "birt_place": "с. Кошелиха", "deat": "8 MAY 1942", "deat_place": "", "father": "Фёдор Иванович Сустатов", "father_id": "NS001", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "Яков Фёдорович, плен", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NH034", "name": "Екатерина Аверьяновна Сустатовa", "givn": "Екатерина Аверьяновна", "surn": "Сустатовa", "patronymic": "Аверьяновна", "sex": "F", "birt": "ок.1830", "birt_place": "с. Кошелиха, Ардатовский уезд", "deat": "", "deat_place": "", "father": "Аверьян Кондратьевич Сустатов", "father_id": "NH005", "mother": "Дарья", "mother_id": "NH006", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "historical", "is_direct": false, "relation_igor": ""}, {"id": "I500091", "name": "Татьяна Сустатова", "givn": "Татьяна", "surn": "Сустатова", "patronymic": "", "sex": "F", "birt": "1932", "birt_place": "", "deat": "", "deat_place": "", "father": "Григорий Васильевич Сустатов", "father_id": "I500071", "mother": "Евдокия Абрамова", "mother_id": "I500072", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "modern", "is_direct": false, "relation_igor": ""}, {"id": "I500092", "name": "Анна Сустатова", "givn": "Анна", "surn": "Сустатова", "patronymic": "", "sex": "F", "birt": "10 JUL 1934", "birt_place": "", "deat": "23 AUG 1953", "deat_place": "", "father": "Григорий Васильевич Сустатов", "father_id": "I500071", "mother": "Евдокия Абрамова", "mother_id": "I500072", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "modern", "is_direct": false, "relation_igor": ""}, {"id": "I500093", "name": "Вера Сустатова", "givn": "Вера", "surn": "Сустатова", "patronymic": "", "sex": "F", "birt": "7 OCT 1939", "birt_place": "", "deat": "", "deat_place": "", "father": "Григорий Васильевич Сустатов", "father_id": "I500071", "mother": "Евдокия Абрамова", "mother_id": "I500072", "spouses": [], "children": [], "marriages": [], "note": "", "confidence": "gedcom", "category": "modern", "is_direct": false, "relation_igor": ""}, {"id": "NS003", "name": "Екатерина Сустатова", "givn": "Екатерина", "surn": "Сустатова", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "NS002", "name": "Александр Сустатов"}], "children": [{"id": "NS004", "name": "Серафим Сустатов"}], "marriages": [], "note": "Екатерина Степановна, жена Александра Ф.", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "NS007", "name": "Евдокия Сустатова", "givn": "Евдокия", "surn": "Сустатова", "patronymic": "", "sex": "F", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [], "children": [], "marriages": [], "note": "Евдокия Федотовна, брак 25.07.1886", "confidence": "gedcom", "category": "cousin", "is_direct": false, "relation_igor": ""}, {"id": "I500022", "name": "Илья Филиппов", "givn": "Илья", "surn": "Филиппов", "patronymic": "", "sex": "M", "birt": "", "birt_place": "", "deat": "", "deat_place": "", "father": "", "father_id": "", "mother": "", "mother_id": "", "spouses": [{"id": "I500101", "name": ""}], "children": [{"id": "I500099", "name": "Иван Филиппов"}, {"id": "I500015", "name": ""}], "marriages": [], "note": "", "confidence": "gedcom", "category": "related", "is_direct": false, "relation_igor": "Супруг(а)/родственник по браку"}], "families": [{"id": "F500001", "husb": "I500001", "wife": "I500002", "children": ["I500003"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500002", "husb": "I500005", "wife": "I500004", "children": ["I500002"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500003", "husb": "I500007", "wife": "I500006", "children": ["I500001", "I500087"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500004", "husb": "I500008", "wife": "I500009", "children": ["I500004", "I500013", "I500029"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500005", "husb": "I500010", "wife": "I500011", "children": ["I500005", "I500112", "I500114", "I500113", "I500116", "I500115"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500006", "husb": "I500012", "wife": "", "children": ["I500008"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500007", "husb": "I500014", "wife": "I500015", "children": ["I500009", "I500019", "I500102", "I500021", "I500020"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500008", "husb": "I500016", "wife": "", "children": ["I500010"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500009", "husb": "I500017", "wife": "I500150", "children": ["I500011", "I500120"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500010", "husb": "I500018", "wife": "", "children": ["I500014"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500011", "husb": "I500022", "wife": "I500101", "children": ["I500099", "I500015"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500036", "husb": "I500071", "wife": "I500072", "children": ["I500007", "I500091", "I500092", "I500094", "I500093"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500037", "husb": "I500073", "wife": "I500074", "children": ["I500071", "I500147", "I500148"], "marr": "30 JUN 1908", "marr_place": "с. Кошелиха", "note": "CONFIRMED: метрика ЦАНО ф.570 оп.10"}, {"id": "F500038", "husb": "I500078", "wife": "I500076", "children": ["I500095", "I500096", "I500006", "I500097"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500039", "husb": "I500077", "wife": "", "children": ["I500076"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500040", "husb": "I500079", "wife": "", "children": ["I500078"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500041", "husb": "I500080", "wife": "", "children": ["I500079"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500042", "husb": "I500081", "wife": "I500082", "children": ["I500072"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500043", "husb": "I500083", "wife": "", "children": ["I500082"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500044", "husb": "I500084", "wife": "", "children": ["I500081"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500045", "husb": "I500085", "wife": "", "children": ["I500073"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500046", "husb": "I500086", "wife": "", "children": ["I500074"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500047", "husb": "I500088", "wife": "I500087", "children": ["I500089", "I500090"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500062", "husb": "I500001", "wife": "I500142", "children": [], "marr": "", "marr_place": "", "note": ""}, {"id": "F500064", "husb": "I500145", "wife": "", "children": [], "marr": "", "marr_place": "", "note": "ОТМЕНЕНО: ложная связь I500145→I500085"}, {"id": "F500065", "husb": "I500146", "wife": "", "children": [], "marr": "", "marr_place": "", "note": ""}, {"id": "F500066", "husb": "I500094", "wife": "I500149", "children": [], "marr": "", "marr_place": "", "note": ""}, {"id": "F500069", "husb": "I500155", "wife": "", "children": ["I500017"], "marr": "", "marr_place": "", "note": ""}, {"id": "F500070", "husb": "I500156", "wife": "", "children": ["I500150"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF001", "husb": "NS001", "wife": "", "children": ["NS002", "NS010", "NS011", "NS012"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF002", "husb": "NS002", "wife": "NS003", "children": ["NS004"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF003", "husb": "NS005", "wife": "", "children": ["NS006", "NS008", "NS009"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_KONDR", "husb": "NH003", "wife": "NH004", "children": ["NH005", "NH007", "NH008"], "marr": "08 NOV 1807", "marr_place": "", "note": ""}, {"id": "NF_AVER", "husb": "NH005", "wife": "NH006", "children": ["NH034"], "marr": "08 NOV 1835", "marr_place": "", "note": ""}, {"id": "NF_VAS_ANDR", "husb": "NH009", "wife": "NH010", "children": ["NH011", "NH012"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_IVAN_ANDR", "husb": "NH013", "wife": "NH014", "children": ["NH015", "NH021"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_IVAN1815", "husb": "NH015", "wife": "NH016", "children": ["NH017", "NH018", "NH019", "NH020"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_IVAN1847", "husb": "NH019", "wife": "", "children": ["NH035"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_DIRECT_1", "husb": "NH035", "wife": "", "children": ["I500085"], "marr": "", "marr_place": "", "note": "I500145 (Василий Иванович) — внук NH035 через I500085, не брат"}, {"id": "NF_FEDOT", "husb": "NH018", "wife": "", "children": ["NH029"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_ALEX_FED", "husb": "NH029", "wife": "NH030", "children": [], "marr": "19 APR 1892", "marr_place": "", "note": ""}, {"id": "NF_MATVEY", "husb": "NH021", "wife": "", "children": ["NH022"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_LEV", "husb": "NH023", "wife": "NH024", "children": ["NH025"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_VAS_ANIS", "husb": "NH027", "wife": "NH028", "children": [], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_STEP_VAS", "husb": "NH012", "wife": "", "children": ["NH031"], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_IVAN_ST", "husb": "NH031", "wife": "NH032", "children": [], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_IVAN1868", "husb": "NH033", "wife": "", "children": [], "marr": "", "marr_place": "", "note": ""}, {"id": "NF_ANDREI", "husb": "NH001", "wife": "NH002", "children": ["NH003", "NH009", "NH013", "NH023", "NH036"], "marr": "", "marr_place": "", "note": "1811 revision family"}]};
+
+const personsMap = {};
+DATA.persons.forEach(p => personsMap[p.id] = p);
+
+const SEX_LABEL = { M: 'муж.', F: 'жен.', '': '—' };
+const CAT_LABEL = {
+  direct: 'Прямая линия', modern: 'XX–XXI в.', historical: 'XIX в. (архив)',
+  cousin: 'Двоюродные', xvii: 'XVII век', related: 'Родственник по браку'
+};
+
+function esc(s) {
+  if (!s) return '';
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function fmtDates(p) {
+  const b = p.birt ? `р. ${p.birt}` : '';
+  const d = p.deat ? `† ${p.deat}` : '';
+  return [b, d].filter(Boolean).join(' · ') || '—';
+}
+
+function badges(p) {
+  let h = '';
+  if (p.is_direct) h += '<span class="badge direct">Прямая линия</span> ';
+  h += `<span class="badge ${p.confidence}">${p.confidence.toUpperCase()}</span> `;
+  if (p.sex === 'M') h += '<span class="badge m">М</span>';
+  if (p.sex === 'F') h += '<span class="badge f">Ж</span>';
+  if (p.category === 'xvii') h += '<span class="badge xvii">XVII</span>';
+  return h;
+}
+
+function openPerson(id) {
+  const p = personsMap[id];
+  if (!p) return;
+  document.getElementById('modalTitle').textContent = p.name || id;
+  document.getElementById('modalBadges').innerHTML = badges(p);
+  const marriages = (p.marriages || []).map(m =>
+    `<li>${esc(m.date || '—')} — ${esc(m.spouse)}${m.place ? ' ('+esc(m.place)+')' : ''}${m.note ? '; '+esc(m.note) : ''}</li>`
+  ).join('') || '<li>—</li>';
+  const children = (p.children || []).map(c =>
+    `<li data-id="${c.id}">${esc(c.name)}</li>`
+  ).join('') || '<li>—</li>';
+  const spouses = (p.spouses || []).map(s =>
+    `<li data-id="${s.id}">${esc(s.name)}</li>`
+  ).join('') || '<li>—</li>';
+
+  document.getElementById('modalBody').innerHTML = `
+    <dl class="detail-grid">
+      <dt>ID</dt><dd>${esc(p.id)}</dd>
+      <dt>Фамилия</dt><dd>${esc(p.surn || '—')}</dd>
+      <dt>Имя</dt><dd>${esc(p.givn || '—')}</dd>
+      <dt>Отчество</dt><dd>${esc(p.patronymic || '—')}</dd>
+      <dt>Пол</dt><dd>${SEX_LABEL[p.sex] || '—'}</dd>
+      <dt>Рождение</dt><dd>${esc(p.birt || '—')}${p.birt_place ? '<br><small>'+esc(p.birt_place)+'</small>' : ''}</dd>
+      <dt>Смерть</dt><dd>${esc(p.deat || '—')}${p.deat_place ? '<br><small>'+esc(p.deat_place)+'</small>' : ''}</dd>
+      <dt>Отец</dt><dd>${p.father_id ? `<span class="link-person" data-id="${p.father_id}">${esc(p.father)}</span>` : esc(p.father || '—')}</dd>
+      <dt>Мать</dt><dd>${p.mother_id ? `<span class="link-person" data-id="${p.mother_id}">${esc(p.mother)}</span>` : esc(p.mother || '—')}</dd>
+      <dt>Категория</dt><dd>${CAT_LABEL[p.category] || p.category}</dd>
+      <dt>Связь с Igor</dt><dd>${esc(p.relation_igor || '—')}</dd>
+    </dl>
+    <div class="detail-section"><h4>Супруг(и)</h4><ul class="link-list">${spouses}</ul></div>
+    <div class="detail-section"><h4>Дети</h4><ul class="link-list">${children}</ul></div>
+    <div class="detail-section"><h4>Браки — даты и места</h4><ul class="link-list">${marriages}</ul></div>
+    <div class="detail-section"><h4>Примечания и факты</h4><p style="font-size:.88rem">${esc(p.note || '—')}</p></div>
+  `;
+  document.getElementById('modal').classList.add('open');
+  document.querySelectorAll('#modalBody .link-person, #modalBody .link-list li[data-id]').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openPerson(el.dataset.id));
+  });
+}
+
+document.getElementById('modalClose').onclick = () => document.getElementById('modal').classList.remove('open');
+document.getElementById('modal').onclick = e => { if (e.target.id === 'modal') document.getElementById('modal').classList.remove('open'); };
+
+// TABS
+document.querySelectorAll('nav.tabs button').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('nav.tabs button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('section.panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+    if (btn.dataset.tab === 'tree') renderTree();
+  };
+});
+
+// STATS
+document.getElementById('statsRow').innerHTML = [
+  `<span class="stat-chip">${DATA.persons.length} персон</span>`,
+  `<span class="stat-chip">${DATA.meta.direct_line.length} в прямой линии</span>`,
+  `<span class="stat-chip">${DATA.persons.filter(p=>p.confidence==='confirmed').length} CONFIRMED</span>`,
+  `<span class="stat-chip">с 1807 (метрика)</span>`,
+  `<span class="stat-chip">Кошелиха</span>`,
+].join('');
+
+// OVERVIEW
+const eras = [
+  { title: '1807–1858', desc: 'Ревизии и метрики: Андрей Петрович, Кондратий, Иваны, параллельные ветви', ids: ['NH001','NH003','NH013','NH015'] },
+  { title: '1868–1908', desc: 'Браки в Кошелихе: Алексей Федотович 1892, Василий Иванович + Королёva 1908', ids: ['NH029','NH033','I500073'] },
+  { title: '1912–1945', desc: 'Григорий Васильевич 1912, 987сп; двоюродные — ВОВ', ids: ['I500071','NS010','NS011'] },
+  { title: '1930–2026', desc: 'Василий → Григорий → Igor (линия отца)', ids: ['I500007','I500001','I500003'] },
+];
+document.getElementById('overviewGrid').innerHTML = eras.map(e => `
+  <div class="overview-item">
+    <h4>${e.title}</h4>
+    <p>${e.desc}</p>
+    <p style="margin-top:6px;font-size:.78rem">${e.ids.map(id => {
+      const p = personsMap[id];
+      return p ? `<span class="link-person" data-id="${id}" style="cursor:pointer;color:var(--accent)">${esc(p.name)}</span>` : id;
+    }).join(' · ')}</p>
+  </div>
+`).join('');
+document.querySelectorAll('#overviewGrid .link-person').forEach(el => {
+  el.onclick = () => openPerson(el.dataset.id);
+});
+
+// DIRECT TIMELINE
+const directIds = DATA.meta.direct_line.slice().reverse();
+document.getElementById('directTimeline').innerHTML = directIds.map((id, i) => {
+  const p = personsMap[id];
+  if (!p) return '';
+  return `<div class="tl-item ${p.confidence==='probable'?'probable':''}" data-id="${id}">
+    <div class="tl-name">${11-i}. ${esc(p.name)}</div>
+    <div class="tl-dates">${esc(fmtDates(p))}</div>
+    <div>${badges(p)}</div>
+    <div class="tl-note">${esc(p.note || '')}</div>
+    ${p.father ? `<div class="tl-note" style="margin-top:4px">← ${esc(p.father)} · ${esc(p.mother||'')}</div>` : ''}
+  </div>`;
+}).join('');
+document.querySelectorAll('#directTimeline .tl-item').forEach(el => {
+  el.onclick = () => openPerson(el.dataset.id);
+});
+
+// TABLE
+let sortKey = 'name', sortAsc = true;
+function renderTable() {
+  const q = document.getElementById('tableSearch').value.toLowerCase();
+  const cat = document.getElementById('filterCategory').value;
+  const conf = document.getElementById('filterConfidence').value;
+  let rows = DATA.persons.filter(p => {
+    if (cat && p.category !== cat) return false;
+    if (conf && p.confidence !== conf) return false;
+    if (q) {
+      const hay = [p.name,p.note,p.id,p.father,p.mother,p.surn,p.patronymic,
+        ...(p.children||[]).map(c=>c.name),...(p.spouses||[]).map(s=>s.name)].join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  rows.sort((a,b) => {
+    let va = a[sortKey]||'', vb = b[sortKey]||'';
+    if (typeof va === 'string') va = va.toLowerCase();
+    if (typeof vb === 'string') vb = vb.toLowerCase();
+    if (va < vb) return sortAsc ? -1 : 1;
+    if (va > vb) return sortAsc ? 1 : -1;
+    return 0;
+  });
+  document.getElementById('tableCount').textContent = `Показано: ${rows.length} из ${DATA.persons.length}`;
+  document.getElementById('tableBody').innerHTML = rows.map(p => {
+    const spouses = (p.spouses||[]).map(s=>esc(s.name)).join('; ') || '—';
+    const children = (p.children||[]).map(c=>esc(c.name)).join('; ') || '—';
+    const marrs = (p.marriages||[]).map(m=>`${m.date||'?'} ${m.spouse}`).join('; ') ||
+      ((p.marriages||[]).length===0 && (p.spouses||[]).length ? '(дата не указана)' : '—');
+    const places = [p.birt_place,p.deat_place].filter(Boolean).join(' / ') || '—';
+    return `<tr class="${p.is_direct?'direct-row':''}" data-id="${p.id}" style="cursor:pointer">
+      <td>${esc(p.id)}</td>
+      <td><strong>${esc(p.name)}</strong></td>
+      <td>${esc(p.patronymic||'—')}</td>
+      <td>${SEX_LABEL[p.sex]||'—'}</td>
+      <td>${esc(p.birt||'—')}</td>
+      <td>${esc(p.deat||'—')}</td>
+      <td>${esc(places)}</td>
+      <td>${p.father_id?`<span data-id="${p.father_id}">${esc(p.father)}</span>`:esc(p.father||'—')}</td>
+      <td>${p.mother_id?`<span data-id="${p.mother_id}">${esc(p.mother)}</span>`:esc(p.mother||'—')}</td>
+      <td>${spouses}</td>
+      <td>${children}</td>
+      <td>${esc(marrs)}</td>
+      <td>${esc(p.relation_igor||'—')}</td>
+      <td><span class="badge ${p.confidence}">${p.confidence}</span></td>
+      <td class="note-cell">${esc(p.note||'—')}</td>
+    </tr>`;
+  }).join('');
+  document.querySelectorAll('#tableBody tr').forEach(tr => {
+    tr.onclick = e => {
+      if (e.target.dataset.id) { e.stopPropagation(); openPerson(e.target.dataset.id); return; }
+      openPerson(tr.dataset.id);
+    };
+  });
+}
+document.getElementById('tableSearch').oninput = renderTable;
+document.getElementById('filterCategory').onchange = renderTable;
+document.getElementById('filterConfidence').onchange = renderTable;
+document.querySelectorAll('#mainTable th[data-sort]').forEach(th => {
+  th.onclick = () => {
+    const k = th.dataset.sort;
+    if (sortKey === k) sortAsc = !sortAsc; else { sortKey = k; sortAsc = true; }
+    renderTable();
+  };
+});
+renderTable();
+
+// BRANCHES
+const branches = [
+  { title: 'Прямая линия (Иван Андреевич)', root: 'NH001', filter: id => DATA.meta.direct_line.includes(id) },
+  { title: 'Ветка Кондратия Андреевича', root: 'NH003', filter: id => ['NH003','NH004','NH005','NH006','NH007','NH008','NH034'].includes(id) || personsMap[id]?.father_id?.startsWith('NH00') },
+  { title: 'Ветка Василия Андреевича (брат)', root: 'NH009', ids: ['NH009','NH010','NH011','NH012','NH031'] },
+  { title: 'Ветка Льва Андреевича', root: 'NH023', ids: ['NH023','NH024','NH025'] },
+  { title: 'Ветка Льва/Василия Анисимовича', root: 'NH026', ids: ['NH026','NH027','NH028'] },
+  { title: 'Ветка Фёдора Ивановича (~1842)', root: 'NH017', ids: ['NH017','NS001','NS002','NS010','NS011','NS012'] },
+  { title: 'Ветка Алексея Федотович (1892)', root: 'NH029', ids: ['NH018','NH029','NH030'] },
+  { title: 'XX век — современная семья', root: 'I500071', filter: p => p.category==='modern' || p.category==='direct' },
+];
+document.getElementById('branchGrid').innerHTML = branches.map(b => {
+  let items;
+  if (b.ids) items = b.ids.map(id => personsMap[id]).filter(Boolean);
+  else if (b.filter) items = typeof b.filter === 'function'
+    ? DATA.persons.filter(b.filter)
+    : DATA.persons.filter(p => b.filter(p.id));
+  else items = [];
+  if (b.root && personsMap[b.root] && !items.find(p=>p.id===b.root)) items.unshift(personsMap[b.root]);
+  return `<div class="branch-card"><h3>${esc(b.title)}</h3><ul>${
+    items.slice(0,12).map(p => `<li data-id="${p.id}">${esc(p.name)} <span style="color:var(--muted)">${esc(fmtDates(p))}</span></li>`).join('')
+  }${items.length>12?`<li style="color:var(--muted)">…ещё ${items.length-12}</li>`:''}</ul></div>`;
+}).join('');
+document.querySelectorAll('#branchGrid li[data-id]').forEach(li => {
+  li.onclick = () => openPerson(li.dataset.id);
+});
+
+// XVII
+document.getElementById('xviiBody').innerHTML = DATA.persons.filter(p=>p.category==='xvii').map(p => `
+  <tr data-id="${p.id}" style="cursor:pointer">
+    <td>${esc(p.id)}</td>
+    <td><strong>${esc(p.name)}</strong></td>
+    <td>${esc(p.birt||p.deat||'XVII в.')}</td>
+    <td>${esc(p.birt_place||'Арзамас / Алатыр')}</td>
+    <td class="note-cell">${esc(p.note||'—')}</td>
+    <td>VGD / CyberLeninka</td>
+  </tr>
+`).join('');
+document.querySelectorAll('#xviiBody tr').forEach(tr => tr.onclick = () => openPerson(tr.dataset.id));
+
+// FAMILIES TABLE
+document.getElementById('familiesBody').innerHTML = (DATA.families || []).map(f => {
+  const h = personsMap[f.husb];
+  const w = personsMap[f.wife];
+  const kids = (f.children || []).map(cid => {
+    const p = personsMap[cid];
+    return p ? `<span class="link-person" data-id="${cid}" style="cursor:pointer;color:var(--accent)">${esc(p.name)}</span>` : cid;
+  }).join(', ') || '—';
+  return `<tr>
+    <td>${esc(f.id)}</td>
+    <td>${h ? `<span class="link-person" data-id="${f.husb}" style="cursor:pointer;color:var(--accent)">${esc(h.name)}</span>` : esc(f.husb||'—')}</td>
+    <td>${w ? `<span class="link-person" data-id="${f.wife}" style="cursor:pointer;color:var(--accent)">${esc(w.name)}</span>` : esc(f.wife||'—')}</td>
+    <td>${esc(f.marr||'—')}</td>
+    <td>${esc(f.marr_place||'—')}</td>
+    <td>${kids}</td>
+    <td class="note-cell">${esc(f.note||'—')}</td>
+  </tr>`;
+}).join('');
+document.querySelectorAll('#familiesBody .link-person').forEach(el => {
+  el.onclick = e => { e.stopPropagation(); openPerson(el.dataset.id); };
+});
+
+// TREE SVG
+let treeMode = 'all';
+let treeScale = 1, treeTx = 40, treeTy = 40;
+let selectedNode = null;
+
+function buildTreeRoots(mode) {
+  if (mode === 'direct') {
+    return DATA.meta.direct_line.filter(id => {
+      const p = personsMap[id];
+      const pid = p?.father_id;
+      return !pid || !DATA.meta.direct_line.includes(pid);
+    }).slice(0,1).map(id => buildNode(id, mode, new Set()));
+  }
+  const roots = ['NH001'];
+  const xvii = DATA.persons.filter(p=>p.category==='xvii').map(p=>p.id);
+  return [...roots, ...xvii].map(id => personsMap[id] ? buildNode(id, mode, new Set()) : null).filter(Boolean);
+}
+
+function buildNode(id, mode, visited) {
+  if (visited.has(id)) return null;
+  visited.add(id);
+  const p = personsMap[id];
+  if (!p) return null;
+  let childIds = (p.children||[]).map(c=>c.id);
+  if (mode === 'direct') {
+    childIds = childIds.filter(cid => DATA.meta.direct_line.includes(cid));
+  }
+  // also follow father line for direct mode upward is separate
+  const children = childIds.map(cid => buildNode(cid, mode, new Set(visited))).filter(Boolean);
+  return { id, person: p, children };
+}
+
+function layoutTree(node, depth = 0) {
+  const NODE_W = 168, NODE_H = 62, GAP_X = 24, GAP_Y = 90;
+  if (!node.children.length) {
+    node.width = NODE_W;
+    node.x = 0;
+    node.y = depth * GAP_Y;
+    return node;
+  }
+  node.children.forEach(c => layoutTree(c, depth + 1));
+  const totalW = node.children.reduce((s,c) => s + c.width + GAP_X, -GAP_X);
+  node.width = Math.max(NODE_W, totalW);
+  node.y = depth * GAP_Y;
+  let cx = (node.width - totalW) / 2;
+  node.children.forEach(c => {
+    c.x = cx + c.width / 2 - NODE_W / 2;
+    cx += c.width + GAP_X;
+  });
+  node.x = node.width / 2 - NODE_W / 2;
+  return node;
+}
+
+function renderTreeNode(g, node, offsetX) {
+  const p = node.person;
+  const x = offsetX + node.x, y = node.y;
+  const fg = p.sex === 'F' ? '#ad1457' : '#1565c0';
+  const bg = p.is_direct ? '#e8f5e9' : '#fff';
+  const stroke = p.is_direct ? '#1b5e20' : '#c5d4bc';
+  const el = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  el.setAttribute('class', 'node-card' + (p.is_direct?' direct':'') + (selectedNode===p.id?' selected':''));
+  el.setAttribute('transform', `translate(${x},${y})`);
+  el.dataset.id = p.id;
+
+  const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('class','node-rect');
+  rect.setAttribute('width','168'); rect.setAttribute('height','62');
+  rect.setAttribute('fill', bg); rect.setAttribute('stroke', stroke);
+  el.appendChild(rect);
+
+  function textLine(txt, dy, size, weight) {
+    const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    t.setAttribute('x','84'); t.setAttribute('y', dy);
+    t.setAttribute('text-anchor','middle');
+    t.setAttribute('font-size', size||'10');
+    t.setAttribute('font-weight', weight||'normal');
+    t.setAttribute('fill','#1a2e1a');
+    t.setAttribute('font-family','Segoe UI, system-ui, sans-serif');
+    const lines = txt.match(/.{1,22}(\s|$)/g) || [txt];
+    lines.slice(0,2).forEach((line,i) => {
+      const ts = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+      ts.setAttribute('x','84'); ts.setAttribute('dy', i===0?0:12);
+      ts.textContent = line.trim();
+      t.appendChild(ts);
+    });
+    el.appendChild(t);
+  }
+  textLine(p.name || p.id, 18, 10, '600');
+  textLine(fmtDates(p), 38, 9);
+  if (p.confidence === 'probable') {
+    const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    dot.setAttribute('cx','158'); dot.setAttribute('cy','8'); dot.setAttribute('r','5');
+    dot.setAttribute('fill','#ef6c00');
+    el.appendChild(dot);
+  }
+
+  el.style.cursor = 'pointer';
+  el.onclick = () => { selectedNode = p.id; openPerson(p.id); renderTree(); };
+
+  g.appendChild(el);
+
+  node.children.forEach(c => {
+    const cx = offsetX + node.x + 84, cy = y + 62;
+    const ccx = offsetX + c.x + 84, ccy = c.y;
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    const mid = (cy + ccy) / 2;
+    path.setAttribute('d', `M${cx},${cy} C${cx},${mid} ${ccx},${mid} ${ccx},${ccy}`);
+    path.setAttribute('class','link');
+    g.insertBefore(path, g.firstChild);
+    renderTreeNode(g, c, offsetX);
+  });
+}
+
+function renderTree() {
+  const svg = document.getElementById('treeSvg');
+  svg.innerHTML = '';
+  const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  g.setAttribute('transform', `translate(${treeTx},${treeTy}) scale(${treeScale})`);
+  svg.appendChild(g);
+
+  const roots = buildTreeRoots(treeMode);
+  let offsetX = 0;
+  const gap = 40;
+  roots.forEach(root => {
+    layoutTree(root);
+    renderTreeNode(g, root, offsetX);
+    offsetX += root.width + gap;
+  });
+
+  const bbox = g.getBBox();
+  svg.setAttribute('width', Math.max(bbox.width + treeTx * 2 + 80, 900));
+  svg.setAttribute('height', Math.max(bbox.height + treeTy * 2 + 80, 500));
+
+  const q = document.getElementById('treeSearch').value.toLowerCase();
+  if (q) {
+    g.querySelectorAll('.node-card').forEach(n => {
+      const p = personsMap[n.dataset.id];
+      const match = (p.name||'').toLowerCase().includes(q) || p.id.toLowerCase().includes(q);
+      n.style.opacity = match ? 1 : 0.25;
+    });
+  }
+}
+
+document.getElementById('btnZoomIn').onclick = () => { treeScale *= 1.15; renderTree(); };
+document.getElementById('btnZoomOut').onclick = () => { treeScale /= 1.15; renderTree(); };
+document.getElementById('btnResetView').onclick = () => { treeScale=1; treeTx=40; treeTy=40; renderTree(); };
+document.getElementById('btnDirectOnly').onclick = () => { treeMode='direct'; renderTree(); };
+document.getElementById('btnAllTree').onclick = () => { treeMode='all'; renderTree(); };
+document.getElementById('treeSearch').oninput = renderTree;
+
+// Pan tree
+let panning = false, panStart = {x:0,y:0};
+const wrap = document.getElementById('treeWrap');
+wrap.addEventListener('mousedown', e => {
+  if (e.target.closest('.node-card')) return;
+  panning = true;
+  panStart = { x: e.clientX - treeTx, y: e.clientY - treeTy };
+});
+window.addEventListener('mousemove', e => {
+  if (!panning) return;
+  treeTx = e.clientX - panStart.x;
+  treeTy = e.clientY - panStart.y;
+  renderTree();
+});
+window.addEventListener('mouseup', () => panning = false);
+
+renderTree();
+</script>
+</body>
+</html>
